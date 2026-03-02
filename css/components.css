@@ -624,7 +624,7 @@
 
 /* --- 4. BEST SELLERS & PRODUCT CARDS --- */
 .best-sellers {
-    padding: 80px 0;
+    padding: var(--gutter);
     background-color: var(--bg-primary);
 }
 

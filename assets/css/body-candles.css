@@ -1,0 +1,211 @@
+/* =========================================================================
+   BODY CANDLES PAGE STYLES
+   ========================================================================= */
+
+.body-candles-page {
+    padding-bottom: var(--space-section);
+}
+
+.bc-hero {
+    width: 100%;
+    min-height: 383px;
+    background-image: url("../../references/body-candles/1-hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bc-products {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-sm);
+}
+
+.bc-section-title {
+    font-size: var(--text-hero);
+    line-height: 1.05;
+    margin-bottom: var(--space-md);
+    color: var(--text-primary);
+}
+
+.bc-section-copy {
+    color: var(--text-primary);
+    font-size: var(--text-body);
+    line-height: 1.45;
+    max-width: 1510px;
+    margin-bottom: var(--space-md);
+}
+
+.bc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.bc-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-card-media {
+    display: block;
+    min-height: 690px;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.bc-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bc-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin: 16px 0 5px;
+}
+
+.bc-card-row h3 {
+    font-size: var(--text-body-large);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+
+.bc-card-row span {
+    font-size: var(--text-body-large);
+    line-height: 1;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.bc-card p {
+    font-size: var(--text-small);
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.bc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    border: 1px solid var(--color-clay);
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: var(--text-micro);
+    font-weight: 600;
+}
+
+.bc-btn:hover {
+    background: var(--color-mocha);
+    border-color: var(--color-mocha);
+    color: var(--color-sand);
+}
+
+.bc-btn-solid {
+    background: var(--color-mocha);
+    border-color: var(--color-mocha);
+    color: var(--color-sand);
+}
+
+.bc-reference-panel {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.bc-panel-you {
+    min-height: 962px;
+    background-image: url("../../references/body-candles/3-she-is-you.png");
+}
+
+.bc-panel-celebrate {
+    min-height: 966px;
+    background-image: url("../../references/body-candles/6-celebrate.png");
+}
+
+.bc-panel-scar {
+    min-height: 960px;
+    background-image: url("../../references/body-candles/9-scar-collection.png");
+}
+
+@media (max-width: 1440px) {
+    .bc-section-title {
+        font-size: var(--text-h1);
+    }
+
+    .bc-card-media {
+        min-height: 540px;
+    }
+
+    .bc-card-row span {
+        font-size: var(--text-h3);
+    }
+}
+
+@media (max-width: 1024px) {
+    .body-candles-page {
+        padding-top: 84px;
+    }
+
+    .bc-products {
+        padding-top: var(--space-lg);
+    }
+
+    .bc-section-title {
+        font-size: var(--text-h2);
+    }
+
+    .bc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bc-card-media {
+        min-height: 420px;
+    }
+
+    .bc-reference-panel {
+        min-height: 620px;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 768px) {
+    .bc-hero {
+        min-height: 260px;
+    }
+
+    .bc-products {
+        padding-top: var(--space-lg);
+    }
+
+    .bc-section-title {
+        font-size: var(--text-h3);
+    }
+
+    .bc-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .bc-card-media {
+        min-height: 340px;
+    }
+
+    .bc-card-row span {
+        font-size: var(--text-h3);
+    }
+
+    .bc-reference-panel {
+        min-height: 420px;
+        margin-top: 46px;
+    }
+}

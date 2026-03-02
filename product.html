@@ -151,18 +151,17 @@
 
     <!-- MAIN PRODUCT -->
     <main class="page-wrapper">
-        <div class="container" style="padding-top: 40px;">
+        <div class="container product-page-main">
             <div class="breadcrumbs text-micro text-muted">
-                <a href="shop.html" class="text-muted">SHOP</a> / <a href="shop.html" class="text-muted">BODY
-                    CANDLES</a> /
-                <span class="text-primary" style="color: var(--color-slate)">SHE IS LUST</span>
+                <a href="shop.html" class="text-muted">SHOP</a> / <a href="shop.html" class="text-muted">BODY CANDLES</a> /
+                <span class="text-primary breadcrumb-current">SHE IS LUST</span>
             </div>
 
             <div class="product-main grid-cols-2">
                 <!-- LEFT: GALLERY -->
                 <div class="product-gallery">
                     <div class="main-image-wrap">
-                        <img src="assets/images/product-1.png" alt="She is Lust">
+                        <img src="assets/images/product-thumb-plus-size.png" alt="She is Lust - Plus Size">
                         <button class="wishlist-btn icon-btn">
                             <!-- Filled heart icon to match design -->
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="#A39382" stroke="none">
@@ -173,22 +172,19 @@
                         </button>
                     </div>
                     <div class="thumbnails">
-                        <div class="thumb-wrap active"><img src="assets/images/product-1.png"></div>
-                        <div class="thumb-wrap"><img src="assets/images/product-2.png"></div>
-                        <div class="thumb-wrap"><img src="assets/images/product-4.png"></div>
+                        <div class="thumb-wrap active"><img src="assets/images/product-thumb-plus-size.png" alt="Plus size thumbnail"></div>
+                        <div class="thumb-wrap"><img src="assets/images/product-thumb-curvy.png" alt="Curvy thumbnail"></div>
+                        <div class="thumb-wrap"><img src="assets/images/product-thumb-slim.png" alt="Slim thumbnail"></div>
                     </div>
                 </div>
 
                 <!-- RIGHT: DETAILS -->
-                <div class="product-details" style="padding-top: 24px;">
+                <div class="product-details">
                     <div class="product-header-block mb-8">
-                        <h1 class="font-serif text-h1" style="font-size: 40px; margin-bottom: 8px;">SHE IS LUST</h1>
+                        <h1 class="font-serif text-h1 product-title">SHE IS LUST</h1>
                         <div class="flex-between items-center">
-                            <div class="subtitle text-micro"
-                                style="margin-bottom: 0; letter-spacing: 0.1em; font-weight: 600;">STRETCH MARK BODY
-                                CANDLE
-                            </div>
-                            <span class="price font-sans" style="font-size: 14px;">£20.26</span>
+                            <div class="subtitle text-micro">STRETCH MARK BODY CANDLE</div>
+                            <span class="price font-sans">£20.26</span>
                         </div>
                     </div>
 
@@ -267,12 +263,6 @@
                     </div>
 
                 </div>
-
-                <aside class="product-ribbons" aria-hidden="true">
-                    <span>NEW ARRIVAL</span>
-                    <span>HAND POURED</span>
-                    <span>LIMITED BATCH</span>
-                </aside>
             </div>
         </div>
     </main>
@@ -281,9 +271,8 @@
     <section class="scents-section">
         <div class="container">
             <h2 class="font-serif">SCENTS</h2>
-            <div class="grid-cols-2 mt-8">
-                <div class="scent-card">
-                    <img src="assets/images/scar-collection.png" class="scent-bg" alt="Vanilla Notes">
+            <div class="grid-cols-2 mt-8 scents-grid">
+                <div class="scent-card scent-card-vanilla">
                     <div class="scent-content">
                         <h3 class="font-serif scent-name text-hero">VANILLA</h3>
                         <div class="scent-notes">
@@ -302,8 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="scent-card">
-                    <img src="assets/images/sculpted-collection.png" class="scent-bg" alt="Lavender Notes">
+                <div class="scent-card scent-card-lavender">
                     <div class="scent-content">
                         <h3 class="font-serif scent-name text-hero">LAVENDER</h3>
                         <div class="scent-notes">
@@ -346,70 +334,132 @@
     </section>
 
     <!-- YOU MAY ALSO LIKE -->
-    <section class="related-products container">
-        <h2 class="font-serif">YOU MAY ALSO LIKE</h2>
+    <section class="section-block best-sellers">
+        <div class="container text-center">
+            <h2 class="section-title">YOU MAY ALSO LIKE</h2>
 
-        <div class="product-grid mt-12">
-            <div class="product-card">
-                <a href="product.html" class="product-image-wrap">
-                    <img src="assets/images/product-2.png" alt="SHE IS POWER">
-                </a>
-                <div class="product-info-stacked">
-                    <span class="product-name">SHE IS POWER</span>
-                    <span class="product-scent">C-SECTION BODY CANDLE</span>
-                    <div class="product-price">
-                        <span class="price-current">£20.26</span>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="product.html" class="product-image-wrap" style="display:block; text-decoration:none;">
+                        <img src="assets/images/product-2.png" alt="SHE IS POWER">
+                    </a>
+                    <div class="product-info-stacked">
+                        <span class="product-name">SHE IS POWER</span>
+                        <span class="product-scent">C-Section Body Candle</span>
+                        <div class="product-price">
+                            <span class="price-strikethrough">£30.26</span>
+                            <span class="price-current">£20.26</span>
+                        </div>
                     </div>
+                    <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
                 </div>
-                <button class="product-btn">ADD TO BAG</button>
-            </div>
 
-            <div class="product-card">
-                <a href="product.html" class="product-image-wrap">
-                    <img src="assets/images/product-1.png" alt="SHE IS GRACE">
-                </a>
-                <div class="product-info-stacked">
-                    <span class="product-name">SHE IS GRACE</span>
-                    <span class="product-scent">EMBELLISHED BODY CANDLE</span>
-                    <div class="product-price">
-                        <span class="price-current">£20.26</span>
+                <div class="product-card">
+                    <a href="product.html" class="product-image-wrap" style="display:block; text-decoration:none;">
+                        <img src="assets/images/product-1.png" alt="SHE IS GRACE">
+                    </a>
+                    <div class="product-info-stacked">
+                        <span class="product-name">SHE IS GRACE</span>
+                        <span class="product-scent">Embellished Body Candle</span>
+                        <div class="product-price">
+                            <span class="price-current">£20.26</span>
+                        </div>
                     </div>
+                    <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
                 </div>
-                <button class="product-btn">ADD TO BAG</button>
-            </div>
 
-            <div class="product-card">
-                <a href="product.html" class="product-image-wrap">
-                    <img src="assets/images/product-3.png" alt="SHE IS BEAUTY">
-                </a>
-                <div class="product-info-stacked">
-                    <span class="product-name">SHE IS BEAUTY</span>
-                    <span class="product-scent">EMBELLISHED BODY CANDLE</span>
-                    <div class="product-price">
-                        <span class="price-current">£20.26</span>
+                <div class="product-card">
+                    <a href="product.html" class="product-image-wrap" style="display:block; text-decoration:none;">
+                        <img src="assets/images/product-3.png" alt="SHE IS BEAUTY">
+                    </a>
+                    <div class="product-info-stacked">
+                        <span class="product-name">SHE IS BEAUTY</span>
+                        <span class="product-scent">Embellished Body Candle</span>
+                        <div class="product-price">
+                            <span class="price-current">£20.26</span>
+                        </div>
                     </div>
+                    <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
                 </div>
-                <button class="product-btn">ADD TO BAG</button>
-            </div>
 
-            <div class="product-card">
-                <a href="product.html" class="product-image-wrap">
-                    <img src="assets/images/product-4.png" alt="SHE IS STRENGTH">
-                </a>
-                <div class="product-info-stacked">
-                    <span class="product-name">SHE IS STRENGTH</span>
-                    <span class="product-scent">EMBELLISHED BODY CANDLE</span>
-                    <div class="product-price">
-                        <span class="price-current">£20.26</span>
+                <div class="product-card">
+                    <a href="product.html" class="product-image-wrap" style="display:block; text-decoration:none;">
+                        <img src="assets/images/product-4.png" alt="SHE IS STRENGTH">
+                    </a>
+                    <div class="product-info-stacked">
+                        <span class="product-name">SHE IS STRENGTH</span>
+                        <span class="product-scent">Embellished Body Candle</span>
+                        <div class="product-price">
+                            <span class="price-current">£20.26</span>
+                        </div>
                     </div>
+                    <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
                 </div>
-                <button class="product-btn">ADD TO BAG</button>
             </div>
         </div>
     </section>
 
+    <!-- REVIEWS -->
+    <section class="reviews-section container">
+        <h2 class="font-serif reviews-title">WHAT OUR CUSTOMERS ARE SAYING</h2>
+
+        <article class="review-item flex-between">
+            <div class="reviewer-info">
+                <h3>Eunice Yumba</h3>
+                <p>London, UK</p>
+            </div>
+            <div class="review-text">
+                <h4>So Unique!</h4>
+                <p class="review-product">She Is Lust / Scented Body Candle / Caramel / Plus Size / Vanilla</p>
+                <p>I knew that the candles looked amazing, but I didn't expect them to smell as amazing too! Scents By Sara really gives the full package. I'm hesitating to light mine because then the magic ends.</p>
+            </div>
+            <div class="review-meta">
+                <div class="review-score">4.5/5 stars</div>
+                <div class="star-rating">★ ★ ★ ★ ★</div>
+            </div>
+        </article>
+
+        <article class="review-item flex-between">
+            <div class="reviewer-info">
+                <h3>Lauren Burfield</h3>
+                <p>Bournemouth, UK</p>
+            </div>
+            <div class="review-text">
+                <h4>Never felt more seen.</h4>
+                <p class="review-product">She Is Strength / Scented Body Candle / Ivory / Slim / Lavender</p>
+                <p>I knew that the candles looked amazing, but I didn't expect them to smell as amazing too! Scents By Sara really gives the full package. I'm hesitating to light mine because then the magic ends.</p>
+            </div>
+            <div class="review-meta">
+                <div class="review-score">5/5 stars</div>
+                <div class="star-rating">★ ★ ★ ★ ★</div>
+            </div>
+        </article>
+
+        <article class="review-item flex-between">
+            <div class="reviewer-info">
+                <h3>Sara Qurashi</h3>
+                <p>Dubai, UAE</p>
+            </div>
+            <div class="review-text">
+                <h4>The perfect gift for my mum.</h4>
+                <p class="review-product">She Is Power / Scented Body Candle / Mocha / Curvy / Vanilla</p>
+                <p>I knew that the candles looked amazing, but I didn't expect them to smell as amazing too! Scents By Sara really gives the full package. I'm hesitating to light mine because then the magic ends.</p>
+            </div>
+            <div class="review-meta">
+                <div class="review-score">5/5 stars</div>
+                <div class="star-rating">★ ★ ★ ★ ★</div>
+            </div>
+        </article>
+
+        <div class="reviews-pagination" aria-hidden="true">
+            <span>←</span>
+            <span>1/1</span>
+            <span>→</span>
+        </div>
+    </section>
+
     <!-- TESTIMONIALS -->
-    <section class="section-block testimonials-section bg-primary text-center">
+    <section class="section-block testimonials-section bg-primary text-center" hidden>
         <div class="container">
             <h2 class="font-serif text-h1 mb-8">WHAT OUR CUSTOMERS ARE SAYING</h2>
             <div class="stars mb-6">

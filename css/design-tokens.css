@@ -17,6 +17,7 @@
     --bg-secondary: var(--color-stone);
     --bg-tertiary: var(--color-clay);
     --text-primary: var(--color-mocha);
+    --text-primary-dark: var(--color-slate);
     --text-muted: var(--color-taupe);
     --border-light: var(--color-clay);
     --border-heavy: var(--color-mocha);
@@ -58,6 +59,10 @@
     --text-h1: 49px;
     --text-h2: 39px;
     --text-h3: 31px;
+    --text-h4: 25px;
+    --text-h5: 21px;
+    --text-h6: 18px;
+    --text-heading-extra: 36px;
     --text-body-large: 20px;
     --text-body: 16px;
     --text-small: 13px;

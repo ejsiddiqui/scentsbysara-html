@@ -1,0 +1,55 @@
+{
+  ".bc-hero": {
+    "x": 0,
+    "y": 300,
+    "width": 1920,
+    "height": 383
+  },
+  ".body-candles-page > section:nth-of-type(2)": {
+    "x": 0,
+    "y": 683,
+    "width": 1920,
+    "height": 1085.171875
+  },
+  ".bc-panel-you": {
+    "x": 0,
+    "y": 1147.171875,
+    "width": 1920,
+    "height": 962
+  },
+  ".body-candles-page > section:nth-of-type(4)": {
+    "x": 0,
+    "y": 1033.171875,
+    "width": 1920,
+    "height": 1085.171875
+  },
+  ".bc-panel-celebrate": {
+    "x": 0,
+    "y": 1147.34375,
+    "width": 1920,
+    "height": 966
+  },
+  ".body-candles-page > section:nth-of-type(6)": {
+    "x": 0,
+    "y": 1035.34375,
+    "width": 1920,
+    "height": 1085.171875
+  },
+  ".body-candles-page > section:nth-of-type(7)": {
+    "x": 0,
+    "y": 1085.515625,
+    "width": 1920,
+    "height": 1085.171875
+  },
+  ".bc-panel-scar": {
+    "x": 0,
+    "y": 1144.6875,
+    "width": 1920,
+    "height": 960
+  },
+  "overflow": {
+    "scrollWidth": 1920,
+    "clientWidth": 1920,
+    "hasOverflow": false
+  }
+}
