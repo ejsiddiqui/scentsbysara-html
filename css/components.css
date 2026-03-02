@@ -294,6 +294,7 @@
     position: static;
     padding-bottom: 36px;
     margin-bottom: -30px;
+    margin-top: 5px;
     /* Bridge gap for hover */
 }
 

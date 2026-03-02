@@ -9,7 +9,7 @@
 
 .shop-hero .text-h1 {
     font-family: var(--font-serif);
-    font-size: 48px;
+    font-size: var(--text-h1);
     margin-bottom: 24px;
     letter-spacing: 0.05em;
     color: var(--color-mocha);
@@ -100,7 +100,7 @@
 }
 
 .sort-label {
-    font-size: 11px;
+    font-size: var(--text-micro);
     font-weight: 600;
     letter-spacing: 0.1em;
     color: var(--color-taupe);
@@ -200,7 +200,7 @@
 
 .shop-card .product-name {
     font-family: var(--font-sans);
-    font-size: 11px;
+    font-size: var(--text-micro);
     font-weight: 700;
     color: var(--color-mocha);
     margin-bottom: 4px;
@@ -341,7 +341,6 @@
     }
 
     .shop-hero .text-h1 {
-        font-size: 38px;
         margin-bottom: 16px;
     }
 
@@ -356,10 +355,6 @@
 }
 
 @media (max-width: 768px) {
-    .shop-hero .text-h1 {
-        font-size: 32px;
-    }
-
     .filter-toolbar {
         flex-direction: column;
         align-items: stretch;

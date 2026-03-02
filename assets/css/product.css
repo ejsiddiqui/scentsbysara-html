@@ -2,10 +2,6 @@
    PRODUCT PAGE STYLES
    ========================================================================= */
 
-.product-page-main {
-    padding-top: var(--header-height);
-}
-
 .breadcrumb-current {
     color: var(--text-primary);
 }

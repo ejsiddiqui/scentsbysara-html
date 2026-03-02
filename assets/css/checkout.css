@@ -48,7 +48,7 @@ body.checkout-layout {
 .checkout-section h2 {
     font-family: var(--font-sans);
     /* Looks like sans-serif here */
-    font-size: 24px;
+    font-size: var(--text-h4);
     font-weight: 400;
     margin-bottom: 24px;
     letter-spacing: 0;
@@ -60,7 +60,7 @@ body.checkout-layout {
 
 .form-label {
     display: block;
-    font-size: 10px;
+    font-size: var(--text-micro);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 8px;

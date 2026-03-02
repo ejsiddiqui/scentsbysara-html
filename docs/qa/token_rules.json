@@ -1,0 +1,106 @@
+{
+    "product.html": [
+        {
+            "selector": ".breadcrumbs a",
+            "property": "color",
+            "token": "--color-slate",
+            "description": "Breadcrumb links should use slate color."
+        },
+        {
+            "selector": ".product-title",
+            "property": "color",
+            "token": "--color-slate",
+            "description": "Product title should use slate color."
+        },
+        {
+            "selector": ".subtitle",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "description": "Subtitle should use body-large token size."
+        }
+    ],
+    "shop.html": [
+        {
+            "selector": ".shop-hero .text-h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Shop hero heading should follow h1 token scale."
+        },
+        {
+            "selector": ".sort-label",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Sort label should use micro token size."
+        },
+        {
+            "selector": ".shop-card .product-name",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Product name in cards should use micro token size."
+        },
+        {
+            "selector": ".shop-card .product-desc",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Product description should use muted text color token."
+        }
+    ],
+    "cart.html": [
+        {
+            "selector": ".cart-header h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Cart page title should follow h1 token scale."
+        },
+        {
+            "selector": ".cart-table th",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Cart table header labels should use micro token size."
+        },
+        {
+            "selector": ".cart-header a",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Cart header action link should use muted text color token."
+        },
+        {
+            "selector": ".cart-summary-box h2",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "description": "Order summary heading should use body-large token size."
+        }
+    ],
+    "checkout.html": [
+        {
+            "selector": ".checkout-breadcrumbs a",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Checkout breadcrumb links should use muted text token."
+        },
+        {
+            "selector": ".checkout-breadcrumbs .active",
+            "property": "color",
+            "token": "--text-primary",
+            "description": "Active checkout breadcrumb should use primary text token."
+        },
+        {
+            "selector": ".checkout-section h2",
+            "property": "font-size",
+            "token": "--text-h4",
+            "description": "Checkout section titles should use h4 token size."
+        },
+        {
+            "selector": ".form-label",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Form labels should use micro token size."
+        },
+        {
+            "selector": ".totals-row.grand-total",
+            "property": "font-size",
+            "token": "--text-h6",
+            "description": "Grand total row should use h6 token size."
+        }
+    ]
+}
