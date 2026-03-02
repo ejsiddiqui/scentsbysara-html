@@ -1,1 +1,0 @@
-"{\"account\":\"window.location.href='contact.html'\",\"wishlist\":\"window.location.href='shop.html'\"}"
