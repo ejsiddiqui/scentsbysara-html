@@ -11,7 +11,7 @@
 }
 
 .breadcrumbs a {
-    color: var(--text-primary);
+    color: var(--color-slate);
     text-decoration: none;
     letter-spacing: 0.1em;
 }
@@ -92,9 +92,11 @@
 
 .product-title {
     margin-bottom: 8px;
+    color: var(--color-slate);
 }
 
 .product-details .subtitle {
+    font-size: var(--text-body-large);
     letter-spacing: 0.18em;
     margin-bottom: 0;
     font-weight: 600;
