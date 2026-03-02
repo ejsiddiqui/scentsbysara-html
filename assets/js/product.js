@@ -9,6 +9,13 @@
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const getSelectedColorName = (swatchEl) => {
+        if (!swatchEl) return 'CARAMEL';
+        if (swatchEl.classList.contains('swatch-tan')) return 'CARAMEL';
+        if (swatchEl.classList.contains('swatch-white')) return 'IVORY';
+        if (swatchEl.classList.contains('swatch-brown')) return 'EBONY';
+        return 'CARAMEL';
+    };
 
     /* --- Gallery Thumbnail Logic --- */
     const thumbnails = document.querySelectorAll('.thumb-wrap');
@@ -25,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Color Swatches --- */
     const lgSwatches = document.querySelectorAll('.swatch-lg');
-    const colorLabel = document.querySelector('.selector-group:first-of-type .selector-label');
+    const colorLabel = document.querySelector('.product-details .selector-group .selector-label');
 
     lgSwatches.forEach(swatch => {
         swatch.addEventListener('click', () => {
@@ -34,9 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Update Label
             if (colorLabel) {
-                const color = swatch.classList.contains('swatch-tan') ? 'CARAMEL' :
-                    swatch.classList.contains('swatch-white') ? 'IVORY' : 'EBONY';
-                colorLabel.textContent = `COLOUR : ${color}`;
+                colorLabel.textContent = `COLOUR : ${getSelectedColorName(swatch)}`;
             }
         });
     });
@@ -107,9 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
         addBagBtn.addEventListener('click', () => {
             const originalText = addBagBtn.textContent;
             const qtyValue = parseInt(qtyInput?.value || '1', 10) || 1;
-            const selectedColor = document.querySelector('.selector-group:first-of-type .selector-label')?.textContent.split(':')[1]?.trim() || 'CARAMEL';
-            const selectedSize = document.querySelectorAll('.selector-group .selector-label')[1]?.textContent.split(':')[1]?.trim() || 'PLUS-SIZE';
-            const selectedScent = document.querySelectorAll('.selector-group .selector-label')[2]?.textContent.split(':')[1]?.trim() || 'VANILLA';
+            const detailLabels = document.querySelectorAll('.product-details .selector-group .selector-label');
+            const selectedSwatch = document.querySelector('.swatch-lg.selected');
+            const selectedColor = getSelectedColorName(selectedSwatch);
+            const selectedSize = detailLabels[1]?.textContent.split(':')[1]?.trim() || 'PLUS-SIZE';
+            const selectedScent = detailLabels[2]?.textContent.split(':')[1]?.trim() || 'VANILLA';
             const productName = document.querySelector('.product-header-block h1')?.textContent.trim() || 'SHE IS LUST';
             const mainImgSrc = document.querySelector('.main-image-wrap img')?.getAttribute('src') || 'assets/images/product-1.png';
             const unitPriceText = document.querySelector('.product-header-block .price')?.textContent || '£20.26';
