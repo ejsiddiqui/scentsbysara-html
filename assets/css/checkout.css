@@ -33,7 +33,7 @@ body.checkout-layout {
 .checkout-breadcrumbs a,
 .checkout-breadcrumbs span {
     color: var(--text-muted);
-    font-size: 10px;
+    font-size: var(--text-micro);
     text-transform: uppercase;
 }
 
@@ -72,7 +72,7 @@ body.checkout-layout {
     padding: 14px 16px;
     border: 1px solid var(--border-heavy);
     background-color: transparent;
-    font-size: 14px;
+    font-size: var(--text-small);
     color: var(--text-primary);
     font-family: var(--font-sans);
 }
@@ -113,14 +113,13 @@ select.form-input {
 }
 
 .checkbox-group label {
-    font-size: 12px;
+    font-size: var(--text-small);
     color: var(--text-primary);
 }
 
 /* PAYMENT BOX */
 .payment-box {
-    background-color: #E6E1DA;
-    /* Slightly darker grey/beige */
+    background-color: var(--bg-secondary);
     padding: 32px;
     border-radius: 0;
     margin-bottom: 32px;
@@ -135,7 +134,7 @@ select.form-input {
 }
 
 .order-summary-col h2 {
-    font-size: 24px;
+    font-size: var(--text-h5);
     font-weight: 400;
     margin-bottom: 40px;
 }
@@ -162,7 +161,7 @@ select.form-input {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
+    border-radius: 0;
 }
 
 .summary-img-wrap img {
@@ -175,31 +174,31 @@ select.form-input {
     top: -8px;
     right: -8px;
     background-color: var(--color-mocha);
-    color: white;
+    color: var(--text-on-dark);
     width: 20px;
     height: 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: var(--text-micro);
 }
 
 .summary-details h4 {
-    font-size: 12px;
+    font-size: var(--text-small);
     font-weight: 400;
     margin-bottom: 4px;
 }
 
 .summary-details p {
-    font-size: 10px;
+    font-size: var(--text-micro);
     color: var(--text-muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
 .summary-price {
-    font-size: 14px;
+    font-size: var(--text-small);
 }
 
 /* TOTALS */
@@ -213,18 +212,22 @@ select.form-input {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
-    font-size: 12px;
+    font-size: var(--text-small);
 }
 
 .totals-row.grand-total {
     margin-top: 24px;
-    font-size: 18px;
+    font-size: var(--text-h6);
     align-items: center;
 }
 
 .totals-row.grand-total span:first-child {
     letter-spacing: 0.2em;
-    font-size: 14px;
+    font-size: var(--text-small);
+}
+
+.checkout-total-value {
+    font-size: var(--text-h4);
 }
 
 .summary-perks {
@@ -237,7 +240,7 @@ select.form-input {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 12px;
+    font-size: var(--text-small);
     color: var(--text-muted);
     margin-bottom: 12px;
 }
@@ -245,50 +248,23 @@ select.form-input {
 .field-error {
     min-height: 16px;
     margin-top: 6px;
-    font-size: 11px;
-    color: #8b2e2e;
+    font-size: var(--text-micro);
+    color: var(--status-error);
 }
 
 .form-status {
     min-height: 18px;
     margin-top: 12px;
-    font-size: 12px;
+    font-size: var(--text-small);
     text-align: center;
 }
 
 .form-status.is-success {
-    color: #2d6a4f;
+    color: var(--status-success);
 }
 
 .form-status.is-error {
-    color: #8b2e2e;
-}
-
-.checkout-footer-lite {
-    border-top: 1px solid var(--border-light);
-    margin-top: 24px;
-    padding: 28px 0 36px;
-    background: var(--bg-primary);
-}
-
-.checkout-footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-taupe);
-}
-
-.checkout-footer-links {
-    display: flex;
-    gap: 20px;
-}
-
-.checkout-footer-links a {
-    color: var(--color-taupe);
+    color: var(--status-error);
 }
 
 @media (max-width: 1024px) {
@@ -306,10 +282,5 @@ select.form-input {
     .form-row {
         flex-direction: column;
         gap: 0;
-    }
-
-    .checkout-footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }

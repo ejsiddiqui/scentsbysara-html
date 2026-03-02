@@ -19,8 +19,21 @@
     --text-primary: var(--color-mocha);
     --text-primary-dark: var(--color-slate);
     --text-muted: var(--color-taupe);
+    --text-on-dark: var(--color-sand);
     --border-light: var(--color-clay);
     --border-heavy: var(--color-mocha);
+    --overlay-dark-40: rgba(63, 50, 41, 0.4);
+    --overlay-dark-45: rgba(45, 43, 39, 0.45);
+    --overlay-dark-50: rgba(45, 43, 39, 0.5);
+
+    /* Status and utility tokens */
+    --status-success: #2d6a4f;
+    --status-error: #8b2e2e;
+
+    /* Product swatch tokens */
+    --swatch-ivory: #EAE5DE;
+    --swatch-caramel: #C99B6A;
+    --swatch-mocha: #6A4232;
 
     /* 2. Spacing Scale (8pt System) */
     --space-xs: 4px;

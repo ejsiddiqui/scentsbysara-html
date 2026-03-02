@@ -87,6 +87,22 @@ h3,
     font-size: var(--text-h3);
 }
 
+.text-h4 {
+    font-size: var(--text-h4);
+}
+
+.text-h5 {
+    font-size: var(--text-h5);
+}
+
+.text-h6 {
+    font-size: var(--text-h6);
+}
+
+.text-body-large {
+    font-size: var(--text-body-large);
+}
+
 .text-body {
     font-size: var(--text-body);
     max-width: 60ch;
@@ -112,6 +128,10 @@ h3,
 
 .font-bold {
     font-weight: 600;
+}
+
+.font-sans {
+    font-family: var(--font-sans);
 }
 
 /* --- 4. LAYOUT CONTAINERS --- */
@@ -222,6 +242,29 @@ main>.container {
     display: block;
 }
 
+.block {
+    display: block;
+}
+
+.w-full {
+    width: 100%;
+    max-width: none;
+}
+
+.items-end,
+.align-end {
+    align-items: flex-end;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .mt-1 {
     margin-top: 4px;
 }
@@ -252,6 +295,38 @@ main>.container {
 
 .mb-8 {
     margin-bottom: 32px;
+}
+
+.mb-12 {
+    margin-bottom: 48px;
+}
+
+.pb-16 {
+    padding-bottom: 64px;
+}
+
+.pt-24 {
+    padding-top: 96px;
+}
+
+.pb-24 {
+    padding-bottom: 96px;
+}
+
+.text-md {
+    font-size: var(--text-h4);
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.tracking-widest {
+    letter-spacing: 0.2em;
 }
 
 /* Added Flex/Layout Utilities */

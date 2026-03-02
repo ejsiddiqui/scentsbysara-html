@@ -7,6 +7,11 @@
     margin-bottom: 64px;
 }
 
+.shop-page-shell {
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
 .shop-hero .text-h1 {
     font-family: var(--font-serif);
     font-size: var(--text-h1);
@@ -23,7 +28,7 @@
 
 .shop-canvas {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 28px;
     align-items: start;
 }
@@ -50,15 +55,15 @@
 
 .shop-rail-copy h3 {
     font-family: var(--font-serif);
-    font-size: 28px;
+    font-size: var(--text-h3);
     line-height: 1.1;
     margin-bottom: 14px;
 }
 
 .shop-rail-copy p {
-    font-size: 14px;
+    font-size: var(--text-body);
     line-height: 1.6;
-    color: var(--color-taupe);
+    color: var(--text-muted);
     margin-bottom: 20px;
 }
 
@@ -87,9 +92,13 @@
 }
 
 .filter-btn span {
-    font-size: 11px;
-    font-weight: 600;
+    font-size: var(--text-micro);
+    font-weight: 400;
     letter-spacing: 0.1em;
+}
+
+.filter-icon {
+    margin-left: 12px;
 }
 
 .sort-dropdown {
@@ -101,9 +110,9 @@
 
 .sort-label {
     font-size: var(--text-micro);
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.1em;
-    color: var(--color-taupe);
+    color: var(--text-muted);
 }
 
 .sort-select {
@@ -111,10 +120,10 @@
     border: 1px solid var(--color-clay);
     padding: 12px 16px;
     background: transparent;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: var(--text-micro);
+    font-weight: 400;
     letter-spacing: 0.1em;
-    color: var(--color-mocha);
+    color: var(--text-primary);
     text-transform: uppercase;
 }
 
@@ -150,10 +159,10 @@
 }
 
 .size-dropdown span {
-    font-size: 9px;
-    font-weight: 600;
+    font-size: var(--text-micro);
+    font-weight: 400;
     letter-spacing: 0.05em;
-    color: var(--color-taupe);
+    color: var(--text-muted);
 }
 
 .color-swatches {
@@ -179,16 +188,16 @@
 }
 
 .swatch-white {
-    background-color: #FFFFFF;
-    border: 1px solid #eee;
+    background-color: var(--swatch-ivory);
+    border: 1px solid var(--border-light);
 }
 
 .swatch-tan {
-    background-color: #CE966B;
+    background-color: var(--swatch-caramel);
 }
 
 .swatch-brown {
-    background-color: #613C2B;
+    background-color: var(--swatch-mocha);
 }
 
 .product-info-shop {
@@ -201,8 +210,8 @@
 .shop-card .product-name {
     font-family: var(--font-sans);
     font-size: var(--text-micro);
-    font-weight: 700;
-    color: var(--color-mocha);
+    font-weight: 400;
+    color: var(--text-primary);
     margin-bottom: 4px;
     display: block;
     text-transform: uppercase;
@@ -211,9 +220,9 @@
 
 .shop-card .product-desc {
     font-family: var(--font-sans);
-    font-size: 10px;
+    font-size: var(--text-micro);
     font-weight: 400;
-    color: var(--color-taupe);
+    color: var(--text-muted);
     text-transform: none;
     letter-spacing: 0;
     display: block;
@@ -221,21 +230,21 @@
 
 .shop-card .price-current {
     font-family: var(--font-sans);
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--color-mocha);
+    font-size: var(--text-micro);
+    font-weight: 400;
+    color: var(--text-primary);
     letter-spacing: 0.02em;
 }
 
 .btn-shop-now {
     width: 100%;
     padding: 16px 0;
-    font-size: 11px;
-    font-weight: 700;
+    font-size: var(--text-micro);
+    font-weight: 400;
     letter-spacing: 0.15em;
     border: 1px solid var(--color-clay);
     background: transparent;
-    color: var(--color-mocha);
+    color: var(--text-primary);
     transition: all 0.3s ease;
     text-transform: uppercase;
     display: flex;
@@ -276,7 +285,7 @@
 }
 
 .filter-header h3 {
-    font-size: 24px;
+    font-size: var(--text-h4);
     letter-spacing: 0.1em;
 }
 
@@ -289,20 +298,20 @@
 }
 
 .filter-group h4 {
-    font-size: 11px;
+    font-size: var(--text-micro);
     letter-spacing: 0.15em;
     margin-bottom: 20px;
-    color: var(--color-mocha);
-    font-weight: 700;
+    color: var(--text-primary);
+    font-weight: 400;
 }
 
 .filter-group label {
     display: block;
-    font-size: 12px;
+    font-size: var(--text-small);
     margin-bottom: 12px;
     cursor: pointer;
     letter-spacing: 0.05em;
-    color: var(--color-taupe);
+    color: var(--text-muted);
 }
 
 .filter-group input {
@@ -331,9 +340,9 @@
 }
 
 @media (max-width: 1024px) {
-    main.page-wrapper>.container {
-        padding-top: 40px !important;
-        padding-bottom: 72px !important;
+    .shop-page-shell {
+        padding-top: 40px;
+        padding-bottom: 72px;
     }
 
     .shop-hero {
@@ -377,6 +386,6 @@
     }
 
     .shop-rail-copy h3 {
-        font-size: 24px;
+        font-size: var(--text-h4);
     }
 }

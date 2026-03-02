@@ -1,4 +1,70 @@
 {
+    "body-candles.html": [
+        {
+            "selector": ".bc-section-title",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Body candles section heading should use h1 token size."
+        },
+        {
+            "selector": ".bc-section-copy",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "description": "Body candles section copy should use body-large token size."
+        },
+        {
+            "selector": ".bc-card p",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Body candles card subtitle should use muted text token."
+        },
+        {
+            "selector": ".bc-feature-scar-copy h2",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Scar collection heading should use h1 token size."
+        }
+    ],
+    "contact.html": [
+        {
+            "selector": ".story-hero-content h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Contact hero heading should use h1 token size."
+        },
+        {
+            "selector": ".contact-form-panel label",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Contact form labels should use micro token size."
+        },
+        {
+            "selector": ".contact-info-panel > p",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Contact intro copy should use muted text token."
+        }
+    ],
+    "our-story.html": [
+        {
+            "selector": ".story-hero-content h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Our story hero heading should use h1 token size."
+        },
+        {
+            "selector": ".our-story-copy h2",
+            "property": "font-size",
+            "token": "--text-h2",
+            "description": "Our story content heading should use h2 token size."
+        },
+        {
+            "selector": ".value-card p",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Value card body copy should use muted text token."
+        }
+    ],
     "product.html": [
         {
             "selector": ".breadcrumbs a",
@@ -101,6 +167,38 @@
             "property": "font-size",
             "token": "--text-h6",
             "description": "Grand total row should use h6 token size."
+        }
+    ],
+    "your-story.html": [
+        {
+            "selector": ".split-left h2",
+            "property": "color",
+            "token": "--color-mocha",
+            "description": "Belief section heading should use the mocha brand token."
+        },
+        {
+            "selector": ".split-left .eyebrow",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Belief section eyebrow should use muted text token."
+        },
+        {
+            "selector": ".ys-input",
+            "property": "border-color",
+            "token": "--border-heavy",
+            "description": "Story form inputs should use heavy border token."
+        },
+        {
+            "selector": ".ys-label",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Story form labels should use muted text token."
+        },
+        {
+            "selector": ".story-submit-section .btn-hero",
+            "property": "background-color",
+            "token": "--color-mocha",
+            "description": "Story submit CTA should use mocha token background."
         }
     ]
 }

@@ -57,7 +57,7 @@
 }
 
 .bc-section-title {
-    font-size: var(--text-hero);
+    font-size: var(--text-h1);
     line-height: 1.05;
     margin-bottom: var(--space-md);
     color: var(--text-primary);
@@ -65,7 +65,7 @@
 
 .bc-section-copy {
     color: var(--text-primary);
-    font-size: var(--text-body);
+    font-size: var(--text-body-large);
     line-height: 1.45;
     max-width: 1510px;
     margin-bottom: var(--space-md);
@@ -104,14 +104,14 @@
 }
 
 .bc-card-row h3 {
-    font-size: var(--text-body-large);
+    font-size: var(--text-h6);
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--text-primary);
 }
 
 .bc-card-row span {
-    font-size: var(--text-body-large);
+    font-size: var(--text-h6);
     line-height: 1;
     color: var(--text-primary);
     white-space: nowrap;
@@ -134,7 +134,7 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-size: var(--text-micro);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .bc-btn:hover {
@@ -197,7 +197,7 @@
 }
 
 .bc-feature-lead strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .bc-feature-product-media {
@@ -243,7 +243,7 @@
 }
 
 .bc-feature-story strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .bc-text-link {
@@ -261,7 +261,7 @@
 }
 
 .bc-feature-scar-copy h2 {
-    font-size: var(--text-hero);
+    font-size: var(--text-h1);
     margin-bottom: var(--space-lg);
 }
 
@@ -287,7 +287,7 @@
 
 .bc-scar-points strong {
     display: block;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .bc-scar-points span {
@@ -314,7 +314,7 @@
     }
 
     .bc-card-row span {
-        font-size: var(--text-h3);
+        font-size: var(--text-h6);
     }
 
     .bc-feature-media {
@@ -342,10 +342,6 @@
 
     .bc-products {
         padding-top: var(--space-lg);
-    }
-
-    .bc-section-title {
-        font-size: var(--text-h2);
     }
 
     .bc-grid {
@@ -410,10 +406,6 @@
         padding-top: var(--space-lg);
     }
 
-    .bc-section-title {
-        font-size: var(--text-h3);
-    }
-
     .bc-grid {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -424,7 +416,7 @@
     }
 
     .bc-card-row span {
-        font-size: var(--text-h3);
+        font-size: var(--text-h6);
     }
 
     .bc-feature {
@@ -437,10 +429,6 @@
 
     .bc-feature-content {
         padding: var(--space-lg) var(--gutter);
-    }
-
-    .bc-feature h2 {
-        font-size: var(--text-h2);
     }
 
     .bc-feature-lead {

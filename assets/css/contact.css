@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--color-sand);
+    color: var(--text-on-dark);
     overflow: hidden;
 }
 
@@ -22,7 +22,7 @@
 .story-hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(45, 43, 39, 0.5);
+    background-color: var(--overlay-dark-50);
 }
 
 .story-hero-content {
@@ -33,7 +33,7 @@
 }
 
 .story-hero-content h1 {
-    font-size: clamp(38px, 5vw, 54px);
+    font-size: var(--text-h1);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     font-weight: 400;
@@ -43,11 +43,11 @@
     width: 44px;
     margin: 12px auto 0;
     border: 0;
-    border-top: 2px solid rgba(249, 246, 242, 0.88);
+    border-top: 2px solid var(--text-on-dark);
 }
 
 .story-hero-content p {
-    color: rgba(249, 246, 242, 0.92);
+    color: var(--text-on-dark);
 }
 
 .contact-section {
@@ -66,13 +66,13 @@
 }
 
 .contact-info-panel h2 {
-    font-size: clamp(30px, 3vw, 40px);
+    font-size: var(--text-h2);
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .contact-info-panel>p {
-    color: var(--color-taupe);
+    color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 36px;
 }
@@ -89,7 +89,7 @@
 
 .contact-info-list h3 {
     font-family: var(--font-sans);
-    font-size: 11px;
+    font-size: var(--text-micro);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 8px;
@@ -97,7 +97,7 @@
 
 .contact-info-list a,
 .contact-info-list p {
-    color: var(--color-taupe);
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -113,10 +113,10 @@
 .contact-form-panel label {
     display: inline-block;
     margin-bottom: 8px;
-    font-size: 10px;
+    font-size: var(--text-micro);
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-taupe);
+    color: var(--text-muted);
 }
 
 .contact-form-panel input,
@@ -126,7 +126,7 @@
     border: 1px solid var(--border-heavy);
     background: transparent;
     padding: 14px 16px;
-    color: var(--color-mocha);
+    color: var(--text-primary);
 }
 
 .contact-form-panel textarea {
@@ -140,29 +140,29 @@
 }
 
 .char-count {
-    font-size: 10px;
-    color: var(--color-taupe);
+    font-size: var(--text-micro);
+    color: var(--text-muted);
 }
 
 .field-error {
     min-height: 16px;
     margin-top: 6px;
-    font-size: 11px;
-    color: #8b2e2e;
+    font-size: var(--text-micro);
+    color: var(--status-error);
 }
 
 .form-status {
     min-height: 18px;
-    font-size: 12px;
+    font-size: var(--text-small);
     letter-spacing: 0.02em;
 }
 
 .form-status.is-success {
-    color: #2d6a4f;
+    color: var(--status-success);
 }
 
 .form-status.is-error {
-    color: #8b2e2e;
+    color: var(--status-error);
 }
 
 @media (max-width: 1024px) {
