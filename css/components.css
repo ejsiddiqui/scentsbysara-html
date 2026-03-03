@@ -28,7 +28,9 @@
 .btn-hero {
     padding: 20px 64px;
     font-size: var(--text-micro);
-}
+    background-color: var(--color-mocha);
+    color: var(--color-sand);
+    border: 1px solid var(--color-mocha);}
 
 .btn-solid {
     background-color: var(--color-mocha);
@@ -40,12 +42,6 @@
     background-color: transparent;
     color: var(--color-mocha);
     border-color: var(--color-mocha);
-}
-
-.btn-hero {
-    background-color: var(--color-mocha);
-    color: var(--color-sand);
-    border: 1px solid var(--color-mocha);
 }
 
 .btn-hero:hover {
@@ -760,12 +756,6 @@
     background-color: var(--color-mocha);
     color: var(--color-sand);
     border-color: var(--color-mocha);
-}
-
-.price-strikethrough {
-    text-decoration: line-through;
-    margin-right: 8px;
-    opacity: 0.5;
 }
 
 
