@@ -698,6 +698,7 @@
     grid-area: scent;
 }
 
+.product-price,
 .best-sellers .product-price {
     grid-area: price;
     margin-top: 0;
@@ -712,6 +713,7 @@
     text-transform: uppercase;
 }
 
+.product-desc,
 .product-scent {
     font-family: var(--font-sans);
     font-size: var(--text-small);

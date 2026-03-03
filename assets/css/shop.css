@@ -21,9 +21,10 @@
 }
 
 .shop-hero p {
-    color: var(--color-taupe);
+    color: var(--text-primary);
     line-height: 1.6;
-    /* max-width: 800px; */
+    font-size: var(--text-body-large);
+    font-weight: 300;
 }
 
 .shop-canvas {
@@ -68,10 +69,9 @@
 }
 
 .filter-toolbar {
-    border-top: 1px solid var(--border-light);
-    border-bottom: 1px solid var(--border-light);
-    padding: 20px 0;
-    margin-bottom: 64px;
+    border-bottom: 1px solid var(--color-taupe);
+    padding: 20px 0 30px;
+    margin-bottom: var(--gutter);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,7 +80,7 @@
 .filter-btn {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--color-clay);
+    border: 1px solid var(--text-primary);
     padding: 12px 24px;
     cursor: pointer;
     background: transparent;
@@ -92,9 +92,10 @@
 }
 
 .filter-btn span {
-    font-size: var(--text-micro);
+    font-size: var(--text-small);
     font-weight: 400;
     letter-spacing: 0.1em;
+    color: var(--text-primary);
 }
 
 .filter-icon {
@@ -106,21 +107,24 @@
     align-items: center;
     gap: 10px;
     min-width: 320px;
+    border: 1px solid var(--text-primary);
+    padding: 0 10px;
 }
 
 .sort-label {
     font-size: var(--text-micro);
     font-weight: 400;
     letter-spacing: 0.1em;
-    color: var(--text-muted);
+    color: var(--text-primary);
+    min-width: 70px;
 }
 
 .sort-select {
+    border: none;
     width: 100%;
-    border: 1px solid var(--color-clay);
     padding: 12px 16px;
     background: transparent;
-    font-size: var(--text-micro);
+    font-size: var(--text-small);
     font-weight: 400;
     letter-spacing: 0.1em;
     color: var(--text-primary);
@@ -144,14 +148,13 @@
     justify-content: space-between;
     align-items: center;
     margin: 16px 0;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 0px;
 }
 
 .size-dropdown {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--color-taupe);
     padding: 4px 10px;
     gap: 20px;
     cursor: pointer;
@@ -162,7 +165,7 @@
     font-size: var(--text-micro);
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: var(--text-muted);
+    color: var(--text-primary);
 }
 
 .color-swatches {
@@ -183,13 +186,13 @@
 }
 
 .swatch.active {
-    border-color: var(--color-mocha);
     transform: scale(1.2);
+    border: 1px solid var(--color-mocha);
 }
 
 .swatch-white {
-    background-color: var(--swatch-ivory);
-    border: 1px solid var(--border-light);
+    background-color: var(--swatch-sand);
+    border: 1px solid var(--color-taupe);
 }
 
 .swatch-tan {
@@ -226,14 +229,6 @@
     text-transform: none;
     letter-spacing: 0;
     display: block;
-}
-
-.shop-card .price-current {
-    font-family: var(--font-sans);
-    font-size: var(--text-micro);
-    font-weight: 400;
-    color: var(--text-primary);
-    letter-spacing: 0.02em;
 }
 
 .btn-shop-now {
@@ -325,8 +320,9 @@
     background: var(--bg-primary);
 }
 
-.filter-footer .btn-solid {
-    padding: 14px 40px;
+.filter-footer .btn-solid,
+.filter-footer .btn-outline {
+    padding: 10px 20px;
 }
 
 @media (max-width: 1280px) {
