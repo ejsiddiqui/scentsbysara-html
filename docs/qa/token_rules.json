@@ -101,14 +101,14 @@
         {
             "selector": ".shop-card .product-name",
             "property": "font-size",
-            "token": "--text-micro",
-            "description": "Product name in cards should use micro token size."
+            "token": "--text-body-large",
+            "description": "Product name in cards should reuse shared product-grid body-large size."
         },
         {
             "selector": ".shop-card .product-desc",
             "property": "color",
-            "token": "--text-muted",
-            "description": "Product description should use muted text color token."
+            "token": "--color-mocha",
+            "description": "Product description should reuse shared product-grid mocha text color."
         }
     ],
     "cart.html": [
