@@ -360,6 +360,16 @@
 }
 
 @media (max-width: 768px) {
+    .sort-select {
+        width: 100%;
+    }
+
+    .shop-rail-copy h3 {
+        font-size: var(--text-h4);
+    }
+}
+
+@media (max-width: 480px) {
     .filter-toolbar {
         flex-direction: column;
         align-items: stretch;
@@ -368,20 +378,5 @@
     .filter-btn {
         width: 100%;
         justify-content: center;
-    }
-
-    .sort-dropdown {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .sort-select {
-        width: 100%;
-    }
-
-    .shop-rail-copy h3 {
-        font-size: var(--text-h4);
     }
 }
