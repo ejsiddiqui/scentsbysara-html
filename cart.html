@@ -10,332 +10,14 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="assets/css/checkout.css"> <!-- For common table layouts -->
-    <style>
-        .cart-page {
-            padding-top: 80px;
-            padding-bottom: 120px;
-        }
-
-        .cart-header {
-            margin-bottom: 64px;
-            border-bottom: 1px solid var(--border-light);
-            padding-bottom: 24px;
-        }
-
-        .cart-header h1 {
-            font-size: var(--text-h1);
-        }
-
-        .cart-layout {
-            display: grid;
-            gap: 32px;
-            grid-template-columns: minmax(0, 1fr) 420px;
-            align-items: start;
-        }
-
-        .cart-table-wrap {
-            width: 100%;
-        }
-
-        .cart-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .cart-table th {
-            text-align: left;
-            font-size: var(--text-micro);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding-bottom: 24px;
-            border-bottom: 1px solid var(--border-light);
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .cart-table td {
-            padding: 32px 0;
-            border-bottom: 1px solid var(--border-light);
-            vertical-align: middle;
-        }
-
-        .cart-product-info {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .cart-img-wrap {
-            width: 120px;
-            height: 120px;
-            background-color: var(--bg-secondary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-light);
-        }
-
-        .cart-img-wrap img {
-            height: 80%;
-            object-fit: contain;
-        }
-
-        .qty-selector {
-            display: inline-flex;
-            border: 1px solid var(--border-heavy);
-            width: 100px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .qty-selector button {
-            padding: 8px 12px;
-        }
-
-        .qty-selector input {
-            width: 30px;
-            text-align: center;
-            border: none;
-            background: transparent;
-            font-size: 14px;
-        }
-
-        .remove-btn {
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            color: var(--color-taupe);
-            font-size: 11px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .line-total {
-            font-family: var(--font-sans);
-        }
-
-        .cart-summary-box {
-            background-color: var(--bg-secondary);
-            padding: 48px;
-            margin-top: 0;
-            position: sticky;
-            top: 140px;
-        }
-
-        .cart-summary-box h2 {
-            font-size: var(--text-body-large);
-            margin-bottom: 24px;
-        }
-
-        .cart-mobile-list {
-            display: none;
-            gap: 16px;
-        }
-
-        .cart-mobile-item {
-            border: 1px solid var(--border-light);
-            padding: 16px;
-            background: var(--bg-primary);
-        }
-
-        .cart-mobile-item .cart-product-info {
-            margin-bottom: 16px;
-            gap: 12px;
-        }
-
-        .cart-mobile-item .cart-img-wrap {
-            width: 84px;
-            height: 84px;
-        }
-
-        .cart-mobile-meta {
-            display: grid;
-            gap: 12px;
-        }
-
-        .cart-mobile-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-        }
-
-        .cart-empty {
-            border: 1px solid var(--border-light);
-            padding: 40px;
-            text-align: center;
-            color: var(--color-taupe);
-        }
-
-        .cart-empty.hidden {
-            display: none;
-        }
-
-        @media (max-width: 1024px) {
-            .cart-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .cart-summary-box {
-                position: static;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .cart-table-wrap {
-                display: none;
-            }
-
-            .cart-mobile-list {
-                display: grid;
-            }
-
-            .cart-page {
-                padding-top: 48px;
-                padding-bottom: 80px;
-            }
-
-            .cart-header {
-                margin-bottom: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/checkout.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
 </head>
 
 <body>
 
-    <!-- ANNOUNCEMENT BAR -->
-        <div class="announcement-bar">
-        <div class="container announcement-inner">
-            <span class="announcement-copy">LAUNCHING MARCH 2026 - JOIN THE WAIT LIST FOR EARLY ACCESS</span>
-             <button aria-label="Currency" class="icon-btn announcement-currency">
-                    <img src="assets/icons/dollar-sign 1.svg" alt="currency selector" aria-hidden="true">
-            </button>
-        </div>
-    </div>
-
-    <!-- SITE HEADER -->
-    <header class="site-header">
-        <div class="header-top container">
-            <!-- Left: Search Icon -->
-            <div class="header-left">
-                                <button aria-label="Search" class="icon-btn search-toggle header-icon-search">
-                    <img src="assets/icons/search 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Cart" class="icon-btn header-icon-cart-mobile" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
-                </button>
-            </div>
-
-            <!-- Center: Logo -->
-            <div class="header-center">
-                <a href="index.html" class="logo-long">
-                    <img src="assets/images/logo-long.svg" alt="Scents by Sara Logo" class="logo-image">
-                </a>
-                <a href="index.html" class="logo-mobile font-serif">BYSARA</a>
-            </div>
-
-            <!-- Right: Icons & Hamburger -->
-            <div class="header-right nav-icons">
-                                <button aria-label="Account" class="icon-btn header-icon-account" onclick="window.location.href='contact.html'">
-                    <img src="assets/icons/user 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Wishlist" class="icon-btn header-icon-wishlist" onclick="window.location.href='shop.html'">
-                    <img src="assets/icons/heart 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Cart" class="icon-btn header-icon-cart" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
-                </button>
-
-                <!-- Hamburger Menu Toggle (Mobile Only) -->
-                <button class="hamburger-btn icon-btn" aria-label="Toggle Menu" aria-expanded="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Bottom: Navigation Links (Desktop) -->
-        <div class="header-bottom">
-            <nav class="nav-links">
-                <div class="nav-item has-mega-menu">
-                    <a href="shop.html">SHOP</a>
-
-                    <!-- Mega Menu Dropdown -->
-                    <div class="mega-menu">
-                        <div class="mega-menu-container">
-                            <div class="mega-menu-grid">
-                                <!-- Col 1 -->
-                                <div class="mega-col">
-                                    <h4>POPULAR</h4>
-                                    <ul>
-                                        <li><a href="shop.html">Shop All</a></li>
-                                        <li><a href="shop.html">Best Sellers</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 2 -->
-                                <div class="mega-col">
-                                    <h4>BODY CANDLES</h4>
-                                    <ul>
-                                        <li><a href="shop.html">All Body Candles</a></li>
-                                        <li><a href="shop.html">She is Timeless</a></li>
-                                        <li><a href="shop.html">She is Beauty</a></li>
-                                        <li><a href="shop.html">She is Lust</a></li>
-                                        <li><a href="shop.html">She is Strength</a></li>
-                                        <li><a href="shop.html">She is Power</a></li>
-                                        <li><a href="shop.html">She is You</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 3 -->
-                                <div class="mega-col">
-                                    <h4>SHOP BY SIZE</h4>
-                                    <ul>
-                                        <li><a href="shop.html">Slim</a></li>
-                                        <li><a href="shop.html">Curvy</a></li>
-                                        <li><a href="shop.html">Plus Size</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 4 -->
-                                <div class="mega-col">
-                                    <h4>SHOP BY COLLECTION</h4>
-                                    <ul>
-                                        <li><a href="shop.html">Scar Collection</a></li>
-                                        <li><a href="shop.html">Sculpted Collection</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Image Col -->
-                            <div class="mega-image-col">
-                                <img src="assets/images/mega-menu-image.png" alt="Featured Body Candles">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="shop.html">GIFTS</a>
-                <a href="our-story.html">OUR STORY</a>
-                <a href="your-story.html">YOUR STORY</a>
-                <a href="contact.html">CONTACT US</a>
-            </nav>
-        </div>
-
-        <!-- Search Overlay -->
-        <div class="search-overlay">
-            <div class="container search-container">
-                <input type="text" class="search-input" placeholder="Search for products, collections...">
-                <button class="icon-btn search-close" aria-label="Close Search">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- SHARED SITE HEADER -->
+    <div data-shared-partial="site-header"></div>
 
     <main class="page-wrapper cart-page">
         <div class="container">
@@ -355,10 +37,10 @@
                         <table class="cart-table" aria-label="Shopping cart">
                             <thead>
                                 <tr>
-                                    <th style="width: 50%;">PRODUCT</th>
-                                    <th style="width: 15%;">PRICE</th>
-                                    <th style="width: 20%;">QUANTITY</th>
-                                    <th style="width: 15%; text-align: right;">TOTAL</th>
+                                    <th>PRODUCT</th>
+                                    <th>PRICE</th>
+                                    <th>QUANTITY</th>
+                                    <th>TOTAL</th>
                                 </tr>
                             </thead>
                             <tbody id="cart-items-table"></tbody>
@@ -372,7 +54,7 @@
                     <h2>ORDER SUMMARY</h2>
                     <div class="flex-between mb-4">
                         <span class="font-sans">SUBTOTAL</span>
-                        <span id="cart-subtotal" class="font-sans" style="font-size: 20px;">£0.00</span>
+                        <span id="cart-subtotal" class="font-sans cart-total-subtotal">£0.00</span>
                     </div>
                     <div class="flex-between mb-4">
                         <span class="text-sm text-muted">Shipping</span>
@@ -384,157 +66,24 @@
                     </div>
                     <div class="flex-between mb-8">
                         <span class="font-sans">TOTAL</span>
-                        <span id="cart-total" class="font-sans" style="font-size: 24px;">£0.00</span>
+                        <span id="cart-total" class="font-sans cart-total-grand">£0.00</span>
                     </div>
-                    <a href="checkout.html" class="btn-solid w-full block text-center" style="width: 100%;">CHECKOUT</a>
+                    <a href="checkout.html" class="btn-solid w-full block text-center">CHECKOUT</a>
                 </aside>
             </div>
         </div>
     </main>
 
-    <!-- SITE FOOTER -->
-    <footer class="site-footer bg-secondary">
-        <div class="container">
-            <div class="footer-main-grid">
-                <!-- 1. Newsletter Column -->
-                <div class="footer-newsletter-col">
-                    <h3 class="newsletter-heading font-serif">JOIN OUR NEWSLETTER</h3>
-                    <form class="newsletter-form-stacked">
-                        <input id="newsletter-email" type="email" placeholder="YOUR EMAIL" required>
-                        <button type="submit" class="btn-solid">SUBSCRIBE</button>
-                    </form>
-                                        <div class="footer-social-group">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <img src="assets/icons/facebook.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                            <img src="assets/icons/tiktok.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                            <img src="assets/icons/pinterest.svg" alt="" aria-hidden="true">
-                        </a>
-                    </div>
-                </div>
+    <!-- SHARED SITE FOOTER -->
+    <div data-shared-partial="site-footer"></div>
 
-                <!-- 2. Shop All -->
-                <div class="footer-links-col">
-                    <h4 class="footer-col-title">SHOP ALL</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="body-candles.html">Body Candles</a></li>
-                        <li><a href="shop.html">Slim Body Candles</a></li>
-                        <li><a href="shop.html">Curvy Body Candles</a></li>
-                        <li><a href="shop.html">Plus Size Body Candles</a></li>
-                        <li><a href="shop.html">Custom Body Candles</a></li>
-                    </ul>
-                </div>
+    <!-- SHARED MOBILE MENU -->
+    <div data-shared-partial="mobile-menu"></div>
 
-                <!-- 3. About Us -->
-                <div class="footer-links-col">
-                    <h4 class="footer-col-title">ABOUT US</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="our-story.html">Our Story</a></li>
-                        <li><a href="our-story.html">Sustainability</a></li>
-                        <li><a href="our-story.html">Candle Care</a></li>
-                    </ul>
-                </div>
-
-                <!-- 4. Gifting -->
-                <div class="footer-links-col">
-                    <h4 class="footer-col-title">GIFTING</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="your-story.html">Your Story</a></li>
-                        <li><a href="contact.html">Customisation</a></li>
-                        <li><a href="contact.html">Corporate Gifting</a></li>
-                    </ul>
-                </div>
-
-                <!-- 5. Customer Service -->
-                <div class="footer-links-col">
-                    <h4 class="footer-col-title">CUSTOMER SERVICE</h4>
-                    <ul class="footer-link-list">
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="contact.html">Shipping & Returns</a></li>
-                        <li><a href="contact.html">Terms & Conditions</a></li>
-                        <li><a href="contact.html">Privacy Policy</a></li>
-                        <li><a href="contact.html">FAQ's</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-divider-rule"></div>
-
-            <div class="footer-bottom-row">
-                <div class="footer-brand-wrap">
-                    <a href="/" class="logo">
-                        <img src="assets/images/logo.svg" alt="Scents by Sara Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-copyright-text">© 2026 SCENTS BY SARA. ALL RIGHTS RESERVED</p>
-                </div>
-                <div class="footer-payment-wrap">
-                    <img src="assets/images/payment-icons.png" alt="Payment Methods" class="payment-methods-img">
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- MOBILE MENU OVERLAY -->
-    <div class="mobile-menu-overlay" aria-hidden="true" inert>
-        <div class="mobile-menu-content container">
-            <div class="mobile-menu-top">
-                <button class="icon-btn mobile-menu-cart" aria-label="Cart" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
-                </button>
-                <a href="index.html" class="mobile-menu-brand font-serif">BYSARA</a>
-                <button class="icon-btn close-mobile-menu" aria-label="Close Menu">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-
-            <nav class="mobile-nav-links mobile-nav-primary">
-                <a href="shop.html">SHOP</a>
-                <a href="shop.html">COLLECTIONS</a>
-                <a href="our-story.html">OUR STORY</a>
-                <a href="contact.html">CONTACT</a>
-            </nav>
-
-            <nav class="mobile-nav-links mobile-nav-secondary">
-                <a href="contact.html">ACCOUNT</a>
-                <a href="shop.html">WISHLIST</a>
-                <a href="contact.html">CONTACT</a>
-            </nav>
-
-            <div class="mobile-menu-footer">
-                <a href="contact.html" class="btn-outline full-width-btn" style="text-align: center;">JOIN OUR NEWSLETTER</a>
-                <div class="mobile-menu-social">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <img src="assets/icons/facebook.svg" alt="" aria-hidden="true">
-                    </a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                        <img src="assets/icons/tiktok.svg" alt="" aria-hidden="true">
-                    </a>
-                    <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                        <img src="assets/icons/pinterest.svg" alt="" aria-hidden="true">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="assets/js/cart-state.js"></script>
+    <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/cart.js"></script>
 </body>
 
 </html>
-

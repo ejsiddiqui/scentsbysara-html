@@ -71,6 +71,15 @@
     max-width: 480px;
 }
 
+.mobile-menu-cta {
+    text-align: center;
+}
+
+.product-image-link {
+    display: block;
+    text-decoration: none;
+}
+
 /* Inline links */
 .inline-link {
     text-decoration: underline;
