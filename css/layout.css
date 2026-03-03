@@ -122,6 +122,10 @@ h3,
     color: var(--text-muted);
 }
 
+.text-dark {
+    color: var(--text-primary-dark);
+}
+
 .text-center {
     text-align: center;
 }
@@ -158,6 +162,14 @@ main>.container {
 .section-row .container {
     padding-left: 0;
     padding-right: 0;
+}
+
+.section-heading {
+    font-size: var(--text-h1);
+    color: var(--text-primary-dark);
+    text-align: center;
+    display: block;
+    padding-bottom: var(--space-lg);
 }
 
 .announcement-bar,

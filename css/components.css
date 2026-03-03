@@ -634,10 +634,13 @@
     background-color: var(--bg-primary);
 }
 
-.best-sellers .section-title {
+.best-sellers .section-title,
+.section-title {
     margin-bottom: 60px;
     letter-spacing: 0.1em;
     font-size: var(--text-h2);
+    color: var(--text-primary-dark);
+    text-align: center;
 }
 
 .product-grid {

@@ -106,6 +106,7 @@
     font-size: var(--text-body-large);
     line-height: 1;
     font-family: var(--font-sans);
+    font-weight: 300;
 }
 
 .selector-group {
@@ -156,9 +157,9 @@
 .pill-btn {
     flex: 1;
     text-align: center;
-    padding: 13px 0;
+    padding: 13px 0 10px;
     border: 1px solid var(--border-heavy);
-    font-size: var(--text-micro);
+    font-size: var(--text-small);
     letter-spacing: 0.1em;
     cursor: pointer;
     background: transparent;
@@ -228,9 +229,11 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: var(--text-micro);
+    font-size: var(--text-body);
     letter-spacing: 0.14em;
     text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-primary-dark);
 }
 
 .accordion-body {
@@ -242,6 +245,8 @@
 .accordion-body p {
     font-size: var(--text-body);
     line-height: 1.45;
+    font-weight: 300;
+    color: var(--text-primary-dark)
 }
 
 .accordion.active .accordion-body {
@@ -268,13 +273,6 @@
 .scents-section {
     padding: 0;
     background-color: var(--bg-primary);
-}
-
-.scents-section h2 {
-    display: block;
-    text-align: center;
-    font-size: var(--text-h1);
-    margin-bottom: 32px;
 }
 
 .scents-grid {
@@ -316,7 +314,6 @@
 .product-commitment-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
     margin-top: 84px;
     min-height: 960px;
 }
@@ -354,11 +351,10 @@
 }
 
 .commitment-content-col .desc {
-    font-size: var(--text-h2);
-    color: var(--text-primary);
+    font-size: var(--text-body);
+    color: var(--text-primary-dark);
     margin-bottom: 44px;
     line-height: 1.35;
-    max-width: 690px;
 }
 
 .commitment-list {
@@ -368,7 +364,7 @@
 }
 
 .commitment-list-item {
-    font-size: var(--text-h3);
+    font-size: var(--text-h4);
     color: var(--text-muted);
     font-weight: 400;
 }
@@ -390,21 +386,30 @@
     gap: 24px;
 }
 
+.review-item:first-of-type {
+    border-top: 0;
+}
+
 .review-item:last-of-type {
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 0;
 }
 
 .reviewer-info {
     width: 21%;
+    font-size: var(--text-body-large);
 }
 
 .reviewer-info h3 {
-    font-size: var(--text-body-large);
     margin-bottom: 10px;
+    color: var(--text-primary-dark);
+    font-family: var(--font-sans);
+    font-weight: 500;
 }
 
 .reviewer-info p {
     color: var(--color-taupe);
+    font-family: var(--font-sans);
+    font-weight: 500;
 }
 
 .review-text {
@@ -414,18 +419,23 @@
 }
 
 .review-text h4 {
-    font-size: var(--text-body-large);
+    font-size: var(--text-h4);
     margin-bottom: 10px;
+    color: var(--text-primary-dark);
+    font-weight: 500;
 }
 
 .review-text .review-product {
-    font-weight: 400;
     color: var(--color-taupe);
+    font-size: var(--text-body-large);
     margin-bottom: 14px;
 }
 
 .review-text p {
     line-height: 1.35;
+    color: var(--text-primary-dark);
+    font-size: var(--text-body-large);
+    font-weight: 300;
 }
 
 .review-meta {
@@ -437,14 +447,15 @@
 
 .review-score {
     font-size: var(--text-h4);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 10px;
+    color: var(--text-primary-dark);
 }
 
 .star-rating {
-    letter-spacing: 5px;
+    letter-spacing: 0;
     color: var(--color-taupe);
-    font-size: var(--text-body-large);
+    font-size: var(--text-h4);
 }
 
 .reviews-pagination {
@@ -454,6 +465,7 @@
     gap: 42px;
     margin-top: 34px;
     font-size: var(--text-h4);
+    font-family: var(--font-serif);
 }
 
 .testimonial-stars {
@@ -480,7 +492,7 @@
     }
 
     .scent-card {
-        min-height: 720px;
+        min-height: 640px;
     }
 
     .scent-name {
@@ -536,10 +548,6 @@
 }
 
 @media (max-width: 1024px) {
-    .product-page-main {
-        padding-top: 84px;
-    }
-
     .product-main {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -568,7 +576,7 @@
     }
 
     .scent-card {
-        min-height: 520px;
+        min-height: 100vw;
     }
 
     .product-commitment-grid {
@@ -620,10 +628,6 @@
         font-size: var(--text-h2);
     }
 
-    .pill-group {
-        flex-wrap: wrap;
-    }
-
     .pill-btn {
         flex: 1 1 calc(50% - 8px);
         min-width: 120px;
@@ -639,23 +643,9 @@
         grid-template-columns: 1fr;
     }
 
-    .scent-card {
-        min-height: 430px;
-    }
-
 }
 
 @media (max-width: 640px) {
-    .add-to-cart-row {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .qty-selector,
-    .btn-add-bag {
-        width: 100%;
-    }
-
     .commitment-content-col {
         padding: 48px 20px;
     }
@@ -672,3 +662,14 @@
         font-size: var(--text-body-large);
     }
 }
+
+@media (max-width: 480px) {
+    .btn-add-bag {
+        padding: 10px;
+    }
+
+    .reviews-section {
+        padding: 40px 20px;
+    }
+}
+    

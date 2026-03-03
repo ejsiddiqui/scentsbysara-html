@@ -139,6 +139,12 @@
         --gutter: 32px;
     }
 
+    .section-title,
+    section .section-title,
+    .container .section-title {
+        margin-bottom: var(--space-md);
+    }
+
     .footer-bottom-row {
         display: block;
     }
