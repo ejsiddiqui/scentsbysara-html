@@ -1,0 +1,5 @@
+interface:
+  display_name: "QA Guardrails"
+  short_description: "Reusable visual and token audit workflow for frontend projects"
+  default_prompt: "Set up and run the QA guardrails workflow for this project: bootstrap the scripts if missing, configure token rules, run viewport and token audits, and report blockers with evidence paths."
+

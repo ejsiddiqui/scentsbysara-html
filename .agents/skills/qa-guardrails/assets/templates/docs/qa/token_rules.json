@@ -1,0 +1,17 @@
+{
+    "index.html": [
+        {
+            "selector": ".hero-title",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Hero title should use h1 token size."
+        },
+        {
+            "selector": ".hero-copy",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Hero supporting copy should use muted text token."
+        }
+    ]
+}
+

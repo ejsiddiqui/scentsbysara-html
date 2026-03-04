@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if command -v python >/dev/null 2>&1; then
+    python docs/qa/precommit_token_gate.py
+elif command -v python3 >/dev/null 2>&1; then
+    python3 docs/qa/precommit_token_gate.py
+elif command -v py >/dev/null 2>&1; then
+    py -3 docs/qa/precommit_token_gate.py
+elif [ -x "/c/Windows/py.exe" ]; then
+    /c/Windows/py.exe -3 docs/qa/precommit_token_gate.py
+elif command -v powershell.exe >/dev/null 2>&1; then
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "python docs/qa/precommit_token_gate.py"
+else
+    echo "[token-gate] Python not found. Install Python to run pre-commit token checks."
+    exit 1
+fi
+
