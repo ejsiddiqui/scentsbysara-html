@@ -14,6 +14,7 @@
 
     /* Semantic Mappings */
     --bg-primary: var(--color-sand);
+    --bg-primary-dark: var(--color-slate);
     --bg-secondary: var(--color-stone);
     --bg-tertiary: var(--color-clay);
     --text-primary: var(--color-mocha);

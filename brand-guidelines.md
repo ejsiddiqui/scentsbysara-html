@@ -1,6 +1,7 @@
 # Brand Guidelines & Design System
 
 ## 1. Brand Overview
+
 **Aesthetic:** Quiet Luxury, Artisanal, Minimalist, Sensory.
 **Core Vibe:** Clean lines, generous negative space, editorial typography, and earth-toned natural palettes.
 **Reference Style:** Similar to Aesop, Jo Malone, Melyon.
@@ -8,24 +9,32 @@
 ---
 
 ## 2. Asset Directory
+
 **Logo:**
+
 * **File Path:** `/images/logo.svg`
 * **Placement:** Centered in Navbar (Desktop), or Top-Left (Mobile).
 
 **Iconography:**
+
+* **SVG Icons** Use provided svg icons
+* **Lucide Icons** If svg icon is not available, use Lucide icons
 * **Library:** [Lucide Icons](https://lucide.dev/)
 * **Settings:** Stroke width `1px`, Size `24px`.
-* **Color:** Inherits text color (usually `#3F3229` or `#2D2B27`).
+* **Color:** Inherits text color (`#3F3229`).
 
 ---
 
 ## 3. Typography
+
 The type system relies on a contrast between an editorial Serif (RL Limo) and a utilitarian Sans-Serif (Suisse Int'l).
 
 ### Primary Typeface (Headings)
+
 **Font Name:** `RL Limo`
 **Source:** Adobe Typekit
 **Import Tag:**
+
 ```html
 <link rel="stylesheet" href="[https://use.typekit.net/ife0byt.css](https://use.typekit.net/ife0byt.css)">
 

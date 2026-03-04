@@ -2,18 +2,20 @@
 
 Design the homepage for **Scents by Sara**, a premium body-shape scented candle brand rooted in scent science, female empowerment, and wellness rituals.
 
-This homepage must look and feel like a calm, editorial luxury ecommerce experience inspired by:
+This homepage must look and feel like a calm, editorial luxury e-commerce experience inspired by:
 
 - Aesop  
 - Jo Malone  
 - Neom  
+
+**Language Preference** For language and spellings, we will use British English.
 
 Launch target: **March 2026**  
 Audience: wellness-focused, design-conscious women aged **20–50**
 
 ---
 
-# ✅ Brand System Reference (Required)
+## ✅ Brand System Reference (Required)
 
 All design and UI decisions must strictly follow:
 
@@ -31,18 +33,27 @@ This includes:
 No component should deviate from these guidelines.
 
 ---
-## Superseding Layout Directives (Authoritative)
+
+### Superseding Layout Directives (Authoritative)
 
 These directives supersede all previous layout instructions in this PRD and other project docs wherever conflicts exist.
 
-0. All screenshots in `references/sections/` are captured from the `1920px` design baseline.  
-   All other breakpoints must be responsive adaptations of this baseline.
+0. All screenshots in `references/sections/` are captured from the `1920px` design baseline.All other breakpoints must be responsive adaptations of this baseline.
 1. Add `1920px` as the wide desktop layout breakpoint.
-2. For viewports above `1920px`, the page behaves as a boxed layout.
+2. For view-ports above `1920px`, the page behaves as a boxed layout.
 3. The layout is section-based. Each section behaves as a row.
 4. Each section has a default design width of `1920px`, while still supporting `width: 100%`.
-6. Default container width is `1800px` with `60px` left and right margins inside the section.
+5. Default container width is `1800px` with `60px` left and right margins inside the section.
+6. The `.container` width for `1920px` above screens should be `1920px`.
 7. `.container-full` is a full-width container (`100%`) with no side margins.
+
+---
+
+## Design Reference
+
+1- Design reference for each page section by section is available in `references/sections/<page-name>`. e.g. Design reference for `home` page can be found in `references/sections/home` dir.
+2- Images to be used are available in `assets/images/` dir.
+Note: All screenshots have been taken on `1920px` view-port, so that they should be adjusted for other screen sizes.
 
 ---
 
@@ -57,7 +68,7 @@ These directives supersede all previous layout instructions in this PRD and othe
   - `#E8E4DD` (Warm Light Grey sections)
   - `#CFC6B9` (Borders/dividers)
   - `#3F3229` (Primary text)
-  - `#2D2B27` (CTA buttons)
+  - `#2D2B27` (dark text)
 
 See **brand-guidelines.md → Colour System**.
 
@@ -68,10 +79,12 @@ See **brand-guidelines.md → Colour System**.
 Typography must match the brand system:
 
 ### Headlines
+
 - RL Limo Regular (serif)
 - Used for hero titles, section headings, ritual statements
 
 ### Body + UI
+
 - Suisse Intl Regular (sans-serif)
 - Used for navigation, labels, product cards, buttons
 
@@ -87,7 +100,7 @@ See **brand-guidelines.md → Typography System**.
 - Default content container:
   - width: `1800px`
   - side margins: `60px` each (inside a `1920px` section)
-- For viewport widths above `1920px`, keep content boxed and centered.
+- For viewport widths above `1920px`, keep content boxed and centered. With `.container` max-width `1920px`.
 - Use `.container-full` for intentionally full-bleed content with no side margins.
 
 Whitespace and spacing are core to the brand.
@@ -96,30 +109,21 @@ See **brand-guidelines.md → Layout & Grid**.
 
 ---
 
-# Homepage Structure
+## Common Sections
 
 ---
 
-## Hero Section (Above the Fold)
+### Small Hero Section
 
-- Must be a slider with **3 slides**
-- Full-bleed warm editorial photography (body-shape candles)
-- Reference hero images are placed in /references dir
-
-Hero overlay content:
-
-- Serif headline (RL Limo):
-  “HAND MADE BESPOKE CANDLES”
-- Short supporting line:
-  “Rooted in sensory science, emotional wellbeing, and confidence.”
-- Primary CTA button:
-  “Shop Body Candles”
-- Secondary CTA:
-  “Explore Rituals”
+- Usually a `380px` high in desktop
+- It has a heading (tokens: --text-t1, --text-on-dark), and body text (tokens: --text-h3, --text-on-dark)
+- Full-bleed warm editorial photography used as a background-image.
+- Reference hero image `references/body-candles/1-hero.png`
 
 ### Button Rules
+
 - Border radius MUST be `0`
-- Primary background: `#2D2B27`
+- Primary background: `--bg-primary-dark`
 
 See **brand-guidelines.md → Buttons & Interactions**.
 
@@ -135,10 +139,10 @@ Top header includes:
 Main nav:
 
 - Shop  
-- Collections  
-- Rituals  
-- Our Story  
-- Contact  
+- Gifts
+- Our Story
+- Your Story  
+- Contact Us
 
 Right side icons:
 
@@ -146,189 +150,39 @@ Right side icons:
 - Wishlist  
 - Cart  
 
-### Iconography Rule
-Use Lucide icons only:
+Left side icons:
 
-- Size: 24px
-- Stroke: 1px
-- Colour: `#3F3229`
+- Search
+
+### Iconography Rule
+
+- Use provided svg icons
+- If icon not available, use Lucide icons
+  - Size: 24px
+  - Stroke: 1px
+  - Colour: `#3F3229`
 
 See **brand-guidelines.md → Iconography**.
 
 Sticky header on scroll with reduced height.
 
----
+## Mobile Navigation
 
-# Homepage Sections (In Order)
-
----
-
-## 1. Bestsellers Strip
-
-- Horizontal row of 3–4 products
-- Each card includes:
-
-  - Product image
-  - Name + price
-  - Quick View or Add to Cart CTA
-
-Hover interaction should be minimal:
-
-- Slight lift or gentle opacity shift
-
-No rounded corners.
+- For screens `1024px` and below, the mobile navigation is displayed and main nav is hidden.
 
 ---
 
-## 2. Brand Story / Founder Moment
+## Coding Style (Important)
 
-Split editorial block:
+- The code should be modular and reusable
+- Try to use the already created css/classes instead of writing new css
+- Many sections are repeating on different pages, try to reuse the same structure and css.
+- Write new css only, if is not already covered in other classes
+- For font-size, font-color, background-color etc use design tokens instead of writing raw values
+- Use qa-guardrails skills to verify the design
+- The design must be tested and verified before committing
 
-- Image: founder ritual moment
-- Text: scent science + empowerment
-
-Add serif pull quote for warmth.
-
-CTA: “Discover Our Story”
-
-Typography must follow brand guidelines exactly.
-
----
-
-## 3. Collections Overview
-
-Grid or carousel featuring:
-
-- Body Candles  
-- Plus Size  
-- 24K Gold Candles  
-- Custom Candles  
-
-Each card includes:
-
-- Atmospheric image
-- Collection name (serif)
-- One-line ritual description (sans-serif)
-- CTA: Shop Collection
-
----
-
-## 4. Rituals & Wellbeing Content Teaser
-
-Editorial content blocks such as:
-
-- Rituals for Confidence  
-- Evening Unwind  
-- Morning Reset  
-
-Calm copy + warm lifestyle imagery.
-
-CTA: Explore Rituals
-
----
-
-## 5. Sensory Science / Scent Story Section
-
-Quiet infographic-style layout:
-
-3–4 points:
-
-- Clean formulations  
-- Mood-support scent science  
-- Handmade + cruelty-free  
-- Eco-conscious rituals  
-
-Use Lucide icons (1px stroke).
-
-Avoid busy visuals.
-
----
-
-## 6. Testimonials / Social Proof
-
-Horizontal slider of reviews:
-
-- Refined typography
-- Minimal framing
-- Calm emotional language
-
-Optional: “Loved by our community”
-
----
-
-## 7. Newsletter & Community Block
-
-Headline example:
-
-- “Join the Ritual”
-- “Stay in the Scent Circle”
-
-One-line invite + email form.
-
-Background may use subtle warmth (no strong gradients).
-
-Primary button uses brand CTA styling.
-
----
-
-## 8. Footer
-
-Three-column layout:
-
-Left:
-- FAQs
-- Candle Care
-- Shipping
-- Returns
-- Privacy
-- Terms
-
-Center:
-- Social Lucide icons (IG, TikTok, Pinterest)
-
-Right:
-- Minimal newsletter signup
-
-Bottom row:
-- Logo + payment icons (subtle)
-
----
-
-# Product & Interaction Details
-
-Product cards must include:
-
-- Variant indication (wax tones, sizes)
-- Minimal hover state
-- Clean CTA path to:
-
-  - Shop All  
-  - Custom Candle page  
-
-All mobile layouts stack gracefully.
-
----
-
-# Tone of Voice
-
-Copy must be:
-
-- Calm
-- Warm
-- Confident
-- Empathetic
-
-Focus on feelings:
-
-- Grounded
-- Confident
-- Soft rituals
-
-Avoid aggressive marketing language.
-
----
-
-# Future Considerations
+## Future Considerations
 
 Homepage should leave modular space for:
 
@@ -339,7 +193,7 @@ Components must remain modular and reusable.
 
 ---
 
-# Product Detail Page — `product.html`
+## Product Detail Page — `product.html`
 
 All design decisions must adhere to `brand-guidelines.md`. The product page must match `screenshots/product-page.png`.
 
@@ -353,49 +207,58 @@ All design decisions must adhere to `brand-guidelines.md`. The product page must
 
 - Uppercase, Suisse Intl, 0.78rem
 - Path: `SHOP / BODY CANDLES / [Product Name]`
-- Muted colour `rgba(63,50,41, 0.55)` with hover to full primary
+- Primary colour `--text-primary` with hover to full primary
 
 ---
 
 ### Product Gallery + Form (2-column split)
 
-**Left — Gallery**
+#### Left — Gallery
 
 - Large main product image (aspect ratio 3:4)
 - Wishlist/heart icon top-right of main image
-- 3 thumbnail images below in a row
+- 3 or more thumbnail images below in a row, use left/right slider if more images
 - Clicking a thumbnail swaps the main image with a fade transition
 - Gallery is `position: sticky` on desktop (top: 140px to clear header)
 
-**Right — Product Form**
+#### Right — Product Form
 
-- Subtitle (small uppercase): "Stretch Mark Body Candle"
-- Product title (RL Limo serif, uppercase): "She Is Lust"
-- Price: e.g. "£20.20"
-- Horizontal divider
+- Subtitle (small uppercase): "Stretch Mark Body Candle" (tokens: --text-body-large, --text-primary-dark)
+- Product title (RL Limo serif, uppercase): "She Is Lust" (tokens: --text-h1, --text-primary-dark)
+- Price: e.g. "£20.20" (tokens: --text-body-large, --font-sans, font-weight:300)
 
 **Colour selector:**
+
 - Label: `COLOUR: [Active Colour]`
 - 3 circular colour swatches (Caramel / Chestnut / Ivory)
 - Active swatch: ring outline
 
-**Size selector:**
-- Label: `BODY SHAPE / PLUS SIZE`
+**Body Shape selector:**
+
+- Label: `BODY SHAPE: [Active Size]`
 - Toggle buttons: Slim / Curvy / Plus Size
-- Active button: dark fill (`#2D2B27`), inverse text
+- Active button: secondary colour fill with primary-text color (`--bg-secondary`, `--text-primary`)
 
 **Scent selector:**
+
 - Label: `SCENT: [Active Scent]`
 - Toggle buttons: Vanilla / Lavender
+- Design token same as `Body Shape` selector
 
 **Quantity + CTA row:**
+
 - `-` / number input / `+` stepper (min 1, max 99)
-- "Add to Bag — £[price]" dark CTA button (full flex-fill)
+- "Add to Bag — £[price]" primary CTA button (full flex-fill)
 - CTA label updates dynamically when qty changes
 - On click: button shows "✓ Added to Bag" for 1.8s then reverts
 
 **Accordions** (below divider, one open at a time):
-- Description
+
+Following tabs would be shown in accordion except `Description`, description would be above Accordion. However, visually it would be like accordion below. By default, all tabs would be closed.
+
+Tokens: Heading (tokens: --text-body, --text-primary-dark, font-weight: 600), text: --text-body, --text-primary-dark.
+
+- Description: (Above Accordion)
 - Craft & Intention
 - How to Use
 - Dimensions & Ingredients
@@ -407,42 +270,36 @@ Panel animates open via `max-height` transition.
 
 ### Scents Section
 
-- Section heading: "SCENTS" (centred, RL Limo)
-- 2 full-bleed editorial photo cards side by side, no gap:
-  - **Vanilla** — warm image, text overlay (scent name + Top Notes / Heart / Base Notes)
-  - **Lavender** — floral image, same overlay structure
-- Image dims to ~60% brightness to support text legibility
-- Hover: subtle image zoom + slight extra dimming
+- Section heading: "SCENTS" (standard section headings, reuse, tokens: --text-h2, --text-primary-dark)
+- Use background-images, no text overlay
 
 ---
 
 ### Commitment Split
 
 Same structure as homepage commitment section:
-- Left: full-height image (`our-commitment-left.png`)
+
+- Left: full-height image (`assets/images/our-commitment-left.png`)
 - Right: eyebrow + heading + intro copy + credentials list
 
 **Credentials:**
+
 - Vegan
 - Paraben-Free
 - Phthalate-Free
 - IFRA-Certified
 
-Each credential is separated by a subtle hairline border.
-
 ---
 
 ### You May Also Like
 
-- Heading: "YOU MAY ALSO LIKE" (centred, RL Limo)
-- 4-column product grid reusing `.products-grid` and `.product-card`
-- Each card: image, product name, sub-label, price, "Shop Now" outline CTA
+This section is same `Best Sellers` section on homepage. So reuse the home page layout/css, while having content from this page.
 
 ---
 
 ### Reviews
 
-- Heading: "WHAT OUR CUSTOMERS ARE SAYING" (centred, RL Limo)
+- Heading: "WHAT OUR CUSTOMERS ARE SAYING" (standard section heading)
 - 3-column review card grid
 - Each card:
   - Reviewer name + location
@@ -458,11 +315,8 @@ Each credential is separated by a subtle hairline border.
 
 | Breakpoint | Change |
 |---|---|
-| ≤ 768px | Product section stacks (gallery above form) |
-| ≤ 768px | Scents grid stacks to 1 column |
+| ≤ 1024px | Product section stacks (gallery above form) |
 | ≤ 768px | Reviews grid stacks to 1 column |
-| ≤ 640px | Add to Bag stretches full width |
-| ≤ 640px | Size toggles wrap |
 
 ---
 
@@ -479,6 +333,7 @@ Each credential is separated by a subtle hairline border.
 End of PRD
 
 ## Implementation Notes (2026-03-01)
+
 - Added dedicated route templates and styling for `our-story.html` (`assets/css/our-story.css`) and `contact.html` (`assets/css/contact.css`).
 - Added shared commerce persistence via `assets/js/cart-state.js` and flow-specific modules (`cart.js`, `checkout.js`).
 - Added shared form validation for story/contact flows via `assets/js/forms.js`.

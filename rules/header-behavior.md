@@ -4,15 +4,15 @@ This document governs the layout, constraints, and interactive mechanics of the 
 
 ## 1. Structural Constraints
 
-- **Maximum Height (Strict):** `130px`.
-  - The header must under no circumstances exceed `130px` on desktop.
+- **Maximum Height (Strict):** `135px`.
+  - The header must under no circumstances exceed `135px` on desktop.
   - If the logo and navigation links require breathing room, rely on `translateY` or flex alignment within this rigid threshold.
-- **Top Bar (Announcement):** If an announcement bar exists (e.g., "Launching March 2026"), it shares real estate inside this threshold, or sits statically above the sticky threshold if the header detaches.
 
 ## 2. Desktop Layout Engine
+
 - **Centering:** `logo` sits dead center of the viewport.
-- **Navigation:** Main categories (`SHOP ALL`, `BEST SELLERS`, `OUR STORY`) cluster around the logo or flank it on the left.
-- **Utility:** Icons (`Search (Magnifying Glass)`, `Wishlist (Heart)`, `Cart (Bag)`) cluster hard to the right boundary.
+- **Navigation:** Main categories (`SHOP ALL`, `GIFTS`, `OUR STORY`, `YOUR STORY`, `CONTACT US`) cluster around the logo or flank it on the left.
+- **Utility:** Icons (`Account (User)`, `Wishlist (Heart)`, `Cart (Bag)`) cluster hard to the right boundary. While `Search (Magnifying Glass)` is on left.
 - All groups use `flex` alignment (`align-items: center`).
 
 ## 3. The Sticky Scroll Interaction Rule
@@ -30,10 +30,12 @@ The header must feel completely un-intrusive when browsing massive imagery conte
   - Add a highly subtle `border-bottom: 1px solid var(--border-light);` or extremely soft shadow to detach it from content scrolling underneath.
 
 ## 4. Mobile Header Pivot
+
 - **Threshold:** At `1024px`, the desktop text navigation is hidden (`display: none`).
-- **Layout Shift:** 
-  - Logo shifts to the standard left-alignment wrapper.
-  - The right side houses the utility icons PLUS the Hamburger Menu.
-- **Hamburger Rules:** 
+- **Layout Shift:**
+  - The left side houses search and bag icons.
+  - The logo stays in the center but the smaller version of the logo is used.
+  - The right side houses the Hamburger Menu.
+- **Hamburger Rules:**
   - Must have strictly bounds `min-height: 44px; min-width: 44px;` for touch mechanics.
   - Sits flush right against the `20px` responsive gutter bound.

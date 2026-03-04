@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             line.className = 'summary-item';
             line.innerHTML = `
                 <div class="summary-product">
+                    <span class="qty-badge">${item.quantity}</span>
                     <div class="summary-img-wrap">
-                        <span class="qty-badge">${item.quantity}</span>
                         <img src="${item.image}" alt="${item.name}">
                     </div>
                     <div class="summary-details">

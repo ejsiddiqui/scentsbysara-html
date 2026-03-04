@@ -6,6 +6,10 @@ body.checkout-layout {
     background-color: var(--bg-primary);
 }
 
+.checkout-container {
+    padding: var(--gutter);
+}
+
 .checkout-main {
     gap: 0;
     padding-bottom: 120px;
@@ -150,6 +154,7 @@ select.form-input {
     display: flex;
     gap: 16px;
     align-items: center;
+    position: relative;
 }
 
 .summary-img-wrap {
@@ -162,17 +167,17 @@ select.form-input {
     align-items: center;
     justify-content: center;
     border-radius: 0;
+    overflow: hidden;
 }
 
 .summary-img-wrap img {
-    height: 80%;
     object-fit: contain;
 }
 
 .qty-badge {
     position: absolute;
     top: -8px;
-    right: -8px;
+    left: 53px;
     background-color: var(--color-mocha);
     color: var(--text-on-dark);
     width: 20px;
@@ -182,6 +187,7 @@ select.form-input {
     align-items: center;
     justify-content: center;
     font-size: var(--text-micro);
+    z-index: 2;
 }
 
 .summary-details h4 {
