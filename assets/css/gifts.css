@@ -1,0 +1,59 @@
+/* =========================================================================
+   GIFTS PAGE STYLES
+   ========================================================================= */
+
+.gifts-page {
+    padding-bottom: var(--space-section);
+}
+
+.gifts-page .small-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(20, 24, 26, 0.34) 0%, rgba(20, 24, 26, 0.24) 32%, rgba(20, 24, 26, 0.12) 100%);
+}
+
+.gifts-page .small-hero h1,
+.gifts-page .small-hero p {
+    color: var(--text-on-dark);
+}
+
+.gifts-page .small-hero p {
+    max-width: 960px;
+    font-size: var(--text-h3);
+}
+
+.gifts-page .gifts-product-grid {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter );
+}
+
+.gifts-page .bc-feature-btn {
+    width: 100%;
+}
+
+.gifts-page .testimonials-section {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+.gifts-page .testimonial-content {
+    padding: 0 70px;
+}
+
+.gifts-page .testimonial-text {
+    font-size: var(--text-h3);
+    color: var(--color-taupe);
+}
+
+@media (max-width: 1024px) {
+    .gifts-page .small-hero p {
+        font-size: var(--text-body-large);
+    }
+}
+
+@media (max-width: 768px) {
+    .gifts-page .testimonial-content {
+        padding: 0;
+    }
+}

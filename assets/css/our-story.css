@@ -3,20 +3,13 @@
    ========================================================================= */
 
 .story-hero {
-    position: relative;
     min-height: 620px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-on-dark);
-    overflow: hidden;
 }
 
 .story-hero--our {
-    background-image: url('../images/our-story.png');
+    background-image: url('../images/founder.jpg');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 40%;
 }
 
 .story-hero-overlay {
@@ -26,9 +19,6 @@
 }
 
 .story-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 860px;
     padding: 80px 24px;
 }
 
@@ -47,40 +37,19 @@
 }
 
 .story-hero-content p {
-    max-width: 680px;
     margin-left: auto;
     margin-right: auto;
     color: var(--text-on-dark);
 }
 
 .our-story-intro {
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding: 96px 0;
 }
 
 .our-story-image-wrap img {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-}
-
-.our-story-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 24px;
-}
-
-.our-story-copy h2 {
-    font-size: var(--text-h2);
-    color: var(--color-mocha);
-    line-height: 1.1;
-}
-
-.our-story-copy p {
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 56ch;
 }
 
 .our-story-values {
@@ -105,7 +74,7 @@
 
 .value-card h3 {
     font-family: var(--font-sans);
-    font-size: var(--text-small);
+    font-size: var(--text-body-large);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     margin-bottom: 14px;
@@ -113,9 +82,10 @@
 }
 
 .value-card p {
-    color: var(--text-muted);
+    color: var(--text-primary);
     line-height: 1.6;
     font-size: var(--text-body);
+    font-weight: 300;
 }
 
 .timeline-list {
@@ -143,7 +113,7 @@
 }
 
 .timeline-list p {
-    color: var(--text-muted);
+    font-weight: 300;
     line-height: 1.7;
 }
 

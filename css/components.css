@@ -2,6 +2,17 @@
    SCENTS BY SARA - COMPONENTS SYSTEM (V2)
    15-Year Architect Standard: UI Elements, Cards, Navigation & Footers
    ========================================================================= */
+/* --- 0. COMMON --- */
+
+.bg-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+
 
 /* --- 1. BUTTONS & LINKS --- */
 .btn-solid,
@@ -686,7 +697,7 @@
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: var(--space-lg);
 }
 
 .product-image-wrap {

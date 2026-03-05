@@ -1,0 +1,31 @@
+/* =========================================================================
+   SCULPTED COLLECTION PAGE STYLES
+   ========================================================================= */
+
+.sculpted-collection-page {
+    padding-bottom: var(--space-section);
+}
+
+.sculpted-collection-page .small-hero h1,
+.sculpted-collection-page .small-hero p {
+    color: var(--text-primary);
+}
+
+.sculpted-products-section {
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+.sculpted-collection-page .bc-feature {
+    margin-top: 0;
+}
+
+.sculpted-collection-page .bc-feature-btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .sculpted-collection-page .small-hero p {
+        font-size: var(--text-body-large);
+    }
+}

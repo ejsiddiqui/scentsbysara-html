@@ -180,7 +180,7 @@
 
 .bc-feature-inner {
     width: 100%;
-    max-width: 540px;
+    max-width: 580px;
     text-align: center;
 }
 
@@ -205,7 +205,7 @@
 .bc-feature-product-media {
     display: block;
     width: min(100%, 360px);
-    margin: 64px auto 40px;
+    margin: 40px auto 32px;
 }
 
 .bc-feature-you h3 {
@@ -271,7 +271,7 @@
 
 .bc-feature-intro {
     color: var(--text-muted);
-    font-size: var(--text-h3);
+    font-size: var(--text-h4);
     line-height: 1.35;
     margin-bottom: 48px;
     font-weight: 300;

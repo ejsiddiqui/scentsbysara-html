@@ -3,44 +3,14 @@
    ========================================================================= */
 
 .story-hero {
-    position: relative;
-    background-image: url('../images/sara.png');
-    background-size: cover;
-    background-position: center 20%;
-    min-height: 640px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-on-dark);
+    background-image: url('../images/bg-hero-gifts.png');
+    padding: 0 var(--gutter);
 }
 
 .story-hero-overlay {
     position: absolute;
     inset: 0;
     background-color: var(--overlay-dark-40);
-}
-
-.story-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 64px 24px;
-}
-
-.story-hero-content h1 {
-    font-size: var(--text-h1);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 400;
-}
-
-.story-hero-content hr {
-    width: 44px;
-    margin: 0 auto;
-    border: none;
-    border-top: 2px solid var(--text-on-dark);
 }
 
 .story-hero-content p {
@@ -321,10 +291,6 @@
 }
 
 @media (max-width: 1024px) {
-    .masonry-grid {
-        grid-template-columns: 1fr;
-    }
-
     .split-belief {
         padding: 88px 0;
     }
@@ -389,11 +355,17 @@
 }
 
 @media (max-width: 640px) {
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
     .story-submit-section .grid-cols-2 {
         grid-template-columns: 1fr;
     }
 
     .story-submit-section .btn-hero {
         width: 100%;
+    }
+    .split-belief{
+        padding: 60px 20px;
     }
 }

@@ -51,6 +51,58 @@
             "description": "Commitment body copy should use slate token color."
         }
     ],
+    "sculpted-collection.html": [
+        {
+            "selector": ".sculpted-collection-page .small-hero h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Sculpted collection hero heading should use h1 token size."
+        },
+        {
+            "selector": ".sculpted-collection-page .sort-label",
+            "property": "font-size",
+            "token": "--text-micro",
+            "description": "Sort label should use micro token size."
+        },
+        {
+            "selector": ".sculpted-collection-page .shop-card .product-name",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "description": "Product names in sculpted collection grid should use body-large token size."
+        },
+        {
+            "selector": ".sculpted-collection-page .bc-feature-intro",
+            "property": "color",
+            "token": "--text-muted",
+            "description": "Sculpted section intro copy should use muted text token."
+        }
+    ],
+    "gifts.html": [
+        {
+            "selector": ".gifts-page .small-hero h1",
+            "property": "font-size",
+            "token": "--text-h1",
+            "description": "Gifts hero heading should use h1 token size."
+        },
+        {
+            "selector": ".gifts-page .small-hero p",
+            "property": "color",
+            "token": "--text-on-dark",
+            "description": "Gifts hero copy should use on-dark text token."
+        },
+        {
+            "selector": ".gifts-page .gifts-product-grid .product-name",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "description": "Gift grid product names should use body-large token size."
+        },
+        {
+            "selector": ".gifts-page .testimonial-text",
+            "property": "font-size",
+            "token": "--text-h3",
+            "description": "Gifts testimonial quote should use h3 token size."
+        }
+    ],
     "contact.html": [
         {
             "selector": ".story-hero-content h1",
@@ -81,14 +133,14 @@
         {
             "selector": ".our-story-copy h2",
             "property": "font-size",
-            "token": "--text-h2",
-            "description": "Our story content heading should use h2 token size."
+            "token": "--text-h1",
+            "description": "Our story content heading should use h1 token size."
         },
         {
             "selector": ".value-card p",
             "property": "color",
-            "token": "--text-muted",
-            "description": "Value card body copy should use muted text token."
+            "token": "--text-primary",
+            "description": "Value card body copy should use primary text token."
         }
     ],
     "product.html": [

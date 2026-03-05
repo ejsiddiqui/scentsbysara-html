@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sculpted Collection | Scents by Sara</title>
+    <link rel="stylesheet" href="https://use.typekit.net/abn0bto.css">
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="assets/css/body-candles.css">
+    <link rel="stylesheet" href="assets/css/shop.css">
+    <link rel="stylesheet" href="assets/css/sculpted-collection.css">
+</head>
+
+<body>
+
+    <!-- SHARED SITE HEADER -->
+    <div data-shared-partial="site-header"></div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="page-wrapper body-candles-page sculpted-collection-page">
+        <section class="small-hero" aria-label="Sculpted Collection hero">
+            <img src="assets/images/bg-hero-sculpted-collection.png" alt="" aria-hidden="true" class="small-hero-image">
+            <div class="container small-hero-content">
+                <h1 class="font-serif">SCULPTED COLLECTION</h1>
+                <p>The Sculpted Collection celebrates the female form through simplicity and presence alone. Minimal, considered and free from custom marks, these pieces invite stillness, reflection, and honour what already exists - inherent beauty, balance, and worth.</p>
+            </div>
+        </section>
+
+        <section class="section-block best-sellers sculpted-products-section">
+            <div class="container">
+                <div class="filter-toolbar">
+                    <button class="filter-btn" type="button" aria-expanded="false" aria-controls="shop-filter-panel">
+                        <span>FILTER</span>
+                        <svg class="filter-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="21" x2="4" y2="14"></line>
+                            <line x1="4" y1="10" x2="4" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12" y2="3"></line>
+                            <line x1="20" y1="21" x2="20" y2="16"></line>
+                            <line x1="20" y1="12" x2="20" y2="3"></line>
+                            <line x1="1" y1="14" x2="7" y2="14"></line>
+                            <line x1="9" y1="8" x2="15" y2="8"></line>
+                            <line x1="17" y1="16" x2="23" y2="16"></line>
+                        </svg>
+                    </button>
+                    <div class="sort-dropdown">
+                        <label for="sort-select" class="sort-label">SORT BY:</label>
+                        <select id="sort-select" class="sort-select" aria-label="Sort products">
+                            <option value="asc">PRICE (LOW TO HIGH)</option>
+                            <option value="desc">PRICE (HIGH TO LOW)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid grid-cols-4">
+                    <article class="product-card shop-card" data-category="slim">
+                        <a href="product.html" class="product-image-wrap product-image-link">
+                            <img src="assets/images/she-is-timeless-thumb.png" alt="She Is Timeless">
+                        </a>
+                        <div class="product-info-stacked">
+                            <span class="product-name">SHE IS TIMELESS</span>
+                            <span class="product-scent">Plain Body Candle</span>
+                            <div class="product-price">
+                                <span class="price-current">£20.26</span>
+                            </div>
+                        </div>
+                        <a class="product-btn" href="product.html">SHOP NOW</a>
+                    </article>
+
+                    <article class="product-card shop-card" data-category="curvy">
+                        <a href="product.html" class="product-image-wrap product-image-link">
+                            <img src="assets/images/she-is-beauty-thumb.png" alt="She Is Beauty">
+                        </a>
+                        <div class="product-info-stacked">
+                            <span class="product-name">SHE IS BEAUTY</span>
+                            <span class="product-scent">23K Gold Body Candle</span>
+                            <div class="product-price">
+                                <span class="price-current">£20.26</span>
+                            </div>
+                        </div>
+                        <a class="product-btn" href="product.html">SHOP NOW</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bc-feature bc-feature-scar" aria-label="Scar collection panel">
+            <div class="bc-feature-media">
+                <img src="assets/images/scar-collection-half.png" alt="Scar collection close-up">
+            </div>
+            <div class="bc-feature-content">
+                <div class="bc-feature-inner bc-feature-scar-copy">
+                    <h2 class="font-serif">SCAR COLLECTION</h2>
+                    <p class="bc-feature-intro">The Scar Collection celebrates the body as a holder of memory, healing, and confidence. Gold leaf is applied by hand to mark scars - not as decoration but as recognition.</p>
+                    <div class="bc-scar-points">
+                        <p><strong>She Is Lust - Stretch Marks</strong><span>Celebrating growth &amp; transformation</span></p>
+                        <p><strong>She Is Strength - Mastectomy Scars</strong><span>Acknowledging resilience &amp; courage</span></p>
+                        <p><strong>She Is Power - C-section</strong><span>Honouring motherhood &amp; creation</span></p>
+                        <p><strong>She Is You - Custom Scars</strong><span>Created in collaboration with you.</span></p>
+                    </div>
+                    <a class="btn-solid bc-feature-btn" href="scar-collection.html">DISCOVER COLLECTION</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SHARED SITE FOOTER -->
+    <div data-shared-partial="site-footer"></div>
+
+    <!-- SHARED MOBILE MENU -->
+    <div data-shared-partial="mobile-menu"></div>
+
+    <script src="assets/js/cart-state.js"></script>
+    <script src="assets/js/shared-layout.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/shop.js"></script>
+</body>
+
+</html>
