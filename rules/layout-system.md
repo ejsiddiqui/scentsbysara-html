@@ -20,11 +20,12 @@ Modern layouts fluidly scale, but must respect hard ceilings to maintain premium
 Layout logic is heavily reliant on CSS Grid to avoid complex nested Flexbox math.
 
 ### The Standard Grid Setup
+
 ```css
 .container {
-  max-width: 1720px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 0 var(--gutter-desk, 100px);
+  padding: var(--gutter);
 }
 
 /* 4-Column Product Grids */
@@ -43,11 +44,13 @@ Layout logic is heavily reliant on CSS Grid to avoid complex nested Flexbox math
 ```
 
 ## 3. Do's and Don'ts
+
 - **Do:** Enforce layout at the parent `container` level. Components inside should take `100%` of their allocated grid cell.
 - **Don't:** Apply left/right margin to individual cards or buttons to create layout structures.
 - **Do:** Use `gap` for internal spacing between sibling items in a grid or flex flex layout.
 - **Don't:** Rely on pseudo-selectors or nested float clear hacks for layout control.
 
 ## 4. Header & Overflow Controls
-- **Header Max Height:** `130px`. The site content below the header must account for this fixed real-estate when anchored or sticky.
+
+- **Header Max Height:** `135px`. The site content below the header must account for this fixed real-estate when anchored or sticky.
 - **Horizontal Overflow:** `overflow-x: hidden` must be permanently applied to the global `body` or `.site-wrapper` to prevent mobile grid blow-outs from causing side scrolling.

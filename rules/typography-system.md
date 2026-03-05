@@ -3,9 +3,11 @@
 This document enforces the strict font usage for the Scents by Sara UI.
 
 ## 1. Typeface Enforcement
+
 There are exactly two approved typefaces for this project.
 
-- **Primary Typeface:** `RL Limo` (Regular). 
+- **Primary Typeface:** `RL Limo` (Regular).
+
   - Usage: H1, H2, H3, Hero Headings, pull quotes, `.mega-menu` primary titles.
   - Fallback: `Georgia, serif` (if font fails to load).
   
@@ -14,9 +16,11 @@ There are exactly two approved typefaces for this project.
   - Fallback: `Helvetica, Arial, sans-serif`.
 
 ### Crucial Prohibition
+
 Do not use italic variations of `RL Limo` or `Suisse Int'l` unless explicitly present in the design screenshot. Almost all text is set to `font-style: normal`. Use tracking (letter-spacing) in buttons, not italics.
 
 ## 2. Typographic Scale Strategy
+
 The system must be fluidly responsive across breakpoints. Do not hardcode `px` font sizes for headings. Use CSS clamp() functions.
 
 - **Hero & Display (`var(--text-hero)`)**
@@ -29,6 +33,7 @@ The system must be fluidly responsive across breakpoints. Do not hardcode `px` f
   - Fixed: `0.75rem` (12px) or `0.6875rem` (11px). Extremely tracked out (`letter-spacing: 0.1em; text-transform: uppercase`). Used for "Customer Testimonials" labels or author attribution.
 
 ## 3. Paragraph Formatting & Rhythm
+
 - The optimal line length for body copy is ~60 characters. Use `max-width` on paragraphs (e.g., `max-width: 560px;`) rather than letting text flow endlessly across `1440px`.
 - Line-height must be strictly:
   - `1.1` to `1.2` for `RL Limo` Headings to keep descenders tight.
