@@ -1,0 +1,59 @@
+/* =========================================================================
+   SCAR COLLECTION PAGE STYLES
+   ========================================================================= */
+
+.scar-collection-page {
+    padding-bottom: var(--space-section);
+}
+
+.scar-collection-page .small-hero h1,
+.scar-collection-page .small-hero p {
+    color: var(--text-primary);
+}
+
+.scar-products-section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+}
+
+.scar-products-section .filter-toolbar {
+    margin-bottom: var(--space-xl);
+}
+
+.scar-products-section .product-grid {
+    gap: var(--space-md);
+}
+
+.scar-collection-page .commitment-text h2 {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+@media (max-width: 1024px) {
+    .scar-collection-page > .bc-hero {
+        min-height: 380px;
+    }
+
+    .scar-collection-page .bc-hero p {
+        font-size: var(--text-body-large);
+    }
+}
+
+@media (max-width: 768px) {
+    .scar-collection-page > .bc-hero {
+        min-height: 320px;
+    }
+
+    .scar-collection-page .bc-hero-image {
+        object-position: 70% center;
+    }
+
+    .scar-collection-page .commitment-text h2 {
+        margin-bottom: 26px;
+        padding-bottom: 18px;
+    }
+
+    .scar-collection-page .commitment-text h2::after {
+        width: 150px;
+    }
+}

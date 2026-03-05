@@ -37,7 +37,7 @@
 }
 
 .bc-hero h1 {
-    font-size: var(--text-hero);
+    font-size: var(--text-h1);
     line-height: 1.05;
     margin-bottom: var(--space-md);
     color: var(--color-sand);
@@ -45,7 +45,7 @@
 
 .bc-hero p {
     color: var(--color-sand);
-    font-size: var(--text-h3);
+    font-size: var(--text-h4);
     line-height: 1.35;
     font-weight: 300;
     max-width: 1040px;
@@ -60,15 +60,16 @@
     font-size: var(--text-h1);
     line-height: 1.05;
     margin-bottom: var(--space-md);
-    color: var(--text-primary);
+    color: var(--text-primary-dark);
 }
 
 .bc-section-copy {
-    color: var(--text-primary);
+    color: var(--text-primary-dark);
     font-size: var(--text-body-large);
     line-height: 1.45;
     max-width: 1510px;
     margin-bottom: var(--space-md);
+    font-weight: 300;
 }
 
 .bc-grid {
@@ -192,8 +193,9 @@
 
 .bc-feature-lead {
     color: var(--text-primary);
-    font-size: var(--text-h4);
+    font-size: var(--text-body-large);
     line-height: 1.35;
+    font-weight: 300;
 }
 
 .bc-feature-lead strong {
@@ -208,18 +210,18 @@
 
 .bc-feature-you h3 {
     color: var(--text-primary);
-    font-family: var(--font-sans);
-    font-size: var(--text-h4);
+    font-size: var(--text-h5);
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: var(--space-sm);
 }
 
 .bc-feature-price {
-    color: var(--text-muted);
-    font-size: var(--text-h5);
+    color: var(--text-primary);
+    font-size: var(--text-body);
     line-height: 1.2;
     margin-bottom: var(--space-lg);
+    font-weight: 300;
 }
 
 .bc-feature-btn {
@@ -236,6 +238,7 @@
     font-size: var(--text-h3);
     line-height: 1.35;
     margin-bottom: var(--space-lg);
+    font-weight: 300;
 }
 
 .bc-feature-story p:last-of-type {
@@ -253,7 +256,8 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--text-muted);
+    border-bottom: 1px solid var(--text-primary);
+    font-weight: 500;
 }
 
 .bc-feature-scar .bc-feature-media img {
@@ -270,6 +274,7 @@
     font-size: var(--text-h3);
     line-height: 1.35;
     margin-bottom: 48px;
+    font-weight: 300;
 }
 
 .bc-scar-points {
@@ -281,13 +286,14 @@
 
 .bc-scar-points p {
     color: var(--text-primary);
-    font-size: var(--text-h4);
+    font-size: var(--text-body-large);
     line-height: 1.35;
 }
 
 .bc-scar-points strong {
+    color: var(--text-primary-dark);
     display: block;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .bc-scar-points span {
@@ -336,10 +342,6 @@
 }
 
 @media (max-width: 1024px) {
-    .body-candles-page {
-        padding-top: 84px;
-    }
-
     .bc-products {
         padding-top: var(--space-lg);
     }

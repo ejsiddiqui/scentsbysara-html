@@ -142,7 +142,7 @@
     .section-title,
     section .section-title,
     .container .section-title {
-        margin-bottom: var(--space-md);
+        margin-bottom: var(--space-lg);
     }
 
     .footer-bottom-row {
@@ -305,6 +305,21 @@
 
 /* --- 480px (Small Mobile Threshold) --- */
 @media (max-width: 480px) {
+    :root {
+        --text-hero: 42px;
+        --text-h1: 36px;
+        --text-h2: 32px;
+        --text-h3: 26px;
+        --text-h4: 22px;
+        --text-h5: 18px;
+        --text-h6: 16px;
+        --text-body-large: 15px;
+        --text-body: 13px;
+        --text-small: 11px;
+        --text-micro: 10px;
+        --gutter: 14px;
+    }
+
     .logo-long {
         display: none;
     }
@@ -335,6 +350,10 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .product-info-stacked {
+        margin-bottom: 10px;
+    }
+
     .product-card{
         margin-bottom: 20px;
     }
@@ -355,6 +374,14 @@
         --text-hero: 40px;
         --text-h1: 32px;
         --text-h2: 24px;
+        --text-h3: 20px;
+        --text-h4: 18px;
+        --text-h5: 16px;
+        --text-h6: 14px;
+        --text-body-large: 16px;
+        --text-body: 14px;
+        --text-small: 12px;
+        --text-micro: 10px;
         --gutter: 12px;
     }
 

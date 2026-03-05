@@ -22,7 +22,7 @@
 /* Base sizing */
 .btn-solid,
 .btn-outline {
-    padding: 18px 60px;
+    padding: 14px 60px;
 }
 
 .btn-hero {
@@ -627,6 +627,46 @@
     background-color: var(--color-slate);
 }
 
+/* 3a. SMALL HERO HEADER*/
+.small-hero{
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    min-height: 383px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.small-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.small-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.small-hero h1 {
+    font-size: var(--text-h1);
+    line-height: 1.05;
+    margin-bottom: var(--space-md);
+    color: var(--color-sand);
+}
+
+.small-hero p {
+    color: var(--color-sand);
+    font-size: var(--text-h4);
+    line-height: 1.35;
+    font-weight: 300;
+    max-width: 1040px;
+}
+
 
 /* --- 4. BEST SELLERS & PRODUCT CARDS --- */
 .best-sellers {
@@ -671,20 +711,19 @@
 }
 
 .product-info-stacked {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 4px;
     margin-bottom: 20px;
     padding-top: 12px;
     text-align: left;
-}
-
-.best-sellers .product-info-stacked {
-    display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
         "name price"
-        "scent scent";
+        "scent scent"
+        "desc desc";
+}
+
+.best-sellers .product-info-stacked {
     column-gap: 16px;
     row-gap: 4px;
     align-items: start;
@@ -911,7 +950,7 @@
     padding-bottom: 22px;
     margin-bottom: 42px;
 }
-
+.commitment-text h2::after,
 .home-page .commitment-text h2::after {
     content: "";
     position: absolute;
