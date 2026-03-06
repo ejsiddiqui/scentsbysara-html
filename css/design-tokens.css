@@ -43,6 +43,7 @@
     --space-md: 16px;
     --space-lg: 32px;
     --space-xl: 64px;
+    --space-xxl: 80px;
     --space-2xl: 96px;
     --space-3xl: 128px;
     --space-4xl: 80px;
@@ -61,6 +62,8 @@
     /* Narrow editorial blocks */
     --gutter: 60px;
     /* 60px side space inside 1920 section row */
+    --inner-gutter: 80px;
+    /* 80px between around text for split sections */
     --radius-max: 0px;
     /* Strict border radius limit - Changed to 0px for sharp design */
     --border-newsletter: 1px solid var(--color-mocha);
@@ -71,14 +74,14 @@
     --font-sans: "Suisse Int'l", sans-serif;
 
     --text-hero: 56px;
-    --text-h1: 49px;
+    --text-h1: 47px;
     --text-h2: 39px;
     --text-h3: 31px;
     --text-h4: 25px;
     --text-h5: 21px;
     --text-h6: 18px;
     --text-heading-extra: 36px;
-    --text-body-large: 20px;
+    --text-body-large: 18px;
     --text-body: 16px;
     --text-small: 13px;
     --text-micro: 11px;

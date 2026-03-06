@@ -356,10 +356,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 24px;
-    border-bottom: 1px solid var(--color-slate);
+    border-bottom: 1px solid var(--color-mocha);
     padding-bottom: 8px;
     color: var(--color-slate);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .mega-col ul li {
@@ -378,7 +378,7 @@
 }
 .mega-col:first-child ul li:first-child a,
 .mega-col:nth-child(2) ul li:first-child a{
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .mega-image-col {
@@ -688,7 +688,6 @@
 .best-sellers .section-title,
 .section-title {
     margin-bottom: 60px;
-    letter-spacing: 0.1em;
     font-size: var(--text-h2);
     color: var(--text-primary-dark);
     text-align: center;
@@ -830,7 +829,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 .stars img {
@@ -894,10 +893,10 @@
 .testimonial-author {
     font-family: var(--font-sans);
     font-size: var(--text-body-large);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-slate);
+    color: var(--color-taupe);
 }
 
 .testimonials-section .slider-dots {
@@ -927,7 +926,7 @@
 /* --- 5. COMMITMENT SECTION --- */
 .commitment-section {
     background-color: var(--bg-primary);
-    padding: var(--space-4xl) 0;
+    padding: var(--space-xxl) 0;
 }
 .section-block.commitment-section{
     padding:var(--gutter) 0;
@@ -944,7 +943,7 @@
 }
 
 .commitment-text {
-    padding: 0 var(--gutter);
+    padding: 0 var(--inner-gutter);
 }
 
 .commitment-text h2 {
@@ -958,8 +957,8 @@
 
 .home-page .commitment-text h2 {
     position: relative;
-    padding-bottom: 22px;
-    margin-bottom: 42px;
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-lg);
 }
 .commitment-text h2::after,
 .home-page .commitment-text h2::after {
@@ -982,7 +981,7 @@
 .commitment-item h3 {
     font-family: var(--font-sans);
     font-size: var(--text-body-large);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-slate);
     margin-bottom: var(--space-xs);
     text-transform: none;
@@ -1014,7 +1013,7 @@
 /* --- 6. COLLECTIONS SECTION --- */
 .collections-section {
     background-color: var(--bg-primary);
-    padding-bottom: var(--space-4xl);
+    padding-bottom: var(--space-xxl);
 }
 
 .collection-card {
@@ -1050,7 +1049,7 @@
 
 .collection-card h3 {
     font-family: var(--font-serif);
-    font-size: 36px;
+    font-size: var(--text-h3);
     color: var(--color-mocha);
     margin-bottom: var(--space-md);
     letter-spacing: 0.02em;
@@ -1088,7 +1087,7 @@ section.story-split {
 }
 
 .story-text-block {
-    padding: var(--space-4xl) var(--gutter);
+    padding: var(--space-xxl) var(--inner-gutter);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1108,12 +1107,20 @@ section.story-split {
     text-transform: uppercase;
 }
 
+.home-page .story-text-block h2 {
+    margin: var(--space-xl) 0;
+}
+
 .story-text-block p {
     color: var(--color-mocha);
     line-height: 1.6;
     margin-bottom: var(--space-xl);
     font-size: var(--text-body-large);
     font-weight: 300;
+}
+
+.home-page .story-text-block p {
+    padding: 0 var(--space-xxl);
 }
 
 .story-img-block {
@@ -1186,7 +1193,7 @@ section.story-split {
 
 .newsletter-form-stacked input {
     width: 100%;
-    height: 64px;
+    height: 56px;
     background-color: rgba(235, 231, 224, 0.4);
     border: 1px solid var(--color-taupe);
     padding: 0 20px;
@@ -1246,7 +1253,7 @@ section.story-split {
 }
 
 .footer-link-list a {
-    font-size: var(--text-body-large);
+    font-size: var(--text-body);
     color: var(--color-mocha);
     transition: opacity 0.3s;
     font-weight: 300;

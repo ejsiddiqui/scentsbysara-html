@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3 class="font-serif">FILTERS</h3>
                 <button class="close-filters icon-btn">&times;</button>
             </div>
-            <div class="filter-grid grid-cols-3">
+            <div class="filter-grid grid-cols-2">
                 <div class="filter-group">
                     <h4>BODY SHAPE</h4>
                     <label><input type="checkbox" value="slim"> SLIM</label>
@@ -56,14 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <label><input type="checkbox" value="plus-size"> PLUS SIZE</label>
                 </div>
                 <div class="filter-group">
-                    <h4>SCENT</h4>
-                    <label><input type="checkbox" value="vanilla"> VANILLA</label>
-                    <label><input type="checkbox" value="lavender"> LAVENDER</label>
-                </div>
-                <div class="filter-group">
-                    <h4>COLLECTION</h4>
-                    <label><input type="checkbox" value="scar"> SCAR COLLECTION</label>
-                    <label><input type="checkbox" value="sculpted"> SCULPTED COLLECTION</label>
+                    <h4>BODY COLOUR</h4>
+                    <label><input type="checkbox" value="ivory"> IVORY</label>
+                    <label><input type="checkbox" value="caramel"> CARAMEL</label>
+                    <label><input type="checkbox" value="mocha"> MOCHA</label>
                 </div>
             </div>
             <div class="filter-footer mt-12 flex-between">
@@ -98,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (applyFiltersBtn) {
         applyFiltersBtn.addEventListener('click', () => {
             const selectedShapes = Array.from(filterOverlay.querySelectorAll('.filter-group:first-child input:checked')).map(i => i.value);
-            filterProducts(selectedShapes);
+            const selectedColors = Array.from(filterOverlay.querySelectorAll('.filter-group:nth-child(2) input:checked')).map(i => i.value);
+            filterProducts(selectedShapes, selectedColors);
             filterOverlay.classList.remove('active');
             if (filterBtn) filterBtn.setAttribute('aria-expanded', 'false');
             filterOverlay.setAttribute('aria-hidden', 'true');
@@ -110,14 +107,33 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clearFiltersBtn) {
         clearFiltersBtn.addEventListener('click', () => {
             filterOverlay.querySelectorAll('input').forEach(i => i.checked = false);
-            filterProducts([]);
+            filterProducts([], []);
         });
     }
 
-    function filterProducts(shapes) {
+    function getCardColors(card) {
+        const definedColors = card.dataset.colors;
+        if (definedColors) {
+            return definedColors.split(/\s+/).filter(Boolean);
+        }
+
+        const swatches = Array.from(card.querySelectorAll('.color-swatches .swatch'));
+        return swatches.map((swatch) => {
+            if (swatch.classList.contains('swatch-tan')) return 'caramel';
+            if (swatch.classList.contains('swatch-brown')) return 'mocha';
+            return 'ivory';
+        });
+    }
+
+    function filterProducts(shapes, colors) {
         const cards = document.querySelectorAll('.shop-card');
         cards.forEach(card => {
-            if (shapes.length === 0 || shapes.includes(card.dataset.category)) {
+            const cardShape = card.dataset.category;
+            const cardColors = getCardColors(card);
+            const matchesShape = shapes.length === 0 || shapes.includes(cardShape);
+            const matchesColor = colors.length === 0 || colors.some((color) => cardColors.includes(color));
+
+            if (matchesShape && matchesColor) {
                 card.style.display = '';
             } else {
                 card.style.display = 'none';

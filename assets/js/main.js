@@ -298,41 +298,4 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlide();
     }
 
-    /* --- Shared product CTA cart persistence --- */
-    const sharedCartButtons = document.querySelectorAll('.product-card .product-btn, .related-products .btn-shop-now');
-
-    sharedCartButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const card = button.closest('.product-card');
-            if (!card || !window.CartState) return;
-
-            const name = card.querySelector('.product-name')?.textContent?.trim() || 'SCENTS BY SARA CANDLE';
-            const priceText = card.querySelector('.price-current:last-child, .price-current')?.textContent || '£20.26';
-            const price = parseFloat(priceText.replace('£', '')) || 20.26;
-            const scent = card.querySelector('.product-scent, .product-desc')?.textContent?.trim() || 'VANILLA';
-            const image = card.querySelector('.product-image-wrap img')?.getAttribute('src') || 'assets/images/product-1.png';
-
-            window.CartState.addItem({
-                id: name.toLowerCase().replace(/\s+/g, '-'),
-                name,
-                price,
-                quantity: 1,
-                color: 'IVORY',
-                size: 'SLIM',
-                scent,
-                image,
-                url: 'product.html'
-            });
-
-            const originalLabel = button.textContent;
-            button.textContent = 'ADDED TO BAG';
-            setTimeout(() => {
-                button.textContent = originalLabel;
-            }, 1500);
-
-            // Prevent legacy inline handlers from forcing product-only navigation.
-            event.stopPropagation();
-        });
-    });
-
 });
