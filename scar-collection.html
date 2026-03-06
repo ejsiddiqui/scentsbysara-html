@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="assets/css/body-candles.css">
+    <link rel="stylesheet" href="assets/css/choices/choices.min.css">
     <link rel="stylesheet" href="assets/css/shop.css">
     <link rel="stylesheet" href="assets/css/scar-collection.css">
 </head>
@@ -51,6 +52,9 @@
                     <div class="sort-dropdown">
                         <label for="sort-select" class="sort-label">SORT BY:</label>
                         <select id="sort-select" class="sort-select" aria-label="Sort products">
+                            <option value="featured">Featured</option>
+                            <option value="bestsellers">Bestsellers</option>
+                            <option value="new">New In</option>
                             <option value="asc">PRICE (LOW TO HIGH)</option>
                             <option value="desc">PRICE (HIGH TO LOW)</option>
                         </select>
@@ -62,6 +66,20 @@
                         <a href="product.html" class="product-image-wrap product-image-link">
                             <img src="assets/images/she-is-you-thumb2.png" alt="She Is You">
                         </a>
+                        <div class="product-options">
+                            <div class="size-dropdown">
+                                <select class="size-select" aria-label="Select body shape">
+                                    <option value="slim" selected>SHAPE: SLIM</option>
+                                    <option value="curvy">SHAPE: CURVY</option>
+                                    <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                                </select>
+                            </div>
+                            <div class="color-swatches">
+                                <span class="swatch swatch-white active"></span>
+                                <span class="swatch swatch-tan"></span>
+                                <span class="swatch swatch-brown"></span>
+                            </div>
+                        </div>
                         <div class="product-info-stacked">
                             <span class="product-name"><a href="product.html">SHE IS YOU</a></span>
                             <span class="product-scent">Custom Body Candle</span>
@@ -76,6 +94,20 @@
                         <a href="product.html" class="product-image-wrap product-image-link">
                             <img src="assets/images/she-is-strength-thumb.png" alt="She Is Strength">
                         </a>
+                        <div class="product-options">
+                            <div class="size-dropdown">
+                                <select class="size-select" aria-label="Select body shape">
+                                    <option value="slim" selected>SHAPE: SLIM</option>
+                                    <option value="curvy">SHAPE: CURVY</option>
+                                    <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                                </select>
+                            </div>
+                            <div class="color-swatches">
+                                <span class="swatch swatch-white active"></span>
+                                <span class="swatch swatch-tan"></span>
+                                <span class="swatch swatch-brown"></span>
+                            </div>
+                        </div>
                         <div class="product-info-stacked">
                             <span class="product-name"><a href="product.html">SHE IS STRENGTH</a></span>
                             <span class="product-scent">Mastectomy Scar Body Candle</span>
@@ -90,6 +122,20 @@
                         <a href="product.html" class="product-image-wrap product-image-link">
                             <img src="assets/images/she-is-lust-thumb.png" alt="She Is Lust">
                         </a>
+                        <div class="product-options">
+                            <div class="size-dropdown">
+                                <select class="size-select" aria-label="Select body shape">
+                                    <option value="slim" selected>SHAPE: SLIM</option>
+                                    <option value="curvy">SHAPE: CURVY</option>
+                                    <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                                </select>
+                            </div>
+                            <div class="color-swatches">
+                                <span class="swatch swatch-white active"></span>
+                                <span class="swatch swatch-tan"></span>
+                                <span class="swatch swatch-brown"></span>
+                            </div>
+                        </div>
                         <div class="product-info-stacked">
                             <span class="product-name"><a href="product.html">SHE IS LUST</a></span>
                             <span class="product-scent">Stretch Marks Body Candle</span>
@@ -104,6 +150,20 @@
                         <a href="product.html" class="product-image-wrap product-image-link">
                             <img src="assets/images/she-is-power-thumb.png" alt="She Is Power">
                         </a>
+                        <div class="product-options">
+                            <div class="size-dropdown">
+                                <select class="size-select" aria-label="Select body shape">
+                                    <option value="slim" selected>SHAPE: SLIM</option>
+                                    <option value="curvy">SHAPE: CURVY</option>
+                                    <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                                </select>
+                            </div>
+                            <div class="color-swatches">
+                                <span class="swatch swatch-white active"></span>
+                                <span class="swatch swatch-tan"></span>
+                                <span class="swatch swatch-brown"></span>
+                            </div>
+                        </div>
                         <div class="product-info-stacked">
                             <span class="product-name"><a href="product.html">SHE IS POWER</a></span>
                             <span class="product-scent">C-Section Body Candle</span>
@@ -163,6 +223,7 @@
     <script src="assets/js/cart-state.js"></script>
     <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/choices.min.js"></script>
     <script src="assets/js/shop.js"></script>
 </body>
 

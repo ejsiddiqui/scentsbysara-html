@@ -29,6 +29,7 @@ No build step is required for static pages.
 - Use semantic HTML and keep page-specific logic in `assets/js/<page>.js`.
 - Use CSS variables from `css/design-tokens.css`; do not hardcode off-palette colors.
 - Always use typographic scale tokens from `css/design-tokens.css` (for example `--text-body-large`) instead of raw/random `px` values for UI typography.
+- If using the `Choices` library for selects, do not include `base.min.css` from `Choices` library; it breaks the storefront layout. Use `assets/css/choices/choices.min.css` only, plus page-specific overrides as needed.
 - Match existing naming: kebab-case files and classes (for example `our-story.html`, `.announcement-bar`).
 - Preserve current formatting style (4-space indentation in HTML/CSS/JS files).
 - Make resuable and maintainable code, and resuse where possible

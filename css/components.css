@@ -33,7 +33,7 @@
 /* Base sizing */
 .btn-solid,
 .btn-outline {
-    padding: 14px 60px;
+    padding: 11px 60px;
 }
 
 .btn-hero {
@@ -107,7 +107,7 @@
     text-transform: uppercase;
     color: var(--color-slate);
     display: block;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
 }
 
 .social-link {
@@ -687,7 +687,7 @@
 
 .best-sellers .section-title,
 .section-title {
-    margin-bottom: 60px;
+    margin-bottom: var(--gutter);
     font-size: var(--text-h2);
     color: var(--text-primary-dark);
     text-align: center;
@@ -723,8 +723,8 @@
 .product-info-stacked {
     display: grid;
     gap: 4px;
-    margin-bottom: 20px;
-    padding-top: 12px;
+    margin-bottom: 8px;
+    padding-top: 8px;
     text-align: left;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
@@ -792,7 +792,7 @@
 .product-btn {
     width: 100%;
     font-size: var(--text-small);
-    padding: 14px 0;
+    padding: 11px 0;
     border: 1px solid var(--color-slate);
     background: transparent;
     color: var(--color-slate);
@@ -819,10 +819,6 @@
     overflow: hidden;
 }
 
-.testimonials-section .section-title {
-    margin-bottom: 40px;
-}
-
 .stars {
     display: flex;
     align-items: center;
@@ -832,8 +828,8 @@
 }
 
 .stars img {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     display: block;
 }
 
@@ -950,17 +946,13 @@
     font-size: var(--text-h1);
     line-height: 1.1;
     color: var(--color-taupe);
-    margin-bottom: var(--space-xl);
     text-transform: uppercase;
-}
-
-.home-page .commitment-text h2 {
     position: relative;
     padding-bottom: var(--space-lg);
     margin-bottom: var(--space-lg);
 }
-.commitment-text h2::after,
-.home-page .commitment-text h2::after {
+
+.commitment-text h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1066,7 +1058,7 @@
 
 .collection-card .btn-outline {
     width: 100%;
-    padding: 16px 0;
+    padding: 12px 0;
 }
 
 /* --- 7. STORY SPLIT SECTION --- */
@@ -1192,7 +1184,7 @@ section.story-split {
 
 .newsletter-form-stacked input {
     width: 100%;
-    height: 56px;
+    height: 48px;
     background-color: rgba(235, 231, 224, 0.4);
     border: 1px solid var(--color-taupe);
     padding: 0 20px;
@@ -1343,7 +1335,7 @@ section.story-split {
 
     .home-page .story-split .story-text-block,
     .home-page .story-split .story-img-block {
-        min-height: 1260px;
+        min-height: 960px;
     }
 
     .home-page .testimonials-section {

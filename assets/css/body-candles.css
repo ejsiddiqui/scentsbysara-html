@@ -160,8 +160,11 @@
 }
 
 .bc-feature-media {
-    min-height: 960px;
+    max-height: 960px;
     overflow: hidden;
+    background: url("../images/she-is-you-half-left.png") no-repeat center center;
+    background-size: cover;
+    width: clamp(100%,50vw,960px);
 }
 
 .bc-feature-media img {
@@ -175,7 +178,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-xl) clamp(40px, 7vw, 140px);
+    padding: var(--inner-gutter) clamp(40px, 7vw, 140px);
+    min-height: 960px;
 }
 
 .bc-feature-inner {
@@ -205,7 +209,7 @@
 .bc-feature-product-media {
     display: block;
     width: min(100%, 360px);
-    margin: 40px auto 32px;
+    margin: 0 auto;
 }
 
 .bc-feature-you h3 {
@@ -301,6 +305,12 @@
     font-weight: 300;
 }
 
+@media (max-width: 1920px) {
+    .bc-feature-content {
+        min-height: 50vw;
+    }
+}
+
 @media (max-width: 1440px) {
     .bc-hero h1 {
         font-size: var(--text-h1);
@@ -321,10 +331,6 @@
 
     .bc-card-row span {
         font-size: var(--text-h6);
-    }
-
-    .bc-feature-media {
-        min-height: 760px;
     }
 
     .bc-feature-content {
@@ -369,7 +375,7 @@
     }
 
     .bc-feature-media {
-        min-height: 560px;
+        min-height: 100vw;
     }
 
     .bc-feature-content {
@@ -425,20 +431,12 @@
         margin-top: 46px;
     }
 
-    .bc-feature-media {
-        min-height: 400px;
-    }
-
     .bc-feature-content {
         padding: var(--space-lg) var(--gutter);
     }
 
     .bc-feature-lead {
         font-size: var(--text-body-large);
-    }
-
-    .bc-feature-product-media {
-        margin: 40px auto 24px;
     }
 
     .bc-feature-you h3 {
@@ -486,9 +484,5 @@
 
     .bc-hero p {
         font-size: var(--text-body);
-    }
-
-    .bc-feature-media {
-        min-height: 320px;
     }
 }

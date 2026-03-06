@@ -42,6 +42,7 @@ docs/qa/*
 !docs/qa/agent-workflow.md
 !docs/qa/precommit_token_gate.py
 docs/archived/
+docs/plans/
 
 # References
 references/

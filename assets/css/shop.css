@@ -151,6 +151,7 @@
 
 .sort-dropdown .choices {
     flex-shrink: 0;
+    min-width: 150px;
 }
 .choices[data-type*=select-one] .choices__inner,
 .size-dropdown .choices__inner,
@@ -170,7 +171,7 @@
 .sort-dropdown .choices[data-type*=select-one] .choices__inner,
 .sort-dropdown .choices__inner {
     letter-spacing: 0.1em;
-    padding: 14px 24px;
+    padding: 14px 30px 14px 10px;
     font-size: var(--text-body);
 }
 
@@ -293,8 +294,8 @@
 .filter-overlay {
     position: fixed;
     top: 0;
-    left: -100vw;
-    width: 400px;
+    left: calc(-1 * min(400px, 100vw));
+    width: min(400px, 100vw);
     height: 100%;
     background-color: var(--bg-primary);
     z-index: 2000;

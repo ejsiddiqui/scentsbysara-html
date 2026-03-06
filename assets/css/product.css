@@ -671,5 +671,14 @@
     .reviews-section {
         padding: 40px 20px;
     }
+
+    .main-image-wrap,
+    .product-gallery .thumbnails {
+        width: calc(100vw - 2 * var(--gutter));
+    }
+
+    .pill-btn {
+        min-width: 112px;
+    }
 }
     

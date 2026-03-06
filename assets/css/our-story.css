@@ -10,16 +10,13 @@
     background-image: url('../images/founder.jpg');
     background-size: cover;
     background-position: center 40%;
+    padding: 0 var(--gutter);
 }
 
 .story-hero-overlay {
     position: absolute;
     inset: 0;
     background-color: var(--overlay-dark-45);
-}
-
-.story-hero-content {
-    padding: 80px 24px;
 }
 
 .story-hero-content h1 {
