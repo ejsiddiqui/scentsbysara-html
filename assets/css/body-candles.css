@@ -256,7 +256,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--text-primary);
+    border-bottom: 1px solid var(--text-muted);
     font-weight: 500;
 }
 
@@ -293,7 +293,7 @@
 .bc-scar-points strong {
     color: var(--text-primary-dark);
     display: block;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .bc-scar-points span {

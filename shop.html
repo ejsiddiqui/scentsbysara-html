@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/design-tokens.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css"> 
+    <link rel="stylesheet" href="assets/css/choices/choices.min.css">
     <link rel="stylesheet" href="assets/css/shop.css">
 </head>
 
@@ -67,11 +68,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: PLUS-SIZE</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -102,11 +103,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: SLIM</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -136,11 +137,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: CURVY</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -170,11 +171,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: PLUS-SIZE</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -204,11 +205,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: CURVY</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -238,11 +239,11 @@
 
                     <div class="product-options">
                         <div class="size-dropdown">
-                            <span>SHAPE: SLIM</span>
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="1.2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                            <select class="size-select" aria-label="Select body shape">
+                                <option value="slim" selected>SHAPE: SLIM</option>
+                                <option value="curvy">SHAPE: CURVY</option>
+                                <option value="plus-size">SHAPE: PLUS-SIZE</option>
+                            </select>
                         </div>
                         <div class="color-swatches">
                             <span class="swatch swatch-white active"></span>
@@ -278,6 +279,7 @@
     <script src="assets/js/cart-state.js"></script>
     <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/choices.min.js"></script>
     <script src="assets/js/shop.js"></script>
 </body>
 

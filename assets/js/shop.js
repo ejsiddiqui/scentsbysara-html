@@ -7,6 +7,28 @@
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (window.Choices) {
+        document.querySelectorAll('.size-select').forEach((select) => {
+            new window.Choices(select, {
+                searchEnabled: false,
+                itemSelectText: '',
+                shouldSort: false,
+                allowHTML: false,
+                position: 'bottom'
+            });
+        });
+
+        const sortSelectControl = document.getElementById('sort-select');
+        if (sortSelectControl) {
+            new window.Choices(sortSelectControl, {
+                searchEnabled: false,
+                itemSelectText: '',
+                shouldSort: false,
+                allowHTML: false,
+                position: 'bottom'
+            });
+        }
+    }
 
     /* --- Variant Selection: Color Swatches --- */
     const swatches = document.querySelectorAll('.swatch');
@@ -18,21 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // In a real app, this would swap the product image
             // console.log(`Selected color: ${swatch.classList[1]}`);
-        });
-    });
-
-    /* --- Variant Selection: Size Dropdown --- */
-    const sizeSelectors = document.querySelectorAll('.size-dropdown');
-    sizeSelectors.forEach(selector => {
-        selector.addEventListener('click', (e) => {
-            // Toggle a simple dropdown or cyclic selection for demo
-            const sizes = ['SLIM', 'CURVY', 'PLUS-SIZE'];
-            const currentSpan = selector.querySelector('span');
-            const currentText = currentSpan.textContent.replace('SIZE: ', '');
-            let nextIndex = (sizes.indexOf(currentText) + 1) % sizes.length;
-            currentSpan.textContent = `SIZE: ${sizes[nextIndex]}`;
-
-            // console.log(`Selected size: ${sizes[nextIndex]}`);
         });
     });
 
