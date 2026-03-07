@@ -6,6 +6,30 @@
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const cartCountBadges = document.querySelectorAll('[data-cart-count]');
+
+    const updateCartCountBadges = (items = null) => {
+        if (!cartCountBadges.length || !window.CartState) return;
+
+        const count = window.CartState.getItemCount(items || window.CartState.getItems());
+        cartCountBadges.forEach((badge) => {
+            badge.textContent = String(count);
+            badge.hidden = count < 1;
+        });
+    };
+
+    if (cartCountBadges.length && window.CartState) {
+        updateCartCountBadges();
+        window.addEventListener(window.CartState.events.updated, (event) => {
+            updateCartCountBadges(event.detail?.items || null);
+        });
+
+        window.addEventListener('storage', (event) => {
+            if (event.key === 'scentsbysara-cart-v1') {
+                updateCartCountBadges();
+            }
+        });
+    }
 
     /* --- Header Scroll Logic --- */
     const header = document.querySelector('.site-header');

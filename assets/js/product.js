@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!swatchEl) return 'CARAMEL';
         if (swatchEl.classList.contains('swatch-tan')) return 'CARAMEL';
         if (swatchEl.classList.contains('swatch-white')) return 'IVORY';
-        if (swatchEl.classList.contains('swatch-brown')) return 'EBONY';
+        if (swatchEl.classList.contains('swatch-brown')) return 'MOCHA';
         return 'CARAMEL';
     };
 

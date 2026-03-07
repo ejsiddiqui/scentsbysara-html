@@ -191,10 +191,10 @@
     ],
     "cart.html": [
         {
-            "selector": ".cart-header h1",
+            "selector": ".cart-header h2",
             "property": "font-size",
-            "token": "--text-h1",
-            "description": "Cart page title should follow h1 token scale."
+            "token": "--text-h2",
+            "description": "Cart page title should follow h2 token scale."
         },
         {
             "selector": ".cart-table th",

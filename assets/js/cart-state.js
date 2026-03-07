@@ -4,6 +4,7 @@
 
 (function initCartState() {
     const STORAGE_KEY = 'scentsbysara-cart-v1';
+    const CART_CHANGE_EVENT = 'cart:updated';
 
     const toNumber = (value, fallback = 0) => {
         const parsed = Number(value);
@@ -39,7 +40,13 @@
     };
 
     const saveItems = (items) => {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(items.map(sanitize)));
+        const nextItems = items.map(sanitize);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(nextItems));
+        window.dispatchEvent(new CustomEvent(CART_CHANGE_EVENT, {
+            detail: {
+                items: nextItems
+            }
+        }));
     };
 
     const addItem = (item) => {
@@ -73,6 +80,11 @@
 
     const clear = () => {
         localStorage.removeItem(STORAGE_KEY);
+        window.dispatchEvent(new CustomEvent(CART_CHANGE_EVENT, {
+            detail: {
+                items: []
+            }
+        }));
     };
 
     const getTotals = (items = getItems()) => {
@@ -83,6 +95,8 @@
         return { subtotal, shipping, tax, total };
     };
 
+    const getItemCount = (items = getItems()) => items.reduce((sum, item) => sum + item.quantity, 0);
+
     window.CartState = {
         getItems,
         saveItems,
@@ -90,6 +104,10 @@
         updateQuantity,
         removeItem,
         clear,
-        getTotals
+        getTotals,
+        getItemCount,
+        events: {
+            updated: CART_CHANGE_EVENT
+        }
     };
 })();

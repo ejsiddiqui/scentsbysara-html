@@ -4,13 +4,13 @@
 }
 
 .cart-header {
-    margin-bottom: 64px;
+    margin-bottom: var(--gutter);
     border-bottom: 1px solid var(--border-light);
-    padding-bottom: 24px;
+    padding-bottom: var(--space-lg);
 }
 
-.cart-header h1 {
-    font-size: var(--text-h1);
+.cart-header h2 {
+    font-size: var(--text-h2);
 }
 
 .cart-layout {
@@ -72,6 +72,11 @@
     gap: 24px;
     align-items: center;
 }
+
+.cart-product-info h3 {
+    font-size: var(--text-h5);
+    font-weight: 400;
+}   
 
 .cart-img-wrap {
     width: 120px;

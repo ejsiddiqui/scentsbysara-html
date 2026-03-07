@@ -25,12 +25,11 @@ body.checkout-layout {
 
 /* LEFT COLUMN - FORMS */
 .checkout-form-col {
-    padding-top: 40px;
-    padding-right: 56px;
+    padding-right: var(--gutter);
 }
 
 .checkout-breadcrumbs {
-    margin-bottom: 48px;
+    margin-bottom: calc( var(--space-lg) + var(--space-md) );
     letter-spacing: 0.1em;
 }
 
