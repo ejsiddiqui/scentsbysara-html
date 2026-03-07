@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <img src="${item.image}" alt="${item.name}">
                         </div>
                         <div>
-                            <h3 class="font-sans text-md font-weight-normal mb-2">${item.name}</h3>
+                            <h3 class="mb-2">${item.name}</h3>
                             <p class="text-micro text-muted mb-4">${item.color} · ${item.size} · ${item.scent}</p>
                             <button class="remove-btn" data-remove-line="${item.lineId}" type="button">REMOVE</button>
                         </div>
