@@ -221,6 +221,10 @@
         --header-height: 80px;
     }
 
+    .announcement-currency {
+        display: none;
+    }
+
     /* Grid collapses */
     .grid-cols-4 {
         grid-template-columns: repeat(2, 1fr);
@@ -333,9 +337,6 @@
     }
     .announcement-copy {
         font-size: var(--text-micro);
-    }
-    .announcement-currency {
-        display: none;
     }
 
      /* Header fixes */

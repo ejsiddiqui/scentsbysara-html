@@ -15,6 +15,7 @@
     const STORAGE_RATES = 'sbs_rates';
     const RATE_TTL = 12 * 60 * 60 * 1000; // 12 hours
     const API_URL = 'https://v6.exchangerate-api.com/v6/42b984d2ebcbe1021baee097/latest/GBP';
+    const SELECTOR = '[data-currency-select]';
 
     /* --- Rates --- */
 
@@ -98,47 +99,98 @@
 
     /* --- Dropdown init --- */
 
-    function initDropdown(state) {
-        var select = document.getElementById('currency-select');
-        if (!select) return null;
-
-        var saved = getSelectedCurrency();
-        select.value = saved;
-
+    function createChoicesInstance(select) {
         if (!window.Choices) return null;
 
-        var choicesInstance = new window.Choices(select, {
+        return new window.Choices(select, {
             searchEnabled: false,
             itemSelectText: '',
             shouldSort: false,
             allowHTML: true,
             position: 'bottom',
-            callbackOnCreateTemplates: function (template) {
+            callbackOnCreateTemplates: function (template, _, getClassNames) {
+                function buildClassName(classNameList) {
+                    return getClassNames(classNameList).join(' ');
+                }
+
+                function buildStateClass(condition, classNameList) {
+                    return condition ? ' ' + buildClassName(classNameList) : '';
+                }
+
                 return {
-                    item: function (classNames, data) {
+                    item: function (config, data) {
+                        var classNames = config.classNames;
                         var label = data.value === 'AED'
                             ? data.label + ' ' + AED_SVG
                             : data.label;
-                        return template('<div class="' + classNames.item + ' ' + (data.highlighted ? classNames.highlightedState : '') + ' ' + (data.placeholder ? '' : classNames.itemSelectable) + '" data-item data-id="' + data.id + '" data-value="' + data.value + '">' + label + '</div>');
+                        var itemClassName = buildClassName(classNames.item)
+                            + buildStateClass(data.highlighted, classNames.highlightedState)
+                            + buildStateClass(!data.placeholder, classNames.itemSelectable);
+
+                        return template('<div class="' + itemClassName + '" data-item data-id="' + data.id + '" data-value="' + data.value + '">' + label + '</div>');
                     },
-                    choice: function (classNames, data) {
+                    choice: function (config, data) {
+                        var classNames = config.classNames;
                         var label = data.value === 'AED'
                             ? data.label + ' ' + AED_SVG
                             : data.label;
-                        return template('<div class="' + classNames.item + ' ' + classNames.itemChoice + ' ' + (data.disabled ? classNames.itemDisabled : classNames.itemSelectable) + '" data-select-text="" data-choice ' + (data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable') + ' data-id="' + data.id + '" data-value="' + data.value + '" role="option">' + label + '</div>');
+                        var choiceClassName = buildClassName(classNames.item)
+                            + ' '
+                            + buildClassName(classNames.itemChoice)
+                            + buildStateClass(data.disabled, classNames.itemDisabled)
+                            + buildStateClass(!data.disabled, classNames.itemSelectable);
+
+                        return template('<div class="' + choiceClassName + '" data-select-text="" data-choice ' + (data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable') + ' data-id="' + data.id + '" data-value="' + data.value + '" role="option">' + label + '</div>');
                     }
                 };
             }
         });
+    }
 
-        choicesInstance.setChoiceByValue(saved);
+    function syncSelectControl(select, instance, value) {
+        select.value = value;
 
-        select.addEventListener('change', function () {
-            setSelectedCurrency(select.value);
-            convertAllPrices(state);
+        if (instance) {
+            instance.setChoiceByValue(value);
+        }
+    }
+
+    function initDropdowns(state) {
+        var selects = Array.prototype.slice.call(document.querySelectorAll(SELECTOR));
+        if (!selects.length) return [];
+
+        var saved = getSelectedCurrency();
+        var isSyncing = false;
+        var controls = selects.map(function (select) {
+            return {
+                select: select,
+                instance: createChoicesInstance(select)
+            };
         });
 
-        return choicesInstance;
+        controls.forEach(function (control) {
+            syncSelectControl(control.select, control.instance, saved);
+        });
+
+        controls.forEach(function (control) {
+            control.select.addEventListener('change', function () {
+                if (isSyncing) return;
+
+                isSyncing = true;
+                setSelectedCurrency(control.select.value);
+
+                controls.forEach(function (otherControl) {
+                    if (otherControl.select !== control.select) {
+                        syncSelectControl(otherControl.select, otherControl.instance, control.select.value);
+                    }
+                });
+
+                convertAllPrices(state);
+                isSyncing = false;
+            });
+        });
+
+        return controls;
     }
 
     /* --- Expose global helper for cart/checkout/product JS --- */
@@ -158,8 +210,9 @@
             return (gbpValue * (state.rates[currency] || 1)).toFixed(2);
         },
         onChange: function (callback) {
-            var select = document.getElementById('currency-select');
-            if (select) select.addEventListener('change', callback);
+            document.querySelectorAll(SELECTOR).forEach(function (select) {
+                select.addEventListener('change', callback);
+            });
         }
     };
 
@@ -175,7 +228,7 @@
             saveRates(DEFAULT_RATES);
         }
 
-        initDropdown(state);
+        initDropdowns(state);
         convertAllPrices(state);
         refreshRatesIfNeeded(state);
     });
