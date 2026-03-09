@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = Array.from(grid.querySelectorAll('.shop-card'));
 
         cards.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.price-current').textContent.replace('£', ''));
-            const priceB = parseFloat(b.querySelector('.price-current').textContent.replace('£', ''));
+            const priceA = parseFloat(a.querySelector('.price-current').getAttribute('data-price-gbp'));
+            const priceB = parseFloat(b.querySelector('.price-current').getAttribute('data-price-gbp'));
             return order === 'asc' ? priceA - priceB : priceB - priceA;
         });
 
@@ -176,8 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             const card = btn.closest('.shop-card');
             const name = card.querySelector('.product-name')?.textContent?.trim() || 'SHE IS TIMELESS';
-            const priceText = card.querySelector('.price-current')?.textContent || '£0';
-            const price = parseFloat(priceText.replace('£', '')) || 0;
+            const priceEl = card.querySelector('.price-current');
+            const price = parseFloat(priceEl?.getAttribute('data-price-gbp')) || 0;
             const size = (card.querySelector('.size-dropdown span')?.textContent || 'SIZE: SLIM')
                 .replace('SIZE:', '')
                 .trim();

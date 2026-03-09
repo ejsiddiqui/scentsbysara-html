@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="assets/css/choices/choices.min.css">
 </head>
 
 <body class="home-page">
@@ -18,9 +19,14 @@
         <div class="announcement-bar">
         <div class="container announcement-inner">
             <span class="announcement-copy">LAUNCHING MARCH 2026 - JOIN THE WAIT LIST FOR EARLY ACCESS</span>
-             <button aria-label="Currency" class="icon-btn announcement-currency">
-                    <img src="assets/icons/dollar-sign 1.svg" alt="currency selector" aria-hidden="true">
-            </button>
+            <div class="announcement-currency">
+                <select id="currency-select" aria-label="Currency">
+                    <option value="AED">AED</option>
+                    <option value="GBP">GBP £</option>
+                    <option value="USD">USD $</option>
+                    <option value="EUR">EUR €</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -193,8 +199,8 @@
                             <span class="product-name"><a href="product.html">SHE IS GRACE</a></span>
                             <span class="product-scent">C-Section Body Candle</span>
                             <div class="product-price">
-                                <span class="price-strikethrough">£30.26</span>
-                                <span class="price-current">£20.26</span>
+                                <span class="price-strikethrough" data-price-gbp="30.26">£30.26</span>
+                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
                             </div>
                         </div>
                         <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -209,7 +215,7 @@
                             <span class="product-name"><a href="product.html">SHE IS BEAUTY</a></span>
                             <span class="product-scent">Amber</span>
                             <div class="product-price">
-                                <span class="price-current">£20.26</span>
+                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
                             </div>
                         </div>
                         <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -224,7 +230,7 @@
                             <span class="product-name"><a href="product.html">SHE IS POWER</a></span>
                             <span class="product-scent">Sandalwood</span>
                             <div class="product-price">
-                                <span class="price-current">£20.26</span>
+                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
                             </div>
                         </div>
                         <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -239,7 +245,7 @@
                             <span class="product-name"><a href="product.html">SHE IS STRENGTH</a></span>
                             <span class="product-scent">Vanilla</span>
                             <div class="product-price">
-                                <span class="price-current">£20.26</span>
+                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
                             </div>
                         </div>
                         <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -543,6 +549,8 @@
     </div>
 
     <script src="assets/js/cart-state.js"></script>
+    <script src="assets/js/choices.min.js"></script>
+    <script src="assets/js/currency.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

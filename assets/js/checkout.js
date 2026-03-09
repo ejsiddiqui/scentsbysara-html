@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('checkout-form');
     const formStatus = document.getElementById('checkout-form-status');
 
-    const formatGBP = (value) => `£${value.toFixed(2)}`;
+    const formatCurrency = (gbpValue) => window.CurrencyConverter ? window.CurrencyConverter.formatPrice(gbpValue) : `£${gbpValue.toFixed(2)}`;
 
     const renderSummary = () => {
         if (!summaryItems || !emptySummary || !subtotalEl || !shippingEl || !taxEl || !totalEl) return;
@@ -36,17 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="summary-details">
                         <h4 class="font-sans">${item.name}</h4>
                         <p>${item.color} · ${item.size} · ${item.scent}</p>
-                        <span class="summary-price mt-2 block font-sans">${formatGBP(item.price * item.quantity)}</span>
+                        <span class="summary-price mt-2 block font-sans">${formatCurrency(item.price * item.quantity)}</span>
                     </div>
                 </div>
             `;
             summaryItems.appendChild(line);
         });
 
-        subtotalEl.textContent = formatGBP(totals.subtotal);
-        shippingEl.textContent = formatGBP(totals.shipping);
-        taxEl.textContent = formatGBP(totals.tax);
-        totalEl.textContent = formatGBP(totals.total);
+        subtotalEl.innerHTML = formatCurrency(totals.subtotal);
+        shippingEl.innerHTML = formatCurrency(totals.shipping);
+        taxEl.innerHTML = formatCurrency(totals.tax);
+        totalEl.innerHTML = formatCurrency(totals.total);
     };
 
     const setError = (fieldName, message) => {
@@ -193,4 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderSummary();
+
+    if (window.CurrencyConverter) {
+        window.CurrencyConverter.onChange(renderSummary);
+    }
 });

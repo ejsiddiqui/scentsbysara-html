@@ -86,9 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAddButtonText() {
         const addBtn = document.querySelector('.btn-add-bag');
         if (addBtn && qtyInput) {
-            const price = 20.26;
-            const total = (price * parseInt(qtyInput.value)).toFixed(2);
-            addBtn.textContent = `ADD TO BAG - £${total}`;
+            const unitGbp = parseFloat(addBtn.getAttribute('data-unit-price-gbp')) || 20.26;
+            const total = unitGbp * parseInt(qtyInput.value);
+            if (window.CurrencyConverter) {
+                addBtn.innerHTML = 'ADD TO BAG - ' + window.CurrencyConverter.formatPrice(total);
+            } else {
+                addBtn.textContent = `ADD TO BAG - £${total.toFixed(2)}`;
+            }
         }
     }
 
@@ -119,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedScent = detailLabels[2]?.textContent.split(':')[1]?.trim() || 'VANILLA';
             const productName = document.querySelector('.product-header-block h1')?.textContent.trim() || 'SHE IS LUST';
             const mainImgSrc = document.querySelector('.main-image-wrap img')?.getAttribute('src') || 'assets/images/product-1.png';
-            const unitPriceText = document.querySelector('.product-header-block .price')?.textContent || '£20.26';
-            const unitPrice = parseFloat(unitPriceText.replace('£', '')) || 20.26;
+            const priceEl = document.querySelector('.product-header-block .price');
+            const unitPrice = parseFloat(priceEl?.getAttribute('data-price-gbp')) || 20.26;
 
             if (window.CartState) {
                 window.CartState.addItem({
@@ -178,5 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pdpDots.forEach((dot, index) => {
             dot.addEventListener('click', () => setTestimonial(index));
         });
+    }
+
+    if (window.CurrencyConverter) {
+        window.CurrencyConverter.onChange(updateAddButtonText);
     }
 });

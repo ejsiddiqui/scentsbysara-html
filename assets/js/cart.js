@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!tableBody || !mobileList || !emptyState || !subtotalEl || !shippingEl || !taxEl || !totalEl) return;
 
-    const formatGBP = (value) => `£${value.toFixed(2)}`;
+    const formatCurrency = (gbpValue) => window.CurrencyConverter ? window.CurrencyConverter.formatPrice(gbpValue) : `£${gbpValue.toFixed(2)}`;
 
     const render = () => {
         const items = window.CartState.getItems();
@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tableBody.innerHTML = '';
         mobileList.innerHTML = '';
 
-        subtotalEl.textContent = formatGBP(totals.subtotal);
-        shippingEl.textContent = formatGBP(totals.shipping);
-        taxEl.textContent = formatGBP(totals.tax);
-        totalEl.textContent = formatGBP(totals.total);
+        subtotalEl.innerHTML = formatCurrency(totals.subtotal);
+        shippingEl.innerHTML = formatCurrency(totals.shipping);
+        taxEl.innerHTML = formatCurrency(totals.tax);
+        totalEl.innerHTML = formatCurrency(totals.total);
 
         items.forEach((item) => {
             const lineTotal = item.price * item.quantity;
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
                 </td>
-                <td><span class="font-sans">${formatGBP(item.price)}</span></td>
+                <td><span class="font-sans">${formatCurrency(item.price)}</span></td>
                 <td>
                     <div class="qty-selector">
                         <button type="button" data-qty-change="${item.lineId}" data-delta="-1" aria-label="Decrease quantity">-</button>
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <button type="button" data-qty-change="${item.lineId}" data-delta="1" aria-label="Increase quantity">+</button>
                     </div>
                 </td>
-                <td style="text-align: right;"><span class="line-total">${formatGBP(lineTotal)}</span></td>
+                <td style="text-align: right;"><span class="line-total">${formatCurrency(lineTotal)}</span></td>
             `;
             tableBody.appendChild(tableRow);
 
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="cart-mobile-meta">
                     <div class="cart-mobile-row">
                         <span class="text-sm text-muted">Price</span>
-                        <span>${formatGBP(item.price)}</span>
+                        <span>${formatCurrency(item.price)}</span>
                     </div>
                     <div class="cart-mobile-row">
                         <span class="text-sm text-muted">Quantity</span>
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="cart-mobile-row">
                         <span class="text-sm text-muted">Total</span>
-                        <span class="line-total">${formatGBP(lineTotal)}</span>
+                        <span class="line-total">${formatCurrency(lineTotal)}</span>
                     </div>
                     <button class="remove-btn" data-remove-line="${item.lineId}" type="button">REMOVE</button>
                 </div>
@@ -120,4 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     render();
+
+    if (window.CurrencyConverter) {
+        window.CurrencyConverter.onChange(render);
+    }
 });

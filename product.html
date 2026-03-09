@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="assets/css/choices/choices.min.css">
     <link rel="stylesheet" href="assets/css/shop.css"> <!-- For cards -->
     <link rel="stylesheet" href="assets/css/product.css">
 </head>
@@ -53,7 +54,7 @@
                         <h1 class="font-serif text-h1 product-title">SHE IS LUST</h1>
                         <div class="flex-between items-center">
                             <div class="subtitle text-micro">STRETCH MARK BODY CANDLE</div>
-                            <span class="price font-sans">£20.26</span>
+                            <span class="price font-sans" data-price-gbp="20.26">£20.26</span>
                         </div>
                     </div>
 
@@ -91,7 +92,7 @@
                                 <input type="text" value="1" readonly class="qty-input">
                                 <button class="qty-btn" aria-label="Increase quantity">+</button>
                             </div>
-                            <button class="btn-solid btn-add-bag">ADD TO BAG - £20.26</button>
+                            <button class="btn-solid btn-add-bag" data-unit-price-gbp="20.26">ADD TO BAG - £20.26</button>
                         </div>
                     </div>
 
@@ -184,8 +185,8 @@
                         <span class="product-name"><a href="product.html">SHE IS POWER</a></span>
                         <span class="product-scent">C-Section Body Candle</span>
                         <div class="product-price">
-                            <span class="price-strikethrough">£30.26</span>
-                            <span class="price-current">£20.26</span>
+                            <span class="price-strikethrough" data-price-gbp="30.26">£30.26</span>
+                            <span class="price-current" data-price-gbp="20.26">£20.26</span>
                         </div>
                     </div>
                     <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -199,7 +200,7 @@
                         <span class="product-name"><a href="product.html">SHE IS GRACE</a></span>
                         <span class="product-scent">Embellished Body Candle</span>
                         <div class="product-price">
-                            <span class="price-current">£20.26</span>
+                            <span class="price-current" data-price-gbp="20.26">£20.26</span>
                         </div>
                     </div>
                     <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -213,7 +214,7 @@
                         <span class="product-name"><a href="product.html">SHE IS BEAUTY</a></span>
                         <span class="product-scent">Embellished Body Candle</span>
                         <div class="product-price">
-                            <span class="price-current">£20.26</span>
+                            <span class="price-current" data-price-gbp="20.26">£20.26</span>
                         </div>
                     </div>
                     <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -227,7 +228,7 @@
                         <span class="product-name"><a href="product.html">SHE IS STRENGTH</a></span>
                         <span class="product-scent">Embellished Body Candle</span>
                         <div class="product-price">
-                            <span class="price-current">£20.26</span>
+                            <span class="price-current" data-price-gbp="20.26">£20.26</span>
                         </div>
                     </div>
                     <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
@@ -328,6 +329,8 @@
     <div data-shared-partial="mobile-menu"></div>
 
     <script src="assets/js/cart-state.js"></script>
+    <script src="assets/js/choices.min.js"></script>
+    <script src="assets/js/currency.js"></script>
     <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/product.js"></script>
