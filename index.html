@@ -14,146 +14,8 @@
 </head>
 
 <body class="home-page">
-
-    <!-- ANNOUNCEMENT BAR -->
-        <div class="announcement-bar">
-        <div class="container announcement-inner">
-            <span class="announcement-copy">LAUNCHING MARCH 2026 - JOIN THE WAIT LIST FOR EARLY ACCESS</span>
-            <div class="announcement-currency">
-                <select id="currency-select" data-currency-select aria-label="Currency">
-                    <option value="AED">AED</option>
-                    <option value="GBP">GBP £</option>
-                    <option value="USD">USD $</option>
-                    <option value="EUR">EUR €</option>
-                </select>
-            </div>
-        </div>
-    </div>
-
-    <!-- SITE HEADER -->
-    <header class="site-header">
-        <div class="header-top container">
-            <!-- Left: Search Icon -->
-            <div class="header-left">
-                                <button aria-label="Search" class="icon-btn search-toggle header-icon-search">
-                    <img src="assets/icons/search 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Cart" class="icon-btn header-icon-cart-mobile" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
-                    <span class="header-cart-badge" data-cart-count hidden aria-hidden="true">0</span>
-                </button>
-            </div>
-
-            <!-- Center: Logo -->
-            <div class="header-center">
-                <a href="index.html" class="logo-long">
-                    <img src="assets/images/logo-long.svg" alt="Scents by Sara Logo" class="logo-image">
-                </a>
-                <a href="index.html" class="logo-mobile font-serif">BYSARA</a>
-            </div>
-
-            <!-- Right: Icons & Hamburger -->
-            <div class="header-right nav-icons">
-                                <button aria-label="Account" class="icon-btn header-icon-account" onclick="window.location.href='contact.html'">
-                    <img src="assets/icons/user 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Wishlist" class="icon-btn header-icon-wishlist" onclick="window.location.href='shop.html'">
-                    <img src="assets/icons/heart 1.svg" alt="" aria-hidden="true">
-                </button>
-                                <button aria-label="Cart" class="icon-btn header-icon-cart" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
-                    <span class="header-cart-badge" data-cart-count hidden aria-hidden="true">0</span>
-                </button>
-
-                <!-- Hamburger Menu Toggle (Mobile Only) -->
-                <button class="hamburger-btn icon-btn" aria-label="Toggle Menu" aria-expanded="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Bottom: Navigation Links (Desktop) -->
-        <div class="header-bottom">
-            <nav class="nav-links" role="navigation" aria-label="Bottom Navigation">
-                <div class="nav-item has-mega-menu">
-                    <a href="shop.html">SHOP</a>
-
-                    <!-- Mega Menu Dropdown -->
-                    <div class="mega-menu">
-                        <div class="mega-menu-container">
-                            <div class="mega-menu-grid">
-                                <!-- Col 1 -->
-                                <div class="mega-col">
-                                    <h4>POPULAR</h4>
-                                    <ul>
-                                        <li><a href="shop.html">Shop All</a></li>
-                                        <li><a href="shop.html">Best Sellers</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 2 -->
-                                <div class="mega-col">
-                                    <h4>BODY CANDLES</h4>
-                                    <ul>
-                                        <li><a href="body-candles.html">All Body Candles</a></li>
-                                        <li><a href="product.html">She is Timeless</a></li>
-                                        <li><a href="product.html">She is Beauty</a></li>
-                                        <li><a href="product.html">She is Lust</a></li>
-                                        <li><a href="product.html">She is Strength</a></li>
-                                        <li><a href="product.html">She is Power</a></li>
-                                        <li><a href="product.html">She is You</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 3 -->
-                                <div class="mega-col">
-                                    <h4>SHOP BY SIZE</h4>
-                                    <ul>
-                                        <li><a href="shop.html">Slim</a></li>
-                                        <li><a href="shop.html">Curvy</a></li>
-                                        <li><a href="shop.html">Plus Size</a></li>
-                                    </ul>
-                                </div>
-                                <!-- Col 4 -->
-                                <div class="mega-col">
-                                    <h4>SHOP BY COLLECTION</h4>
-                                    <ul>
-                                        <li><a href="scar-collection.html">Scar Collection</a></li>
-                                        <li><a href="sculpted-collection.html">Sculpted Collection</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Image Col -->
-                            <div class="mega-image-col">
-                                <img src="assets/images/mega-menu-image.png" alt="Featured Body Candles">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="gifts.html">GIFTS</a>
-                <a href="our-story.html">OUR STORY</a>
-                <a href="your-story.html">YOUR STORY</a>
-                <a href="contact.html">CONTACT US</a>
-            </nav>
-        </div>
-
-        <!-- Search Overlay -->
-        <div class="search-overlay">
-            <div class="container search-container">
-                <input type="text" class="search-input" placeholder="Search for products, collections...">
-                <button class="icon-btn search-close" aria-label="Close Search">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- SHARED SITE HEADER -->
+    <div data-shared-partial="site-header"></div>
 
     <!-- MAIN PAGE WRAPPER -->
     <main class="page-wrapper">
@@ -561,7 +423,9 @@
     <script src="assets/js/cart-state.js"></script>
     <script src="assets/js/choices.min.js"></script>
     <script src="assets/js/currency.js"></script>
+    <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
 </html>
+
