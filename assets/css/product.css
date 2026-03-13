@@ -299,8 +299,13 @@
 
 .accordion-body {
     margin-bottom: 0;
-    display: none;
-    padding: 0 24px 24px 24px;
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 24px;
+    opacity: 0;
+    transition: max-height 0.18s ease, opacity 0.14s ease, padding-bottom 0.18s ease;
+    will-change: max-height, opacity;
 }
 
 .accordion-body p {
@@ -311,11 +316,13 @@
 }
 
 .accordion.active .accordion-body {
-    display: block;
+    padding-bottom: 24px;
+    opacity: 1;
 }
 
 .accordion-body.is-visible {
-    display: block;
+    padding-bottom: 24px;
+    opacity: 1;
 }
 
 .accordion.active .accordion-header::after {
