@@ -7,6 +7,10 @@
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const shopGrid = document.querySelector('.grid-cols-4');
+    const shopCards = Array.from(document.querySelectorAll('.shop-card'));
+    const mobileItemCount = document.querySelector('.mobile-item-count');
+
     if (window.Choices) {
         document.querySelectorAll('.size-select').forEach((select) => {
             new window.Choices(select, {
@@ -56,13 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="close-filters icon-btn">&times;</button>
             </div>
             <div class="filter-grid grid-cols-2">
-                <div class="filter-group">
+                <div class="filter-group filter-group-sort mobile-filter-sort">
+                    <h4>SORT BY</h4>
+                    <label><input type="radio" name="mobile-sort" value="featured" checked> FEATURED</label>
+                    <label><input type="radio" name="mobile-sort" value="bestsellers"> BESTSELLERS</label>
+                    <label><input type="radio" name="mobile-sort" value="new"> NEW IN</label>
+                    <label><input type="radio" name="mobile-sort" value="asc"> PRICE (LOW TO HIGH)</label>
+                    <label><input type="radio" name="mobile-sort" value="desc"> PRICE (HIGH TO LOW)</label>
+                </div>
+                <div class="filter-group filter-group-shape">
                     <h4>BODY SHAPE</h4>
                     <label><input type="checkbox" value="slim"> SLIM</label>
                     <label><input type="checkbox" value="curvy"> CURVY</label>
                     <label><input type="checkbox" value="plus-size"> PLUS SIZE</label>
                 </div>
-                <div class="filter-group">
+                <div class="filter-group filter-group-color">
                     <h4>BODY COLOUR</h4>
                     <label><input type="checkbox" value="ivory"> IVORY</label>
                     <label><input type="checkbox" value="caramel"> CARAMEL</label>
@@ -100,8 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyFiltersBtn = filterOverlay.querySelector('.apply-filters');
     if (applyFiltersBtn) {
         applyFiltersBtn.addEventListener('click', () => {
-            const selectedShapes = Array.from(filterOverlay.querySelectorAll('.filter-group:first-child input:checked')).map(i => i.value);
-            const selectedColors = Array.from(filterOverlay.querySelectorAll('.filter-group:nth-child(2) input:checked')).map(i => i.value);
+            const selectedShapes = Array.from(filterOverlay.querySelectorAll('.filter-group-shape input:checked')).map(i => i.value);
+            const selectedColors = Array.from(filterOverlay.querySelectorAll('.filter-group-color input:checked')).map(i => i.value);
+            const selectedSort = getSelectedMobileSort();
+            if (sortSelect) {
+                sortSelect.value = selectedSort;
+            }
+            sortProducts(selectedSort);
             filterProducts(selectedShapes, selectedColors);
             filterOverlay.classList.remove('active');
             if (filterBtn) filterBtn.setAttribute('aria-expanded', 'false');
@@ -114,8 +131,30 @@ document.addEventListener('DOMContentLoaded', () => {
     if (clearFiltersBtn) {
         clearFiltersBtn.addEventListener('click', () => {
             filterOverlay.querySelectorAll('input').forEach(i => i.checked = false);
+            const defaultSort = filterOverlay.querySelector('input[name="mobile-sort"][value="featured"]');
+            if (defaultSort) defaultSort.checked = true;
+            if (sortSelect) {
+                sortSelect.value = 'featured';
+            }
+            sortProducts('featured');
             filterProducts([], []);
         });
+    }
+
+    function getSelectedMobileSort() {
+        return filterOverlay.querySelector('input[name="mobile-sort"]:checked')?.value || 'featured';
+    }
+
+    function syncMobileSort(value) {
+        const target = filterOverlay.querySelector(`input[name="mobile-sort"][value="${value}"]`)
+            || filterOverlay.querySelector('input[name="mobile-sort"][value="featured"]');
+        if (target) target.checked = true;
+    }
+
+    function updateVisibleItemCount() {
+        if (!mobileItemCount) return;
+        const visibleCards = shopCards.filter((card) => card.style.display !== 'none').length;
+        mobileItemCount.textContent = `${visibleCards} ${visibleCards === 1 ? 'ITEM' : 'ITEMS'}`;
     }
 
     function getCardColors(card) {
@@ -133,8 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filterProducts(shapes, colors) {
-        const cards = document.querySelectorAll('.shop-card');
-        cards.forEach(card => {
+        shopCards.forEach(card => {
             const cardShape = card.dataset.category;
             const cardColors = getCardColors(card);
             const matchesShape = shapes.length === 0 || shapes.includes(cardShape);
@@ -146,28 +184,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.display = 'none';
             }
         });
+        updateVisibleItemCount();
     }
 
     /* --- Sort Dropdown Logic --- */
     const sortSelect = document.getElementById('sort-select');
     if (sortSelect) {
         sortSelect.addEventListener('change', () => {
+            syncMobileSort(sortSelect.value);
             sortProducts(sortSelect.value);
         });
     }
 
     function sortProducts(order) {
-        const grid = document.querySelector('.grid-cols-4');
-        const cards = Array.from(grid.querySelectorAll('.shop-card'));
+        if (!shopGrid) return;
+        const cards = Array.from(shopGrid.querySelectorAll('.shop-card'));
 
-        cards.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.price-current').getAttribute('data-price-gbp'));
-            const priceB = parseFloat(b.querySelector('.price-current').getAttribute('data-price-gbp'));
-            return order === 'asc' ? priceA - priceB : priceB - priceA;
-        });
+        if (order === 'featured' || order === 'bestsellers' || order === 'new') {
+            cards.sort((a, b) => shopCards.indexOf(a) - shopCards.indexOf(b));
+        } else {
+            cards.sort((a, b) => {
+                const priceA = parseFloat(a.querySelector('.price-current').getAttribute('data-price-gbp'));
+                const priceB = parseFloat(b.querySelector('.price-current').getAttribute('data-price-gbp'));
+                return order === 'asc' ? priceA - priceB : priceB - priceA;
+            });
+        }
 
-        // Re-append in order
-        cards.forEach(card => grid.appendChild(card));
+        cards.forEach(card => shopGrid.appendChild(card));
+        updateVisibleItemCount();
     }
 
     /* --- Add to Cart Logic --- */
@@ -214,4 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 2000);
         });
     });
+
+    if (sortSelect) {
+        syncMobileSort(sortSelect.value);
+    }
+    updateVisibleItemCount();
 });
