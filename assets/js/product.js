@@ -5,7 +5,7 @@
    - Color Swatches (Large)
    - Pill Button Selectors (Shape, Scent)
    - Accordion Toggle
-   - Gallery Thumbnail Swap
+   - Swipeable Product Gallery
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,18 +17,70 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'CARAMEL';
     };
 
-    /* --- Gallery Thumbnail Logic --- */
-    const thumbnails = document.querySelectorAll('.thumb-wrap');
-    const mainImage = document.querySelector('.main-image-wrap img');
+    /* --- Product Gallery Logic --- */
+    const galleryTrack = document.querySelector('.product-gallery-track');
+    const gallerySlides = Array.from(document.querySelectorAll('.product-gallery-slide'));
+    const thumbnails = Array.from(document.querySelectorAll('.thumb-wrap'));
+    const galleryViewport = document.querySelector('.product-gallery-viewport');
+    const prevArrow = document.querySelector('.product-gallery-arrow[data-direction="prev"]');
+    const nextArrow = document.querySelector('.product-gallery-arrow[data-direction="next"]');
 
-    thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            thumbnails.forEach(t => t.classList.remove('active'));
-            thumb.classList.add('active');
-            const newSrc = thumb.querySelector('img').src;
-            if (mainImage) mainImage.src = newSrc;
+    if (galleryTrack && gallerySlides.length > 0) {
+        let currentGalleryIndex = Math.max(
+            gallerySlides.findIndex((slide) => slide.classList.contains('is-active')),
+            0
+        );
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const updateGallery = (index) => {
+            const safeIndex = (index + gallerySlides.length) % gallerySlides.length;
+            galleryTrack.style.transform = `translateX(-${safeIndex * 100}%)`;
+
+            gallerySlides.forEach((slide, slideIndex) => {
+                slide.classList.toggle('is-active', slideIndex === safeIndex);
+            });
+
+            thumbnails.forEach((thumb, thumbIndex) => {
+                thumb.classList.toggle('active', thumbIndex === safeIndex);
+            });
+
+            currentGalleryIndex = safeIndex;
+        };
+
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener('click', () => updateGallery(index));
         });
-    });
+
+        if (prevArrow) {
+            prevArrow.addEventListener('click', () => updateGallery(currentGalleryIndex - 1));
+        }
+
+        if (nextArrow) {
+            nextArrow.addEventListener('click', () => updateGallery(currentGalleryIndex + 1));
+        }
+
+        if (galleryViewport) {
+            galleryViewport.addEventListener('touchstart', (event) => {
+                touchStartX = event.changedTouches[0].screenX;
+            }, { passive: true });
+
+            galleryViewport.addEventListener('touchend', (event) => {
+                touchEndX = event.changedTouches[0].screenX;
+                const deltaX = touchEndX - touchStartX;
+
+                if (deltaX <= -50) {
+                    updateGallery(currentGalleryIndex + 1);
+                }
+
+                if (deltaX >= 50) {
+                    updateGallery(currentGalleryIndex - 1);
+                }
+            }, { passive: true });
+        }
+
+        updateGallery(currentGalleryIndex);
+    }
 
     /* --- Color Swatches --- */
     const lgSwatches = document.querySelectorAll('.swatch-lg');
@@ -122,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedSize = detailLabels[1]?.textContent.split(':')[1]?.trim() || 'PLUS-SIZE';
             const selectedScent = detailLabels[2]?.textContent.split(':')[1]?.trim() || 'VANILLA';
             const productName = document.querySelector('.product-header-block h1')?.textContent.trim() || 'SHE IS LUST';
-            const mainImgSrc = document.querySelector('.main-image-wrap img')?.getAttribute('src') || 'assets/images/product-1.png';
+            const mainImgSrc = document.querySelector('.product-gallery-slide.is-active img')?.getAttribute('src') || 'assets/images/product-1.png';
             const priceEl = document.querySelector('.product-header-block .price');
             const unitPrice = parseFloat(priceEl?.getAttribute('data-price-gbp')) || 20.26;
 
