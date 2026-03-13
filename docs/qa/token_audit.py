@@ -125,6 +125,10 @@ def run_audit(
 
                           const root = getComputedStyle(document.documentElement);
                           return rules.map((rule) => {
+                            if (Array.isArray(rule.widths) && rule.widths.length && !rule.widths.includes(window.innerWidth)) {
+                              return null;
+                            }
+
                             const tokenValue = root.getPropertyValue(rule.token).trim();
                             const expected = canonicalize(rule.property, `var(${rule.token})`);
                             const nodes = Array.from(document.querySelectorAll(rule.selector));
@@ -187,6 +191,8 @@ def run_audit(
                     )
 
                     for check in checks:
+                        if not check:
+                            continue
                         report["results"].append(
                             {
                                 "page": page_name,

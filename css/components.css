@@ -175,7 +175,7 @@
     height: 20px;
     padding: 0 5px;
     border-radius: 999px;
-    background-color: var(--color-mocha);
+    background-color: var(--bg-secondary);
     color: var(--text-on-dark);
     display: inline-flex;
     align-items: center;

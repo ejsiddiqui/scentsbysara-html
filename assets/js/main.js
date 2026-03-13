@@ -5,6 +5,131 @@
    - Mobile Hamburger Menu Toggle
    ========================================================================= */
 
+const MOBILE_MENU_TEMPLATE = `
+    <div class="mobile-menu-content container">
+        <div class="mobile-menu-top">
+            <a href="index.html" class="mobile-menu-brand" aria-label="Scents by Sara">
+                <img src="assets/images/logo-long.svg" alt="Scents by Sara Logo">
+            </a>
+            <div class="mobile-menu-actions">
+                <button class="icon-btn mobile-menu-cart" aria-label="Cart" onclick="window.location.href='cart.html'">
+                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
+                </button>
+                <button class="icon-btn mobile-menu-search search-toggle" aria-label="Search">
+                    <img src="assets/icons/search 1.svg" alt="" aria-hidden="true">
+                </button>
+                <button class="icon-btn close-mobile-menu" aria-label="Close Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-body">
+            <nav class="mobile-nav-links mobile-nav-primary" role="navigation" aria-label="Mobile Navigation">
+                <div class="mobile-nav-item mobile-nav-item-shop">
+                    <button class="mobile-shop-toggle" type="button" aria-expanded="false" aria-controls="mobile-shop-panel">
+                        <span>SHOP</span>
+                        <svg class="mobile-shop-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-shop-panel" id="mobile-shop-panel" hidden>
+                        <div class="mobile-shop-group">
+                            <h3>POPULAR</h3>
+                            <a href="shop.html">Shop All</a>
+                            <a href="shop.html">Bestsellers</a>
+                        </div>
+                        <div class="mobile-shop-group">
+                            <h3>BODY CANDLES</h3>
+                            <a href="body-candles.html">All Body Candles</a>
+                            <a href="product.html">She is You</a>
+                            <a href="product.html">She is Strength</a>
+                            <a href="product.html">She is Real</a>
+                            <a href="product.html">She is Power</a>
+                            <a href="product.html">She is Timeless</a>
+                            <a href="product.html">She is Beauty</a>
+                        </div>
+                        <div class="mobile-shop-group">
+                            <h3>SHOP BY SIZE</h3>
+                            <a href="shop.html">Slim</a>
+                            <a href="shop.html">Curvy</a>
+                            <a href="shop.html">Plus Size</a>
+                        </div>
+                        <div class="mobile-shop-group">
+                            <h3>SHOP BY COLLECTION</h3>
+                            <a href="scar-collection.html">Scar Collection</a>
+                            <a href="sculpted-collection.html">Sculpted Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="gifts.html">GIFTS</a>
+                <a href="our-story.html">OUR STORY</a>
+                <a href="your-story.html">YOUR STORY</a>
+                <a href="shop.html">WISHLIST</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+
+            <div class="mobile-menu-footer">
+                <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">LOG IN</a>
+                <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">JOIN OUR NEWSLETTER</a>
+                <div class="mobile-menu-meta">
+                    <div class="mobile-menu-social">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <img src="assets/icons/facebook.svg" alt="" aria-hidden="true">
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <img src="assets/icons/tiktok.svg" alt="" aria-hidden="true">
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <img src="assets/icons/pinterest.svg" alt="" aria-hidden="true">
+                        </a>
+                    </div>
+                    <div class="mobile-menu-currency">
+                        <select data-currency-select aria-label="Mobile currency">
+                            <option value="AED">AED</option>
+                            <option value="GBP">GBP £</option>
+                            <option value="USD">USD $</option>
+                            <option value="EUR">EUR €</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+
+(function ensureMobileMenuIntegrity() {
+    const mobileMenu = document.querySelector('.mobile-menu-overlay');
+    if (!mobileMenu) return;
+
+    const primaryNav = mobileMenu.querySelector('.mobile-nav-primary');
+    const primaryLinkCount = primaryNav ? primaryNav.querySelectorAll(':scope > a').length : 0;
+    const socialLinkCount = mobileMenu.querySelectorAll('.mobile-menu-social a').length;
+    const hasCurrency = !!mobileMenu.querySelector('.mobile-menu-currency select');
+    const hasFooter = !!mobileMenu.querySelector('.mobile-menu-footer');
+    const hasShopToggle = !!mobileMenu.querySelector('.mobile-shop-toggle');
+
+    const isIncomplete = !primaryNav
+        || primaryLinkCount < 5
+        || socialLinkCount < 4
+        || !hasCurrency
+        || !hasFooter
+        || !hasShopToggle;
+
+    if (isIncomplete) {
+        mobileMenu.innerHTML = MOBILE_MENU_TEMPLATE;
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     const cartCountBadges = document.querySelectorAll('[data-cart-count]');
 
