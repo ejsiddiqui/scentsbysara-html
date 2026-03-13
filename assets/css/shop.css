@@ -96,6 +96,7 @@
     font-weight: 400;
     letter-spacing: 0.1em;
     color: var(--text-primary);
+    line-height: 1em;
 }
 
 .filter-btn-label-mobile,
@@ -324,15 +325,15 @@
 .filter-grid {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--space-lg);
     overflow-y: auto;
-    padding-bottom: 40px;
+    padding-bottom: var(--space-lg);
 }
 
 .filter-group h4 {
     font-size: var(--text-micro);
     letter-spacing: 0.15em;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-md);
     color: var(--text-primary);
     font-weight: 400;
 }
@@ -340,7 +341,7 @@
 .filter-group label {
     display: block;
     font-size: var(--text-small);
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
     cursor: pointer;
     letter-spacing: 0.05em;
     color: var(--text-muted);
@@ -433,7 +434,6 @@
         width: auto;
         justify-content: flex-start;
         padding: 12px 18px;
-        min-width: 202px;
     }
 
     .filter-btn-label-desktop {
@@ -522,6 +522,7 @@
     .shop-page .shop-card .price-current,
     .shop-page .shop-card .price-strikethrough {
         font-size: var(--text-body);
+        margin-right: 0;
     }
 
     .shop-page .shop-card .product-desc {
@@ -537,7 +538,7 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        gap: 8px;
+        gap: 4px;
     }
 
     .shop-page .shop-card .product-btn {
