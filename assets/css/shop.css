@@ -491,18 +491,9 @@
         justify-self: end;
         align-self: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-end;
-        gap: 2px;
-    }
-
-    .shop-page .shop-card .price-current {
-        order: 1;
-    }
-
-    .shop-page .shop-card .price-strikethrough {
-        order: 2;
-        margin-right: 0;
+        gap: 8px;
     }
 
     .shop-page .shop-card .product-btn {
