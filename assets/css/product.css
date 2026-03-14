@@ -100,22 +100,20 @@
     transform: translateY(-50%);
     width: 38px;
     height: 38px;
-    border: 1px solid rgba(163, 147, 130, 0.55);
     border-radius: 999px;
-    background: rgba(245, 243, 238, 0.92);
     color: var(--color-slate);
-    display: none;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
 
 .product-gallery-arrow[data-direction="prev"] {
-    left: 20px;
+    left: 10px;
 }
 
 .product-gallery-arrow[data-direction="next"] {
-    right: 20px;
+    right: 10px;
 }
 
 .thumbnails {
@@ -714,13 +712,21 @@
 }
 
 @media (max-width: 480px) {
+    .product-main {
+        gap: 0;
+    }
+
+    .mt-4 {
+        margin-top: 10px;
+    }
+
     .product-mobile-header {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         gap: 16px;
         margin-bottom: 12px;
-        padding: 12px var(--space-md) 10px;
+        padding: 12px 0 10px;
         border-top: 1px solid var(--color-clay);
         border-bottom: 1px solid var(--color-clay);
     }
@@ -784,6 +790,65 @@
 
     .pill-btn {
         min-width: 112px;
+    }
+
+    .product-page .best-sellers .section-title {
+        text-align: left;
+    }
+
+    .product-page .best-sellers .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
+        gap: 12px;
+        overflow: visible;
+        padding-bottom: 0;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+    }
+
+    .product-page .best-sellers .product-grid .product-info-stacked {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "name price"
+            "scent price";
+        row-gap: 0;
+        column-gap: 8px;
+        align-items: start;
+    }
+
+    .product-page .best-sellers .product-grid .product-name {
+        font-size: var(--text-body);
+        max-width: 100%;
+    }
+
+    .product-page .best-sellers .product-grid .product-scent {
+        font-size: var(--text-small);
+        max-width: 100%;
+    }
+
+    .product-page .best-sellers .product-grid .product-price {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 2px;
+    }
+
+    .product-page .best-sellers .product-grid .product-btn {
+        padding: 7px 0;
+    }
+
+    .product-page .best-sellers .product-grid .price-strikethrough {
+        margin-right: 0;
+    }
+
+    .product-page .best-sellers .product-grid > * {
+        min-width: 0;
+        scroll-snap-align: none;
+    }
+
+    .product-page .scents-section .section-title {
+        margin-left: var(--gutter);
     }
 }
     

@@ -550,17 +550,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- Hero Image Slider Logic --- */
+    const heroSection = document.querySelector('.home-hero');
     const heroSlider = document.querySelector('.hero-slider');
     const heroDots = document.querySelectorAll('.home-hero .slider-dots .dot');
 
-    if (heroSlider && heroDots.length > 0) {
+    if (heroSection && heroSlider && heroDots.length > 0) {
         const totalSlides = heroDots.length;
+        const HERO_DRAG_THRESHOLD_PX = 56;
+        const HERO_DRAG_THRESHOLD_RATIO = 0.12;
         let currentSlide = 0;
         let autoSlideInterval;
+        let activePointerId = null;
+        let dragStartX = 0;
+        let dragStartY = 0;
+        let dragDistanceX = 0;
+        let isDraggingHero = false;
+
+        const getHeroSlideWidth = () => heroSection.getBoundingClientRect().width || heroSlider.offsetWidth;
+
+        const setHeroSliderOffsetPx = (offsetPx) => {
+            heroSlider.style.transform = `translate3d(${offsetPx}px, 0, 0)`;
+        };
 
         const updateSlider = (index) => {
-            heroSlider.style.transform = `translateX(-${index * 100}%)`;
-            heroDots.forEach(dot => dot.classList.remove('active'));
+            heroSection.classList.remove('is-dragging');
+            heroSlider.classList.remove('is-dragging');
+            heroSlider.style.transform = `translate3d(-${index * 100}%, 0, 0)`;
+            heroDots.forEach((dot) => dot.classList.remove('active'));
             heroDots[index].classList.add('active');
             currentSlide = index;
         };
@@ -585,28 +601,85 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Swipe (Touch Events)
-        let touchStartX = 0;
-        let touchEndX = 0;
+        const resetHeroDragState = () => {
+            activePointerId = null;
+            dragDistanceX = 0;
+            isDraggingHero = false;
+            heroSection.classList.remove('is-dragging');
+            heroSlider.classList.remove('is-dragging');
+        };
 
-        heroSlider.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+        const commitHeroSwipe = () => {
+            if (activePointerId === null) return;
 
-        heroSlider.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
+            const slideWidth = getHeroSlideWidth();
+            const swipeThreshold = Math.max(HERO_DRAG_THRESHOLD_PX, slideWidth * HERO_DRAG_THRESHOLD_RATIO);
+            let targetSlide = currentSlide;
 
-        const handleSwipe = () => {
-            if (touchEndX < touchStartX - 50) {
-                nextSlide();
+            if (isDraggingHero && Math.abs(dragDistanceX) >= swipeThreshold) {
+                targetSlide = dragDistanceX < 0 ? (currentSlide + 1) % totalSlides : (currentSlide - 1 + totalSlides) % totalSlides;
+            }
+
+            updateSlider(targetSlide);
+
+            if (isDraggingHero || Math.abs(dragDistanceX) > 0) {
                 resetAutoSlide();
             }
-            if (touchEndX > touchStartX + 50) {
-                prevSlide();
-                resetAutoSlide();
+
+            resetHeroDragState();
+        };
+
+        const handleHeroPointerDown = (event) => {
+            if (activePointerId !== null) return;
+            if (event.pointerType === 'mouse' && event.button !== 0) return;
+            if (event.target.closest('a, button, input, select, textarea, label, .slider-dots, .dot')) return;
+
+            activePointerId = event.pointerId;
+            dragStartX = event.clientX;
+            dragStartY = event.clientY;
+            dragDistanceX = 0;
+            isDraggingHero = false;
+            heroSection.classList.add('is-dragging');
+            heroSlider.classList.add('is-dragging');
+
+            if (typeof heroSection.setPointerCapture === 'function') {
+                heroSection.setPointerCapture(activePointerId);
             }
+        };
+
+        const handleHeroPointerMove = (event) => {
+            if (event.pointerId !== activePointerId) return;
+
+            const deltaX = event.clientX - dragStartX;
+            const deltaY = event.clientY - dragStartY;
+
+            if (!isDraggingHero) {
+                if (Math.abs(deltaX) < 6 || Math.abs(deltaX) < Math.abs(deltaY)) {
+                    return;
+                }
+
+                isDraggingHero = true;
+            }
+
+            dragDistanceX = deltaX;
+
+            const atFirstSlide = currentSlide === 0 && dragDistanceX > 0;
+            const atLastSlide = currentSlide === totalSlides - 1 && dragDistanceX < 0;
+            const dragResistance = atFirstSlide || atLastSlide ? 0.35 : 1;
+            const baseOffsetPx = -currentSlide * getHeroSlideWidth();
+
+            setHeroSliderOffsetPx(baseOffsetPx + (dragDistanceX * dragResistance));
+            event.preventDefault();
+        };
+
+        const handleHeroPointerEnd = (event) => {
+            if (event.pointerId !== activePointerId) return;
+
+            if (typeof heroSection.releasePointerCapture === 'function' && heroSection.hasPointerCapture(event.pointerId)) {
+                heroSection.releasePointerCapture(event.pointerId);
+            }
+
+            commitHeroSwipe();
         };
 
         const startAutoSlide = () => {
@@ -618,7 +691,21 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoSlide();
         };
 
+        heroSection.addEventListener('pointerdown', handleHeroPointerDown);
+        heroSection.addEventListener('pointermove', handleHeroPointerMove);
+        heroSection.addEventListener('pointerup', handleHeroPointerEnd);
+        heroSection.addEventListener('pointercancel', handleHeroPointerEnd);
+        heroSection.addEventListener('lostpointercapture', () => {
+            if (activePointerId !== null) {
+                commitHeroSwipe();
+            }
+        });
+        heroSection.addEventListener('dragstart', (event) => {
+            event.preventDefault();
+        });
+
         // Init
+        updateSlider(0);
         startAutoSlide();
     }
 
