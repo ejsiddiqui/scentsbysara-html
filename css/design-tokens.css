@@ -11,6 +11,10 @@
     --color-taupe: #A39382;
     --color-mocha: #3F3229;
     --color-slate: #2D2B27;
+    --gradient-brown: linear-gradient(90deg, rgba(109, 58, 15, 1) 0%, rgba(241, 189, 139, 0.85) 100%);
+    --gradient-tan: linear-gradient(90deg,rgba(213, 149, 84, 1) 0%, rgba(239, 180, 124, 0.85) 100%);
+    --gradient-white: linear-gradient(90deg,rgba(202, 172, 148, 0.67) 0%, rgba(249, 246, 242, 0.67) 100%);
+    
 
     /* Semantic Mappings */
     --bg-primary: var(--color-sand);

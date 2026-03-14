@@ -163,6 +163,7 @@
 .choices[data-type*=select-one] .choices__inner,
 .size-dropdown .choices__inner,
 .sort-dropdown .choices__inner {
+    position: relative;
     min-height: 0;
     padding: 7.5px 28px 7.5px 10px;
     border: 1px solid var(--color-taupe);
@@ -198,12 +199,18 @@
 
 .choices[data-type*="select-one"]::after {
     border-color: var(--text-primary) transparent transparent;
-    right: 10px;
+    right: 15px;
+    content: "⌵";
+    top: -17%
 }
 
 .choices[data-type*="select-one"].is-open::after {
     border-color: transparent transparent var(--text-primary);
-    margin-top: -7px;
+    margin-top: 30px;
+    right: 9px;
+    border-width: 0;
+    content: "⌵";
+    rotate: 180deg;
 }
 
 .choices__list--dropdown,
@@ -239,7 +246,7 @@
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: 1px solid var(--color-sand);
     display: inline-block;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -247,21 +254,19 @@
 }
 
 .swatch.active {
-    transform: scale(1.2);
-    border: 1px solid var(--color-mocha);
-}
-
-.swatch-white {
-    background-color: var(--swatch-sand);
     border: 1px solid var(--color-taupe);
 }
 
+.swatch-white {
+    background: var(--gradient-white);
+}
+
 .swatch-tan {
-    background-color: var(--swatch-caramel);
+    background: var(--gradient-tan);
 }
 
 .swatch-brown {
-    background-color: var(--swatch-mocha);
+    background: var(--gradient-brown);
 }
 
 .product-info-shop {
@@ -510,18 +515,20 @@
     .shop-page .shop-card .size-dropdown .choices__inner {
         width: 100%;
         padding: 7px 22px 7px 8px;
+        border: none;
+        box-shadow: inset 0 0 0 0.3px var(--bg-primary-dark);
     }
 
     .shop-page .shop-card .color-swatches {
         grid-column: 1;
         grid-row: 3;
-        gap: 6px;
+        gap: 4px;
         align-self: center;
     }
 
     .shop-page .shop-card .swatch {
-        width: 12px;
-        height: 12px;
+        width: 18px;
+        height: 18px;
     }
 
     .shop-page .shop-card .product-info-shop > div:first-child {
@@ -530,7 +537,9 @@
     }
 
     .shop-page .shop-card .product-name {
-        font-size: var(--text-body-large);
+        font-size: var(--text-small);
+        font-family: var(--font-sans);
+        letter-spacing: 5%;
     }
 
     .shop-page .shop-card .price-current,
@@ -540,7 +549,8 @@
     }
 
     .shop-page .shop-card .product-desc {
-        font-size: var(--text-small);
+        font-size: var(--text-xsmall);
+        font-weight: 300;
     }
 
     .shop-page .shop-card .product-price {

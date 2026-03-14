@@ -203,7 +203,15 @@
             "selector": ".shop-card .product-name",
             "property": "font-size",
             "token": "--text-body-large",
+            "widths": [1920, 768],
             "description": "Product name in cards should reuse shared product-grid body-large size."
+        },
+        {
+            "selector": ".shop-card .product-name",
+            "property": "font-size",
+            "token": "--text-small",
+            "widths": [375],
+            "description": "Product name in cards uses reduced small token at 375px mobile breakpoint."
         },
         {
             "selector": ".shop-card .product-desc",
