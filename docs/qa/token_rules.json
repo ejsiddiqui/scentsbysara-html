@@ -157,10 +157,25 @@
             "description": "Product title should use slate color."
         },
         {
-            "selector": ".subtitle",
+            "selector": ".product-details .subtitle, .product-mobile-header .subtitle",
             "property": "font-size",
             "token": "--text-body-large",
-            "description": "Subtitle should use body-large token size."
+            "widths": [1920, 768],
+            "description": "Subtitle should use body-large token size on desktop and tablet."
+        },
+        {
+            "selector": ".product-details .subtitle",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "widths": [375],
+            "description": "The hidden desktop subtitle retains the body-large token at the 375px breakpoint."
+        },
+        {
+            "selector": ".product-mobile-header .subtitle",
+            "property": "font-size",
+            "token": "--text-body",
+            "widths": [375],
+            "description": "The mobile product header subtitle uses the reduced mobile token at the 375px breakpoint."
         }
     ],
     "shop.html": [

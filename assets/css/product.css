@@ -741,7 +741,7 @@
     }
 
     .product-mobile-header .subtitle {
-        font-size: var(--text-body-large);
+        font-size: var(--text-body);
     }
 
     .product-mobile-header .price {
