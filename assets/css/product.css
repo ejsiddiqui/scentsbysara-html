@@ -101,7 +101,7 @@
     width: 38px;
     height: 38px;
     border-radius: 999px;
-    color: var(--color-slate);
+    color: var(--color-taupe);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -316,11 +316,13 @@
 .accordion.active .accordion-body {
     padding-bottom: 24px;
     opacity: 1;
+    max-height: fit-content;
 }
 
 .accordion-body.is-visible {
     padding-bottom: 24px;
     opacity: 1;
+    max-height: fit-content;
 }
 
 .accordion.active .accordion-header::after {
@@ -343,7 +345,8 @@
 
 .scents-grid {
     margin-top: 0;
-    padding: 0 var(--gutter);
+    padding: 0;
+    gap: 0;
 }
 
 .scent-card {
@@ -624,7 +627,7 @@
     }
 
     .scent-card {
-        min-height: 100vw;
+        min-width: 50vw;
     }
 
     .product-commitment-grid {
@@ -689,6 +692,14 @@
 
     .scents-grid {
         grid-template-columns: 1fr;
+    }
+
+        .scent-card-lavender {
+        order:1;
+    }
+
+    .scent-card-vanilla {
+        order:2
     }
 
 }

@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Accordions --- */
     const accordions = document.querySelectorAll('.accordion');
-    const slidePanelState = window.SBSUI?.setSlidePanelState;
 
     accordions.forEach(acc => {
         const header = acc.querySelector('.accordion-header');
@@ -162,14 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isInitiallyExpanded = isStaticBlock || body.classList.contains('is-visible') || acc.classList.contains('active');
         acc.classList.toggle('active', !isStaticBlock && isInitiallyExpanded);
 
-        if (slidePanelState) {
-            slidePanelState(body, isInitiallyExpanded, {
-                collapsedPaddingBottom: '0px',
-                expandedPaddingBottom: '24px',
-                immediate: true,
-            });
-        }
-
         header.addEventListener('click', () => {
             if (isStaticBlock) return;
 
@@ -178,26 +169,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Close others
             accordions.forEach(other => {
                 if (other === acc || other.classList.contains('static-block')) return;
-
                 other.classList.remove('active');
-
-                const otherBody = other.querySelector('.accordion-body');
-                if (otherBody && slidePanelState) {
-                    slidePanelState(otherBody, false, {
-                        collapsedPaddingBottom: '0px',
-                        expandedPaddingBottom: '24px',
-                    });
-                }
             });
 
             acc.classList.toggle('active', willOpen);
-
-            if (slidePanelState) {
-                slidePanelState(body, willOpen, {
-                    collapsedPaddingBottom: '0px',
-                    expandedPaddingBottom: '24px',
-                });
-            }
         });
     });
 

@@ -386,131 +386,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const slidePanelTimeouts = new WeakMap();
-
-    const clearSlidePanelTimeout = (panel) => {
-        const timeoutId = slidePanelTimeouts.get(panel);
-        if (timeoutId) {
-            window.clearTimeout(timeoutId);
-            slidePanelTimeouts.delete(panel);
-        }
-    };
-
-    const resetSlidePanelStyles = (panel) => {
-        clearSlidePanelTimeout(panel);
-        panel.style.transition = '';
-        panel.style.maxHeight = '';
-        panel.style.opacity = '';
-        panel.style.paddingBottom = '';
-        panel.style.overflow = '';
-        panel.style.willChange = '';
-    };
-
-    const setSlidePanelState = (panel, isExpanded, options = {}) => {
-        const config = {
-            durationMs: 180,
-            opacityMs: 140,
-            collapsedOpacity: '0',
-            expandedOpacity: '1',
-            collapsedPaddingBottom: '0px',
-            expandedPaddingBottom: '0px',
-            immediate: false,
-            ...options,
-        };
-
-        clearSlidePanelTimeout(panel);
-        panel.style.overflow = 'hidden';
-        panel.style.willChange = 'max-height, opacity';
-
-        const applyExpandedState = () => {
-            panel.style.maxHeight = `${panel.scrollHeight}px`;
-            panel.style.opacity = config.expandedOpacity;
-            panel.style.paddingBottom = config.expandedPaddingBottom;
-        };
-
-        if (config.immediate) {
-            panel.style.transition = 'none';
-            panel.style.paddingBottom = isExpanded ? config.expandedPaddingBottom : config.collapsedPaddingBottom;
-            panel.style.maxHeight = isExpanded ? `${panel.scrollHeight}px` : '0px';
-            panel.style.opacity = isExpanded ? config.expandedOpacity : config.collapsedOpacity;
-            panel.offsetHeight;
-            panel.style.transition = '';
-            return;
-        }
-
-        panel.style.transition = [
-            `max-height ${config.durationMs}ms ease`,
-            `opacity ${config.opacityMs}ms ease`,
-            `padding-bottom ${config.durationMs}ms ease`,
-        ].join(', ');
-
-        if (isExpanded) {
-            panel.style.paddingBottom = config.collapsedPaddingBottom;
-            panel.style.maxHeight = '0px';
-            panel.style.opacity = config.collapsedOpacity;
-
-            window.requestAnimationFrame(() => {
-                applyExpandedState();
-            });
-        } else {
-            panel.style.paddingBottom = config.expandedPaddingBottom;
-            panel.style.maxHeight = `${panel.scrollHeight}px`;
-            panel.style.opacity = config.expandedOpacity;
-
-            panel.offsetHeight;
-
-            window.requestAnimationFrame(() => {
-                panel.style.maxHeight = '0px';
-                panel.style.opacity = config.collapsedOpacity;
-                panel.style.paddingBottom = config.collapsedPaddingBottom;
-            });
-        }
-
-        const cleanupTimeout = window.setTimeout(() => {
-            panel.style.willChange = '';
-            slidePanelTimeouts.delete(panel);
-        }, Math.max(config.durationMs, config.opacityMs) + 30);
-
-        slidePanelTimeouts.set(panel, cleanupTimeout);
-    };
-
-    window.SBSUI = {
-        ...(window.SBSUI || {}),
-        resetSlidePanelStyles,
-        setSlidePanelState,
-    };
-
     /* --- Footer Mobile Accordion --- */
     const footerAccordionQuery = window.matchMedia('(max-width: 480px)');
     const footerAccordionItems = Array.from(document.querySelectorAll('.footer-links-col')).map((section) => ({
         section,
         trigger: section.querySelector('.footer-accordion-trigger'),
-        panel: section.querySelector('.footer-link-list'),
         icon: section.querySelector('.footer-accordion-icon'),
-    })).filter((item) => item.trigger && item.panel && item.icon);
+    })).filter((item) => item.trigger && item.icon);
 
-    const setFooterAccordionExpanded = (item, isExpanded, options = {}) => {
+    const setFooterAccordionExpanded = (item, isExpanded) => {
         item.section.classList.toggle('expanded', isExpanded);
         item.trigger.setAttribute('aria-expanded', String(isExpanded));
         item.icon.textContent = isExpanded ? '-' : '+';
-
-        if (!footerAccordionQuery.matches) {
-            resetSlidePanelStyles(item.panel);
-            return;
-        }
-
-        setSlidePanelState(item.panel, isExpanded, {
-            collapsedPaddingBottom: '0px',
-            expandedPaddingBottom: '18px',
-            immediate: options.immediate === true,
-        });
     };
 
     const syncFooterAccordionState = () => {
         if (!footerAccordionItems.length) return;
 
         footerAccordionItems.forEach((item) => {
-            setFooterAccordionExpanded(item, !footerAccordionQuery.matches, { immediate: true });
+            setFooterAccordionExpanded(item, !footerAccordionQuery.matches);
         });
     };
 

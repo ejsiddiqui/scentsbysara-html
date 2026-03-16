@@ -645,6 +645,7 @@
     }
 
     .footer-links-col.expanded .footer-link-list {
+        max-height: fit-content;
         padding: 0 0 18px;
         opacity: 1;
     }
