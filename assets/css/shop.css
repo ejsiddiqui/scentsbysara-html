@@ -125,6 +125,11 @@
     line-height: 1em;
 }
 
+/* "+" add-to-cart button: mobile only */
+.product-btn-add {
+    display: none;
+}
+
 /* Product Card specific for shop */
 .shop-card {
     margin-bottom: 48px;
@@ -191,7 +196,7 @@
 .size-dropdown .choices__list--single .choices__item,
 .sort-dropdown .choices__list--single .choices__item {
     font-size: var(--text-micro);
-    font-weight: 400;
+    font-weight: 300;
     color: var(--text-primary);
     line-height: 1em;
     text-transform: uppercase;
@@ -487,27 +492,113 @@
         gap: 18px 12px;
     }
 
+    /* Card: flex column with ordered children */
     .shop-page .shop-card {
         margin-bottom: 0;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        column-gap: 12px;
-        row-gap: 10px;
-        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
+    /* Image: first, with position:relative for "+" overlay */
     .shop-page .shop-card .product-image-wrap {
-        grid-column: 1 / -1;
+        order: 1;
+        position: relative;
     }
 
-    .shop-page .shop-card .product-options,
-    .shop-page .shop-card .product-info-shop {
+    /* "+" button: overlaid on image bottom-right */
+    .shop-page .shop-card .product-btn-add {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 7px;
+        right: 7px;
+        width: 20px;
+        height: 22px;
+        background: var(--color-taupe);
+        color: var(--color-sand);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    /* Dissolve product-options so swatches and dropdown become direct flex children */
+    .shop-page .shop-card .product-options {
         display: contents;
     }
 
-    .shop-page .shop-card .size-dropdown,
-    .shop-page .shop-card .size-dropdown .choices {
+    /* Product info: 2-col grid — name | price on row 1, desc full-width on row 2 */
+    .shop-page .shop-card .product-info-shop {
+        order: 2;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 2px;
+        row-gap: 3px;
+        align-items: start;
+        margin-bottom: 0;
+    }
+
+    /* Inner div: use display:contents to place name and desc directly into grid */
+    .shop-page .shop-card .product-info-shop > div:first-child {
+        display: contents;
+    }
+
+    .shop-page .shop-card .product-name {
+        font-size: var(--text-xsmall);
+        font-family: var(--font-sans);
+        letter-spacing: 0.05em;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* Desc: full width on its own row */
+    .shop-page .shop-card .product-desc {
+        font-size: var(--text-xsmall);
+        font-weight: 300;
         grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    /* Price: top-right */
+    .shop-page .shop-card .product-price {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .shop-page .shop-card .price-current,
+    .shop-page .shop-card .price-strikethrough {
+        font-size: var(--text-xsmall);
+        margin-right: 0;
+        font-weight: 300;
+    }
+
+    /* Color swatches: after product info */
+    .shop-page .shop-card .color-swatches {
+        order: 3;
+        gap: 6px;
+    }
+
+    .shop-page .shop-card .swatch {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Shape dropdown: last */
+    .shop-page .shop-card .size-dropdown {
+        order: 4;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .shop-page .shop-card .size-dropdown .choices {
         width: 100%;
         min-width: 0;
     }
@@ -516,58 +607,11 @@
         width: 100%;
         padding: 7px 22px 7px 8px;
         border: none;
-        box-shadow: inset 0 0 0 0.3px var(--bg-primary-dark);
+        box-shadow: inset 0 0 0 0.3px var(--color-slate)
     }
 
-    .shop-page .shop-card .color-swatches {
-        grid-column: 1;
-        grid-row: 3;
-        gap: 4px;
-        align-self: center;
-    }
-
-    .shop-page .shop-card .swatch {
-        width: 18px;
-        height: 18px;
-    }
-
-    .shop-page .shop-card .product-info-shop > div:first-child {
-        grid-column: 1 / -1;
-        grid-row: 4;
-    }
-
-    .shop-page .shop-card .product-name {
-        font-size: var(--text-small);
-        font-family: var(--font-sans);
-        letter-spacing: 5%;
-    }
-
-    .shop-page .shop-card .price-current,
-    .shop-page .shop-card .price-strikethrough {
-        font-size: var(--text-body);
-        margin-right: 0;
-    }
-
-    .shop-page .shop-card .product-desc {
-        font-size: var(--text-xsmall);
-        font-weight: 300;
-    }
-
-    .shop-page .shop-card .product-price {
-        grid-column: 2;
-        grid-row: 3;
-        margin-top: 0;
-        justify-self: end;
-        align-self: center;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 4px;
-    }
-
+    /* Hide SHOP NOW button — replaced by "+" overlay */
     .shop-page .shop-card .product-btn {
-        grid-column: 1 / -1;
-        padding: 10px 0;
-        font-size: var(--text-micro);
+        display: none;
     }
 }

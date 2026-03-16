@@ -12,7 +12,13 @@
     background-color: var(--bg-secondary);
 }
 
+.thin-border {
+    box-shadow: inset 0 0 0 0.3px var(--color-mocha);
+}
 
+.thin-border-dark {
+    box-shadow: inset 0 0 0 0.3px var(--color-slate);
+}
 
 /* --- 1. BUTTONS & LINKS --- */
 .btn-solid,
@@ -1063,9 +1069,9 @@
     text-align: left;
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-        "name price"
+        "name  price"
         "scent scent"
-        "desc desc";
+        "desc  desc";
 }
 
 .best-sellers .product-info-stacked {
@@ -1088,6 +1094,13 @@
     margin-top: 0;
     justify-self: end;
     align-self: start;
+}
+
+.best-sellers .product-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
 }
 
 .product-name {
@@ -1121,7 +1134,6 @@
     color: var(--color-taupe);
     font-weight: 300;
     text-decoration: line-through;
-    margin-right: 10px;
 }
 
 .product-btn {

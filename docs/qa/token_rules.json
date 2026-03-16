@@ -173,9 +173,9 @@
         {
             "selector": ".product-mobile-header .subtitle",
             "property": "font-size",
-            "token": "--text-body",
+            "token": "--text-small",
             "widths": [375],
-            "description": "The mobile product header subtitle uses the reduced mobile token at the 375px breakpoint."
+            "description": "The mobile product header subtitle uses the small token at the 375px breakpoint."
         }
     ],
     "shop.html": [
@@ -209,9 +209,9 @@
         {
             "selector": ".shop-card .product-name",
             "property": "font-size",
-            "token": "--text-small",
+            "token": "--text-xsmall",
             "widths": [375],
-            "description": "Product name in cards uses reduced small token at 375px mobile breakpoint."
+            "description": "Product name in cards uses xsmall token at 375px mobile breakpoint."
         },
         {
             "selector": ".shop-card .product-desc",
