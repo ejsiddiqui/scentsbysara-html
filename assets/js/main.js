@@ -159,27 +159,36 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- Header Scroll Logic --- */
     const header = document.querySelector('.site-header');
     let lastScrollY = window.scrollY;
+    const SCROLL_THRESHOLD = 8;
+    let headerScrollTicking = false;
 
     if (header) {
         window.addEventListener('scroll', () => {
-            const currentScrollY = window.scrollY;
+            if (headerScrollTicking) return;
+            headerScrollTicking = true;
 
-            // At the very top
-            if (currentScrollY <= 0) {
-                header.classList.remove('header-scrolled', 'header-hidden');
-            }
-            // Scrolling Down -> Hide Menu
-            else if (currentScrollY > lastScrollY) {
-                header.classList.add('header-hidden');
-                header.classList.remove('header-scrolled');
-            }
-            // Scrolling Up -> Show Sticky Menu
-            else {
-                header.classList.remove('header-hidden');
-                header.classList.add('header-scrolled');
-            }
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+                const delta = currentScrollY - lastScrollY;
 
-            lastScrollY = currentScrollY;
+                // At the very top
+                if (currentScrollY <= 0) {
+                    header.classList.remove('header-scrolled', 'header-hidden');
+                }
+                // Scrolling Down -> Hide Menu
+                else if (delta > SCROLL_THRESHOLD) {
+                    header.classList.add('header-hidden');
+                    header.classList.remove('header-scrolled');
+                }
+                // Scrolling Up -> Show Sticky Menu
+                else if (delta < -SCROLL_THRESHOLD) {
+                    header.classList.remove('header-hidden');
+                    header.classList.add('header-scrolled');
+                }
+
+                lastScrollY = currentScrollY;
+                headerScrollTicking = false;
+            });
         }, { passive: true });
     }
 

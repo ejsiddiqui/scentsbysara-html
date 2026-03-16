@@ -8,8 +8,8 @@
 }
 
 .shop-page-shell {
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
 }
 
 .shop-hero .text-h1 {
@@ -32,6 +32,11 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
     align-items: start;
+}
+
+.shop-products .grid-cols-4 {
+    row-gap: var(--space-lg);
+    column-gap: var(--space-md);
 }
 
 .shop-rail {
@@ -149,7 +154,6 @@
 
 /* Product Card specific for shop */
 .shop-card {
-    margin-bottom: 48px;
     display: flex;
     flex-direction: column;
 }
@@ -386,9 +390,9 @@
 }
 
 .mobile-item-count {
-    font-size: var(--text-small);
-    font-weight: 400;
-    letter-spacing: 0.16em;
+    font-size: var(--text-xsmall);
+    font-weight: 300;
+    letter-spacing: 15%;
     color: var(--text-primary);
     text-transform: uppercase;
     white-space: nowrap;
@@ -417,7 +421,7 @@
 
 @media (max-width: 1024px) {
     .shop-page-shell {
-        padding-top: 40px;
+        padding-top: var(--space-xl);
         padding-bottom: 72px;
     }
 
@@ -476,7 +480,15 @@
     .filter-btn {
         width: auto;
         justify-content: flex-start;
-        padding: 12px 18px;
+        padding: 4px 6px;
+        border: none;
+        box-shadow: inset 0 0 0 0.3px var(--color-mocha);
+    }
+
+    .filter-btn span {
+        font-size: var(--text-xsmall);
+        font-weight: 300;
+        letter-spacing: 15%;
     }
 
     .filter-btn-label-desktop {
@@ -490,6 +502,8 @@
     .filter-icon {
         margin-left: 0;
         margin-right: 12px;
+        height: 14px;
+        width: 14px;
     }
 
     .sort-dropdown {

@@ -420,6 +420,26 @@
    height: 30px;
 }
 
+.logo-symbol {
+    display: none;
+}
+
+.header-scrolled .header-top.container{
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .header-scrolled .logo-long {
+        display: none;
+    }
+
+    .header-scrolled .logo-symbol {
+        display: block;
+        width: 64px;
+        padding: 2px 0;
+    }
+}
+
 .logo-text {
     font-family: var(--font-serif);
     font-size: 32px;

@@ -247,6 +247,8 @@
         height: 24px;
     }
 
+
+
     /* Grid collapses */
     .grid-cols-4 {
         grid-template-columns: repeat(2, 1fr);
@@ -411,7 +413,7 @@
     }
 
     .mobile-menu-brand img {
-        height: 18px;
+        height: 16px;
     }
 
     .mobile-menu-footer {
