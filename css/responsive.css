@@ -414,11 +414,6 @@
         height: 18px;
     }
 
-    .mobile-nav-links a,
-    .mobile-shop-toggle {
-        letter-spacing: 0.09em;
-    }
-
     .mobile-menu-footer {
         padding-top: var(--space-lg);
     }
@@ -444,6 +439,7 @@
 
     .mobile-menu-currency .choices[data-type*=select-one] .choices__inner {
         min-height: 34px;
+        border: none;
     }
     
     /* Hero */

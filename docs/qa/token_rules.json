@@ -35,8 +35,8 @@
         {
             "selector": ".scar-collection-page .sort-label",
             "property": "font-size",
-            "token": "--text-micro",
-            "description": "Sort label should use micro token size."
+            "token": "--text-small",
+            "description": "Sort label should use small token size."
         },
         {
             "selector": ".scar-collection-page .shop-card .product-name",
@@ -61,8 +61,8 @@
         {
             "selector": ".sculpted-collection-page .sort-label",
             "property": "font-size",
-            "token": "--text-micro",
-            "description": "Sort label should use micro token size."
+            "token": "--text-small",
+            "description": "Sort label should use small token size."
         },
         {
             "selector": ".sculpted-collection-page .shop-card .product-name",
@@ -196,8 +196,8 @@
         {
             "selector": ".sort-label",
             "property": "font-size",
-            "token": "--text-micro",
-            "description": "Sort label should use micro token size."
+            "token": "--text-small",
+            "description": "Sort label should use small token size."
         },
         {
             "selector": ".shop-card .product-name",
