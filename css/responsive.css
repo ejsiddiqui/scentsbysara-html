@@ -143,10 +143,18 @@
         height: 26px;
     }
 
+    .header-scrolled .logo-long img {
+        height: 20px;
+    }
+
     .section-title,
     section .section-title,
     .container .section-title {
         margin-bottom: var(--space-lg);
+    }
+
+    .home-page .section-title {
+        margin-bottom: 0;
     }
 
     .footer-bottom-row {
@@ -237,6 +245,10 @@
     :root {
         --gutter: 20px;
         --header-height: 80px;
+        --text-xsmall: 11px;
+        --text-h4: 20px;
+        --text-h5: 18px;
+        --text-h6: 16px;
     }
 
     .announcement-currency {
@@ -247,6 +259,23 @@
         height: 24px;
     }
 
+    .eyebrow {
+        font-size: var(--text-small);
+        letter-spacing: 10%;
+    }
+
+    .home-page .commitment-text h2 {
+        font-size: var(--text-h4);
+        color: var(--color-mocha);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        padding-right: var(--space-xl);
+    }
+
+    .commitment-section .commitment-text {
+        padding: var(--space-xl);
+        padding-right: var(--space-2xl);
+    }
 
 
     /* Grid collapses */
@@ -256,12 +285,22 @@
 
     .commitment-section .container.grid-cols-2 {
         grid-template-columns: 1fr;
-        gap: var(--space-lg);
     }
 
     .commitment-section .commitment-image,
     .commitment-section .commitment-text {
         width: 100%;
+    }
+
+    .commitment-section .commitment-item h3 {
+        font-size: var(--text-small);
+        margin-bottom: 6px;
+        font-weight: 500;
+    }
+
+    .commitment-section .commitment-item p {
+        font-size: var(--text-small);
+        font-weight: 300;
     }
 
     .collection-card p {
@@ -312,13 +351,13 @@
     }
 
     .hero-content .text-hero {
-        font-size: var(--text-h2);
+        font-size: var(--text-h3);
         color: var(--text-on-dark);
         margin-bottom: var(--space-lg);
     }
 
     .hero-subtext {
-        font-size: var(--text-body-large);
+        font-size: var(--text-body);
         margin-bottom: var(--space-lg);
         color: var(--text-on-dark);
     }
@@ -327,9 +366,11 @@
         bottom: -22px;
     }
     .btn-solid, .btn-outline {
-        padding: 10px 24px;
-        font-size: var(--text-body);
-        min-height: 36px;
+        padding: 3px 28px;
+        font-size: var(--text-xsmall);
+        min-height: 24px;
+        line-height: 1;
+        letter-spacing: 10%;
     }
 
     .page-wrapper .home-hero {
@@ -368,8 +409,8 @@
         --text-hero: 42px;
         --text-h1: 36px;
         --text-h2: 32px;
-        --text-h3: 26px;
-        --text-h4: 22px;
+        --text-h3: 25px;
+        --text-h4: 20px;
         --text-h5: 18px;
         --text-h6: 16px;
         --text-body-large: 15px;
@@ -386,7 +427,7 @@
         --space-lg: 24px;
         --space-xl: 36px;
         --space-xxl: 48px;
-        --space-2xl: 64px;
+        --space-2xl: 60px;
         --space-3xl: 80px;
         --space-4xl: 96px;
         --space-section: 64px;
@@ -463,6 +504,11 @@
         grid-template-columns: 1fr;
     }
 
+    .home-page .section-block {
+        padding-top: var(--space-xxl);
+        padding-bottom: var(--space-xxl);
+    }
+
     .section-block {
         padding-top: var(--space-xl);
         padding-bottom: var(--space-xl);
@@ -471,11 +517,18 @@
     .section-block.commitment-section {
         padding-top: 0;
         padding-bottom: 0;
+        background-color: var(--bg-secondary);
+    }
+
+    .commitment-section .commitment-link {
+        font-size: var(--text-xsmall);
+        box-shadow: 0px 0.4px 0 0px var(--color-taupe);
+        border: none;
     }
 
     .section-title, section .section-title, .container .section-title {
         font-size: var(--text-body);
-        margin-bottom: var(--space-sm);
+        margin-bottom: 0;
         text-align: left;
     }
 
@@ -495,6 +548,10 @@
 
     .testimonials-section .slider-dots {
             margin-top: var(--space-lg);
+    }
+
+    .section-nav {
+        display: flex;
     }
 
     body:not(.shop-page) .product-grid {
@@ -540,6 +597,22 @@
         scroll-snap-align: start;
     }
 
+    .home-page .collection-card h3 {
+        font-family: var(--font-sans);
+        font-size: var(--text-body);
+        letter-spacing: 5%;
+    }
+
+    .home-page .collection-card p {
+        font-size: var(--text-xsmall);
+        font-weight: 300;
+    }
+
+    .home-page .collection-card .btn-outline {
+        display: none;
+    }
+
+
     .product-info-stacked {
         margin-bottom: 10px;
     }
@@ -565,7 +638,7 @@
 
     .newsletter-heading {
         margin-bottom: 18px;
-        font-size: var(--text-h3);
+        font-size: var(--text-h4);
     }
 
     .newsletter-form-stacked {
@@ -573,7 +646,7 @@
     }
 
     .newsletter-form-stacked input {
-        height: 44px;
+        height: 42px;
         padding: 0 14px;
         font-size: var(--text-micro);
         letter-spacing: 0.18em;
@@ -582,13 +655,13 @@
     .newsletter-form-stacked button {
         width: 118px;
         min-height: 30px;
-        padding: 10px 16px;
+        padding: 9px 16px;
         font-size: var(--text-micro);
-        letter-spacing: 0.16em;
+        letter-spacing: 0.15%;
     }
 
     .footer-social-group {
-        gap: 13px;
+        gap: 12px;
         margin-top: 24px;
         margin-bottom: 18px;
     }
@@ -613,7 +686,7 @@
         margin-bottom: 0;
         padding: 18px 0;
         border-bottom: 0;
-        font-size: var(--text-body);
+        font-size: var(--text-small);
         font-weight: 400;
         letter-spacing: 0.06em;
         cursor: pointer;
@@ -655,7 +728,7 @@
     }
 
     .footer-link-list a {
-        font-size: var(--text-body);
+        font-size: var(--text-small);
     }
 
     .footer-divider-rule,

@@ -452,6 +452,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* --- Bestsellers Carousel Logic --- */
+    const bestsellersSection = document.querySelector('.best-sellers');
+
+    if (bestsellersSection) {
+        const grid = bestsellersSection.querySelector('.product-grid');
+        const prevBtn = bestsellersSection.querySelector('[data-carousel-prev]');
+        const nextBtn = bestsellersSection.querySelector('[data-carousel-next]');
+
+        if (grid && prevBtn && nextBtn) {
+            const getCardWidth = () => {
+                const card = grid.querySelector('.product-card');
+                if (!card) return 0;
+                const style = window.getComputedStyle(grid);
+                const gap = parseFloat(style.columnGap) || parseFloat(style.gap) || 0;
+                return card.offsetWidth + gap;
+            };
+
+            const updateNavState = () => {
+                const atStart = grid.scrollLeft <= 1;
+                const atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+                prevBtn.disabled = atStart;
+                nextBtn.disabled = atEnd;
+            };
+
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+            });
+
+            grid.addEventListener('scroll', updateNavState, { passive: true });
+            window.addEventListener('resize', updateNavState);
+            updateNavState();
+        }
+    }
+
     /* --- Hero Image Slider Logic --- */
     const heroSection = document.querySelector('.home-hero');
     const heroSlider = document.querySelector('.hero-slider');

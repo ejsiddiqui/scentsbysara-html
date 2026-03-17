@@ -41,8 +41,8 @@
         {
             "selector": ".scar-collection-page .shop-card .product-name",
             "property": "font-size",
-            "token": "--text-body-large",
-            "description": "Product names in scar collection grid should use body-large token size."
+            "token": "--text-body",
+            "description": "Product names in scar collection grid should use the shared product-name body token."
         },
         {
             "selector": ".scar-collection-page .commitment-item p",
@@ -67,8 +67,8 @@
         {
             "selector": ".sculpted-collection-page .shop-card .product-name",
             "property": "font-size",
-            "token": "--text-body-large",
-            "description": "Product names in sculpted collection grid should use body-large token size."
+            "token": "--text-body",
+            "description": "Product names in sculpted collection grid should use the shared product-name body token."
         },
         {
             "selector": ".sculpted-collection-page .bc-feature-intro",
@@ -93,8 +93,8 @@
         {
             "selector": ".gifts-page .gifts-product-grid .product-name",
             "property": "font-size",
-            "token": "--text-body-large",
-            "description": "Gift grid product names should use body-large token size."
+            "token": "--text-body",
+            "description": "Gift grid product names should use the shared product-name body token."
         },
         {
             "selector": ".gifts-page .testimonial-text",
@@ -202,9 +202,9 @@
         {
             "selector": ".shop-card .product-name",
             "property": "font-size",
-            "token": "--text-body-large",
+            "token": "--text-body",
             "widths": [1920, 768],
-            "description": "Product name in cards should reuse shared product-grid body-large size."
+            "description": "Product name in cards should reuse the shared product-name body token on desktop and tablet."
         },
         {
             "selector": ".shop-card .product-name",

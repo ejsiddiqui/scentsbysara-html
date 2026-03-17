@@ -24,7 +24,10 @@
         <section class="home-hero">
             <div class="hero-slider">
                 <div class="hero-slide">
-                    <img src="assets/images/hero-bg.png" alt="Body Candles 1">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-1.png">
+                        <img src="assets/images/hero-bg.png" alt="Body Candles 1">
+                    </picture>
                     <div class="hero-content container">
                         <h1 class="font-serif text-hero">HAND MADE<br>BESPOKE CANDLES</h1>
                         <p class="hero-subtext text-body">Rooted in sensory science, emotional<br>wellbeing, and confidence.</p>
@@ -32,7 +35,10 @@
                     </div>
                 </div>
                 <div class="hero-slide">
-                    <img src="assets/images/hero-bg.png" alt="Body Candles 2">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-2.png">
+                        <img src="assets/images/hero-bg.png" alt="Body Candles 2">
+                    </picture>
                     <div class="hero-content container">
                         <h1 class="font-serif text-hero">HAND MADE<br>BESPOKE CANDLES</h1>
                         <p class="hero-subtext text-body">Rooted in sensory science, emotional<br>wellbeing, and confidence.</p>
@@ -40,7 +46,10 @@
                     </div>
                 </div>
                 <div class="hero-slide">
-                    <img src="assets/images/hero-bg.png" alt="Body Candles 3">
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-3.png">
+                        <img src="assets/images/hero-bg.png" alt="Body Candles 3">
+                    </picture>
                     <div class="hero-content container">
                         <h1 class="font-serif text-hero">HAND MADE<br>BESPOKE CANDLES</h1>
                         <p class="hero-subtext text-body">Rooted in sensory science, emotional<br>wellbeing, and confidence.</p>
@@ -59,7 +68,17 @@
         <!-- BEST SELLERS -->
         <section class="section-block best-sellers">
             <div class="container text-center">
-                <h2 class="section-title">BESTSELLERS</h2>
+                <div class="section-header">
+                    <h2 class="section-title">BESTSELLERS</h2>
+                    <div class="section-nav">
+                        <button type="button" class="section-nav-link" data-carousel-prev>
+                            <img src="assets/icons/move-left.svg" alt="Back arrow"> BACK
+                        </button>
+                        <button type="button" class="section-nav-link" data-carousel-next>
+                            NEXT <img src="assets/icons/move-right.svg" alt="Next arrow">
+                        </button>
+                    </div>
+                </div>
 
                 <div class="product-grid">
                     <!-- Product Card 1 -->
@@ -138,28 +157,23 @@
 
                     <div class="commitment-items">
                         <div class="commitment-item">
+                            <h3>Embodied Confidence</h3>
+                            <p>Confidence that is felt rather than performed — creating space to recognise ourselves, our experiences, and how we feel within them.</p>
+                        </div>
+
+                        <div class="commitment-item">
                             <h3>Rooted in Real Stories</h3>
-                            <p>Scents by Sara is built with its community, not just for it. Each piece
-                                carries real stories and shared experiences, turning both gifting and self-use into
-                                something deeply personal.</p>
+                            <p>Built with its community, not just for it — shaped by lived experience, resilience, and the individuality that defines each person.</p>
                         </div>
 
                         <div class="commitment-item">
-                            <h3>Handcrafted & Customisable</h3>
-                            <p>From form to final detail, each piece is hand-poured in small batches
-                                and thoughtfully finished to be intentionally one of a kind.</p>
+                            <h3>Meaningful Gifting</h3>
+                            <p>Custom pieces gifted as recognition for self or others – chosen to honour who someone is and the moments that shape them.</p>
                         </div>
 
                         <div class="commitment-item">
-                            <h3>Scent Science</h3>
-                            <p>Fragrance designed as a tool for daily ritual and to be used with
-                                intention. More than decorative, every scent serves a purpose.</p>
-                        </div>
-
-                        <div class="commitment-item">
-                            <h3>Sustainable Throughout</h3>
-                            <p>Every element, from wax to packaging, is consciously chosen to be vegan,
-                                cruelty-free and environmentally considered without compromise on quality or design.</p>
+                            <h3>Sustainable Craftsmanship</h3>
+                            <p>Luxury defined through consideration — for materials, craft, and the environments in which our pieces exist.</p>
                         </div>
                     </div>
 
@@ -174,7 +188,9 @@
                 <!-- Collection 1 -->
                 <div class="collection-card">
                     <div class="collection-image-wrap">
+                        <a href="scar-collection.html">
                         <img src="assets/images/scar-collection.png" alt="Scar Collection">
+                        </a>
                     </div>
                     <div class="collection-content">
                         <h3 class="font-serif">SCAR COLLECTION</h3>
@@ -188,7 +204,9 @@
                 <!-- Collection 2 -->
                 <div class="collection-card">
                     <div class="collection-image-wrap">
+                        <a href="sculpted-collection.html">
                         <img src="assets/images/sculpted-collection.png" alt="Sculpted Collection">
+                        </a>
                     </div>
                     <div class="collection-content">
                         <h3 class="font-serif">SCULPTED COLLECTION</h3>
@@ -213,10 +231,9 @@
                     <h2 class="font-serif">GROUNDED IN RITUAL.<br>EMBODIED IN CONFIDENCE.</h2>
                     <div class="container-editorial">
                         <p>
-                            Born in London and raised in Dubai, Scents by Sara is a female-founded premium fragrance
-                            brand
-                            that brings together embodied confidence, intentional scent and personal ritual, shaped by
-                            community and real stories.
+                            Scents By Sara is a female-founded fragrance house rooted in embodied confidence and modern ritual. 
+                            What began as a personal exploration of scent and form has grown into a brand shaped by lived experience, 
+                            community, and the power of recognising ourselves as we are.
                         </p>
                     </div>
                     <a href="our-story.html" class="btn-solid">READ MORE</a>
