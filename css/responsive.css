@@ -147,6 +147,14 @@
         height: 20px;
     }
 
+    .hero-slide {
+        padding-bottom: 107px;
+    }
+
+    .hero-slide .hero-content {
+        padding-left: 50px;
+    }
+
     .section-title,
     section .section-title,
     .container .section-title {
@@ -214,16 +222,6 @@
         gap: 0;
         order: 3;
     }
-    /* Hero */
-    .hero-slide .hero-content {
-        position: absolute;
-        bottom: 0;
-        padding: 20px;
-    }
-
-    .hero-content .text-hero {
-        font-size: 56px;
-    }
 
     /* Footer */
     .footer-top {
@@ -253,6 +251,14 @@
 
     .announcement-currency {
         display: none;
+    }
+
+    .page-wrapper .home-hero .hero-slider .hero-slide {
+        padding-bottom: 114px;
+    }
+
+    .hero-slide .hero-content {
+        padding-left: 50px;
     }
 
     .logo-long img {
@@ -345,28 +351,9 @@
     .mobile-menu-footer {
         padding-top: var(--space-lg);
     }
-    /* Hero */
-    .home-hero {
-        overflow: visible;
-    }
 
-    .hero-content .text-hero {
-        font-size: var(--text-h3);
-        color: var(--text-on-dark);
-        margin-bottom: var(--space-lg);
-    }
-
-    .hero-subtext {
-        font-size: var(--text-body);
-        margin-bottom: var(--space-lg);
-        color: var(--text-on-dark);
-    }
-
-    .home-hero .slider-dots {
-        bottom: -22px;
-    }
     .btn-solid, .btn-outline {
-        padding: 3px 28px;
+        padding: 10px 28px;
         font-size: var(--text-xsmall);
         min-height: 24px;
         line-height: 1;
@@ -379,7 +366,6 @@
     }
 
     .page-wrapper .home-hero .hero-slide {
-        align-items: center;
         padding: 0;
     }
 
@@ -489,11 +475,42 @@
     .home-hero {
        align-items: center;
        padding: 0 var(--space-md);
+       overflow: visible;
     }
 
     .home-hero .hero-slide {
         align-items: center;
         padding: 0 var(--space-md);
+    }
+
+    .hero-slide .hero-content {
+        position: absolute;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    .hero-content .text-hero {
+        font-size: var(--text-h3);
+        color: var(--text-on-dark);
+        margin-bottom: var(--space-lg);
+    }
+
+    .hero-subtext {
+        font-size: var(--text-body);
+        margin-bottom: var(--space-lg);
+        color: var(--text-on-dark);
+    }
+
+    .home-hero .slider-dots {
+        bottom: -22px;
+    }
+    
+    .btn-solid, .btn-outline {
+        padding: 3px 28px;
+        font-size: var(--text-xsmall);
+        min-height: 24px;
+        line-height: 1;
+        letter-spacing: 10%;
     }
 
      /* Header fixes */
