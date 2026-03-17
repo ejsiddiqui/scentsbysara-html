@@ -953,7 +953,7 @@ body[style*="position: fixed"] .announcement-bar {
     position: relative;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
 }
 
 .hero-slide picture {
@@ -979,21 +979,21 @@ body[style*="position: fixed"] .announcement-bar {
     z-index: 10;
     margin: 0 auto;
     max-width: var(--container-max);
-    padding-left: var(--gutter);
+    padding-left: 111px;
 }
 
 .hero-content .text-hero {
     font-size: var(--text-hero);
-    line-height: 1.1;
+    line-height: 1;
     margin-bottom: 24px;
     color: var(--color-mocha);
 }
 
 .hero-subtext {
-    font-size: var(--text-body-large);
+    font-size: var(--text-h4);
     margin-bottom: 48px;
     color: var(--color-mocha);
-    max-width: 400px;
+    max-width: 550px;
     line-height: 1.4;
     font-weight: 300;
 }
