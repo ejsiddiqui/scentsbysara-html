@@ -714,6 +714,7 @@ body[style*="position: fixed"] .announcement-bar {
     display: flex;
     flex-direction: row;
     transition: transform 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 .mobile-menu-panels.submenu-active {
@@ -725,6 +726,7 @@ body[style*="position: fixed"] .announcement-bar {
     width: 50%;
     flex-shrink: 0;
     overflow-y: auto;
+    overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
     display: flex;
     flex-direction: column;
@@ -740,8 +742,8 @@ body[style*="position: fixed"] .announcement-bar {
 .sub-nav-bar {
     display: flex;
     align-items: center;
-    height: 48px;
-    padding: 0 var(--gutter);
+    min-height: 48px;
+    padding: 0;
     flex-shrink: 0;
 }
 
@@ -806,7 +808,6 @@ body[style*="position: fixed"] .announcement-bar {
     text-align: left;
     cursor: pointer;
 }
-
 
 .mobile-shop-group {
     display: grid;
