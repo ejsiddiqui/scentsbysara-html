@@ -124,6 +124,23 @@ def run_audit(
                           };
 
                           const root = getComputedStyle(document.documentElement);
+
+                          // Collect all CSS custom properties from :root for reverse-lookup
+                          const allTokens = {};
+                          for (const sheet of document.styleSheets) {
+                            try {
+                              for (const cssRule of sheet.cssRules) {
+                                if (cssRule.selectorText === ':root') {
+                                  for (const prop of cssRule.style) {
+                                    if (prop.startsWith('--')) {
+                                      allTokens[prop] = root.getPropertyValue(prop).trim();
+                                    }
+                                  }
+                                }
+                              }
+                            } catch (e) {}
+                          }
+
                           return rules.map((rule) => {
                             if (Array.isArray(rule.widths) && rule.widths.length && !rule.widths.includes(window.innerWidth)) {
                               return null;
@@ -144,6 +161,7 @@ def run_audit(
                                 tokenValue,
                                 totalMatches: nodes.length,
                                 offenders: [],
+                                matched_token: null,
                               };
                             }
 
@@ -158,6 +176,7 @@ def run_audit(
                                 tokenValue,
                                 totalMatches: 0,
                                 offenders: [],
+                                matched_token: null,
                               };
                             }
 
@@ -173,6 +192,20 @@ def run_audit(
                               }
                             });
 
+                            // For failures, find which token the actual value maps to
+                            let matched_token = null;
+                            if (offenders.length) {
+                              const actual = offenders[0].actual;
+                              for (const [tokenName, tokenVal] of Object.entries(allTokens)) {
+                                if (tokenName === rule.token) continue;
+                                const canonVal = canonicalize(rule.property, `var(${tokenName})`);
+                                if (canonVal === actual) {
+                                  matched_token = tokenName;
+                                  break;
+                                }
+                              }
+                            }
+
                             return {
                               selector: rule.selector,
                               property: rule.property,
@@ -183,6 +216,7 @@ def run_audit(
                               tokenValue,
                               totalMatches: nodes.length,
                               offenders,
+                              matched_token,
                             };
                           });
                         }
@@ -247,6 +281,53 @@ def run_audit(
     return report
 
 
+def apply_rule_updates(report: dict) -> int:
+    """Update token_rules.json with matched tokens from audit failures.
+
+    Returns the number of rules updated.
+    """
+    raw_rules = json.loads(RULES_PATH.read_text(encoding="utf-8"))
+    updated = 0
+
+    for entry in report["results"]:
+        check = entry["check"]
+        if check["status"] != "fail" or not check.get("matched_token"):
+            continue
+
+        page_name = entry["page"]
+        page_rules = raw_rules.get(page_name, [])
+        viewport = entry["viewport"]
+
+        for rule in page_rules:
+            if rule["selector"] != check["selector"]:
+                continue
+            if rule["property"] != check["property"]:
+                continue
+            if rule["token"] == check["matched_token"]:
+                continue
+            # For width-scoped rules, only update if viewport matches
+            if rule.get("widths") and viewport["width"] not in rule["widths"]:
+                continue
+
+            old_token = rule["token"]
+            rule["token"] = check["matched_token"]
+            updated += 1
+            print(
+                f"[update-rules] {page_name} | {rule['selector']} "
+                f"({rule['property']}): {old_token} -> {check['matched_token']}"
+            )
+
+    if updated:
+        RULES_PATH.write_text(
+            json.dumps(raw_rules, indent=4) + "\n", encoding="utf-8"
+        )
+        print(f"[update-rules] Updated {updated} rule(s) in {RULES_PATH.name}")
+    else:
+        print("[update-rules] No token changes detected to update.")
+
+    return updated
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Audit CSS token compliance for selectors defined in docs/qa/token_rules.json."
@@ -261,6 +342,12 @@ def parse_args() -> argparse.Namespace:
         action="append",
         type=int,
         help="Viewport width to audit (repeatable), e.g. --width 1920 --width 768",
+    )
+    parser.add_argument(
+        "--update-rules",
+        action="store_true",
+        help="Update token_rules.json with actual token values instead of failing. "
+        "Use when design token usage has intentionally changed.",
     )
     return parser.parse_args()
 
@@ -281,6 +368,11 @@ def main() -> None:
 
     summary = report["summary"]
     failed = summary["failures"] + summary["missing_selectors"] + summary["invalid_tokens"]
+
+    if failed and args.update_rules:
+        apply_rule_updates(report)
+        return
+
     if failed:
         raise SystemExit(1)
 
