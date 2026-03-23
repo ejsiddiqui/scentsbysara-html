@@ -30,16 +30,76 @@ const MOBILE_MENU_TEMPLATE = `
         </div>
 
         <div class="mobile-menu-body">
-            <nav class="mobile-nav-links mobile-nav-primary" role="navigation" aria-label="Mobile Navigation">
-                <div class="mobile-nav-item mobile-nav-item-shop">
-                    <button class="mobile-shop-toggle" type="button" aria-expanded="false" aria-controls="mobile-shop-panel">
-                        <span>SHOP</span>
-                        <svg class="mobile-shop-toggle-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="9 6 15 12 9 18"></polyline>
-                        </svg>
-                    </button>
-                    <div class="mobile-shop-panel" id="mobile-shop-panel" hidden>
+            <div class="mobile-menu-panels">
+
+                <!-- Panel 1: Main Navigation -->
+                <div class="mobile-panel-main">
+                    <nav class="mobile-nav-links mobile-nav-primary" role="navigation" aria-label="Mobile Navigation">
+                        <div class="mobile-nav-item mobile-nav-item-shop">
+                            <button class="mobile-shop-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel-sub">
+                                <span>SHOP</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="9 6 15 12 9 18"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="gifts.html">GIFTS</a>
+                        <a href="our-story.html">OUR STORY</a>
+                        <a href="your-story.html">YOUR STORY</a>
+                        <a href="shop.html">WISHLIST</a>
+                        <a href="contact.html">CONTACT</a>
+                    </nav>
+
+                    <div class="mobile-menu-footer">
+                        <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">LOG IN</a>
+                        <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">JOIN OUR NEWSLETTER</a>
+                        <div class="mobile-menu-meta">
+                            <div class="mobile-menu-social">
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <img src="assets/icons/facebook.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                                    <img src="assets/icons/tiktok.svg" alt="" aria-hidden="true">
+                                </a>
+                                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                                    <img src="assets/icons/pinterest.svg" alt="" aria-hidden="true">
+                                </a>
+                            </div>
+                            <div class="mobile-menu-currency">
+                                <select data-currency-select aria-label="Mobile currency">
+                                    <option value="AED">AED</option>
+                                    <option value="GBP">GBP £</option>
+                                    <option value="USD">USD $</option>
+                                    <option value="EUR">EUR €</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Shop Submenu -->
+                <div class="mobile-panel-sub" id="mobile-panel-sub" aria-hidden="true">
+                    <div class="sub-nav-bar">
+                        <button class="icon-btn sub-back-btn" type="button" aria-label="Back to menu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <span class="sub-nav-label">SHOP</span>
+                        <button class="icon-btn sub-close-btn" type="button" aria-label="Close menu">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mobile-shop-groups">
                         <div class="mobile-shop-group">
                             <h3>POPULAR</h3>
                             <a href="shop.html">Shop All</a>
@@ -68,40 +128,7 @@ const MOBILE_MENU_TEMPLATE = `
                         </div>
                     </div>
                 </div>
-                <a href="gifts.html">GIFTS</a>
-                <a href="our-story.html">OUR STORY</a>
-                <a href="your-story.html">YOUR STORY</a>
-                <a href="shop.html">WISHLIST</a>
-                <a href="contact.html">CONTACT</a>
-            </nav>
 
-            <div class="mobile-menu-footer">
-                <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">LOG IN</a>
-                <a href="contact.html" class="btn-outline full-width-btn mobile-menu-cta">JOIN OUR NEWSLETTER</a>
-                <div class="mobile-menu-meta">
-                    <div class="mobile-menu-social">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <img src="assets/icons/instagram.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <img src="assets/icons/facebook.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                            <img src="assets/icons/tiktok.svg" alt="" aria-hidden="true">
-                        </a>
-                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                            <img src="assets/icons/pinterest.svg" alt="" aria-hidden="true">
-                        </a>
-                    </div>
-                    <div class="mobile-menu-currency">
-                        <select data-currency-select aria-label="Mobile currency">
-                            <option value="AED">AED</option>
-                            <option value="GBP">GBP £</option>
-                            <option value="USD">USD $</option>
-                            <option value="EUR">EUR €</option>
-                        </select>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -116,14 +143,14 @@ const MOBILE_MENU_TEMPLATE = `
     const socialLinkCount = mobileMenu.querySelectorAll('.mobile-menu-social a').length;
     const hasCurrency = !!mobileMenu.querySelector('.mobile-menu-currency select');
     const hasFooter = !!mobileMenu.querySelector('.mobile-menu-footer');
-    const hasShopToggle = !!mobileMenu.querySelector('.mobile-shop-toggle');
+    const hasSubPanel = !!mobileMenu.querySelector('.mobile-panel-sub');
 
     const isIncomplete = !primaryNav
         || primaryLinkCount < 5
         || socialLinkCount < 4
         || !hasCurrency
         || !hasFooter
-        || !hasShopToggle;
+        || !hasSubPanel;
 
     if (isIncomplete) {
         mobileMenu.innerHTML = MOBILE_MENU_TEMPLATE;
@@ -197,53 +224,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.querySelector('.mobile-menu-overlay');
     const closeMenuBtn = document.querySelector('.close-mobile-menu');
     const mobileMenuLinks = document.querySelectorAll('.mobile-nav-links a');
-    const mobileShopItem = document.querySelector('.mobile-nav-item-shop');
     const mobileShopToggle = document.querySelector('.mobile-shop-toggle');
-    const mobileShopPanel = document.querySelector('.mobile-shop-panel');
+    const mobileMenuPanels = document.querySelector('.mobile-menu-panels');
+    const subPanel = document.querySelector('.mobile-panel-sub');
+    const subBackBtn = document.querySelector('.sub-back-btn');
+    const subCloseBtn = document.querySelector('.sub-close-btn');
     const MENU_CLOSE_DURATION_MS = 450;
-    const SHOP_PANEL_DURATION_MS = 180;
     let closeMenuTimeoutId = null;
     let closeTransitionHandler = null;
     let pageScrollY = 0;
-    let shopPanelTimeoutId = null;
 
-    const setShopMenuExpanded = (isExpanded) => {
-        if (!mobileShopItem || !mobileShopToggle || !mobileShopPanel) return;
+    const openSubMenu = () => {
+        if (!mobileMenuPanels || !mobileShopToggle) return;
+        mobileMenuPanels.classList.add('submenu-active');
+        mobileShopToggle.setAttribute('aria-expanded', 'true');
+        if (subPanel) subPanel.setAttribute('aria-hidden', 'false');
+    };
 
-        if (shopPanelTimeoutId) {
-            window.clearTimeout(shopPanelTimeoutId);
-            shopPanelTimeoutId = null;
-        }
-
-        mobileShopItem.classList.toggle('expanded', isExpanded);
-        mobileShopToggle.setAttribute('aria-expanded', String(isExpanded));
-
-        if (isExpanded) {
-            mobileShopPanel.removeAttribute('hidden');
-            mobileShopPanel.style.maxHeight = '0px';
-            mobileShopPanel.style.opacity = '0';
-
-            window.requestAnimationFrame(() => {
-                mobileShopPanel.style.maxHeight = `${mobileShopPanel.scrollHeight}px`;
-                mobileShopPanel.style.opacity = '1';
-            });
-
-            mobileShopPanel.removeAttribute('hidden');
-            return;
-        }
-
-        const currentHeight = mobileShopPanel.scrollHeight;
-        mobileShopPanel.style.maxHeight = `${currentHeight}px`;
-        mobileShopPanel.style.opacity = '1';
-
-        window.requestAnimationFrame(() => {
-            mobileShopPanel.style.maxHeight = '0px';
-            mobileShopPanel.style.opacity = '0';
-        });
-
-        shopPanelTimeoutId = window.setTimeout(() => {
-            mobileShopPanel.setAttribute('hidden', '');
-        }, SHOP_PANEL_DURATION_MS);
+    const closeSubMenu = () => {
+        if (!mobileMenuPanels || !mobileShopToggle) return;
+        mobileMenuPanels.classList.remove('submenu-active');
+        mobileShopToggle.setAttribute('aria-expanded', 'false');
+        if (subPanel) subPanel.setAttribute('aria-hidden', 'true');
     };
 
     const lockPageScroll = () => {
@@ -286,13 +288,13 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.setAttribute('aria-hidden', 'true');
         mobileMenu.setAttribute('inert', '');
         unlockPageScroll();
-        setShopMenuExpanded(false);
+        closeSubMenu();
     };
 
     const openMenu = () => {
         if (!hamburgerBtn || !mobileMenu) return;
         clearCloseAnimation();
-        setShopMenuExpanded(false);
+        closeSubMenu();
 
         hamburgerBtn.setAttribute('aria-expanded', 'true');
         mobileMenu.classList.remove('closing');
@@ -372,11 +374,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-        if (mobileShopToggle) {
-            setShopMenuExpanded(false);
-            mobileShopToggle.addEventListener('click', () => {
-                const isExpanded = mobileShopToggle.getAttribute('aria-expanded') === 'true';
-                setShopMenuExpanded(!isExpanded);
+    if (mobileShopToggle) {
+        mobileShopToggle.addEventListener('click', openSubMenu);
+    }
+
+    if (subBackBtn) {
+        subBackBtn.addEventListener('click', closeSubMenu);
+    }
+
+    if (subCloseBtn) {
+        subCloseBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            setMenuState(false);
         });
     }
 
