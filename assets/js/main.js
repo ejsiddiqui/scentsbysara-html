@@ -199,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuLinks = document.querySelectorAll('.mobile-nav-links a');
     const mobileShopToggle = document.querySelector('.mobile-shop-toggle');
     const mobileMenuPanels = document.querySelector('.mobile-menu-panels');
+    const subPanel = document.querySelector('.mobile-panel-sub');
     const subBackBtn = document.querySelector('.sub-back-btn');
     const subCloseBtn = document.querySelector('.sub-close-btn');
     const MENU_CLOSE_DURATION_MS = 450;
@@ -210,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!mobileMenuPanels || !mobileShopToggle) return;
         mobileMenuPanels.classList.add('submenu-active');
         mobileShopToggle.setAttribute('aria-expanded', 'true');
-        const subPanel = document.querySelector('.mobile-panel-sub');
         if (subPanel) subPanel.setAttribute('aria-hidden', 'false');
     };
 
@@ -218,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!mobileMenuPanels || !mobileShopToggle) return;
         mobileMenuPanels.classList.remove('submenu-active');
         mobileShopToggle.setAttribute('aria-expanded', 'false');
-        const subPanel = document.querySelector('.mobile-panel-sub');
         if (subPanel) subPanel.setAttribute('aria-hidden', 'true');
     };
 
