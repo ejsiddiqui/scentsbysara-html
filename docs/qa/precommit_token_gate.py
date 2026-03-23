@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
 import sys
@@ -65,17 +66,33 @@ def resolve_pages_to_audit(staged_files: set[str], rule_pages: list[str]) -> lis
     return sorted(selected)
 
 
-def run_token_audit(pages: list[str]) -> int:
+def run_token_audit(pages: list[str], *, update_rules: bool = False) -> int:
     cmd = [sys.executable, "docs/qa/token_audit.py"]
     for page in pages:
         cmd.extend(["--page", page])
+    if update_rules:
+        cmd.append("--update-rules")
 
     print(f"[token-gate] Running token audit for: {', '.join(pages)}")
     result = subprocess.run(cmd, cwd=REPO_ROOT, check=False)
     return result.returncode
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Pre-commit gate that runs the token audit on staged files."
+    )
+    parser.add_argument(
+        "--update-rules",
+        action="store_true",
+        help="Update token_rules.json with actual token values instead of blocking "
+        "the commit. Use when design token usage has intentionally changed.",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
+    args = parse_args()
     staged_files = get_staged_files()
     rule_pages = load_rule_pages()
     pages = resolve_pages_to_audit(staged_files, rule_pages)
@@ -84,12 +101,13 @@ def main() -> int:
         print("[token-gate] Skipped (no token-relevant staged changes).")
         return 0
 
-    code = run_token_audit(pages)
-    if code != 0:
+    code = run_token_audit(pages, update_rules=args.update_rules)
+    if code != 0 and not args.update_rules:
         print("[token-gate] Blocking commit due to token audit failures.")
+        print("[token-gate] Tip: re-run with --update-rules to accept the changes.")
     else:
         print("[token-gate] Passed.")
-    return code
+    return 0 if args.update_rules else code
 
 
 if __name__ == "__main__":
