@@ -39,6 +39,7 @@ shopify_theme/
 docs/qa/*
 !docs/qa/token_audit.py
 !docs/qa/token_rules.json
+!docs/qa/interaction_checks.json
 !docs/qa/agent-workflow.md
 !docs/qa/precommit_token_gate.py
 !docs/qa/viewport_audit.py

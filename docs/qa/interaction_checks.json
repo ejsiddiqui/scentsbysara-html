@@ -1,0 +1,328 @@
+{
+  "index.html": [
+    {
+      "id": "home-hero-dots",
+      "description": "Hero slider dot navigation switches slides",
+      "selector": ".home-hero .slider-dots .dot"
+    },
+    {
+      "id": "home-hero-swipe",
+      "description": "Hero slider responds to drag/swipe gestures",
+      "selector": ".hero-slider"
+    },
+    {
+      "id": "home-bestsellers-carousel",
+      "description": "Bestsellers carousel prev/next buttons scroll products",
+      "selector": "[data-carousel-prev], [data-carousel-next]"
+    },
+    {
+      "id": "home-testimonials-dots",
+      "description": "Testimonials slider dot navigation switches slides",
+      "selector": ".testimonials-section .slider-dots .dot"
+    }
+  ],
+  "shop.html": [
+    {
+      "id": "shop-filter-toggle",
+      "description": "Filter button opens/closes the filter overlay panel",
+      "selector": ".filter-btn"
+    },
+    {
+      "id": "shop-filter-apply",
+      "description": "Apply filters button filters the product grid",
+      "selector": ".apply-filters"
+    },
+    {
+      "id": "shop-filter-clear",
+      "description": "Clear filters button resets all filter selections",
+      "selector": ".clear-filters"
+    },
+    {
+      "id": "shop-sort",
+      "description": "Sort dropdown reorders product grid",
+      "selector": "#sort-select"
+    },
+    {
+      "id": "shop-color-swatch",
+      "description": "Color swatch selection updates product card image",
+      "selector": ".swatch"
+    },
+    {
+      "id": "shop-size-select",
+      "description": "Size dropdown selects product variant",
+      "selector": ".size-select"
+    },
+    {
+      "id": "shop-add-to-bag",
+      "description": "Add to bag button adds item to cart and updates cart badge",
+      "selector": ".btn-shop-now"
+    }
+  ],
+  "product.html": [
+    {
+      "id": "product-gallery-thumbs",
+      "description": "Gallery thumbnail click swaps main image",
+      "selector": ".thumb-wrap"
+    },
+    {
+      "id": "product-gallery-arrows",
+      "description": "Gallery prev/next arrows navigate images",
+      "selector": ".product-gallery-arrow"
+    },
+    {
+      "id": "product-gallery-swipe",
+      "description": "Gallery viewport responds to touch swipe",
+      "selector": ".product-gallery-viewport"
+    },
+    {
+      "id": "product-color-swatch",
+      "description": "Color swatch selection updates variant and label",
+      "selector": ".swatch-lg"
+    },
+    {
+      "id": "product-size-pill",
+      "description": "Size/shape pill selection updates variant",
+      "selector": ".pill-btn"
+    },
+    {
+      "id": "product-quantity",
+      "description": "Quantity +/- buttons update count within valid range",
+      "selector": ".qty-btn"
+    },
+    {
+      "id": "product-add-to-bag",
+      "description": "Add to bag button adds item to cart and shows confirmation",
+      "selector": ".btn-add-bag"
+    },
+    {
+      "id": "product-accordion",
+      "description": "Accordion headers expand/collapse detail sections",
+      "selector": ".accordion-header"
+    }
+  ],
+  "cart.html": [
+    {
+      "id": "cart-quantity-adjust",
+      "description": "Quantity +/- buttons update item count and recalculate totals",
+      "selector": "[data-qty-change]"
+    },
+    {
+      "id": "cart-remove-item",
+      "description": "Remove button removes item and updates totals",
+      "selector": "[data-remove-line]"
+    },
+    {
+      "id": "cart-empty-state",
+      "description": "Empty cart shows empty state message with continue shopping link",
+      "selector": "#cart-empty"
+    },
+    {
+      "id": "cart-totals-display",
+      "description": "Subtotal, shipping, tax, and total display correctly",
+      "selector": "#cart-subtotal, #cart-shipping, #cart-tax, #cart-total"
+    },
+    {
+      "id": "cart-checkout-link",
+      "description": "Checkout button navigates to checkout page",
+      "selector": "a[href=\"checkout.html\"]"
+    }
+  ],
+  "checkout.html": [
+    {
+      "id": "checkout-form-validation",
+      "description": "Required fields show validation errors when empty on submit",
+      "selector": ".field-error"
+    },
+    {
+      "id": "checkout-card-formatting",
+      "description": "Card number auto-formats with spaces, expiry as MM/YY",
+      "selector": "#cardnumber, #expiry, #cvc"
+    },
+    {
+      "id": "checkout-order-summary",
+      "description": "Order summary shows correct items, subtotal, shipping, tax, total",
+      "selector": "#checkout-summary-items, #checkout-total"
+    },
+    {
+      "id": "checkout-submit",
+      "description": "Complete order button submits form with validation",
+      "selector": "button[type=\"submit\"]"
+    }
+  ],
+  "your-story.html": [
+    {
+      "id": "story-form-validation",
+      "description": "Required fields show validation errors when empty on submit",
+      "selector": ".field-error"
+    },
+    {
+      "id": "story-char-counter",
+      "description": "Character counter updates as user types in textarea",
+      "selector": "[data-counter-for]"
+    },
+    {
+      "id": "story-form-submit",
+      "description": "Submit button triggers validation and shows status message",
+      "selector": "button[type=\"submit\"]"
+    }
+  ],
+  "our-story.html": [
+    {
+      "id": "our-story-cta",
+      "description": "Shop all CTA button navigates to shop page",
+      "selector": "a[href=\"shop.html\"]"
+    }
+  ],
+  "contact.html": [
+    {
+      "id": "contact-form-validation",
+      "description": "Required fields show validation errors when empty on submit",
+      "selector": ".field-error"
+    },
+    {
+      "id": "contact-char-counter",
+      "description": "Message character counter updates as user types",
+      "selector": "[data-counter-for=\"contact-message\"]"
+    },
+    {
+      "id": "contact-topic-dropdown",
+      "description": "Topic dropdown selects subject category",
+      "selector": "#contact-topic"
+    },
+    {
+      "id": "contact-form-submit",
+      "description": "Submit button triggers validation and shows status message",
+      "selector": "button[type=\"submit\"]"
+    }
+  ],
+  "body-candles.html": [
+    {
+      "id": "body-candles-product-links",
+      "description": "Product card links navigate to product page",
+      "selector": ".product-image-wrap, .product-btn"
+    },
+    {
+      "id": "body-candles-cta",
+      "description": "Feature CTA button navigates to target page",
+      "selector": ".btn-solid"
+    },
+    {
+      "id": "body-candles-prices",
+      "description": "Product prices display and update with currency selection",
+      "selector": "[data-price-gbp]"
+    }
+  ],
+  "scar-collection.html": [
+    {
+      "id": "scar-filter-toggle",
+      "description": "Filter button opens/closes filter overlay",
+      "selector": ".filter-btn"
+    },
+    {
+      "id": "scar-sort",
+      "description": "Sort dropdown reorders product grid",
+      "selector": "#sort-select"
+    },
+    {
+      "id": "scar-color-swatch",
+      "description": "Color swatch selection updates product card",
+      "selector": ".swatch"
+    },
+    {
+      "id": "scar-size-select",
+      "description": "Size dropdown selects product variant",
+      "selector": ".size-select"
+    },
+    {
+      "id": "scar-product-link",
+      "description": "Product card navigates to product page",
+      "selector": ".product-btn"
+    }
+  ],
+  "sculpted-collection.html": [
+    {
+      "id": "sculpted-filter-toggle",
+      "description": "Filter button opens/closes filter overlay",
+      "selector": ".filter-btn"
+    },
+    {
+      "id": "sculpted-sort",
+      "description": "Sort dropdown reorders product grid",
+      "selector": "#sort-select"
+    },
+    {
+      "id": "sculpted-color-swatch",
+      "description": "Color swatch selection updates product card",
+      "selector": ".swatch"
+    },
+    {
+      "id": "sculpted-size-select",
+      "description": "Size dropdown selects product variant",
+      "selector": ".size-select"
+    },
+    {
+      "id": "sculpted-product-link",
+      "description": "Product card navigates to product page",
+      "selector": ".product-btn"
+    }
+  ],
+  "gifts.html": [
+    {
+      "id": "gifts-product-links",
+      "description": "Product card links navigate to product page",
+      "selector": ".product-image-wrap, .product-btn"
+    },
+    {
+      "id": "gifts-collection-cta",
+      "description": "Discover collection buttons navigate to collection pages",
+      "selector": ".btn-solid"
+    },
+    {
+      "id": "gifts-prices",
+      "description": "Product prices display and update with currency selection",
+      "selector": "[data-price-gbp]"
+    }
+  ],
+  "_shared": [
+    {
+      "id": "shared-hamburger",
+      "description": "Hamburger button opens mobile menu overlay",
+      "selector": ".hamburger-btn"
+    },
+    {
+      "id": "shared-mobile-menu-close",
+      "description": "Mobile menu overlay closes on close button or overlay click",
+      "selector": ".mobile-menu-overlay"
+    },
+    {
+      "id": "shared-mobile-shop-submenu",
+      "description": "Mobile shop toggle opens submenu panel, back button returns",
+      "selector": ".mobile-shop-toggle, .sub-back-btn"
+    },
+    {
+      "id": "shared-search-toggle",
+      "description": "Search toggle opens/closes search overlay",
+      "selector": ".search-toggle"
+    },
+    {
+      "id": "shared-header-scroll",
+      "description": "Header hides on scroll down, shows on scroll up",
+      "selector": ".site-header"
+    },
+    {
+      "id": "shared-footer-accordion",
+      "description": "Footer accordion sections expand/collapse on mobile",
+      "selector": ".footer-accordion-trigger"
+    },
+    {
+      "id": "shared-currency-select",
+      "description": "Currency dropdown updates all prices on page",
+      "selector": "[data-currency-select]"
+    },
+    {
+      "id": "shared-cart-badge",
+      "description": "Cart badge count updates when items are added/removed",
+      "selector": "[data-cart-count]"
+    }
+  ]
+}
