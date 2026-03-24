@@ -41,6 +41,7 @@ docs/qa/*
 !docs/qa/token_rules.json
 !docs/qa/agent-workflow.md
 !docs/qa/precommit_token_gate.py
+!docs/qa/viewport_audit.py
 docs/archived/
 docs/plans/
 docs/superpowers/
