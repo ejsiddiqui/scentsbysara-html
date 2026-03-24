@@ -485,7 +485,7 @@
 
     .hero-slide .hero-content {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         padding: 20px;
     }
 
@@ -602,7 +602,6 @@
         gap: var(--space-md);
         overflow-x: auto;
         overscroll-behavior-x: contain;
-        padding-bottom: 4px;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
@@ -617,12 +616,14 @@
     .home-page .collection-card h3 {
         font-family: var(--font-sans);
         font-size: var(--text-body);
-        letter-spacing: 5%;
+        letter-spacing: 10%;
     }
 
     .home-page .collection-card p {
         font-size: var(--text-xsmall);
         font-weight: 300;
+        margin-bottom: 0;
+        min-width: 250px;
     }
 
     .home-page .collection-card .btn-outline {

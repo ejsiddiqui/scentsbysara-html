@@ -1,301 +1,427 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scents by Sara | Luxury Bespoke Candles</title>
-    <link rel="stylesheet" href="https://use.typekit.net/ooj6lrz.css">
-    <link rel="stylesheet" href="css/design-tokens.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="assets/css/choices/choices.min.css">
-</head>
+    <link rel="stylesheet" href="https://use.typekit.net/ooj6lrz.css" />
+    <link rel="stylesheet" href="css/design-tokens.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/choices/choices.min.css" />
+  </head>
 
-<body class="home-page">
+  <body class="home-page">
     <!-- SHARED SITE HEADER -->
     <div data-shared-partial="site-header"></div>
 
     <!-- MAIN PAGE WRAPPER -->
     <main class="page-wrapper">
-
-        <!-- HERO SECTION -->
-        <section class="home-hero">
-            <div class="hero-slider">
-                <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-1.png">
-                        <img src="assets/images/desktop-hero-1.png" alt="Female Form As It Is">
-                    </picture>
-                    <div class="hero-content container">
-                        <h1 class="font-serif text-hero">THE FEMALE FORM,<br>AS IT IS</h1>
-                        <p class="hero-subtext text-body">Hand-poured body candles celebrating real bodies and lived experience.</p>
-                        <a href="shop.html" class="btn-solid">SHOP NOW</a>
-                    </div>
-                </div>
-                <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-2.png">
-                        <img src="assets/images/desktop-hero-2.png" alt="Meaningful Gifts">
-                    </picture>
-                    <div class="hero-content container">
-                        <h1 class="font-serif text-hero">MEANINGFUL GIFTS</h1>
-                        <p class="hero-subtext text-body">A gesture of recognition for who someone is and <br>the experiences they carry.</p>
-                        <a href="gifts.html" class="btn-solid">EXPLORE GITS</a>
-                    </div>
-                </div>
-                <div class="hero-slide">
-                    <picture>
-                        <source media="(max-width: 480px)" srcset="assets/images/mobile-hero-3.png">
-                        <img src="assets/images/desktop-hero-3.png" alt="She Is You">
-                    </picture>
-                    <div class="hero-content container">
-                        <h1 class="font-serif text-hero">SHE IS YOU</h1>
-                        <p class="hero-subtext text-body">A fully customisable body candle created from<br>your own description.</p>
-                        <a href="product.html" class="btn-solid">CUSTOMISE YOUR OWN</a>
-                    </div>
-                </div>
+      <!-- HERO SECTION -->
+      <section class="home-hero">
+        <div class="hero-slider">
+          <div class="hero-slide">
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcset="assets/images/mobile-hero-1.png"
+              />
+              <img
+                src="assets/images/desktop-hero-1.png"
+                alt="Female Form As It Is"
+              />
+            </picture>
+            <div class="hero-content container">
+              <h1 class="font-serif text-hero">
+                THE FEMALE FORM,<br />AS IT IS
+              </h1>
+              <p class="hero-subtext text-body">
+                Hand-poured body candles celebrating real bodies and lived
+                experience.
+              </p>
+              <a href="shop.html" class="btn-solid">SHOP NOW</a>
             </div>
-            <!-- Slider Dots -->
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+          </div>
+          <div class="hero-slide">
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcset="assets/images/mobile-hero-2.png"
+              />
+              <img
+                src="assets/images/desktop-hero-2.png"
+                alt="Meaningful Gifts"
+              />
+            </picture>
+            <div class="hero-content container">
+              <h1 class="font-serif text-hero">MEANINGFUL GIFTS</h1>
+              <p class="hero-subtext text-body">
+                A gesture of recognition for who someone is and <br />the
+                experiences they carry.
+              </p>
+              <a href="gifts.html" class="btn-solid">EXPLORE GITS</a>
             </div>
-        </section>
-
-        <!-- BEST SELLERS -->
-        <section class="section-block best-sellers">
-            <div class="container text-center">
-                <div class="section-header">
-                    <h2 class="section-title">BESTSELLERS</h2>
-                    <div class="section-nav">
-                        <button type="button" class="section-nav-link" data-carousel-prev>
-                            <img src="assets/icons/move-left.svg" alt="Back arrow"> BACK
-                        </button>
-                        <button type="button" class="section-nav-link" data-carousel-next>
-                            NEXT <img src="assets/icons/move-right.svg" alt="Next arrow">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="product-grid">
-                    <!-- Product Card 1 -->
-                    <div class="product-card">
-                        <a href="product.html" class="product-image-wrap product-image-link">
-                            <img src="assets/images/she-is-grace-thumb.png" alt="SHE IS GRACE">
-                        </a>
-                        <div class="product-info-stacked">
-                            <span class="product-name"><a href="product.html">SHE IS GRACE</a></span>
-                            <span class="product-scent">C-Section Body Candle</span>
-                            <div class="product-price">
-                                <span class="price-strikethrough" data-price-gbp="30.26">£30.26</span>
-                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
-                            </div>
-                        </div>
-                        <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
-                    </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="product-card">
-                        <a href="product.html" class="product-image-wrap product-image-link">
-                            <img src="assets/images/she-is-beauty-thumb.png" alt="SHE IS BEAUTY">
-                        </a>
-                        <div class="product-info-stacked">
-                            <span class="product-name"><a href="product.html">SHE IS BEAUTY</a></span>
-                            <span class="product-scent">Amber</span>
-                            <div class="product-price">
-                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
-                            </div>
-                        </div>
-                        <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
-                    </div>
-
-                    <!-- Product Card 3 -->
-                    <div class="product-card">
-                        <a href="product.html" class="product-image-wrap product-image-link">
-                            <img src="assets/images/she-is-power-thumb.png" alt="SHE IS POWER">
-                        </a>
-                        <div class="product-info-stacked">
-                            <span class="product-name"><a href="product.html">SHE IS POWER</a></span>
-                            <span class="product-scent">Sandalwood</span>
-                            <div class="product-price">
-                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
-                            </div>
-                        </div>
-                        <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
-                    </div>
-
-                    <!-- Product Card 4 -->
-                    <div class="product-card">
-                        <a href="product.html" class="product-image-wrap product-image-link">
-                            <img src="assets/images/she-is-strength-thumb.png" alt="SHE IS STRENGTH">
-                        </a>
-                        <div class="product-info-stacked">
-                            <span class="product-name"><a href="product.html">SHE IS STRENGTH</a></span>
-                            <span class="product-scent">Vanilla</span>
-                            <div class="product-price">
-                                <span class="price-current" data-price-gbp="20.26">£20.26</span>
-                            </div>
-                        </div>
-                        <button class="product-btn" onclick="window.location.href='product.html'">SHOP NOW</button>
-                    </div>
-                </div>
+          </div>
+          <div class="hero-slide">
+            <picture>
+              <source
+                media="(max-width: 480px)"
+                srcset="assets/images/mobile-hero-3.png"
+              />
+              <img src="assets/images/desktop-hero-3.png" alt="She Is You" />
+            </picture>
+            <div class="hero-content container">
+              <h1 class="font-serif text-hero">SHE IS YOU</h1>
+              <p class="hero-subtext text-body">
+                A fully customisable body candle created from<br />your own
+                description.
+              </p>
+              <a href="product.html" class="btn-solid">CUSTOMISE YOUR OWN</a>
             </div>
-        </section>
+          </div>
+        </div>
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
 
-        <!-- OUR COMMITMENT -->
-        <section class="section-block commitment-section">
-            <div class="container grid-cols-2">
-                <div class="commitment-image">
-                    <img src="assets/images/our-commitment-left.png" alt="Matches and candle">
-                </div>
-                <div class="commitment-text">
-                    <span class="eyebrow">OUR COMMITMENT</span>
-                    <h2 class="font-serif">INTENTIONAL DESIGN IN SCENT AND FORM.</h2>
-
-                    <div class="commitment-items">
-                        <div class="commitment-item">
-                            <h3>Embodied Confidence</h3>
-                            <p>Confidence that is felt rather than performed — creating space to recognise ourselves, our experiences, and how we feel within them.</p>
-                        </div>
-
-                        <div class="commitment-item">
-                            <h3>Rooted in Real Stories</h3>
-                            <p>Built with its community, not just for it — shaped by lived experience, resilience, and the individuality that defines each person.</p>
-                        </div>
-
-                        <div class="commitment-item">
-                            <h3>Meaningful Gifting</h3>
-                            <p>Custom pieces gifted as recognition for self or others – chosen to honour who someone is and the moments that shape them.</p>
-                        </div>
-
-                        <div class="commitment-item">
-                            <h3>Sustainable Craftsmanship</h3>
-                            <p>Luxury defined through consideration — for materials, craft, and the environments in which our pieces exist.</p>
-                        </div>
-                    </div>
-
-                    <a href="our-story.html" class="commitment-link">READ OUR STORY</a>
-                </div>
+      <!-- BEST SELLERS -->
+      <section class="section-block best-sellers">
+        <div class="container text-center">
+          <div class="section-header">
+            <h2 class="section-title">BESTSELLERS</h2>
+            <div class="section-nav">
+              <button type="button" class="section-nav-link" data-carousel-prev>
+                <img src="assets/icons/move-left.svg" alt="Back arrow" /> BACK
+              </button>
+              <button type="button" class="section-nav-link" data-carousel-next>
+                NEXT <img src="assets/icons/move-right.svg" alt="Next arrow" />
+              </button>
             </div>
-        </section>
+          </div>
 
-        <!-- COLLECTIONS -->
-        <section class="section-block collections-section">
-            <div class="container grid-cols-2">
-                <!-- Collection 1 -->
-                <div class="collection-card">
-                    <div class="collection-image-wrap">
-                        <a href="scar-collection.html">
-                        <img src="assets/images/scar-collection.png" alt="Scar Collection">
-                        </a>
-                    </div>
-                    <div class="collection-content">
-                        <h3 class="font-serif">SCAR COLLECTION</h3>
-                        <p>
-                            A collection that honours lived experience by turning stretch marks and scars into sculpted
-                            forms of beauty, resilience, and self-recognition.
-                        </p>
-                        <a href="scar-collection.html" class="btn-outline">DISCOVER NOW</a>
-                    </div>
+          <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+              <a
+                href="product.html"
+                class="product-image-wrap product-image-link"
+              >
+                <img
+                  src="assets/images/she-is-grace-thumb.png"
+                  alt="SHE IS GRACE"
+                />
+              </a>
+              <div class="product-info-stacked">
+                <span class="product-name"
+                  ><a href="product.html">SHE IS GRACE</a></span
+                >
+                <span class="product-scent">C-Section Body Candle</span>
+                <div class="product-price">
+                  <span class="price-strikethrough" data-price-gbp="30.26"
+                    >£30.26</span
+                  >
+                  <span class="price-current" data-price-gbp="20.26"
+                    >£20.26</span
+                  >
                 </div>
-                <!-- Collection 2 -->
-                <div class="collection-card">
-                    <div class="collection-image-wrap">
-                        <a href="sculpted-collection.html">
-                        <img src="assets/images/sculpted-collection.png" alt="Sculpted Collection">
-                        </a>
-                    </div>
-                    <div class="collection-content">
-                        <h3 class="font-serif">SCULPTED COLLECTION</h3>
-                        <p>
-                            Designed around fluid silhouettes and intentional scent layering, this line celebrates the
-                            female body through elevated shape, texture, and ritual.
-                        </p>
-                        <a href="sculpted-collection.html" class="btn-outline">DISCOVER NOW</a>
-                    </div>
-                </div>
+              </div>
+              <button
+                class="product-btn"
+                onclick="window.location.href = 'product.html'"
+              >
+                SHOP NOW
+              </button>
             </div>
-        </section>
 
-        <!-- OUR STORY SPLIT -->
-        <section class="story-split">
-            <div class="grid-cols-2">
-                <div class="story-img-block">
-                    <img src="assets/images/sara.png" alt="Founder of Scents by Sara">
+            <!-- Product Card 2 -->
+            <div class="product-card">
+              <a
+                href="product.html"
+                class="product-image-wrap product-image-link"
+              >
+                <img
+                  src="assets/images/she-is-beauty-thumb.png"
+                  alt="SHE IS BEAUTY"
+                />
+              </a>
+              <div class="product-info-stacked">
+                <span class="product-name"
+                  ><a href="product.html">SHE IS BEAUTY</a></span
+                >
+                <span class="product-scent">Amber</span>
+                <div class="product-price">
+                  <span class="price-current" data-price-gbp="20.26"
+                    >£20.26</span
+                  >
                 </div>
-                <div class="story-text-block bg-secondary">
-                    <span class="eyebrow">OUR STORY</span>
-                    <h2 class="font-serif">GROUNDED IN RITUAL.<br>EMBODIED IN CONFIDENCE.</h2>
-                    <div class="container-editorial">
-                        <p>
-                            Scents By Sara is a female-founded fragrance house rooted in embodied confidence and modern ritual. 
-                            What began as a personal exploration of scent and form has grown into a brand shaped by lived experience, 
-                            community, and the power of recognising ourselves as we are.
-                        </p>
-                    </div>
-                    <a href="our-story.html" class="btn-solid">READ MORE</a>
-                </div>
+              </div>
+              <button
+                class="product-btn"
+                onclick="window.location.href = 'product.html'"
+              >
+                SHOP NOW
+              </button>
             </div>
-        </section>
 
-        <!-- TESTIMONIALS -->
-        <section class="section-block testimonials-section bg-primary text-center">
-            <div class="container">
-                <h2 class="section-title font-serif text-h1">CUSTOMER TESTIMONIALS</h2>
-                <div class="stars">
-                    <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true">
-                    <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true">
-                    <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true">
-                    <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true">
-                    <img src="assets/icons/star_empty.svg" alt="" aria-hidden="true">
+            <!-- Product Card 3 -->
+            <div class="product-card">
+              <a
+                href="product.html"
+                class="product-image-wrap product-image-link"
+              >
+                <img
+                  src="assets/images/she-is-power-thumb.png"
+                  alt="SHE IS POWER"
+                />
+              </a>
+              <div class="product-info-stacked">
+                <span class="product-name"
+                  ><a href="product.html">SHE IS POWER</a></span
+                >
+                <span class="product-scent">Sandalwood</span>
+                <div class="product-price">
+                  <span class="price-current" data-price-gbp="20.26"
+                    >£20.26</span
+                  >
                 </div>
-
-                <div class="testimonials-slider">
-                    <!-- slide 1 -->
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                I knew that the candles looked amazing, but I didn't expect them to smell as amazing
-                                too! Scents By Sara really gives the full package. I'm hesitating to light mine because
-                                then the magic ends.
-                            </p>
-                            <p class="testimonial-author">EUNICE YUMBA</p>
-                        </div>
-                    </div>
-                    <!-- slide 2 -->
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                Absolutely stunning pieces that instantly elevated my living room. The scent throw even
-                                when unlit is incredible. A true work of art.
-                            </p>
-                            <p class="testimonial-author">SARAH JENNINGS</p>
-                        </div>
-                    </div>
-                    <!-- slide 3 -->
-                    <div class="testimonial-slide">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                The attention to detail is unmatched. I gifted this to my sister and she was brought to
-                                tears by the beautiful intention behind the sculpted design.
-                            </p>
-                            <p class="testimonial-author">MICHELLE D.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slider Dots -->
-                <div class="slider-dots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
-                </div>
+              </div>
+              <button
+                class="product-btn"
+                onclick="window.location.href = 'product.html'"
+              >
+                SHOP NOW
+              </button>
             </div>
-        </section>
 
+            <!-- Product Card 4 -->
+            <div class="product-card">
+              <a
+                href="product.html"
+                class="product-image-wrap product-image-link"
+              >
+                <img
+                  src="assets/images/she-is-strength-thumb.png"
+                  alt="SHE IS STRENGTH"
+                />
+              </a>
+              <div class="product-info-stacked">
+                <span class="product-name"
+                  ><a href="product.html">SHE IS STRENGTH</a></span
+                >
+                <span class="product-scent">Vanilla</span>
+                <div class="product-price">
+                  <span class="price-current" data-price-gbp="20.26"
+                    >£20.26</span
+                  >
+                </div>
+              </div>
+              <button
+                class="product-btn"
+                onclick="window.location.href = 'product.html'"
+              >
+                SHOP NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR COMMITMENT -->
+      <section class="section-block commitment-section">
+        <div class="container grid-cols-2">
+          <div class="commitment-image">
+            <img
+              src="assets/images/our-commitment-left.png"
+              alt="Matches and candle"
+            />
+          </div>
+          <div class="commitment-text">
+            <span class="eyebrow">OUR COMMITMENT</span>
+            <h2 class="font-serif">INTENTIONAL DESIGN IN SCENT AND FORM.</h2>
+
+            <div class="commitment-items">
+              <div class="commitment-item">
+                <h3>Embodied Confidence</h3>
+                <p>
+                  Confidence that is felt rather than performed — creating space
+                  to recognise ourselves, our experiences, and how we feel
+                  within them.
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h3>Rooted in Real Stories</h3>
+                <p>
+                  Built with its community, not just for it — shaped by lived
+                  experience, resilience, and the individuality that defines
+                  each person.
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h3>Meaningful Gifting</h3>
+                <p>
+                  Custom pieces gifted as recognition for self or others –
+                  chosen to honour who someone is and the moments that shape
+                  them.
+                </p>
+              </div>
+
+              <div class="commitment-item">
+                <h3>Sustainable Craftsmanship</h3>
+                <p>
+                  Luxury defined through consideration — for materials, craft,
+                  and the environments in which our pieces exist.
+                </p>
+              </div>
+            </div>
+
+            <a href="our-story.html" class="commitment-link">READ OUR STORY</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section class="section-block collections-section">
+        <div class="container grid-cols-2">
+          <!-- Collection 1 -->
+          <div class="collection-card">
+            <div class="collection-image-wrap">
+              <a href="scar-collection.html">
+                <img
+                  src="assets/images/scar-collection.png"
+                  alt="Scar Collection"
+                />
+              </a>
+            </div>
+            <div class="collection-content">
+              <h3 class="font-serif">SCAR COLLECTION</h3>
+              <p>
+                Designed to celebrate the body as a holder of memory, healing,
+                and confidence. Gold leaf is applied by hand to mark scars - not
+                as decoration but as recognition.
+              </p>
+              <a href="scar-collection.html" class="btn-outline"
+                >DISCOVER NOW</a
+              >
+            </div>
+          </div>
+          <!-- Collection 2 -->
+          <div class="collection-card">
+            <div class="collection-image-wrap">
+              <a href="sculpted-collection.html">
+                <img
+                  src="assets/images/sculpted-collection.png"
+                  alt="Sculpted Collection"
+                />
+              </a>
+            </div>
+            <div class="collection-content">
+              <h3 class="font-serif">SCULPTED COLLECTION</h3>
+              <p>
+                Designed around fluid silhouettes and intentional scent
+                layering, this line celebrates the female body through elevated
+                shape, texture, and ritual.
+              </p>
+              <a href="sculpted-collection.html" class="btn-outline"
+                >DISCOVER NOW</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY SPLIT -->
+      <section class="story-split">
+        <div class="grid-cols-2">
+          <div class="story-img-block">
+            <img src="assets/images/sara.png" alt="Founder of Scents by Sara" />
+          </div>
+          <div class="story-text-block bg-secondary">
+            <span class="eyebrow">OUR STORY</span>
+            <h2 class="font-serif">
+              GROUNDED IN RITUAL.<br />EMBODIED IN CONFIDENCE.
+            </h2>
+            <div class="container-editorial">
+              <p>
+                Scents By Sara is a female-founded fragrance house rooted in
+                embodied confidence and modern ritual. What began as a personal
+                exploration of scent and form has grown into a brand shaped by
+                lived experience, community, and the power of recognising
+                ourselves as we are.
+              </p>
+            </div>
+            <a href="our-story.html" class="btn-solid">READ MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section
+        class="section-block testimonials-section bg-primary text-center"
+      >
+        <div class="container">
+          <h2 class="section-title font-serif text-h1">
+            CUSTOMER TESTIMONIALS
+          </h2>
+          <div class="stars">
+            <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true" />
+            <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true" />
+            <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true" />
+            <img src="assets/icons/star_filled.svg" alt="" aria-hidden="true" />
+            <img src="assets/icons/star_empty.svg" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="testimonials-slider">
+            <!-- slide 1 -->
+            <div class="testimonial-slide active">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  I knew that the candles looked amazing, but I didn't expect
+                  them to smell as amazing too! Scents By Sara really gives the
+                  full package. I'm hesitating to light mine because then the
+                  magic ends.
+                </p>
+                <p class="testimonial-author">EUNICE YUMBA</p>
+              </div>
+            </div>
+            <!-- slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  Absolutely stunning pieces that instantly elevated my living
+                  room. The scent throw even when unlit is incredible. A true
+                  work of art.
+                </p>
+                <p class="testimonial-author">SARAH JENNINGS</p>
+              </div>
+            </div>
+            <!-- slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  The attention to detail is unmatched. I gifted this to my
+                  sister and she was brought to tears by the beautiful intention
+                  behind the sculpted design.
+                </p>
+                <p class="testimonial-author">MICHELLE D.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Dots -->
+          <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- SHARED SITE FOOTER -->
@@ -306,7 +432,5 @@
     <script src="assets/js/currency.js"></script>
     <script src="assets/js/shared-layout.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
-
