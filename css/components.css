@@ -753,9 +753,10 @@ body[style*="position: fixed"] .announcement-bar {
     font-family: var(--font-sans);
     font-size: var(--text-body);
     line-height: 1.25;
-    letter-spacing: 0.1em;
+    letter-spacing: 10%;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--text-primary-dark);
+    font-weight: 500;
 }
 
 .mobile-nav-links {
@@ -816,7 +817,7 @@ body[style*="position: fixed"] .announcement-bar {
 
 .mobile-shop-group h3 {
     margin: 0;
-    font-size: var(--text-small);
+    font-size: var(--text-body);
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1891,7 +1892,7 @@ section.story-split {
 
 @media (max-width: 480px) {
     .home-page .story-text-block {
-        padding: var(--space-xl) var(--space-md);
+        padding: var(--space-2xl) var(--space-md);
 
     }
 

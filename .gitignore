@@ -43,6 +43,10 @@ docs/qa/*
 !docs/qa/precommit_token_gate.py
 docs/archived/
 docs/plans/
+docs/superpowers/
 
 # References
 references/
+
+# AI Plugins
+.superpowers/
