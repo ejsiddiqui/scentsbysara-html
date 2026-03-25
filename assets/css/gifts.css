@@ -57,3 +57,18 @@
         padding: 0;
     }
 }
+
+@media (max-width: 480px) {
+    .gifts-page .small-hero::after {
+        background: none;
+    }
+
+    .gifts-page .small-hero h1 {
+        color: var(--text-primary);
+    }
+
+    .gifts-page .small-hero p {
+        color: var(--text-primary-dark)
+    }
+
+}

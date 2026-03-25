@@ -679,6 +679,16 @@
         display: none;
     }
 
+    .scar-collection-page .scar-products-section,
+    .sculpted-collection-page .sculpted-products-section{
+        padding-top: 0;
+    }
+
+    .scar-collection-page .scar-products-section .filter-toolbar,
+    .sculpted-collection-page .sculpted-products-section .filter-toolbar {
+        margin: 0;
+    }
+
 
     .product-info-stacked {
         margin-bottom: 10px;

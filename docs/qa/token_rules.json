@@ -161,7 +161,7 @@
         {
             "selector": ".gifts-page .small-hero p",
             "property": "color",
-            "token": "--color-sand",
+            "token": "--color-slate",
             "widths": [
                 375
             ],
