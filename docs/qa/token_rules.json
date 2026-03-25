@@ -24,13 +24,21 @@
             "selector": ".scar-collection-page .small-hero h1",
             "property": "font-size",
             "token": "--text-h1",
-            "description": "Scar collection hero heading should use h1 token size."
+            "description": "Scar collection hero heading should use h1 token size.",
+            "widths": [
+                1920,
+                768
+            ]
         },
         {
             "selector": ".scar-collection-page .small-hero p",
             "property": "color",
             "token": "--text-primary",
-            "description": "Scar collection hero copy should use primary text token."
+            "description": "Scar collection hero copy should use primary text token.",
+            "widths": [
+                1920,
+                768
+            ]
         },
         {
             "selector": ".scar-collection-page .sort-label",
@@ -49,6 +57,24 @@
             "property": "color",
             "token": "--color-slate",
             "description": "Commitment body copy should use slate token color."
+        },
+        {
+            "selector": ".scar-collection-page .small-hero h1",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "widths": [
+                375
+            ],
+            "description": "Mobile hero heading uses body-large token at \u2264480px."
+        },
+        {
+            "selector": ".scar-collection-page .small-hero p",
+            "property": "color",
+            "token": "--color-mocha",
+            "widths": [
+                375
+            ],
+            "description": "Mobile hero copy uses slate token at \u2264480px."
         }
     ],
     "sculpted-collection.html": [
@@ -56,7 +82,11 @@
             "selector": ".sculpted-collection-page .small-hero h1",
             "property": "font-size",
             "token": "--text-h1",
-            "description": "Sculpted collection hero heading should use h1 token size."
+            "description": "Sculpted collection hero heading should use h1 token size.",
+            "widths": [
+                1920,
+                768
+            ]
         },
         {
             "selector": ".sculpted-collection-page .sort-label",
@@ -75,6 +105,15 @@
             "property": "color",
             "token": "--text-muted",
             "description": "Sculpted section intro copy should use muted text token."
+        },
+        {
+            "selector": ".sculpted-collection-page .small-hero h1",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "widths": [
+                375
+            ],
+            "description": "Mobile hero heading uses body-large token at \u2264480px."
         }
     ],
     "gifts.html": [
@@ -82,13 +121,21 @@
             "selector": ".gifts-page .small-hero h1",
             "property": "font-size",
             "token": "--text-h1",
-            "description": "Gifts hero heading should use h1 token size."
+            "description": "Gifts hero heading should use h1 token size.",
+            "widths": [
+                1920,
+                768
+            ]
         },
         {
             "selector": ".gifts-page .small-hero p",
             "property": "color",
             "token": "--text-on-dark",
-            "description": "Gifts hero copy should use on-dark text token."
+            "description": "Gifts hero copy should use on-dark text token.",
+            "widths": [
+                1920,
+                768
+            ]
         },
         {
             "selector": ".gifts-page .gifts-product-grid .product-name",
@@ -101,6 +148,24 @@
             "property": "font-size",
             "token": "--text-h3",
             "description": "Gifts testimonial quote should use h3 token size."
+        },
+        {
+            "selector": ".gifts-page .small-hero h1",
+            "property": "font-size",
+            "token": "--text-body-large",
+            "widths": [
+                375
+            ],
+            "description": "Mobile hero heading uses body-large token at \u2264480px."
+        },
+        {
+            "selector": ".gifts-page .small-hero p",
+            "property": "color",
+            "token": "--color-sand",
+            "widths": [
+                375
+            ],
+            "description": "Mobile hero copy uses slate token at \u2264480px."
         }
     ],
     "contact.html": [
@@ -160,21 +225,28 @@
             "selector": ".product-details .subtitle, .product-mobile-header .subtitle",
             "property": "font-size",
             "token": "--text-body-large",
-            "widths": [1920, 768],
+            "widths": [
+                1920,
+                768
+            ],
             "description": "Subtitle should use body-large token size on desktop and tablet."
         },
         {
             "selector": ".product-details .subtitle",
             "property": "font-size",
             "token": "--text-body-large",
-            "widths": [375],
+            "widths": [
+                375
+            ],
             "description": "The hidden desktop subtitle retains the body-large token at the 375px breakpoint."
         },
         {
             "selector": ".product-mobile-header .subtitle",
             "property": "font-size",
             "token": "--text-small",
-            "widths": [375],
+            "widths": [
+                375
+            ],
             "description": "The mobile product header subtitle uses the small token at the 375px breakpoint."
         }
     ],
@@ -183,14 +255,19 @@
             "selector": ".shop-hero .text-h1",
             "property": "font-size",
             "token": "--text-h1",
-            "widths": [1920, 768],
+            "widths": [
+                1920,
+                768
+            ],
             "description": "Shop hero heading should follow h1 token scale."
         },
         {
             "selector": ".shop-hero .text-h1",
             "property": "font-size",
             "token": "--text-h4",
-            "widths": [375],
+            "widths": [
+                375
+            ],
             "description": "Shop hero heading uses the reduced mobile token at the 375px breakpoint."
         },
         {
@@ -203,14 +280,19 @@
             "selector": ".shop-card .product-name",
             "property": "font-size",
             "token": "--text-body",
-            "widths": [1920, 768],
+            "widths": [
+                1920,
+                768
+            ],
             "description": "Product name in cards should reuse the shared product-name body token on desktop and tablet."
         },
         {
             "selector": ".shop-card .product-name",
             "property": "font-size",
             "token": "--text-xsmall",
-            "widths": [375],
+            "widths": [
+                375
+            ],
             "description": "Product name in cards uses xsmall token at 375px mobile breakpoint."
         },
         {

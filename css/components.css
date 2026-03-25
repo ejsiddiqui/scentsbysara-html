@@ -1099,7 +1099,6 @@ body[style*="position: fixed"] .announcement-bar {
     max-width: 1040px;
 }
 
-
 /* --- 4. BEST SELLERS & PRODUCT CARDS --- */
 .best-sellers {
     padding: var(--gutter);

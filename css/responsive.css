@@ -504,7 +504,56 @@
     .home-hero .slider-dots {
         bottom: -22px;
     }
-    
+
+    /* MOBILE HERO (≤ 480px) – stacked layout */
+    .page-wrapper .small-hero {
+        padding: 0;
+    }
+
+    .small-hero-mobile-image {
+        display: none;
+    }
+
+    .small-hero {
+        display: block;
+        min-height: unset;
+        overflow: visible;
+    }
+
+    .small-hero .small-hero-image {
+        display: none;
+    }
+
+    .small-hero .small-hero-mobile-image {
+        display: block;
+        position: static;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .small-hero .small-hero-content {
+        position: static;
+        padding: var(--space-xl) var(--gutter);
+    }
+
+    .small-hero h1 {
+        font-family: var(--font-serif);
+        font-size: var(--text-body-large);
+        color: var(--color-mocha);
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .small-hero p {
+        font-family: var(--font-sans);
+        font-size: var(--text-small);
+        font-weight: 300;
+        color: var(--color-slate);
+        line-height: 1.5;
+        max-width: none;
+    }
+
     .btn-solid, .btn-outline {
         padding: 3px 28px;
         font-size: var(--text-xsmall);
