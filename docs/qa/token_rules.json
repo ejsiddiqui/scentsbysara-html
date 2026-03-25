@@ -189,7 +189,7 @@
         {
             "selector": ".shop-hero .text-h1",
             "property": "font-size",
-            "token": "--text-body-large",
+            "token": "--text-h4",
             "widths": [375],
             "description": "Shop hero heading uses the reduced mobile token at the 375px breakpoint."
         },

@@ -183,6 +183,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const wishlistButtons = document.querySelectorAll('.product-card-wishlist');
+    wishlistButtons.forEach((button) => {
+        const syncWishlistState = (isActive) => {
+            button.setAttribute('aria-pressed', String(isActive));
+            button.classList.toggle('is-active', isActive);
+        };
+
+        syncWishlistState(button.getAttribute('aria-pressed') === 'true');
+
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const isActive = button.getAttribute('aria-pressed') === 'true';
+            syncWishlistState(!isActive);
+        });
+    });
+
     /* --- Header Scroll Logic --- */
     const header = document.querySelector('.site-header');
     let lastScrollY = window.scrollY;

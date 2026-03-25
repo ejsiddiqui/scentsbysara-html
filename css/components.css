@@ -1172,6 +1172,9 @@ body[style*="position: fixed"] .announcement-bar {
     gap: var(--space-lg);
 }
 
+.product-card-media {
+    position: relative;
+}
 
 .product-image-wrap {
     width: 100%;
@@ -1192,6 +1195,43 @@ body[style*="position: fixed"] .announcement-bar {
 
 .product-card:hover .product-image-wrap img {
     transform: scale(1.03);
+}
+
+.product-card-wishlist {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    color: var(--color-taupe);
+    background: transparent;
+    border: 0;
+    padding: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.product-card-wishlist:hover {
+    opacity: 0.72;
+}
+
+.product-card-wishlist:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+}
+
+.product-card-wishlist svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    fill: transparent;
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.product-card-wishlist.is-active svg,
+.product-card-wishlist[aria-pressed="true"] svg {
+    fill: currentColor;
 }
 
 .product-info-stacked {
