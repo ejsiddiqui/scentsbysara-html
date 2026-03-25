@@ -100,10 +100,12 @@
       "name": "Typography",
       "settings": {
         "type_heading_font": {
-          "label": "Heading font"
+          "label": "Heading font",
+          "info": "RL Limo is the intended brand face. This picker controls the fallback until the licensed file is added."
         },
         "type_body_font": {
-          "label": "Body font"
+          "label": "Body font",
+          "info": "Suisse Int'l is loaded from the theme assets. This picker controls the fallback stack."
         },
         "heading_size_h1": {
           "label": "Heading size H1"
@@ -212,5 +214,10 @@
         }
       }
     }
+  },
+  "labels": {
+    "menu": "Menu",
+    "customer_account_menu": "Customer account menu",
+    "show_payment_icons": "Show payment icons"
   }
 }

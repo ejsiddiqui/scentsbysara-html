@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("./SuisseIntl-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("./SuisseIntl-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("./SuisseIntl-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("./SuisseIntl-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Shared theme foundation: reset, typography, layout utilities, buttons, forms, and responsive primitives. */
 
 *,
@@ -55,6 +87,21 @@ a {
 
 a:hover {
   opacity: 0.85;
+}
+
+.skip-to-content {
+  position: absolute;
+  left: var(--gutter);
+  top: 0;
+  z-index: var(--z-overlay, 2000);
+  transform: translateY(-120%);
+  padding: 0.75rem 1rem;
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.skip-to-content:focus-visible {
+  transform: translateY(0);
 }
 
 button,

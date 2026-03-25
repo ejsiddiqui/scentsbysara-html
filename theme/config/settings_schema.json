@@ -153,13 +153,15 @@
         "type": "font_picker",
         "id": "type_heading_font",
         "default": "libre_baskerville_n4",
-        "label": "t:settings_schema.typography.settings.type_heading_font.label"
+        "label": "t:settings_schema.typography.settings.type_heading_font.label",
+        "info": "t:settings_schema.typography.settings.type_heading_font.info"
       },
       {
         "type": "font_picker",
         "id": "type_body_font",
         "default": "work_sans_n4",
-        "label": "t:settings_schema.typography.settings.type_body_font.label"
+        "label": "t:settings_schema.typography.settings.type_body_font.label",
+        "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
       {
         "type": "range",
@@ -320,7 +322,7 @@
             "label": "Page"
           }
         ],
-        "default": "drawer"
+        "default": "page"
       },
       {
         "type": "checkbox",

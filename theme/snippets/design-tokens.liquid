@@ -66,8 +66,8 @@
   --border-newsletter: 1px solid var(--color-mocha);
   --border-footer-divider: 1px solid rgba(63, 50, 41, 0.15);
 
-  --font-serif: {{ settings.type_heading_font.family | default: 'Libre Baskerville' | json }}, {{ settings.type_heading_font.fallback_families | default: 'serif' }};
-  --font-sans: {{ settings.type_body_font.family | default: 'Work Sans' | json }}, {{ settings.type_body_font.fallback_families | default: 'sans-serif' }};
+  --font-serif: "rl-limo", {{ settings.type_heading_font.family | default: 'Libre Baskerville' | json }}, {{ settings.type_heading_font.fallback_families | default: 'serif' }};
+  --font-sans: "Suisse Int'l", {{ settings.type_body_font.family | default: 'Work Sans' | json }}, {{ settings.type_body_font.fallback_families | default: 'sans-serif' }};
   --text-hero: {{ settings.heading_size_h1 | default: 47 | plus: 2 }}px;
   --text-h1: {{ settings.heading_size_h1 | default: 47 }}px;
   --text-h2: {{ settings.heading_size_h2 | default: 39 }}px;
@@ -90,7 +90,7 @@
   --card-show-quick-add: {{ settings.card_show_quick_add | default: true }};
   --swatch-shape: {{ settings.swatch_shape | default: 'circle' }};
   --swatch-size: {{ settings.swatch_size | default: 32 }}px;
-  --cart-type: {{ settings.cart_type | default: 'drawer' }};
+  --cart-type: {{ settings.cart_type | default: 'page' }};
   --cart-note-enabled: {{ settings.cart_note_enabled | default: false }};
   --cart-auto-open: {{ settings.cart_auto_open | default: true }};
 }
