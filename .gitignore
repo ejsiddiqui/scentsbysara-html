@@ -8,7 +8,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-fix_links.py
 
 # Temporary Output Files
 tracked_files.txt
@@ -24,7 +23,6 @@ npm-debug.log
 yarn-error.log
 
 # IDEs and Editors
-.vscode/
 .idea/
 *.suo
 *.ntvs*
@@ -32,23 +30,12 @@ yarn-error.log
 *.sln
 *.sw?
 
-# Temporarily ignoring shopify_theme dir
-shopify_theme/
-
-# QA Docs
-docs/qa/*
-!docs/qa/token_audit.py
-!docs/qa/token_rules.json
-!docs/qa/interaction_checks.json
-!docs/qa/agent-workflow.md
-!docs/qa/precommit_token_gate.py
-!docs/qa/viewport_audit.py
-docs/archived/
-docs/plans/
-docs/superpowers/
-
-# References
-references/
+# Shopify
+theme/.shopify-cli.yml
 
 # AI Plugins
 .superpowers/
+
+# HTML Mockup — untracked artifacts (screenshots, QA sweeps generated during dev)
+html/docs/qa/sweep-*/
+html/docs/qa/token-audit-*/

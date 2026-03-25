@@ -1,50 +1,85 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
-This repository contains a static storefront.
-- Root HTML pages: `index.html`, `shop.html`, `product.html`, `body-candles.html`,`cart.html`, `checkout.html`, `contact.html`, `our-story.html`, `your-story.html`.
-- Shared styling system: `css/design-tokens.css`, `css/layout.css`, `css/components.css`, `css/responsive.css`.
-- Page behavior scripts: `assets/js/` (for example `main.js`, `shop.js`, `product.js`, `cart-state.js`).
-- Media assets: `assets/images/`, `assets/icons/`, `assets/fonts/`.
-- QA evidence and audits: `docs/qa/`; planning/review docs: `docs/review/`, `docs/task/`.
-- Visual references: `references/`, organized by page and section assets used for matching.
+## Project Overview
+Scents by Sara — luxury body candle e-commerce brand. This repo contains:
+- `/html/` — Completed HTML mockup (90% done). Reference-only during Shopify development.
+- `/theme/` — Shopify Online Store 2.0 theme (active development).
+- `/docs/superpowers/plans/` — Implementation plans for Shopify theme.
+- `/references/` — Design reference screenshots.
 
-## Current Status & Scope Rules
-- `index.html` (homepage) is the approved baseline and is fully responsive.
-- Do not change homepage HTML/CSS unless explicitly requested.
-- Other pages currently contain known layout/consistency issues and should be fixed.
-- Reuse homepage design patterns (spacing, typography, header/footer behavior, components, tokens) when updating other pages.
-- For page fixes, use reference screenshots from `references/<page-name>/` and match section-by-section. Don't use screenshot images in code,they are for reference only. Images to be used can be found in `assets/images/` dir.
+## Project Structure
 
+### Shopify Theme (`/theme/`)
+```
+theme/
+  assets/          — CSS files + JS modules (ES modules, no build step)
+  config/          — settings_schema.json, settings_data.json
+  layout/          — theme.liquid, password.liquid
+  locales/         — en.default.json, en.default.schema.json
+  sections/        — Liquid sections + section group JSON files
+  snippets/        — Reusable Liquid partials
+  templates/       — JSON templates (Online Store 2.0)
+```
+
+### HTML Mockup Reference (`/html/`)
+The completed HTML mockup is the visual source of truth. When building Shopify sections, cross-reference:
+- `html/index.html` — Homepage layout and sections
+- `html/product.html` — Product detail page
+- `html/shop.html` — Shop/collection page
+- `html/cart.html` — Cart page
+- `html/css/design-tokens.css` — All color, spacing, typography tokens
+- `html/css/components.css` — Button, card, form component styles
+- `html/css/responsive.css` — Breakpoint-specific styles
+
+## Current Status & Scope
+- HTML mockup phase is complete. Do not modify files in `/html/` unless explicitly requested.
+- Active work is on the Shopify theme in `/theme/`.
+- Follow the implementation plan: `docs/superpowers/plans/2026-03-26-shopify-theme-development.md`
+
+## Architecture Decisions
+- **Platform:** Shopify Basic plan, Online Store 2.0
+- **JS approach:** Vanilla ES modules with Web Components (Custom Elements), no build step, import maps
+- **CSS approach:** Liquid-generated CSS custom properties from theme settings + `base.css`
+- **Sections/Blocks:** JSON templates with sections everywhere for full theme customizer support
+- **Cart:** Drawer + full cart page, using Shopify Cart API + Section Rendering API
+- **Variants:** Single product with variants (Shape: Slim/Curvy/Plus-Size, Colour: Ivory/Caramel/Mocha)
+- **Filtering:** Shopify native Storefront Filtering API (not custom JS)
+- **Navigation:** Shopify native menu system + mega menu via theme settings
+- **Markets:** GBP (UK), AED (UAE), USD (US) — 3 markets on Basic plan
+- **Reviews:** Judge.me app integration
+- **UGC (Your Story):** Contact form for submission, metaobjects for display
+- **Checkout:** Shopify native (Basic plan), brand-styled with logo/colours/fonts
 
 ## Build, Test, and Development Commands
-No build step is required for static pages.
-- `python -m http.server 4173` from repo root: run local preview at `http://127.0.0.1:4173`.
-- `python docs/qa/viewport_audit.py`: run multi-page, multi-breakpoint Playwright sweep; outputs screenshots and `report.json` under `docs/qa/sweep-<timestamp>/`.
-- `python docs/qa/token_audit.py --page product.html`: run token/typography compliance checks from `docs/qa/token_rules.json` and output report artifacts under `docs/qa/token-audit-<timestamp>/`.
-- `git config core.hooksPath .githooks`: enable repo-managed pre-commit hooks (includes token audit gate).
-- `git status --short`: verify only intended files changed before commit.
+- `cd theme && shopify theme dev --store=<store>.myshopify.com` — Start local Shopify theme development server
+- `shopify theme check` — Lint theme for Shopify best practices and Liquid errors
+- `shopify theme push` — Push theme to Shopify store (use with caution)
+- `shopify theme pull` — Pull latest theme from Shopify store
+- No build step for CSS/JS — all files served directly via Shopify's asset pipeline
 
 ## Coding Style & Naming Conventions
-- Use semantic HTML and keep page-specific logic in `assets/js/<page>.js`.
-- Use CSS variables from `css/design-tokens.css`; do not hardcode off-palette colors.
-- Always use typographic scale tokens from `css/design-tokens.css` (for example `--text-body-large`) instead of raw/random `px` values for UI typography.
-- If using the `Choices` library for selects, do not include `base.min.css` from `Choices` library; it breaks the storefront layout. Use `assets/css/choices/choices.min.css` only, plus page-specific overrides as needed.
-- Match existing naming: kebab-case files and classes (for example `our-story.html`, `.announcement-bar`).
-- Preserve current formatting style (4-space indentation in HTML/CSS/JS files).
-- Make resuable and maintainable code, and resuse where possible
-- Keep global layout changes in shared CSS files; keep page-specific tweaks isolated.
-- Keep page specific to minimum, use shared css files where possible.
-- For repeating sections e.g. product-grid, section with two halves, etc are repeating many times. Same CSS and html should be used.
+- **Liquid:** Use Shopify's Online Store 2.0 patterns — JSON templates, sections with schemas, snippets for reuse
+- **CSS:** Use CSS custom properties generated from theme settings via `design-tokens.liquid`. Never hardcode colours or spacing — use `var(--token)` references
+- **JavaScript:** Vanilla ES modules, Web Components (Custom Elements). Use `@theme/` namespace in import maps. No jQuery, no frameworks
+- **Naming:** kebab-case for files and CSS classes (e.g., `hero-slideshow.liquid`, `.product-card`)
+- **Indentation:** 2-space indentation in Liquid/HTML/CSS/JS files
+- **Sections:** Every section must have a complete schema with settings, blocks, and presets
+- **Accessibility:** All interactive elements need ARIA attributes. All images need alt text. Minimum WCAG AA contrast
+- **Reuse:** Extract repeated patterns into snippets. If a component appears on 2+ pages, it must be a snippet
+- **Design tokens:** All visual values (colours, fonts, spacing, border-radius) must come from theme settings or CSS custom properties — never raw values
+- **British English:** Use British spelling in all user-facing strings (colour, customise, etc.)
 
-## Testing Guidelines
-- Primary validation is visual and functional QA, not unit tests.
-- For UI changes, run `python docs/qa/viewport_audit.py` and review screenshots at 1920, 1440, 1024, 768, 390, and 375 widths.
-- For token-sensitive changes (colors, font-size, typography hierarchy), run `python docs/qa/token_audit.py --page <page>.html` and treat any `fail`, `missing_selector`, or `invalid_token` result as a blocker.
-- Log evidence in `docs/qa/implementation/<TASK-ID>/` when completing fixes.
-- Treat console errors and horizontal overflow as release blockers.
+## Testing & QA Guidelines
+- Primary validation is visual QA against the HTML mockup in `/html/`
+- Test every page at: 375px, 390px, 768px, 1024px, 1440px, 1920px
+- Run `shopify theme check` before committing to catch Liquid errors
+- Treat console errors and horizontal overflow as release blockers
+- Use the QA checklist at the end of each phase in the implementation plan
+- QA process: Test -> Verify against mockup -> Fix -> Re-test -> Commit
 
 ## Commit & Pull Request Guidelines
-- Follow Conventional Commit prefixes used in history: `feat:`, `fix:`, `docs:`, `test(qa):`, `chore:`.
-- Keep commits scoped by page or feature area (for example header, cart state, checkout validation).
-- PRs should include: concise summary, affected routes/files, linked task/issue, and before/after screenshots for desktop + mobile.
+- Follow Conventional Commit prefixes: `feat:`, `fix:`, `docs:`, `chore:`, `perf:`
+- Keep commits scoped by section or feature area (e.g., header, product-card, cart-drawer)
+- Commit after every completed task, not just phases
+- Never commit broken code — verify theme loads without errors first
+- PRs should include: summary, affected sections, before/after screenshots
