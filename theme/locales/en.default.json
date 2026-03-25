@@ -1,4 +1,10 @@
 {
+  "accessibility": {
+    "skip_to_content": "Skip to content",
+    "close": "Close",
+    "previous_slide": "Previous slide",
+    "next_slide": "Next slide"
+  },
   "404": {
     "title": "404",
     "not_found": "Page not found.",
@@ -10,14 +16,29 @@
     "comment_form_body": "Comment",
     "comment_form_email": "Email",
     "comment_form_name": "Name",
-    "comment_form_submit": "Post",
+    "comment_form_submit": "Post comment",
     "comment_form_title": "Add a comment"
   },
   "cart": {
     "checkout": "Checkout",
-    "title": "Cart",
+    "title": "Your bag",
+    "empty": "Your bag is empty",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax (VAT)",
+    "total": "Total",
     "update": "Update",
-    "remove": "Remove"
+    "remove": "Remove",
+    "view_bag": "View bag"
+  },
+  "collections": {
+    "title": "Collections",
+    "filter": "Filter",
+    "sort": "Sort by",
+    "items_count": "{{ count }} items"
+  },
+  "contact": {
+    "success": "Thank you for your message. We'll get back to you soon."
   },
   "customers": {
     "login": {
@@ -27,8 +48,11 @@
       "title": "Login"
     }
   },
-  "collections": {
-    "title": "Collections"
+  "general": {
+    "continue_shopping": "Continue shopping",
+    "search": "Search",
+    "cart": "Cart",
+    "account": "Account"
   },
   "gift_card": {
     "add_to_apple_wallet": "Add to Apple Wallet",
@@ -37,10 +61,19 @@
     "expires_on": "Expires on {{ expires_on }}",
     "use_at_checkout": "Use this gift card at checkout"
   },
+  "newsletter": {
+    "success": "Thank you for subscribing!"
+  },
   "password": {
     "title": "This shop is private",
     "password": "Password",
     "enter": "Enter"
+  },
+  "products": {
+    "add_to_cart": "Add to bag",
+    "sold_out": "Sold out",
+    "quantity": "Quantity",
+    "shop_now": "Shop now"
   },
   "search": {
     "title": "Search",
