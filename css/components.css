@@ -1079,6 +1079,11 @@ body[style*="position: fixed"] .announcement-bar {
     object-position: center;
 }
 
+.small-hero-mobile-image {
+    display: none;
+}
+
+
 .small-hero-content {
     position: relative;
     z-index: 1;
