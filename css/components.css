@@ -1193,10 +1193,6 @@ body[style*="position: fixed"] .announcement-bar {
     transition: transform 0.5s ease;
 }
 
-.product-card:hover .product-image-wrap img {
-    transform: scale(1.03);
-}
-
 .product-card-wishlist {
     position: absolute;
     top: 14px;

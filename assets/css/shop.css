@@ -233,13 +233,13 @@
     border-color: var(--text-primary) transparent transparent;
     right: 15px;
     content: "⌵";
-    top: -17%
+    top: -3px;
 }
 
 .choices[data-type*="select-one"].is-open::after {
     border-color: transparent transparent var(--text-primary);
     margin-top: 30px;
-    right: 10px;
+    right: 8px;
     border-width: 0;
     content: "⌵";
     rotate: 180deg;
@@ -649,6 +649,18 @@
     .shop-page .shop-card .size-dropdown .choices {
         width: 100%;
         min-width: 0;
+        font-size: 12px;
+    }
+
+    .product-options .choices[data-type*="select-one"]::after {
+        top: 6px;
+        border-width: 0;
+        right: 16px;
+    }
+
+    .shop-card .choices[data-type*="select-one"].is-open::after {
+        margin-top: 16px;
+        right: 7px;
     }
 
     .shop-page .shop-card .size-dropdown .choices__inner {
