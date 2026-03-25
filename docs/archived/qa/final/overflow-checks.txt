@@ -1,0 +1,16 @@
+index 375: 0
+index 390: 0
+shop 375: 0
+shop 390: 0
+product 375: 0
+product 390: 0
+checkout 375: 0
+checkout 390: 0
+cart 375: 0
+cart 390: 0
+your-story 375: 0
+your-story 390: 0
+our-story 375: 0
+our-story 390: 0
+contact 375: 0
+contact 390: 0

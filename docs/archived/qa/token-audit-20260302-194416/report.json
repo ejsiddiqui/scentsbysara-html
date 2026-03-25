@@ -1,0 +1,716 @@
+{
+  "timestamp": "20260302-194416",
+  "base_url": "http://127.0.0.1:4173",
+  "out_dir": "D:\\Ejaz\\Epyc Digital\\Repositories\\Scentsbysara\\scentsbysara-v3\\docs\\qa\\token-audit-20260302-194416",
+  "results": [
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".shop-hero .text-h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Shop hero heading should follow h1 token scale.",
+        "status": "pass",
+        "expected": "49px",
+        "tokenValue": "49px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".sort-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Sort label should use micro token size.",
+        "status": "pass",
+        "expected": "11px",
+        "tokenValue": "11px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".shop-card .product-name",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Product name in cards should use micro token size.",
+        "status": "pass",
+        "expected": "11px",
+        "tokenValue": "11px",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".shop-card .product-desc",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Product description should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".shop-hero .text-h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Shop hero heading should follow h1 token scale.",
+        "status": "pass",
+        "expected": "42px",
+        "tokenValue": "42px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".sort-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Sort label should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".shop-card .product-name",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Product name in cards should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".shop-card .product-desc",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Product description should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".shop-hero .text-h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Shop hero heading should follow h1 token scale.",
+        "status": "pass",
+        "expected": "32px",
+        "tokenValue": "32px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".sort-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Sort label should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".shop-card .product-name",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Product name in cards should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".shop-card .product-desc",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Product description should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 6,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".cart-header h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Cart page title should follow h1 token scale.",
+        "status": "pass",
+        "expected": "49px",
+        "tokenValue": "49px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".cart-table th",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Cart table header labels should use micro token size.",
+        "status": "pass",
+        "expected": "11px",
+        "tokenValue": "11px",
+        "totalMatches": 4,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".cart-header a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Cart header action link should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".cart-summary-box h2",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Order summary heading should use body-large token size.",
+        "status": "pass",
+        "expected": "20px",
+        "tokenValue": "20px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".cart-header h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Cart page title should follow h1 token scale.",
+        "status": "pass",
+        "expected": "42px",
+        "tokenValue": "42px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".cart-table th",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Cart table header labels should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 4,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".cart-header a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Cart header action link should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".cart-summary-box h2",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Order summary heading should use body-large token size.",
+        "status": "pass",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".cart-header h1",
+        "property": "font-size",
+        "token": "--text-h1",
+        "description": "Cart page title should follow h1 token scale.",
+        "status": "pass",
+        "expected": "32px",
+        "tokenValue": "32px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".cart-table th",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Cart table header labels should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 4,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".cart-header a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Cart header action link should use muted text color token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".cart-summary-box h2",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Order summary heading should use body-large token size.",
+        "status": "pass",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Checkout breadcrumb links should use muted text token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs .active",
+        "property": "color",
+        "token": "--text-primary",
+        "description": "Active checkout breadcrumb should use primary text token.",
+        "status": "pass",
+        "expected": "rgb(63, 50, 41)",
+        "tokenValue": "#3F3229",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".checkout-section h2",
+        "property": "font-size",
+        "token": "--text-h4",
+        "description": "Checkout section titles should use h4 token size.",
+        "status": "pass",
+        "expected": "25px",
+        "tokenValue": "25px",
+        "totalMatches": 3,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".form-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Form labels should use micro token size.",
+        "status": "pass",
+        "expected": "11px",
+        "tokenValue": "11px",
+        "totalMatches": 10,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".totals-row.grand-total",
+        "property": "font-size",
+        "token": "--text-h6",
+        "description": "Grand total row should use h6 token size.",
+        "status": "pass",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Checkout breadcrumb links should use muted text token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs .active",
+        "property": "color",
+        "token": "--text-primary",
+        "description": "Active checkout breadcrumb should use primary text token.",
+        "status": "pass",
+        "expected": "rgb(63, 50, 41)",
+        "tokenValue": "#3F3229",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".checkout-section h2",
+        "property": "font-size",
+        "token": "--text-h4",
+        "description": "Checkout section titles should use h4 token size.",
+        "status": "pass",
+        "expected": "25px",
+        "tokenValue": "25px",
+        "totalMatches": 3,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".form-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Form labels should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 10,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".totals-row.grand-total",
+        "property": "font-size",
+        "token": "--text-h6",
+        "description": "Grand total row should use h6 token size.",
+        "status": "pass",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs a",
+        "property": "color",
+        "token": "--text-muted",
+        "description": "Checkout breadcrumb links should use muted text token.",
+        "status": "pass",
+        "expected": "rgb(163, 147, 130)",
+        "tokenValue": "#A39382",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".checkout-breadcrumbs .active",
+        "property": "color",
+        "token": "--text-primary",
+        "description": "Active checkout breadcrumb should use primary text token.",
+        "status": "pass",
+        "expected": "rgb(63, 50, 41)",
+        "tokenValue": "#3F3229",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".checkout-section h2",
+        "property": "font-size",
+        "token": "--text-h4",
+        "description": "Checkout section titles should use h4 token size.",
+        "status": "pass",
+        "expected": "25px",
+        "tokenValue": "25px",
+        "totalMatches": 3,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".form-label",
+        "property": "font-size",
+        "token": "--text-micro",
+        "description": "Form labels should use micro token size.",
+        "status": "pass",
+        "expected": "10px",
+        "tokenValue": "10px",
+        "totalMatches": 10,
+        "offenders": []
+      }
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".totals-row.grand-total",
+        "property": "font-size",
+        "token": "--text-h6",
+        "description": "Grand total row should use h6 token size.",
+        "status": "pass",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": []
+      }
+    }
+  ],
+  "summary": {
+    "total_checks": 39,
+    "passes": 39,
+    "failures": 0,
+    "missing_selectors": 0,
+    "invalid_tokens": 0
+  }
+}

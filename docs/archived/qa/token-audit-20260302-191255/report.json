@@ -1,0 +1,245 @@
+{
+  "timestamp": "20260302-191255",
+  "base_url": "http://127.0.0.1:4173",
+  "out_dir": "D:\\Ejaz\\Epyc Digital\\Repositories\\Scentsbysara\\scentsbysara-v3\\docs\\qa\\token-audit-20260302-191255",
+  "results": [
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".breadcrumbs a",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Breadcrumb links should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 2,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHOP"
+          },
+          {
+            "index": 1,
+            "actual": "rgb(63, 50, 41)",
+            "text": "BODY CANDLES"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".product-title",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Product title should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHE IS LUST"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "check": {
+        "selector": ".subtitle",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Subtitle should use body-large token size.",
+        "status": "fail",
+        "expected": "20px",
+        "tokenValue": "20px",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "11px",
+            "text": "STRETCH MARK BODY CANDLE"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".breadcrumbs a",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Breadcrumb links should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 2,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHOP"
+          },
+          {
+            "index": 1,
+            "actual": "rgb(63, 50, 41)",
+            "text": "BODY CANDLES"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".product-title",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Product title should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHE IS LUST"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "check": {
+        "selector": ".subtitle",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Subtitle should use body-large token size.",
+        "status": "fail",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "10px",
+            "text": "STRETCH MARK BODY CANDLE"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".breadcrumbs a",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Breadcrumb links should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 2,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHOP"
+          },
+          {
+            "index": 1,
+            "actual": "rgb(63, 50, 41)",
+            "text": "BODY CANDLES"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".product-title",
+        "property": "color",
+        "token": "--color-slate",
+        "description": "Product title should use slate color.",
+        "status": "fail",
+        "expected": "rgb(45, 43, 39)",
+        "tokenValue": "#2D2B27",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "rgb(63, 50, 41)",
+            "text": "SHE IS LUST"
+          }
+        ]
+      }
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "check": {
+        "selector": ".subtitle",
+        "property": "font-size",
+        "token": "--text-body-large",
+        "description": "Subtitle should use body-large token size.",
+        "status": "fail",
+        "expected": "18px",
+        "tokenValue": "18px",
+        "totalMatches": 1,
+        "offenders": [
+          {
+            "index": 0,
+            "actual": "10px",
+            "text": "STRETCH MARK BODY CANDLE"
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "total_checks": 9,
+    "passes": 0,
+    "failures": 9,
+    "missing_selectors": 0,
+    "invalid_tokens": 0
+  }
+}

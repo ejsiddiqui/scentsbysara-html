@@ -1,0 +1,4238 @@
+{
+  "timestamp": "20260302-195236",
+  "base_url": "http://127.0.0.1:4173",
+  "out_dir": "D:\\Ejaz\\Epyc Digital\\Repositories\\Scentsbysara\\scentsbysara-v3\\docs\\qa\\sweep-20260302-195236",
+  "results": [
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "index-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 5760,
+            "left": 3840
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 5760,
+            "left": 3840
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "index-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 4320,
+            "left": 2880
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 4320,
+            "left": 2880
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "index-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 3072,
+            "left": 2048
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 3072,
+            "left": 2048
+          },
+          {
+            "tag": "div",
+            "className": "hero-content container",
+            "right": 1056,
+            "left": 32
+          },
+          {
+            "tag": "h1",
+            "className": "font-serif text-hero",
+            "right": 1036,
+            "left": 52
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "index-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 2304,
+            "left": 1536
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 2304,
+            "left": 1536
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "index-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 1170,
+            "left": 780
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1170,
+            "left": 780
+          },
+          {
+            "tag": "div",
+            "className": "story-img-block",
+            "right": 400,
+            "left": 0
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 400,
+            "left": 0
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "index.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "index-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "hero-slide",
+            "right": 1125,
+            "left": 750
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1125,
+            "left": 750
+          },
+          {
+            "tag": "div",
+            "className": "story-img-block",
+            "right": 400,
+            "left": 0
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 400,
+            "left": 0
+          },
+          {
+            "tag": "span",
+            "className": "quote-mark left",
+            "right": 22,
+            "left": -8
+          },
+          {
+            "tag": "span",
+            "className": "quote-mark right",
+            "right": 383,
+            "left": 353
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "our-story-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "our-story-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "our-story-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "our-story-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "our-story-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "our-story.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "our-story-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "your-story-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "your-story-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "your-story-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": [
+        "Failed to load resource: net::ERR_CONNECTION_FAILED"
+      ]
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "your-story-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "your-story-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "your-story.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "your-story-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "shop-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "shop-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "shop-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "shop-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "shop-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "shop.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "shop-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "product-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "product-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "product-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "product-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "product-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "product.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "product-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "cart-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "cart-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "cart-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "cart-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "cart-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "cart.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "cart-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "checkout-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "checkout-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "checkout-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "checkout-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "checkout-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "checkout.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "checkout-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "screenshot": "contact-1920.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 3840,
+            "left": 1920
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 3870,
+            "left": 1890
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1994,
+            "left": 1950
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1982,
+            "left": 1962
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2960.22,
+            "left": 2799.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 3810,
+            "left": 3766
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 3798,
+            "left": 3778
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 3793,
+            "left": 3783
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 3810,
+            "left": 1950
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 3810,
+            "left": 1950
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1024
+      },
+      "screenshot": "contact-1440.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2880,
+            "left": 1440
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2898,
+            "left": 1422
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1514,
+            "left": 1470
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1502,
+            "left": 1482
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 2240.22,
+            "left": 2079.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2850,
+            "left": 2806
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2838,
+            "left": 2818
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2833,
+            "left": 2823
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2850,
+            "left": 1470
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2850,
+            "left": 1470
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 1024,
+        "height": 1366
+      },
+      "screenshot": "contact-1024.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "clientWidth": 1024,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 2048,
+            "left": 1024
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 2050,
+            "left": 1022
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 1098,
+            "left": 1054
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 1086,
+            "left": 1066
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1616.22,
+            "left": 1455.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 2018,
+            "left": 1974
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 2006,
+            "left": 1986
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 2001,
+            "left": 1991
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 2018,
+            "left": 1054
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 2018,
+            "left": 1054
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "contact-768.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 1536,
+            "left": 768
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 1526,
+            "left": 778
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 842,
+            "left": 798
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 830,
+            "left": 810
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 1232.22,
+            "left": 1071.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 1506,
+            "left": 1462
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 1494,
+            "left": 1474
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 1489,
+            "left": 1479
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 1506,
+            "left": 798
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 1506,
+            "left": 798
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "contact-390.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 780,
+            "left": 390
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 770,
+            "left": 400
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 456,
+            "left": 420
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 448,
+            "left": 428
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 665.22,
+            "left": 504.78
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 750,
+            "left": 714
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 742,
+            "left": 722
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 737,
+            "left": 727
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 750,
+            "left": 420
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 750,
+            "left": 420
+          }
+        ]
+      },
+      "console_errors": []
+    },
+    {
+      "page": "contact.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "contact-375.png",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 375,
+        "clientWidth": 375,
+        "offenders": [
+          {
+            "tag": "div",
+            "className": "mobile-menu-overlay",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-content container",
+            "right": 750,
+            "left": 375
+          },
+          {
+            "tag": "div",
+            "className": "mobile-menu-top",
+            "right": 732,
+            "left": 393
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn mobile-menu-cart",
+            "right": 441,
+            "left": 405
+          },
+          {
+            "tag": "img",
+            "className": "",
+            "right": 433,
+            "left": 413
+          },
+          {
+            "tag": "a",
+            "className": "mobile-menu-brand font-serif",
+            "right": 642.72,
+            "left": 482.28
+          },
+          {
+            "tag": "button",
+            "className": "icon-btn close-mobile-menu",
+            "right": 720,
+            "left": 684
+          },
+          {
+            "tag": "svg",
+            "className": {},
+            "right": 712,
+            "left": 692
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "line",
+            "className": {},
+            "right": 707,
+            "left": 697
+          },
+          {
+            "tag": "nav",
+            "className": "mobile-nav-links mobile-nav-primary",
+            "right": 720,
+            "left": 405
+          },
+          {
+            "tag": "a",
+            "className": "",
+            "right": 720,
+            "left": 405
+          }
+        ]
+      },
+      "console_errors": []
+    }
+  ],
+  "summary": {
+    "total_checks": 48,
+    "overflow_failures": 0,
+    "console_error_failures": 1
+  }
+}

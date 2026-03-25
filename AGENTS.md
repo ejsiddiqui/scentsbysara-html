@@ -51,7 +51,7 @@ The completed HTML mockup is the visual source of truth. When building Shopify s
 - **Checkout:** Shopify native (Basic plan), brand-styled with logo/colours/fonts
 
 ## Build, Test, and Development Commands
-- `cd theme && shopify theme dev --store=<store>.myshopify.com` — Start local Shopify theme development server
+- `cd theme && shopify theme dev --store=scentsbysara-dev.myshopify.com` — Start local Shopify theme development server
 - `shopify theme check` — Lint theme for Shopify best practices and Liquid errors
 - `shopify theme push` — Push theme to Shopify store (use with caution)
 - `shopify theme pull` — Pull latest theme from Shopify store

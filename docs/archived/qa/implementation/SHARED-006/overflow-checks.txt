@@ -1,0 +1,10 @@
+index-375 => {   "innerWidth": 375,   "scrollWidth": 375 }
+index-390 => {   "innerWidth": 390,   "scrollWidth": 390 }
+cart-375 => {   "innerWidth": 375,   "scrollWidth": 375 }
+cart-390 => {   "innerWidth": 390,   "scrollWidth": 390 }
+your-story-375 => {   "innerWidth": 375,   "scrollWidth": 375 }
+your-story-390 => {   "innerWidth": 390,   "scrollWidth": 390 }
+our-story-375 => {   "innerWidth": 375,   "scrollWidth": 375 }
+our-story-390 => {   "innerWidth": 390,   "scrollWidth": 390 }
+contact-375 => {   "innerWidth": 375,   "scrollWidth": 375 }
+contact-390 => {   "innerWidth": 390,   "scrollWidth": 390 }

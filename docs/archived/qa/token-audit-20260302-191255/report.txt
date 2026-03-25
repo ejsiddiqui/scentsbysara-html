@@ -1,0 +1,36 @@
+Token Audit: 9 checks
+Passes: 0
+Failures: 9
+Missing selectors: 0
+Invalid tokens: 0
+
+- product.html @ 1920x1080 | .breadcrumbs a -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHOP"
+  actual: rgb(63, 50, 41) | text="BODY CANDLES"
+- product.html @ 1920x1080 | .product-title -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHE IS LUST"
+- product.html @ 1920x1080 | .subtitle -> font-size (fail)
+  expected: 20px from var(--text-body-large) [20px]
+  actual: 11px | text="STRETCH MARK BODY CANDLE"
+- product.html @ 768x1024 | .breadcrumbs a -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHOP"
+  actual: rgb(63, 50, 41) | text="BODY CANDLES"
+- product.html @ 768x1024 | .product-title -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHE IS LUST"
+- product.html @ 768x1024 | .subtitle -> font-size (fail)
+  expected: 18px from var(--text-body-large) [18px]
+  actual: 10px | text="STRETCH MARK BODY CANDLE"
+- product.html @ 375x812 | .breadcrumbs a -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHOP"
+  actual: rgb(63, 50, 41) | text="BODY CANDLES"
+- product.html @ 375x812 | .product-title -> color (fail)
+  expected: rgb(45, 43, 39) from var(--color-slate) [#2D2B27]
+  actual: rgb(63, 50, 41) | text="SHE IS LUST"
+- product.html @ 375x812 | .subtitle -> font-size (fail)
+  expected: 18px from var(--text-body-large) [18px]
+  actual: 10px | text="STRETCH MARK BODY CANDLE"

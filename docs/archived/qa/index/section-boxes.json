@@ -1,0 +1,65 @@
+[
+  {
+    "selector": ".announcement-bar",
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 38
+  },
+  {
+    "selector": ".site-header",
+    "x": 0,
+    "y": 38,
+    "width": 1920,
+    "height": 94
+  },
+  {
+    "selector": ".home-hero",
+    "x": 0,
+    "y": 132,
+    "width": 1920,
+    "height": 700
+  },
+  {
+    "selector": ".best-sellers",
+    "x": 0,
+    "y": 832,
+    "width": 1920,
+    "height": 935.390625
+  },
+  {
+    "selector": ".commitment-section",
+    "x": 0,
+    "y": 1767.390625,
+    "width": 1920,
+    "height": 1073.375
+  },
+  {
+    "selector": ".collections-section",
+    "x": 0,
+    "y": 2840.765625,
+    "width": 1920,
+    "height": 1430.765625
+  },
+  {
+    "selector": ".story-split",
+    "x": 0,
+    "y": 4351.53125,
+    "width": 1920,
+    "height": 700
+  },
+  {
+    "selector": ".testimonials-section",
+    "x": 0,
+    "y": 5051.53125,
+    "width": 1920,
+    "height": 556.59375
+  },
+  {
+    "selector": ".site-footer",
+    "x": 0,
+    "y": 5608.125,
+    "width": 1920,
+    "height": 669.390625
+  }
+]

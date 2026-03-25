@@ -1,0 +1,72 @@
+Token Audit: 39 checks
+Passes: 24
+Failures: 15
+Missing selectors: 0
+Invalid tokens: 0
+
+- shop.html @ 1920x1080 | .shop-hero .text-h1 -> font-size (fail)
+  expected: 49px from var(--text-h1) [49px]
+  actual: 48px | text="SHOP ALL"
+- shop.html @ 768x1024 | .shop-hero .text-h1 -> font-size (fail)
+  expected: 42px from var(--text-h1) [42px]
+  actual: 32px | text="SHOP ALL"
+- shop.html @ 768x1024 | .sort-label -> font-size (fail)
+  expected: 10px from var(--text-micro) [10px]
+  actual: 11px | text="SORT BY:"
+- shop.html @ 768x1024 | .shop-card .product-name -> font-size (fail)
+  expected: 10px from var(--text-micro) [10px]
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+- shop.html @ 375x812 | .sort-label -> font-size (fail)
+  expected: 10px from var(--text-micro) [10px]
+  actual: 11px | text="SORT BY:"
+- shop.html @ 375x812 | .shop-card .product-name -> font-size (fail)
+  expected: 10px from var(--text-micro) [10px]
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+  actual: 11px | text="SHE IS TIMELESS"
+- cart.html @ 1920x1080 | .cart-header h1 -> font-size (fail)
+  expected: 49px from var(--text-h1) [49px]
+  actual: 32px | text="YOUR BAG"
+- cart.html @ 1920x1080 | .cart-table th -> font-size (fail)
+  expected: 11px from var(--text-micro) [11px]
+  actual: 10px | text="PRODUCT"
+  actual: 10px | text="PRICE"
+  actual: 10px | text="QUANTITY"
+  actual: 10px | text="TOTAL"
+- cart.html @ 768x1024 | .cart-header h1 -> font-size (fail)
+  expected: 42px from var(--text-h1) [42px]
+  actual: 32px | text="YOUR BAG"
+- cart.html @ 768x1024 | .cart-summary-box h2 -> font-size (fail)
+  expected: 18px from var(--text-body-large) [18px]
+  actual: 20px | text="ORDER SUMMARY"
+- cart.html @ 375x812 | .cart-summary-box h2 -> font-size (fail)
+  expected: 18px from var(--text-body-large) [18px]
+  actual: 20px | text="ORDER SUMMARY"
+- checkout.html @ 1920x1080 | .checkout-section h2 -> font-size (fail)
+  expected: 25px from var(--text-h4) [25px]
+  actual: 24px | text="CONTACT"
+  actual: 24px | text="SHIPPING ADDRESS"
+  actual: 24px | text="PAYMENT"
+- checkout.html @ 1920x1080 | .form-label -> font-size (fail)
+  expected: 11px from var(--text-micro) [11px]
+  actual: 10px | text="EMAIL"
+  actual: 10px | text="COUNTRY/REGION"
+  actual: 10px | text="FIRST NAME"
+  actual: 10px | text="LAST NAME"
+  actual: 10px | text="ADDRESS"
+- checkout.html @ 768x1024 | .checkout-section h2 -> font-size (fail)
+  expected: 25px from var(--text-h4) [25px]
+  actual: 24px | text="CONTACT"
+  actual: 24px | text="SHIPPING ADDRESS"
+  actual: 24px | text="PAYMENT"
+- checkout.html @ 375x812 | .checkout-section h2 -> font-size (fail)
+  expected: 25px from var(--text-h4) [25px]
+  actual: 24px | text="CONTACT"
+  actual: 24px | text="SHIPPING ADDRESS"
+  actual: 24px | text="PAYMENT"

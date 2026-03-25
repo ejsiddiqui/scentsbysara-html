@@ -1,0 +1,10 @@
+Page: index
+URL: http://127.0.0.1:4173/
+Generated: 2026-03-01T07:06:52.7417705+05:00
+
+=== agent-browser errors --clear ===
+[32m✓[0m Request log cleared
+
+=== agent-browser console --clear ===
+[32m✓[0m Request log cleared
+
