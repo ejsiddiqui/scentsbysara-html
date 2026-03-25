@@ -557,9 +557,13 @@
     .btn-solid, .btn-outline {
         padding: 3px 28px;
         font-size: var(--text-xsmall);
-        min-height: 24px;
+        min-height: 25px;
         line-height: 1;
         letter-spacing: 10%;
+    }
+
+    .bc-feature .btn-solid, .bc-feature .btn-outline {
+        max-width: 220px;
     }
 
      /* Header fixes */
