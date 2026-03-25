@@ -101,7 +101,7 @@
       "settings": {
         "type_heading_font": {
           "label": "Heading font",
-          "info": "RL Limo is the intended brand face. This picker controls the fallback until the licensed file is added."
+          "info": "RL Limo is loaded from Adobe Fonts. This picker controls the fallback stack."
         },
         "type_body_font": {
           "label": "Body font",
