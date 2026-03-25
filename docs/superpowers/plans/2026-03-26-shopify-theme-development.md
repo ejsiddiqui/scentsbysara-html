@@ -8,6 +8,8 @@
 
 **Tech Stack:** Liquid, vanilla JavaScript (ES modules, Custom Elements), CSS custom properties, Shopify Storefront APIs (Cart, Section Rendering, Storefront Filtering), Shopify CLI for local development.
 
+**JS Strategy (Hybrid):** Use Web Components only for elements needing JS state management (cart drawer, variant picker, slideshow, product card, facets, predictive search, quantity selector). Keep simple interactive elements as native HTML/CSS with lightweight enhancement scripts: accordions use `<details>`/`<summary>`, mega menu uses CSS `:hover` + minimal JS for keyboard a11y, footer accordions use native `<details>`.
+
 **Reference:** HTML mockup lives in `/html` directory. All visual decisions come from there. Design tokens in `/html/css/design-tokens.css`.
 
 ---
@@ -45,7 +47,7 @@ scentsbysara-v3/
       cart.js                    # <cart-items> cart page management
       header.js                  # <header-component> sticky, scroll, mega menu
       mobile-menu.js             # <mobile-menu> drawer with nested panels
-      accordion.js               # <accordion-component> expandable content
+      accordion.js               # Lightweight enhancement for <details> elements (smooth animation, exclusive mode)
       facets.js                  # <facet-filters> collection filtering/sorting
       quantity-selector.js       # <quantity-selector> +/- input
       dialog.js                  # <dialog-component> base for drawers/modals
@@ -86,7 +88,7 @@ scentsbysara-v3/
       product-card.liquid        # Reusable product card
       price.liquid               # Price with sale/compare-at logic
       variant-swatches.liquid    # Color swatches for cards
-      image.liquid               # Responsive <picture> element
+      image.liquid               # Responsive image with srcset, sizes, loading="lazy", and Shopify image_url CDN transforms
       icon.liquid                # SVG icon renderer
       button.liquid              # Styled button component
       breadcrumbs.liquid         # Breadcrumb navigation
@@ -611,7 +613,7 @@ Run `shopify theme dev` and verify:
 7. HTML mockup in `/html` still works independently
 8. Translation strings resolve correctly (not showing raw keys)
 
-Fix any issues found, re-test, then commit fixes.
+Run `shopify theme check` and fix any Liquid lint errors. Fix any issues found, re-test, then commit fixes.
 
 ---
 
@@ -789,9 +791,11 @@ The mega menu reads from Shopify's native menu structure:
 </div>
 ```
 
-- [ ] **Step 2: Add mega menu hover/focus activation to `header.js`**
+- [ ] **Step 2: Add mega menu hover/focus activation**
 
-On desktop: pointer enter on nav link with children shows mega menu. Pointer leave hides. Focus support for keyboard nav.
+> **Hybrid JS Strategy:** Mega menu hover is CSS-first (`:hover` + `opacity` transition for smooth 0.3s fade-in). JS is only added for keyboard accessibility (focus management, Escape to close). No Web Component needed for the mega menu itself.
+
+On desktop: CSS `:hover` on nav link with children shows mega menu. JS handles focus/keyboard navigation and Escape key.
 
 - [ ] **Step 3: Add header section settings for mega menu**
 
@@ -981,7 +985,7 @@ git commit -m "feat: add footer section with newsletter, menus, and social links
 11. No console errors
 12. Responsive: test at 375px, 768px, 1024px, 1440px, 1920px
 
-Fix any issues, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix any issues, re-test, commit.
 
 ---
 
@@ -1030,13 +1034,13 @@ Each slide is a block with: heading, subheading, CTA text, CTA link, desktop ima
   <div class="hero-slider">
     {%- for block in section.blocks -%}
       <div class="hero-slide{% if forloop.first %} is-active{% endif %}" {{ block.shopify_attributes }}>
-        <picture>
-          {%- if block.settings.image_mobile -%}
-            <source media="(max-width: 749px)" srcset="{{ block.settings.image_mobile | image_url: width: 750 }}">
-          {%- endif -%}
-          <img src="{{ block.settings.image_desktop | image_url: width: 1920 }}"
-            alt="{{ block.settings.heading | escape }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-        </picture>
+        {% render 'image',
+          image: block.settings.image_desktop,
+          mobile_image: block.settings.image_mobile,
+          alt: block.settings.heading,
+          sizes: '100vw',
+          loading: forloop.first | ternary: 'eager', 'lazy',
+          fetchpriority: forloop.first | ternary: 'high', nil %}
         <div class="hero-content container" style="text-align: {{ block.settings.text_alignment }}">
           <h1 class="font-serif text-hero">{{ block.settings.heading }}</h1>
           {%- if block.settings.subheading != blank -%}
@@ -1079,7 +1083,86 @@ git add theme/sections/hero-slideshow.liquid theme/assets/slideshow.js theme/ass
 git commit -m "feat: add hero slideshow section with autoplay and swipe"
 ```
 
-### Task 3.2: Product Card Snippet + Featured Collection Section
+### Task 3.2: Image Snippet (Foundation for All Sections)
+
+**Files:**
+- Create: `theme/snippets/image.liquid`
+
+> **Image Optimization:** This snippet is used by every section that renders images. It must handle `srcset`, `sizes`, and `loading` correctly from day one — not deferred to Phase 8.
+
+- [ ] **Step 1: Create `image.liquid` snippet**
+
+Renders optimized responsive images using Shopify's `image_url` CDN transforms:
+
+```liquid
+{%- comment -%}
+  Renders an optimized responsive image.
+  Usage:
+    {% render 'image', image: section.settings.image, alt: 'Hero image', sizes: '100vw', loading: 'lazy', class: 'hero-img' %}
+    {% render 'image', image: product.featured_image, widths: '200,400,600,800', sizes: '(min-width: 1024px) 25vw, 50vw' %}
+
+  Params:
+    image       - Shopify image object (required)
+    alt         - Alt text (falls back to image.alt)
+    sizes       - sizes attribute (default: '100vw')
+    widths      - Comma-separated widths for srcset (default: '375,750,1100,1500,1920')
+    loading     - 'lazy' (default) or 'eager' (for above-fold images)
+    fetchpriority - 'high' for LCP images, omitted otherwise
+    class       - CSS class name
+    mobile_image - Optional separate mobile image (renders <picture> with <source>)
+{%- endcomment -%}
+
+{%- liquid
+  assign alt_text = alt | default: image.alt | escape
+  assign sizes_attr = sizes | default: '100vw'
+  assign widths_list = widths | default: '375,750,1100,1500,1920' | split: ','
+  assign loading_attr = loading | default: 'lazy'
+-%}
+
+{%- if mobile_image -%}
+  <picture>
+    <source media="(max-width: 749px)"
+      srcset="{%- for w in widths_list -%}{{ mobile_image | image_url: width: w }} {{ w }}w{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}"
+      sizes="{{ sizes_attr }}">
+    <source media="(min-width: 750px)"
+      srcset="{%- for w in widths_list -%}{{ image | image_url: width: w }} {{ w }}w{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}"
+      sizes="{{ sizes_attr }}">
+    <img src="{{ image | image_url: width: 1500 }}"
+      alt="{{ alt_text }}"
+      loading="{{ loading_attr }}"
+      {%- if fetchpriority %} fetchpriority="{{ fetchpriority }}"{% endif %}
+      {%- if class %} class="{{ class }}"{% endif %}
+      width="{{ image.width }}"
+      height="{{ image.height }}">
+  </picture>
+{%- else -%}
+  <img src="{{ image | image_url: width: 1500 }}"
+    srcset="{%- for w in widths_list -%}{{ image | image_url: width: w }} {{ w }}w{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}"
+    sizes="{{ sizes_attr }}"
+    alt="{{ alt_text }}"
+    loading="{{ loading_attr }}"
+    {%- if fetchpriority %} fetchpriority="{{ fetchpriority }}"{% endif %}
+    {%- if class %} class="{{ class }}"{% endif %}
+    width="{{ image.width }}"
+    height="{{ image.height }}">
+{%- endif -%}
+```
+
+Key optimisation decisions:
+- `width` and `height` attributes always set to prevent layout shift (CLS)
+- `loading="lazy"` default — override with `loading: 'eager'` for hero/above-fold
+- `fetchpriority="high"` for LCP images (hero slide 1, first product card)
+- `srcset` with 5 widths covers mobile through 1920px desktop
+- Shopify CDN handles format negotiation (WebP/AVIF served automatically)
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add theme/snippets/image.liquid
+git commit -m "feat: add optimised image snippet with srcset and lazy loading"
+```
+
+### Task 3.3: Product Card Snippet + Featured Collection Section
 
 **Files:**
 - Create: `theme/snippets/product-card.liquid`
@@ -1153,11 +1236,9 @@ Matches mockup card structure:
 <product-card class="product-card">
   <a href="{{ product.url }}" class="product-card-link">
     <div class="product-card-media">
-      <img src="{{ product.featured_image | image_url: width: 600 }}"
-        alt="{{ product.featured_image.alt | escape }}" loading="lazy" class="card-image-primary">
+      {% render 'image', image: product.featured_image, sizes: '(min-width: 1024px) 25vw, 50vw', widths: '200,400,600,800', class: 'card-image-primary' %}
       {%- if product.images.size > 1 and settings.card_show_secondary_image -%}
-        <img src="{{ product.images[1] | image_url: width: 600 }}"
-          alt="{{ product.images[1].alt | escape }}" loading="lazy" class="card-image-hover">
+        {% render 'image', image: product.images[1], sizes: '(min-width: 1024px) 25vw, 50vw', widths: '200,400,600,800', class: 'card-image-hover' %}
       {%- endif -%}
     </div>
   </a>
@@ -1372,7 +1453,7 @@ git commit -m "feat: compose homepage template with all sections"
 10. Responsive: test at 375px, 768px, 1024px, 1440px, 1920px
 11. No console errors
 
-Fix any issues, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix any issues, re-test, commit.
 
 ---
 
@@ -1532,11 +1613,12 @@ git commit -m "feat: add variant picker with Section Rendering API and quantity 
 
 - [ ] **Step 1: Create `accordion.js`**
 
-`<accordion-component>` extends `Component`:
-- Click header toggles body visibility
-- Supports exclusive mode (only one open at a time) or independent
-- Manages `aria-expanded` state
-- Smooth height animation via CSS transition
+> **Hybrid JS Strategy:** Accordions use native `<details>`/`<summary>` HTML (no Web Component). `accordion.js` is a lightweight progressive enhancement that adds:
+
+- Smooth height animation on open/close (CSS `grid-template-rows` transition trick)
+- Exclusive mode (only one open at a time within a group, via `data-accordion-group`)
+- Does NOT extend `Component` — just a simple `document.querySelectorAll` init script
+- Works without JS (native `<details>` provides full functionality as fallback)
 
 - [ ] **Step 2: Create `accordion.liquid` snippet**
 
@@ -1698,7 +1780,7 @@ git commit -m "feat: add breadcrumb navigation to product page"
 13. Theme customizer: all product sections/blocks editable
 14. No console errors
 
-Fix, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix, re-test, commit.
 
 ---
 
@@ -1909,7 +1991,7 @@ git commit -m "feat: add gifts collection template with custom hero"
 9. Responsive: grid collapses to 2 columns on tablet, 1-2 on mobile
 10. No console errors
 
-Fix, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix, re-test, commit.
 
 ---
 
@@ -2063,7 +2145,7 @@ git commit -m "feat: add cart page with quantity management and order summary"
 11. Responsive: cart drawer works on mobile, cart page stacks on mobile
 12. No console errors
 
-Fix, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix, re-test, commit.
 
 ---
 
@@ -2331,7 +2413,7 @@ git commit -m "feat: add contact page with form and info blocks"
 10. All pages: header/footer consistent, responsive layout works
 11. No console errors
 
-Fix, re-test, commit.
+Run `shopify theme check` and fix any Liquid lint errors. Fix, re-test, commit.
 
 ---
 
@@ -2637,13 +2719,14 @@ Phase 8 (Polish) ←── All phases complete
 ## QA Process (Applied at Every Phase)
 
 ```
-Test → Verify → Fix → Re-Test → Commit
+Lint → Test → Verify → Fix → Re-Test → Commit
 ```
 
+0. **Lint**: Run `shopify theme check` — fix all Liquid errors and warnings before testing
 1. **Test**: Run through the QA checklist for the phase
 2. **Verify**: Cross-reference with HTML mockup in `/html` — visual match?
 3. **Fix**: Address all issues found
-4. **Re-Test**: Run the full QA checklist again
+4. **Re-Test**: Run the full QA checklist again (including `shopify theme check`)
 5. **Commit**: Only commit when all checks pass
 
 ## Commit Strategy
