@@ -191,15 +191,21 @@ def audit_page(
             # --- Image diff (optional) ---
             if image_diff:
                 for el in elements:
+                    mockup_sel = el.get("mockup", "")
+                    theme_sel = el.get("theme", "")
+                    if not mockup_sel or not theme_sel:
+                        print(f"      [!] Skipping image diff for '{el.get('name', '?')}' — missing selector mapping")
+                        continue
+
                     with create_browser_context(browser, vp_width) as mockup_ctx2:
                         mp = mockup_ctx2.new_page()
                         navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
-                        mockup_img = extract_image_info(mp, el.get("mockup", ""))
+                        mockup_img = extract_image_info(mp, mockup_sel)
 
                     with create_browser_context(browser, vp_width) as theme_ctx2:
                         tp = theme_ctx2.new_page()
                         navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
-                        theme_img = extract_image_info(tp, el.get("theme", ""))
+                        theme_img = extract_image_info(tp, theme_sel)
 
                     if mockup_img and theme_img:
                         # Compare aspect ratios
@@ -239,15 +245,21 @@ def audit_page(
             # --- SVG compare (optional) ---
             if svg_compare:
                 for el in elements:
+                    mockup_sel = el.get("mockup", "")
+                    theme_sel = el.get("theme", "")
+                    if not mockup_sel or not theme_sel:
+                        print(f"      [!] Skipping SVG compare for '{el.get('name', '?')}' — missing selector mapping")
+                        continue
+
                     with create_browser_context(browser, vp_width) as mockup_ctx3:
                         mp = mockup_ctx3.new_page()
                         navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
-                        mockup_svg = extract_svg_info(mp, el.get("mockup", ""))
+                        mockup_svg = extract_svg_info(mp, mockup_sel)
 
                     with create_browser_context(browser, vp_width) as theme_ctx3:
                         tp = theme_ctx3.new_page()
                         navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
-                        theme_svg = extract_svg_info(tp, el.get("theme", ""))
+                        theme_svg = extract_svg_info(tp, theme_sel)
 
                     if mockup_svg and theme_svg:
                         if mockup_svg.get("pathData") != theme_svg.get("pathData"):
@@ -263,10 +275,12 @@ def audit_page(
                                 section_name=sec_name,
                             ))
 
-            critical = sum(1 for d in diffs if d.severity == "Critical")
-            notable = sum(1 for d in diffs if d.severity == "Notable")
-            marginal = sum(1 for d in diffs if d.severity == "Marginal")
-            unknown = sum(1 for d in diffs if d.severity == "Unknown")
+            # Summary for this viewport (includes style + image + SVG diffs)
+            vp_diffs = [d for d in all_diffs if d.viewport == vp_width and d.section_name == sec_name]
+            critical = sum(1 for d in vp_diffs if d.severity == "Critical")
+            notable = sum(1 for d in vp_diffs if d.severity == "Notable")
+            marginal = sum(1 for d in vp_diffs if d.severity == "Marginal")
+            unknown = sum(1 for d in vp_diffs if d.severity == "Unknown")
             print(f"C:{critical} N:{notable} M:{marginal} U:{unknown}")
 
     # Generate and save report
