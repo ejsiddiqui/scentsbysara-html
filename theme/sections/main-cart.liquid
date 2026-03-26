@@ -18,15 +18,15 @@
       <a href="{{ routes.collections_url }}" class="text-micro text-muted underline">CONTINUE SHOPPING</a>
     </div>
 
-    {%- if cart.item_count == 0 -%}
-      <div class="cart-empty">
-        <p>Your bag is currently empty.</p>
-        <a href="{{ routes.collections_url }}" class="btn-outline">SHOP CANDLES</a>
-      </div>
-    {%- else -%}
-      <form action="{{ routes.cart_url }}" method="post" id="MainCartForm-{{ section.id }}">
-        <div class="cart-layout">
-          <section class="cart-content">
+    <form action="{{ routes.cart_url }}" method="post" id="MainCartForm-{{ section.id }}">
+      <div class="cart-layout">
+        <section class="cart-content">
+          {%- if cart.item_count == 0 -%}
+            <div class="cart-empty">
+              <p>Your bag is currently empty.</p>
+              <a href="{{ routes.collections_url }}" class="btn-outline">SHOP CANDLES</a>
+            </div>
+          {%- else -%}
             <div class="cart-table-wrap">
               <table class="cart-table" aria-label="Shopping cart">
                 <thead>
@@ -140,36 +140,42 @@
                 </article>
               {%- endfor -%}
             </div>
-          </section>
+          {%- endif -%}
+        </section>
 
-          <aside class="cart-summary-box" aria-live="polite">
-            <h2>ORDER SUMMARY</h2>
-            <div class="flex-between">
-              <span class="font-sans">SUBTOTAL</span>
-              <span class="font-sans cart-total-subtotal">{{ cart.total_price | money }}</span>
-            </div>
-            <div class="flex-between">
-              <span class="text-sm text-muted">Shipping</span>
-              <span class="font-sans">Calculated at checkout</span>
-            </div>
-            <div class="flex-between">
-              <span class="text-sm text-muted">Tax</span>
-              <span class="font-sans">Calculated at checkout</span>
-            </div>
-            <div class="flex-between">
-              <span class="font-sans">TOTAL</span>
-              <span class="font-sans cart-total-grand">{{ cart.total_price | money }}</span>
-            </div>
+        <aside class="cart-summary-box" aria-live="polite">
+          <h2>ORDER SUMMARY</h2>
+          <div class="flex-between">
+            <span class="font-sans">SUBTOTAL</span>
+            <span class="font-sans cart-total-subtotal">{{ cart.total_price | money }}</span>
+          </div>
+          <div class="flex-between">
+            <span class="text-sm text-muted">Shipping</span>
+            <span class="font-sans">Calculated at checkout</span>
+          </div>
+          <div class="flex-between">
+            <span class="text-sm text-muted">Tax</span>
+            <span class="font-sans">Calculated at checkout</span>
+          </div>
+          <div class="flex-between">
+            <span class="font-sans">TOTAL</span>
+            <span class="font-sans cart-total-grand">{{ cart.total_price | money }}</span>
+          </div>
 
-            <div class="main-cart__summary-actions">
+          <div class="main-cart__summary-actions">
+            {%- if cart.item_count > 0 -%}
               <button type="submit" class="btn-solid w-full block text-center" name="checkout">
                 CHECKOUT
               </button>
-            </div>
-          </aside>
-        </div>
-      </form>
-    {%- endif -%}
+            {%- else -%}
+              <a href="{{ routes.collections_url }}" class="btn-solid w-full block text-center">
+                SHOP CANDLES
+              </a>
+            {%- endif -%}
+          </div>
+        </aside>
+      </div>
+    </form>
   </div>
 </cart-items>
 
