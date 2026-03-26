@@ -1,0 +1,1426 @@
+{
+  "defaults": {
+    "themeBaseUrl": "http://127.0.0.1:9292",
+    "htmlBaseUrl": "http://127.0.0.1:8080",
+    "htmlBaseDir": "html",
+    "tolerance": 2,
+    "storePassword": "",
+    "viewports": {
+      "core": [
+        1920,
+        1440,
+        768,
+        480
+      ],
+      "full": [
+        1920,
+        1440,
+        1024,
+        768,
+        480,
+        390
+      ]
+    }
+  },
+  "pages": [
+    {
+      "name": "Body Candles",
+      "mockup": "body-candles.html",
+      "theme": "/collections/body-candles",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".small-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero Content",
+          "mockupSelector": ".small-hero-content",
+          "themeSelector": ".small-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Products",
+          "mockupSelector": ".bc-products",
+          "themeSelector": ".bc-products",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Grid",
+          "mockupSelector": ".bc-grid",
+          "themeSelector": ".bc-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Stacked",
+          "mockupSelector": ".product-info-stacked",
+          "themeSelector": ".product-info-stacked",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature",
+          "mockupSelector": ".bc-feature",
+          "themeSelector": ".bc-feature",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Media",
+          "mockupSelector": ".bc-feature-media",
+          "themeSelector": ".bc-feature-media",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Content",
+          "mockupSelector": ".bc-feature-content",
+          "themeSelector": ".bc-feature-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Inner",
+          "mockupSelector": ".bc-feature-inner",
+          "themeSelector": ".bc-feature-inner",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Scar Points",
+          "mockupSelector": ".bc-scar-points",
+          "themeSelector": ".bc-scar-points",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Cart",
+      "mockup": "cart.html",
+      "theme": "/cart",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkout Breadcrumbs",
+          "mockupSelector": ".checkout-breadcrumbs",
+          "themeSelector": ".checkout-breadcrumbs",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Cart Header",
+          "mockupSelector": ".cart-header",
+          "themeSelector": ".cart-header",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Cart Layout",
+          "mockupSelector": ".cart-layout",
+          "themeSelector": ".cart-page-section",
+          "themeFile": "sections/main-cart.liquid",
+          "elements": []
+        },
+        {
+          "name": "Cart Content",
+          "mockupSelector": ".cart-content",
+          "themeSelector": ".cart-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Cart Empty",
+          "mockupSelector": ".cart-empty",
+          "themeSelector": ".cart-empty",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Cart Table Wrap",
+          "mockupSelector": ".cart-table-wrap",
+          "themeSelector": ".cart-table-wrap",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Cart Mobile List",
+          "mockupSelector": ".cart-mobile-list",
+          "themeSelector": ".cart-mobile-list",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Flex Between",
+          "mockupSelector": ".flex-between",
+          "themeSelector": ".flex-between",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Checkout",
+      "mockup": "checkout.html",
+      "theme": "/checkout",
+      "sections": [
+        {
+          "name": "Checkout Container",
+          "mockupSelector": ".checkout-container",
+          "themeSelector": ".checkout-container",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkout Main",
+          "mockupSelector": ".checkout-main",
+          "themeSelector": ".checkout-main",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkout Form Col",
+          "mockupSelector": ".checkout-form-col",
+          "themeSelector": ".checkout-form-col",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkout Breadcrumbs",
+          "mockupSelector": ".checkout-breadcrumbs",
+          "themeSelector": ".checkout-breadcrumbs",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkout Section",
+          "mockupSelector": ".checkout-section",
+          "themeSelector": ".checkout-section",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Form Group",
+          "mockupSelector": ".form-group",
+          "themeSelector": ".form-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Checkbox Group",
+          "mockupSelector": ".checkbox-group",
+          "themeSelector": ".checkbox-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Form Row",
+          "mockupSelector": ".form-row",
+          "themeSelector": ".form-row",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Payment Box",
+          "mockupSelector": ".payment-box",
+          "themeSelector": ".payment-box",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Summary Items",
+          "mockupSelector": ".summary-items",
+          "themeSelector": ".summary-items",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Summary Totals",
+          "mockupSelector": ".summary-totals",
+          "themeSelector": ".summary-totals",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Totals Row",
+          "mockupSelector": ".totals-row",
+          "themeSelector": ".totals-row",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Summary Perks",
+          "mockupSelector": ".summary-perks",
+          "themeSelector": ".summary-perks",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Perk Item",
+          "mockupSelector": ".perk-item",
+          "themeSelector": ".perk-item",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "mockup": "contact.html",
+      "theme": "/pages/contact",
+      "sections": [
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".small-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Story Hero Overlay",
+          "mockupSelector": ".story-hero-overlay",
+          "themeSelector": ".story-hero-overlay",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero Content",
+          "mockupSelector": ".small-hero-content",
+          "themeSelector": ".small-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Contact Section",
+          "mockupSelector": ".contact-section",
+          "themeSelector": ".contact-section",
+          "themeFile": "sections/contact-form.liquid",
+          "elements": []
+        },
+        {
+          "name": "Gap 8",
+          "mockupSelector": ".gap-8",
+          "themeSelector": ".gap-8",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Contact Form Panel",
+          "mockupSelector": ".contact-form-panel",
+          "themeSelector": ".contact-form-panel",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Form Group",
+          "mockupSelector": ".form-group",
+          "themeSelector": ".form-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Form Meta",
+          "mockupSelector": ".form-meta",
+          "themeSelector": ".form-meta",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Gifts",
+      "mockup": "gifts.html",
+      "theme": "/collections/gifts",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".small-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero Content",
+          "mockupSelector": ".small-hero-content",
+          "themeSelector": ".small-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature",
+          "mockupSelector": ".bc-feature",
+          "themeSelector": ".bc-feature",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Media",
+          "mockupSelector": ".bc-feature-media",
+          "themeSelector": ".bc-feature-media",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Content",
+          "mockupSelector": ".bc-feature-content",
+          "themeSelector": ".bc-feature-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Inner",
+          "mockupSelector": ".bc-feature-inner",
+          "themeSelector": ".bc-feature-inner",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Scar Points",
+          "mockupSelector": ".bc-scar-points",
+          "themeSelector": ".bc-scar-points",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Section Block",
+          "mockupSelector": ".section-block",
+          "themeSelector": ".section-block",
+          "themeFile": "sections/reviews-placeholder.liquid",
+          "elements": []
+        },
+        {
+          "name": "Text Center",
+          "mockupSelector": ".text-center",
+          "themeSelector": ".text-center",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Grid",
+          "mockupSelector": ".product-grid",
+          "themeSelector": ".product-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Stacked",
+          "mockupSelector": ".product-info-stacked",
+          "themeSelector": ".product-info-stacked",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Stars",
+          "mockupSelector": ".stars",
+          "themeSelector": ".stars",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Testimonials Slider",
+          "mockupSelector": ".testimonials-slider",
+          "themeSelector": ".testimonials-slider",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Testimonial Slide",
+          "mockupSelector": ".testimonial-slide",
+          "themeSelector": ".testimonial-slide",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Testimonial Content",
+          "mockupSelector": ".testimonial-content",
+          "themeSelector": ".testimonial-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Slider Dots",
+          "mockupSelector": ".slider-dots",
+          "themeSelector": ".slider-dots",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Homepage",
+      "mockup": "index.html",
+      "theme": "/",
+      "sections": []
+    },
+    {
+      "name": "Our Story",
+      "mockup": "our-story.html",
+      "theme": "/pages/our-story",
+      "sections": [
+        {
+          "name": "Story Hero",
+          "mockupSelector": ".story-hero",
+          "themeSelector": ".story-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Story Hero Overlay",
+          "mockupSelector": ".story-hero-overlay",
+          "themeSelector": ".story-hero-overlay",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Story Hero Content",
+          "mockupSelector": ".story-hero-content",
+          "themeSelector": ".story-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Intro",
+          "mockupSelector": ".our-story-intro",
+          "themeSelector": ".our-story-intro",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Gap 8",
+          "mockupSelector": ".gap-8",
+          "themeSelector": ".gap-8",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Image Wrap",
+          "mockupSelector": ".our-story-image-wrap",
+          "themeSelector": ".our-story-image-wrap",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Copy",
+          "mockupSelector": ".our-story-copy",
+          "themeSelector": ".our-story-copy",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Values",
+          "mockupSelector": ".our-story-values",
+          "themeSelector": ".our-story-values",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Section Header",
+          "mockupSelector": ".section-header",
+          "themeSelector": ".section-header",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Value Grid",
+          "mockupSelector": ".value-grid",
+          "themeSelector": ".value-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Timeline",
+          "mockupSelector": ".our-story-timeline",
+          "themeSelector": ".our-story-timeline",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Our Story Cta",
+          "mockupSelector": ".our-story-cta",
+          "themeSelector": ".our-story-cta",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "mockup": "product.html",
+      "theme": "/products/body-candle",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Page Main",
+          "mockupSelector": ".product-page-main",
+          "themeSelector": ".product-page-main",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Breadcrumbs",
+          "mockupSelector": ".breadcrumbs",
+          "themeSelector": ".breadcrumbs",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Mobile Header",
+          "mockupSelector": ".product-mobile-header",
+          "themeSelector": ".product-mobile-header",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Mobile Header Copy",
+          "mockupSelector": ".product-mobile-header-copy",
+          "themeSelector": ".product-mobile-header-copy",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Subtitle",
+          "mockupSelector": ".subtitle",
+          "themeSelector": ".subtitle",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Main",
+          "mockupSelector": ".product-main",
+          "themeSelector": ".product-page-section",
+          "themeFile": "sections/main-product.liquid",
+          "elements": []
+        },
+        {
+          "name": "Product Gallery",
+          "mockupSelector": ".product-gallery",
+          "themeSelector": ".product-gallery",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Main Image Wrap",
+          "mockupSelector": ".main-image-wrap",
+          "themeSelector": ".main-image-wrap",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Gallery Viewport",
+          "mockupSelector": ".product-gallery-viewport",
+          "themeSelector": ".product-gallery-viewport",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Gallery Track",
+          "mockupSelector": ".product-gallery-track",
+          "themeSelector": ".product-gallery-track",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Gallery Slide",
+          "mockupSelector": ".product-gallery-slide",
+          "themeSelector": ".product-gallery-slide",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Thumbnails",
+          "mockupSelector": ".thumbnails",
+          "themeSelector": ".thumbnails",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Details",
+          "mockupSelector": ".product-details",
+          "themeSelector": ".product-details",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Header Block",
+          "mockupSelector": ".product-header-block",
+          "themeSelector": ".product-header-block",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Flex Between",
+          "mockupSelector": ".flex-between",
+          "themeSelector": ".flex-between",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Selector Group",
+          "mockupSelector": ".selector-group",
+          "themeSelector": ".selector-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Selector Label",
+          "mockupSelector": ".selector-label",
+          "themeSelector": ".selector-label",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Mt 4",
+          "mockupSelector": ".mt-4",
+          "themeSelector": ".mt-4",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Swatch Lg",
+          "mockupSelector": ".swatch-lg",
+          "themeSelector": ".swatch-lg",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Pill Group",
+          "mockupSelector": ".pill-group",
+          "themeSelector": ".pill-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Add To Cart Row",
+          "mockupSelector": ".add-to-cart-row",
+          "themeSelector": ".add-to-cart-row",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Qty Selector",
+          "mockupSelector": ".qty-selector",
+          "themeSelector": ".qty-selector",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Accordion Wrapper",
+          "mockupSelector": ".accordion-wrapper",
+          "themeSelector": ".accordion-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Accordion",
+          "mockupSelector": ".accordion",
+          "themeSelector": ".accordion",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Accordion Header",
+          "mockupSelector": ".accordion-header",
+          "themeSelector": ".accordion-header",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Accordion Body",
+          "mockupSelector": ".accordion-body",
+          "themeSelector": ".accordion-body",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Scents Section",
+          "mockupSelector": ".scents-section",
+          "themeSelector": ".scents-section",
+          "themeFile": "sections/scents-section.liquid",
+          "elements": []
+        },
+        {
+          "name": "Mt 8",
+          "mockupSelector": ".mt-8",
+          "themeSelector": ".mt-8",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Scent Card",
+          "mockupSelector": ".scent-card",
+          "themeSelector": ".scent-card",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Commitment Grid",
+          "mockupSelector": ".product-commitment-grid",
+          "themeSelector": ".product-commitment-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Img Col",
+          "mockupSelector": ".commitment-img-col",
+          "themeSelector": ".commitment-img-col",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Content Col",
+          "mockupSelector": ".commitment-content-col",
+          "themeSelector": ".commitment-content-col",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment List",
+          "mockupSelector": ".commitment-list",
+          "themeSelector": ".commitment-list",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Section Block",
+          "mockupSelector": ".section-block",
+          "themeSelector": ".section-block",
+          "themeFile": "sections/reviews-placeholder.liquid",
+          "elements": []
+        },
+        {
+          "name": "Text Center",
+          "mockupSelector": ".text-center",
+          "themeSelector": ".text-center",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Grid",
+          "mockupSelector": ".product-grid",
+          "themeSelector": ".product-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Card",
+          "mockupSelector": ".product-card",
+          "themeSelector": ".product-card",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Card Media",
+          "mockupSelector": ".product-card-media",
+          "themeSelector": ".product-card-media",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Stacked",
+          "mockupSelector": ".product-info-stacked",
+          "themeSelector": ".product-info-stacked",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Reviews Section",
+          "mockupSelector": ".reviews-section",
+          "themeSelector": ".reviews-section",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Reviewer Info",
+          "mockupSelector": ".reviewer-info",
+          "themeSelector": ".reviewer-info",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Review Text",
+          "mockupSelector": ".review-text",
+          "themeSelector": ".review-text",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Review Meta",
+          "mockupSelector": ".review-meta",
+          "themeSelector": ".review-meta",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Review Score",
+          "mockupSelector": ".review-score",
+          "themeSelector": ".review-score",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Star Rating",
+          "mockupSelector": ".star-rating",
+          "themeSelector": ".star-rating",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Reviews Pagination",
+          "mockupSelector": ".reviews-pagination",
+          "themeSelector": ".reviews-pagination",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Stars",
+          "mockupSelector": ".stars",
+          "themeSelector": ".stars",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Testimonial Content",
+          "mockupSelector": ".testimonial-content",
+          "themeSelector": ".testimonial-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Slider Dots",
+          "mockupSelector": ".slider-dots",
+          "themeSelector": ".slider-dots",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Scar Collection",
+      "mockup": "scar-collection.html",
+      "theme": "/collections/scar-collection",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".small-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero Content",
+          "mockupSelector": ".small-hero-content",
+          "themeSelector": ".small-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Section Block",
+          "mockupSelector": ".section-block",
+          "themeSelector": ".section-block",
+          "themeFile": "sections/reviews-placeholder.liquid",
+          "elements": []
+        },
+        {
+          "name": "Filter Toolbar",
+          "mockupSelector": ".filter-toolbar",
+          "themeSelector": ".filter-toolbar",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Sort Dropdown",
+          "mockupSelector": ".sort-dropdown",
+          "themeSelector": ".sort-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Grid",
+          "mockupSelector": ".product-grid",
+          "themeSelector": ".product-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Options",
+          "mockupSelector": ".product-options",
+          "themeSelector": ".product-options",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Size Dropdown",
+          "mockupSelector": ".size-dropdown",
+          "themeSelector": ".size-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Stacked",
+          "mockupSelector": ".product-info-stacked",
+          "themeSelector": ".product-info-stacked",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Image",
+          "mockupSelector": ".commitment-image",
+          "themeSelector": ".commitment-image",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Text",
+          "mockupSelector": ".commitment-text",
+          "themeSelector": ".commitment-text",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Items",
+          "mockupSelector": ".commitment-items",
+          "themeSelector": ".commitment-items",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Commitment Item",
+          "mockupSelector": ".commitment-item",
+          "themeSelector": ".commitment-item",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Sculpted Collection",
+      "mockup": "sculpted-collection.html",
+      "theme": "/collections/sculpted-collection",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".small-hero",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Small Hero Content",
+          "mockupSelector": ".small-hero-content",
+          "themeSelector": ".small-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Section Block",
+          "mockupSelector": ".section-block",
+          "themeSelector": ".section-block",
+          "themeFile": "sections/reviews-placeholder.liquid",
+          "elements": []
+        },
+        {
+          "name": "Filter Toolbar",
+          "mockupSelector": ".filter-toolbar",
+          "themeSelector": ".filter-toolbar",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Sort Dropdown",
+          "mockupSelector": ".sort-dropdown",
+          "themeSelector": ".sort-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Grid",
+          "mockupSelector": ".product-grid",
+          "themeSelector": ".product-grid",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Options",
+          "mockupSelector": ".product-options",
+          "themeSelector": ".product-options",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Size Dropdown",
+          "mockupSelector": ".size-dropdown",
+          "themeSelector": ".size-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Stacked",
+          "mockupSelector": ".product-info-stacked",
+          "themeSelector": ".product-info-stacked",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature",
+          "mockupSelector": ".bc-feature",
+          "themeSelector": ".bc-feature",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Media",
+          "mockupSelector": ".bc-feature-media",
+          "themeSelector": ".bc-feature-media",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Content",
+          "mockupSelector": ".bc-feature-content",
+          "themeSelector": ".bc-feature-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Feature Inner",
+          "mockupSelector": ".bc-feature-inner",
+          "themeSelector": ".bc-feature-inner",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Bc Scar Points",
+          "mockupSelector": ".bc-scar-points",
+          "themeSelector": ".bc-scar-points",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Shop",
+      "mockup": "shop.html",
+      "theme": "/collections/all",
+      "sections": [
+        {
+          "name": "Page Wrapper",
+          "mockupSelector": ".page-wrapper",
+          "themeSelector": ".page-wrapper",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Shop Page Shell",
+          "mockupSelector": ".shop-page-shell",
+          "themeSelector": ".shop-page-shell",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Shop Hero",
+          "mockupSelector": ".shop-hero",
+          "themeSelector": ".collection-page",
+          "themeFile": "sections/main-collection.liquid",
+          "elements": []
+        },
+        {
+          "name": "Filter Toolbar",
+          "mockupSelector": ".filter-toolbar",
+          "themeSelector": ".filter-toolbar",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Sort Dropdown",
+          "mockupSelector": ".sort-dropdown",
+          "themeSelector": ".sort-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Mobile Item Count",
+          "mockupSelector": ".mobile-item-count",
+          "themeSelector": ".mobile-item-count",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Shop Canvas",
+          "mockupSelector": ".shop-canvas",
+          "themeSelector": ".shop-canvas",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Shop Products",
+          "mockupSelector": ".shop-products",
+          "themeSelector": ".shop-products",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Card",
+          "mockupSelector": ".product-card",
+          "themeSelector": ".product-card",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Card Media",
+          "mockupSelector": ".product-card-media",
+          "themeSelector": ".product-card-media",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Options",
+          "mockupSelector": ".product-options",
+          "themeSelector": ".product-options",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Size Dropdown",
+          "mockupSelector": ".size-dropdown",
+          "themeSelector": ".size-dropdown",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Info Shop",
+          "mockupSelector": ".product-info-shop",
+          "themeSelector": ".product-info-shop",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Product Price",
+          "mockupSelector": ".product-price",
+          "themeSelector": ".product-price",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    },
+    {
+      "name": "Your Story",
+      "mockup": "your-story.html",
+      "theme": "/pages/your-story",
+      "sections": [
+        {
+          "name": "Small Hero",
+          "mockupSelector": ".small-hero",
+          "themeSelector": ".story-form-section",
+          "themeFile": "sections/story-form.liquid",
+          "elements": []
+        },
+        {
+          "name": "Story Hero Overlay",
+          "mockupSelector": ".story-hero-overlay",
+          "themeSelector": ".story-hero-overlay",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Story Hero Content",
+          "mockupSelector": ".story-hero-content",
+          "themeSelector": ".story-hero-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Intro Quote",
+          "mockupSelector": ".intro-quote",
+          "themeSelector": ".intro-quote",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Community Stories",
+          "mockupSelector": ".community-stories",
+          "themeSelector": ".story-grid-section",
+          "themeFile": "sections/story-grid.liquid",
+          "elements": []
+        },
+        {
+          "name": "Section Header",
+          "mockupSelector": ".section-header",
+          "themeSelector": ".section-header",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Gap 8",
+          "mockupSelector": ".gap-8",
+          "themeSelector": ".gap-8",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Masonry Col",
+          "mockupSelector": ".masonry-col",
+          "themeSelector": ".masonry-col",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Ys Card",
+          "mockupSelector": ".ys-card",
+          "themeSelector": ".ys-card",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Ys Img Wrap",
+          "mockupSelector": ".ys-img-wrap",
+          "themeSelector": ".ys-img-wrap",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Ys Content",
+          "mockupSelector": ".ys-content",
+          "themeSelector": ".ys-content",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Split Belief",
+          "mockupSelector": ".split-belief",
+          "themeSelector": ".split-belief",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Split Left",
+          "mockupSelector": ".split-left",
+          "themeSelector": ".split-left",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Split Right",
+          "mockupSelector": ".split-right",
+          "themeSelector": ".split-right",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Story Submit Section",
+          "mockupSelector": ".story-submit-section",
+          "themeSelector": ".story-submit-section",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Gap 4",
+          "mockupSelector": ".gap-4",
+          "themeSelector": ".gap-4",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Form Group",
+          "mockupSelector": ".form-group",
+          "themeSelector": ".form-group",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Char Count",
+          "mockupSelector": ".char-count",
+          "themeSelector": ".char-count",
+          "themeFile": "",
+          "elements": []
+        },
+        {
+          "name": "Text Center",
+          "mockupSelector": ".text-center",
+          "themeSelector": ".text-center",
+          "themeFile": "",
+          "elements": []
+        }
+      ]
+    }
+  ]
+}
