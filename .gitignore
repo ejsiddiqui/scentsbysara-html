@@ -36,6 +36,9 @@ theme/.shopify-cli.yml
 # AI Plugins
 .superpowers/
 
+# Git Worktrees
+.worktrees/
+
 # HTML Mockup — untracked artifacts (screenshots, QA sweeps generated during dev)
 html/docs/qa/sweep-*/
 html/docs/qa/token-audit-*/
