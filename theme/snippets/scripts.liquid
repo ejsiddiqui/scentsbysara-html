@@ -2,13 +2,17 @@
   {
     "imports": {
       "@theme/component": "{{ 'component.js' | asset_url }}",
-      "@theme/dialog": "{{ 'dialog.js' | asset_url }}"
+      "@theme/dialog": "{{ 'dialog.js' | asset_url }}",
+      "@theme/slideshow": "{{ 'slideshow.js' | asset_url }}",
+      "@theme/product-card": "{{ 'product-card.js' | asset_url }}"
     }
   }
 </script>
 <script type="module">
   import "@theme/component";
   import "@theme/dialog";
+  import "@theme/slideshow";
+  import "@theme/product-card";
   import "{{ 'header.js' | asset_url }}";
   import "{{ 'mobile-menu.js' | asset_url }}";
   import "{{ 'predictive-search.js' | asset_url }}";
