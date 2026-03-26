@@ -172,7 +172,7 @@
 
           <h1 class="product-details__title font-serif text-h1">{{ product.title }}</h1>
 
-          <div class="product-details__meta flex-between items-center">
+          <div class="product-details__meta flex-between items-center" aria-live="polite" aria-atomic="true">
             <p class="product-details__subtitle text-micro">{{ subtitle_text }}</p>
             {% render 'price', card_product: product, variant: current_variant %}
           </div>

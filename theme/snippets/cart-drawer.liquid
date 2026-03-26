@@ -5,10 +5,10 @@
   data-currency-code="{{ cart.currency.iso_code }}"
   {% if settings.cart_auto_open %}data-auto-open{% endif %}
 >
-  <dialog ref="dialog" class="cart-drawer-dialog">
+  <dialog ref="dialog" class="cart-drawer-dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
     <div class="cart-drawer__inner">
       <header class="cart-drawer-header">
-        <h2 class="font-serif text-h3">YOUR BAG</h2>
+        <h2 id="cart-drawer-title" class="font-serif text-h3">YOUR BAG</h2>
         <button type="button" ref="close" class="icon-btn" data-dialog-close aria-label="Close cart">
           {% render 'icon', name: 'close', size: 18 %}
         </button>

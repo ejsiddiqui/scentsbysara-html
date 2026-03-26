@@ -132,7 +132,7 @@
     {% render 'search-modal', section_id: section.id %}
 
     <mobile-menu id="MobileMenu-{{ section.id }}" aria-label="{{ 'general.mobile_menu' | t }}">
-      <dialog class="mobile-menu-dialog" ref="dialog">
+      <dialog class="mobile-menu-dialog" ref="dialog" aria-modal="true" aria-label="{{ 'general.mobile_menu' | t }}">
         <div class="mobile-menu-content">
           <div class="mobile-menu-top">
             <a href="{{ routes.root_url }}" class="mobile-menu-brand" aria-label="{{ shop.name }}">
