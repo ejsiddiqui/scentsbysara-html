@@ -9,6 +9,7 @@ import urllib.request
 import urllib.error
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 # Add parent dir so imports work when run as script
 sys.path.insert(0, str(Path(__file__).parent))
@@ -54,7 +55,8 @@ def wait_for_theme_server(url: str, max_retries: int = 3, interval: int = 5):
             print(f"  Waiting... (attempt {attempt + 1}/{max_retries})")
         else:
             print(f"  Retrying... (attempt {attempt + 1}/{max_retries})")
-        time.sleep(interval)
+        if attempt < max_retries - 1:
+            time.sleep(interval)
 
     print(f"\n  [X] Could not reach {url} after {max_retries} attempts. Exiting.")
     sys.exit(1)
@@ -104,11 +106,15 @@ def audit_page(
     output_dir: str,
     store_password: str | None = None,
 ) -> str | None:
-    """Audit a single page. Returns path to saved report, or None if no issues."""
+    """Audit a single page. Returns path to saved report."""
     page_name = page_config["name"]
     mockup_file = page_config["mockup"]
     theme_path = page_config["theme"]
     sections = page_config.get("sections", [])
+
+    if not sections:
+        print(f"  [!] No sections configured for {page_name} — skipping")
+        return None
 
     theme_base_url = defaults.get("themeBaseUrl", "http://127.0.0.1:9292")
     properties = all_property_names()
@@ -135,44 +141,43 @@ def audit_page(
         for vp_width in viewports:
             print(f"      Viewport: {vp_width}px ... ", end="", flush=True)
 
-            # --- Mockup ---
-            mockup_ctx = create_browser_context(browser, vp_width)
-            mockup_page = mockup_ctx.new_page()
-            mockup_url = f"{mockup_base_url}/{mockup_file}"
-            navigate_to_page(mockup_page, mockup_url)
-
-            mockup_elements = [{"name": e["name"], "mockup": e["mockup"]} for e in elements]
-            mockup_results = extract_section_styles(
-                mockup_page, section["mockupSelector"], mockup_elements, properties
-            )
-
-            # Screenshot (mockup)
             slug = sec_name.lower().replace(" ", "-")
-            take_section_screenshot(
-                mockup_page,
-                section["mockupSelector"],
-                os.path.join(screenshot_dir, f"{page_name.lower()}-{slug}-{vp_width}-mockup.png"),
-            )
-            mockup_ctx.close()
+
+            # --- Mockup ---
+            with create_browser_context(browser, vp_width) as mockup_ctx:
+                mockup_page = mockup_ctx.new_page()
+                mockup_url = f"{mockup_base_url}/{mockup_file}"
+                navigate_to_page(mockup_page, mockup_url)
+
+                mockup_elements = [{"name": e["name"], "mockup": e["mockup"]} for e in elements]
+                mockup_results = extract_section_styles(
+                    mockup_page, section["mockupSelector"], mockup_elements, properties
+                )
+
+                # Screenshot (mockup)
+                take_section_screenshot(
+                    mockup_page,
+                    section["mockupSelector"],
+                    os.path.join(screenshot_dir, f"{page_name.lower()}-{slug}-{vp_width}-mockup.png"),
+                )
 
             # --- Theme ---
-            theme_ctx = create_browser_context(browser, vp_width)
-            theme_page = theme_ctx.new_page()
-            theme_url = f"{theme_base_url}{theme_path}"
-            navigate_to_page(theme_page, theme_url, password=store_password)
+            with create_browser_context(browser, vp_width) as theme_ctx:
+                theme_page = theme_ctx.new_page()
+                theme_url = f"{theme_base_url}{theme_path}"
+                navigate_to_page(theme_page, theme_url, password=store_password)
 
-            theme_elements = [{"name": e["name"], "theme": e["theme"]} for e in elements]
-            theme_results = extract_section_styles(
-                theme_page, section["themeSelector"], theme_elements, properties
-            )
+                theme_elements = [{"name": e["name"], "theme": e["theme"]} for e in elements]
+                theme_results = extract_section_styles(
+                    theme_page, section["themeSelector"], theme_elements, properties
+                )
 
-            # Screenshot (theme)
-            take_section_screenshot(
-                theme_page,
-                section["themeSelector"],
-                os.path.join(screenshot_dir, f"{page_name.lower()}-{slug}-{vp_width}-theme.png"),
-            )
-            theme_ctx.close()
+                # Screenshot (theme)
+                take_section_screenshot(
+                    theme_page,
+                    section["themeSelector"],
+                    os.path.join(screenshot_dir, f"{page_name.lower()}-{slug}-{vp_width}-theme.png"),
+                )
 
             # --- Diff ---
             diffs = diff_sections(mockup_results, theme_results, tolerance, vp_width)
@@ -225,6 +230,11 @@ def main():
         sys.exit(1)
 
     config = load_config(str(config_path))
+
+    if "pages" not in config:
+        print("  [X] Config is missing required 'pages' key.")
+        sys.exit(1)
+
     defaults = config.get("defaults", {})
 
     # Apply CLI overrides
@@ -246,7 +256,16 @@ def main():
 
     # Start mockup server
     html_base_dir = defaults.get("htmlBaseDir", "html")
-    html_port = int(defaults.get("htmlBaseUrl", "http://127.0.0.1:8080").split(":")[-1])
+    # Resolve html_base_dir relative to repo root (config is at .agents/skills/visual-qa/config/)
+    repo_root = config_path.parents[4]
+    resolved_html_dir = repo_root / html_base_dir
+    if not resolved_html_dir.exists():
+        print(f"  [X] HTML directory not found: {resolved_html_dir}")
+        print(f"  Check htmlBaseDir in config/page-mappings.json")
+        sys.exit(1)
+    html_base_dir = str(resolved_html_dir)
+    html_url_parsed = urlparse(defaults.get("htmlBaseUrl", "http://127.0.0.1:8080"))
+    html_port = html_url_parsed.port or 8080
     mockup_server = MockupServer(html_base_dir, html_port)
 
     try:
