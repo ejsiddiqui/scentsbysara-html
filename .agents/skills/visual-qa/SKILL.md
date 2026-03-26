@@ -9,6 +9,8 @@ Automate visual QA by comparing HTML mockups (`/html/`) against the live Shopify
 
 ## Prerequisites
 
+Python 3.10+ required
+
 Install dependencies (one-time):
 ```bash
 pip install -r .agents/skills/visual-qa/scripts/requirements.txt
@@ -19,6 +21,8 @@ Ensure the Shopify dev server is running:
 ```bash
 cd theme && shopify theme dev --store=scentsbysara-dev.myshopify.com
 ```
+
+If the dev server is not reachable, the script will prompt you to start it and retry 3 times before exiting.
 
 ## Quick Start
 
@@ -59,7 +63,7 @@ python .agents/skills/visual-qa/scripts/audit.py --dry-run
 
 ## Configuration
 
-Edit `config/page-mappings.json` to define page-to-section-to-element mappings.
+Edit `.agents/skills/visual-qa/config/page-mappings.json` to define page-to-section-to-element mappings.
 
 To detect config drift after mockup changes:
 ```bash

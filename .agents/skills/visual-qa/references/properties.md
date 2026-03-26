@@ -11,6 +11,8 @@
 - color
 - text-align
 - text-decoration
+- text-overflow
+- white-space
 
 ## Sizes & Spacing
 - width
@@ -58,6 +60,15 @@
 - right
 - bottom
 - left
+- flex-wrap
+- overflow
+- overflow-x
+- overflow-y
+- z-index
+- aspect-ratio
+- flex-grow
+- flex-shrink
+- flex-basis
 
 ## Images
 - object-fit
@@ -71,3 +82,8 @@
 - background-color
 - background-image
 - opacity
+- background-size
+- background-position
+- background-repeat
+- transform
+- visibility
