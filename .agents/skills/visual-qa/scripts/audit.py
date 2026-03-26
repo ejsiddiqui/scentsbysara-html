@@ -19,6 +19,8 @@ from extract_styles import (
     all_property_names,
     create_browser_context,
     extract_section_styles,
+    extract_image_info,   # ADD THIS
+    extract_svg_info,     # ADD THIS
     navigate_to_page,
     take_section_screenshot,
 )
@@ -185,6 +187,81 @@ def audit_page(
             for d in diffs:
                 d.section_name = sec_name
             all_diffs.extend(diffs)
+
+            # --- Image diff (optional) ---
+            if image_diff:
+                for el in elements:
+                    with create_browser_context(browser, vp_width) as mockup_ctx2:
+                        mp = mockup_ctx2.new_page()
+                        navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
+                        mockup_img = extract_image_info(mp, el.get("mockup", ""))
+
+                    with create_browser_context(browser, vp_width) as theme_ctx2:
+                        tp = theme_ctx2.new_page()
+                        navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
+                        theme_img = extract_image_info(tp, el.get("theme", ""))
+
+                    if mockup_img and theme_img:
+                        # Compare aspect ratios
+                        if mockup_img.get("aspectRatio") and theme_img.get("aspectRatio"):
+                            ar_diff = abs(mockup_img["aspectRatio"] - theme_img["aspectRatio"])
+                            if ar_diff > 0.05:
+                                all_diffs.append(StyleDiff(
+                                    element_name=el["name"],
+                                    element_selector=el.get("theme", ""),
+                                    property="aspect-ratio",
+                                    category="Images",
+                                    expected=f"{mockup_img['aspectRatio']:.3f}",
+                                    actual=f"{theme_img['aspectRatio']:.3f}",
+                                    severity="Critical" if ar_diff > 0.1 else "Notable",
+                                    viewport=vp_width,
+                                    section_name=sec_name,
+                                ))
+
+                        # Compare rendered dimensions
+                        for dim in ["renderedWidth", "renderedHeight"]:
+                            if mockup_img.get(dim) is not None and theme_img.get(dim) is not None:
+                                dim_diff = abs(mockup_img[dim] - theme_img[dim])
+                                if dim_diff > tolerance:
+                                    severity = "Critical" if dim_diff > tolerance * 2 else "Notable"
+                                    all_diffs.append(StyleDiff(
+                                        element_name=el["name"],
+                                        element_selector=el.get("theme", ""),
+                                        property=dim,
+                                        category="Images",
+                                        expected=f"{mockup_img[dim]:.0f}px",
+                                        actual=f"{theme_img[dim]:.0f}px",
+                                        severity=severity,
+                                        viewport=vp_width,
+                                        section_name=sec_name,
+                                    ))
+
+            # --- SVG compare (optional) ---
+            if svg_compare:
+                for el in elements:
+                    with create_browser_context(browser, vp_width) as mockup_ctx3:
+                        mp = mockup_ctx3.new_page()
+                        navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
+                        mockup_svg = extract_svg_info(mp, el.get("mockup", ""))
+
+                    with create_browser_context(browser, vp_width) as theme_ctx3:
+                        tp = theme_ctx3.new_page()
+                        navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
+                        theme_svg = extract_svg_info(tp, el.get("theme", ""))
+
+                    if mockup_svg and theme_svg:
+                        if mockup_svg.get("pathData") != theme_svg.get("pathData"):
+                            all_diffs.append(StyleDiff(
+                                element_name=el["name"],
+                                element_selector=el.get("theme", ""),
+                                property="svg-paths",
+                                category="Icons & SVGs",
+                                expected=f"{len(mockup_svg.get('pathData', []))} paths",
+                                actual=f"{len(theme_svg.get('pathData', []))} paths (content differs)",
+                                severity="Notable",
+                                viewport=vp_width,
+                                section_name=sec_name,
+                            ))
 
             critical = sum(1 for d in diffs if d.severity == "Critical")
             notable = sum(1 for d in diffs if d.severity == "Notable")
