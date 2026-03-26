@@ -19,8 +19,8 @@ from extract_styles import (
     all_property_names,
     create_browser_context,
     extract_section_styles,
-    extract_image_info,   # ADD THIS
-    extract_svg_info,     # ADD THIS
+    extract_image_info,
+    extract_svg_info,
     navigate_to_page,
     take_section_screenshot,
 )
