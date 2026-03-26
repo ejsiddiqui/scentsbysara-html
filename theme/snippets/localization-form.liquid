@@ -1,16 +1,17 @@
 {%- liquid
   assign form_id = 'Localisation-' | append: section.id
+  assign select_id = form_id | append: '-select'
   assign available_countries = localization.available_countries
   assign current_country = localization.country
 -%}
 
 {%- if available_countries.size > 1 -%}
   {%- form 'localization', id: form_id, class: 'localization-form' -%}
-    <label class="localization-form__label" for="{{ form_id }}">Select your market</label>
+    <label class="localization-form__label" for="{{ select_id }}">{{ 'localization.select_market' | t }}</label>
     <select
-      id="{{ form_id }}"
+      id="{{ select_id }}"
       name="country_code"
-      aria-label="Select your market"
+      aria-label="{{ 'localization.select_market' | t }}"
       onchange="this.form.submit()"
     >
       {%- for country in available_countries -%}
@@ -24,7 +25,7 @@
     </select>
   {%- endform -%}
 {%- else -%}
-  <div class="localization-form localization-form--static" aria-label="Current market">
+  <div class="localization-form localization-form--static" aria-label="{{ 'localization.current_market' | t }}">
     <span>{{ current_country.currency.iso_code }} {{ current_country.currency.symbol }}</span>
   </div>
 {%- endif -%}

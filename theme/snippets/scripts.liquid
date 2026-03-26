@@ -1,10 +1,16 @@
 <script type="importmap">
   {
     "imports": {
-      "@theme/component": "{{ 'component.js' | asset_url }}"
+      "@theme/component": "{{ 'component.js' | asset_url }}",
+      "@theme/dialog": "{{ 'dialog.js' | asset_url }}"
     }
   }
 </script>
 <script type="module">
   import "@theme/component";
+  import "@theme/dialog";
+  import "{{ 'header.js' | asset_url }}";
+  import "{{ 'mobile-menu.js' | asset_url }}";
+  import "{{ 'predictive-search.js' | asset_url }}";
+  import "{{ 'accordion.js' | asset_url }}";
 </script>

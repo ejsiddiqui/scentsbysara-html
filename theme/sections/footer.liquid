@@ -25,7 +25,7 @@
 
           <div class="footer-section__newsletter-fields">
             <label class="footer-section__label" for="FooterNewsletterEmail">
-              Email address
+              {{ 'newsletter.email_label' | t }}
             </label>
             <input
               id="FooterNewsletterEmail"
@@ -33,18 +33,18 @@
               type="email"
               name="contact[email]"
               autocomplete="email"
-              placeholder="Email address"
+              placeholder="{{ 'newsletter.email_placeholder' | t }}"
               required
             >
             <button type="submit" class="footer-section__button btn-solid">
-              Subscribe
+              {{ 'newsletter.subscribe' | t }}
             </button>
           </div>
         {%- endform -%}
 
-        <div class="footer-section__socials" aria-label="Social media links">
+        <div class="footer-section__socials" aria-label="{{ 'general.social_media_links' | t }}">
           {%- if settings.social_instagram != blank -%}
-            <a href="{{ settings.social_instagram }}" class="footer-section__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <a href="{{ settings.social_instagram }}" class="footer-section__social" aria-label="{{ 'social.instagram' | t }}" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <rect x="5" y="5" width="14" height="14" rx="4" ry="4" fill="none" stroke="currentColor" stroke-width="1.4"></rect>
                 <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
@@ -54,7 +54,7 @@
           {%- endif -%}
 
           {%- if settings.social_facebook != blank -%}
-            <a href="{{ settings.social_facebook }}" class="footer-section__social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <a href="{{ settings.social_facebook }}" class="footer-section__social" aria-label="{{ 'social.facebook' | t }}" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M14.8 8.5h2V5.8h-2.2c-2.5 0-4 1.5-4 4v1.8H8.1v2.8h2.5V19h3v-4.6h2.3l.4-2.8h-2.7v-1.4c0-.9.3-1.7 1.2-1.7Z" fill="currentColor"></path>
               </svg>
@@ -62,7 +62,7 @@
           {%- endif -%}
 
           {%- if settings.social_tiktok != blank -%}
-            <a href="{{ settings.social_tiktok }}" class="footer-section__social" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <a href="{{ settings.social_tiktok }}" class="footer-section__social" aria-label="{{ 'social.tiktok' | t }}" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M14.1 5.2c.5 1.9 1.8 3 3.8 3.3v2.8c-1.3 0-2.6-.4-3.8-1.1v4.1c0 2.7-2.2 4.9-4.9 4.9S4.3 17 4.3 14.3s2.2-4.9 4.9-4.9c.3 0 .7 0 1 .1v2.9c-.3-.1-.6-.2-1-.2-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2V4.8h2.9c0 .2 0 .3 0 .4Z" fill="currentColor"></path>
               </svg>
@@ -70,7 +70,7 @@
           {%- endif -%}
 
           {%- if settings.social_pinterest != blank -%}
-            <a href="{{ settings.social_pinterest }}" class="footer-section__social" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+            <a href="{{ settings.social_pinterest }}" class="footer-section__social" aria-label="{{ 'social.pinterest' | t }}" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M12 4.2c-4.2 0-7.6 3.2-7.6 7.3 0 3.1 1.8 5 2.8 5 .4 0 .6-1 .6-1.5 0-.5-1-1.3-1-3 0-2.4 1.8-4.2 4.2-4.2 2 0 3.4 1.1 3.4 3.2 0 1.5-.6 4.5-2.6 4.5-.7 0-1.4-.5-1.2-1.3.2-.8.6-1.7.6-2.6 0-1.1-.6-1.8-1.6-1.8-1.2 0-2.2 1.2-2.2 2.8 0 .9.3 1.5.3 1.5l-1.2 4.8c-.4 1.5-.1 3.4-.1 3.4h2.2l.8-3c.2.4 1.1.8 2 .8 3.4 0 5.8-3 5.8-7 0-3.8-3-6.9-7.3-6.9Z" fill="currentColor"></path>
               </svg>
@@ -94,7 +94,7 @@
               {%- endfor -%}
             {%- else -%}
               <li class="footer-section__menu-item footer-section__menu-item--empty">
-                <span>Menu not assigned</span>
+                <span>{{ 'general.menu_not_assigned' | t }}</span>
               </li>
             {%- endif -%}
           </ul>
@@ -116,7 +116,7 @@
               {%- endfor -%}
             {%- else -%}
               <li class="footer-section__menu-item footer-section__menu-item--empty">
-                <span>Menu not assigned</span>
+                <span>{{ 'general.menu_not_assigned' | t }}</span>
               </li>
             {%- endif -%}
           </ul>
@@ -138,7 +138,7 @@
               {%- endfor -%}
             {%- else -%}
               <li class="footer-section__menu-item footer-section__menu-item--empty">
-                <span>Menu not assigned</span>
+                <span>{{ 'general.menu_not_assigned' | t }}</span>
               </li>
             {%- endif -%}
           </ul>
@@ -160,7 +160,7 @@
               {%- endfor -%}
             {%- else -%}
               <li class="footer-section__menu-item footer-section__menu-item--empty">
-                <span>Menu not assigned</span>
+                <span>{{ 'general.menu_not_assigned' | t }}</span>
               </li>
             {%- endif -%}
           </ul>
@@ -203,12 +203,12 @@
         {%- endif -%}
 
         <p class="footer-section__copyright">
-          &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.
+          &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ 'footer.rights_reserved' | t }}
         </p>
       </div>
 
       {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
-        <div class="footer-section__payments" aria-label="Payment methods">
+        <div class="footer-section__payments" aria-label="{{ 'general.payment_methods' | t }}">
           {%- for type in shop.enabled_payment_types -%}
             {{ type | payment_type_svg_tag }}
           {%- endfor -%}
@@ -400,12 +400,18 @@
   }
 
   @media (min-width: 990px) {
-    .footer-section__menu-title {
-      display: none;
-    }
-
     .footer-section__menu-panel {
       display: block !important;
+    }
+
+    .footer-section__menu {
+      display: grid;
+      gap: 16px;
+    }
+
+    .footer-section__menu-title {
+      padding: 0;
+      pointer-events: none;
     }
   }
 
@@ -467,7 +473,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "Colour scheme",
-      "default": "scheme-1"
+      "default": "scheme-2"
     },
     {
       "type": "text",
@@ -483,8 +489,7 @@
     {
       "type": "link_list",
       "id": "menu_1",
-      "label": "Menu 1",
-      "default": "main-menu"
+      "label": "Menu 1"
     },
     {
       "type": "text",
@@ -495,8 +500,7 @@
     {
       "type": "link_list",
       "id": "menu_2",
-      "label": "Menu 2",
-      "default": "main-menu"
+      "label": "Menu 2"
     },
     {
       "type": "text",
@@ -507,8 +511,7 @@
     {
       "type": "link_list",
       "id": "menu_3",
-      "label": "Menu 3",
-      "default": "main-menu"
+      "label": "Menu 3"
     },
     {
       "type": "text",
@@ -519,8 +522,7 @@
     {
       "type": "link_list",
       "id": "menu_4",
-      "label": "Menu 4",
-      "default": "main-menu"
+      "label": "Menu 4"
     },
     {
       "type": "text",

@@ -165,6 +165,12 @@
       text-align: center;
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    #AnnouncementBar-{{ section.id }} .announcement-bar__track {
+      animation: none;
+    }
+  }
 {% endstyle %}
 
 {% schema %}
