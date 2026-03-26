@@ -1,11 +1,17 @@
 """Generate Markdown QA reports from style diffs."""
 
 import os
+import warnings
 from datetime import datetime
 from collections import defaultdict
 from pathlib import Path
 
 from diff_styles import StyleDiff
+
+
+def _md_cell(value: str) -> str:
+    """Escape pipe characters in Markdown table cell content."""
+    return str(value).replace("|", "\\|")
 
 
 def generate_report(
@@ -52,7 +58,7 @@ def generate_report(
         lines.append("| Element | Selector | Viewport | Details |")
         lines.append("|---------|----------|----------|---------|")
         for d in unknowns:
-            lines.append(f"| {d.element_name} | `{d.element_selector}` | {d.viewport}px | {d.actual} |")
+            lines.append(f"| {_md_cell(d.element_name)} | `{_md_cell(d.element_selector)}` | {d.viewport}px | {_md_cell(d.actual)} |")
         lines.append("")
 
     # Group diffs by section (using section_name tagged during audit)
@@ -61,6 +67,15 @@ def generate_report(
         if d.severity == "Unknown":
             continue
         section_diffs[d.section_name].append(d)
+
+    # Warn if any diffs have no section_name (would be silently dropped from report body)
+    orphaned = [d for d in all_diffs if d.severity != "Unknown" and not d.section_name]
+    if orphaned:
+        warnings.warn(
+            f"{len(orphaned)} diffs have no section_name and will not appear in the report body. "
+            "Ensure audit.py sets d.section_name on each diff.",
+            stacklevel=2,
+        )
 
     # Render each section
     for sec in sections:
@@ -79,7 +94,12 @@ def generate_report(
         lines.append("")
 
         if not diffs:
-            lines.append("No issues found.")
+            # Check if this section has Unknown selectors (stale config)
+            sec_unknowns = [d for d in all_diffs if d.severity == "Unknown" and d.section_name == sec_name]
+            if sec_unknowns:
+                lines.append("*All selectors in this section are unresolved — see Unknown Selectors table above.*")
+            else:
+                lines.append("No issues found.")
             lines.append("")
             continue
 
@@ -103,7 +123,7 @@ def generate_report(
                 lines.append("|---------|----------|----------|--------|----------|")
                 for d in vp_diffs:
                     lines.append(
-                        f"| `{d.element_selector}` | {d.property} | `{d.expected}` | `{d.actual}` | {d.severity} |"
+                        f"| `{_md_cell(d.element_selector)}` | {_md_cell(d.property)} | `{_md_cell(d.expected)}` | `{_md_cell(d.actual)}` | {d.severity} |"
                     )
                 lines.append("")
 
