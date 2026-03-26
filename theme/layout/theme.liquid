@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {{ page_title }}{% if current_tags %} | {{ current_tags | join: ', ' }}{% endif %}{% if current_page != 1 %} | Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} | {{ shop.name }}{% endunless %}
+    </title>
+
+    {% render 'meta-tags' %}
+
+    {{ 'rl-limo.css' | asset_url | stylesheet_tag }}
+
+    {{ settings.type_heading_font | font_face: font_display: 'swap' }}
+    {{ settings.type_body_font | font_face: font_display: 'swap' }}
+
+    {% unless settings.type_heading_font.system? %}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {{ settings.type_heading_font | font_url | preload_tag: as: 'font', crossorigin: 'anonymous' }}
+    {% endunless %}
+
+    {% unless settings.type_body_font.system? %}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {{ settings.type_body_font | font_url | preload_tag: as: 'font', crossorigin: 'anonymous' }}
+    {% endunless %}
+
+    {% render 'design-tokens' %}
+    {% render 'color-schemes' %}
+
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
+    {% render 'scripts' %}
+
+    {{ content_for_header }}
+  </head>
+
+  <body class="template-{{ template.name }}{% if template.suffix %} template-{{ template.name }}-{{ template.suffix }}{% endif %}">
+    <a href="#MainContent" class="skip-to-content">{{ 'accessibility.skip_to_content' | t }}</a>
+
+    {% sections 'header-group' %}
+
+    <main id="MainContent" class="page-wrapper" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% sections 'footer-group' %}
+
+    {% if settings.cart_type == 'drawer' %}
+      {% render 'cart-drawer' %}
+    {% endif %}
+  </body>
+</html>
