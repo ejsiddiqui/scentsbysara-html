@@ -84,7 +84,6 @@ def scan_theme_sections(theme_dir: str) -> dict[str, str]:
                 if not cls.startswith("color-") and not cls.startswith("{"):
                     class_to_file[cls] = liquid_file.name
                     break
-            break
 
     return class_to_file
 
