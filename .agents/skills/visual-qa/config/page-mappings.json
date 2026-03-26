@@ -174,13 +174,6 @@
           "themeSelector": ".cart-mobile-list",
           "themeFile": "",
           "elements": []
-        },
-        {
-          "name": "Flex Between",
-          "mockupSelector": ".flex-between",
-          "themeSelector": ".flex-between",
-          "themeFile": "",
-          "elements": []
         }
       ]
     },
@@ -323,13 +316,6 @@
           "elements": []
         },
         {
-          "name": "Gap 8",
-          "mockupSelector": ".gap-8",
-          "themeSelector": ".gap-8",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Contact Form Panel",
           "mockupSelector": ".contact-form-panel",
           "themeSelector": ".contact-form-panel",
@@ -421,13 +407,6 @@
           "elements": []
         },
         {
-          "name": "Text Center",
-          "mockupSelector": ".text-center",
-          "themeSelector": ".text-center",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Product Grid",
           "mockupSelector": ".product-grid",
           "themeSelector": ".product-grid",
@@ -489,7 +468,50 @@
       "name": "Homepage",
       "mockup": "index.html",
       "theme": "/",
-      "sections": []
+      "sections": [
+        {
+          "name": "Hero Slideshow",
+          "mockupSelector": ".home-hero",
+          "themeSelector": ".home-hero",
+          "themeFile": "sections/hero-slideshow.liquid",
+          "elements": []
+        },
+        {
+          "name": "Best Sellers",
+          "mockupSelector": ".best-sellers",
+          "themeSelector": ".featured-collection",
+          "themeFile": "sections/featured-collection.liquid",
+          "elements": []
+        },
+        {
+          "name": "Commitment",
+          "mockupSelector": ".commitment-section",
+          "themeSelector": ".commitment-section",
+          "themeFile": "sections/commitment.liquid",
+          "elements": []
+        },
+        {
+          "name": "Collections",
+          "mockupSelector": ".collections-section",
+          "themeSelector": ".collections-grid",
+          "themeFile": "sections/collections-grid.liquid",
+          "elements": []
+        },
+        {
+          "name": "Story Split",
+          "mockupSelector": ".story-split",
+          "themeSelector": ".split-view",
+          "themeFile": "sections/split-view.liquid",
+          "elements": []
+        },
+        {
+          "name": "Testimonials",
+          "mockupSelector": ".testimonials-section",
+          "themeSelector": ".testimonials-section",
+          "themeFile": "sections/testimonials.liquid",
+          "elements": []
+        }
+      ]
     },
     {
       "name": "Our Story",
@@ -525,13 +547,6 @@
           "elements": []
         },
         {
-          "name": "Gap 8",
-          "mockupSelector": ".gap-8",
-          "themeSelector": ".gap-8",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Our Story Image Wrap",
           "mockupSelector": ".our-story-image-wrap",
           "themeSelector": ".our-story-image-wrap",
@@ -549,13 +564,6 @@
           "name": "Our Story Values",
           "mockupSelector": ".our-story-values",
           "themeSelector": ".our-story-values",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Section Header",
-          "mockupSelector": ".section-header",
-          "themeSelector": ".section-header",
           "themeFile": "",
           "elements": []
         },
@@ -693,13 +701,6 @@
           "elements": []
         },
         {
-          "name": "Flex Between",
-          "mockupSelector": ".flex-between",
-          "themeSelector": ".flex-between",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Selector Group",
           "mockupSelector": ".selector-group",
           "themeSelector": ".selector-group",
@@ -710,13 +711,6 @@
           "name": "Selector Label",
           "mockupSelector": ".selector-label",
           "themeSelector": ".selector-label",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Mt 4",
-          "mockupSelector": ".mt-4",
-          "themeSelector": ".mt-4",
           "themeFile": "",
           "elements": []
         },
@@ -784,13 +778,6 @@
           "elements": []
         },
         {
-          "name": "Mt 8",
-          "mockupSelector": ".mt-8",
-          "themeSelector": ".mt-8",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Scent Card",
           "mockupSelector": ".scent-card",
           "themeSelector": ".scent-card",
@@ -830,13 +817,6 @@
           "mockupSelector": ".section-block",
           "themeSelector": ".section-block",
           "themeFile": "sections/reviews-placeholder.liquid",
-          "elements": []
-        },
-        {
-          "name": "Text Center",
-          "mockupSelector": ".text-center",
-          "themeSelector": ".text-center",
-          "themeFile": "",
           "elements": []
         },
         {
@@ -1323,20 +1303,6 @@
           "elements": []
         },
         {
-          "name": "Section Header",
-          "mockupSelector": ".section-header",
-          "themeSelector": ".section-header",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Gap 8",
-          "mockupSelector": ".gap-8",
-          "themeSelector": ".gap-8",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Masonry Col",
           "mockupSelector": ".masonry-col",
           "themeSelector": ".masonry-col",
@@ -1393,13 +1359,6 @@
           "elements": []
         },
         {
-          "name": "Gap 4",
-          "mockupSelector": ".gap-4",
-          "themeSelector": ".gap-4",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Form Group",
           "mockupSelector": ".form-group",
           "themeSelector": ".form-group",
@@ -1410,13 +1369,6 @@
           "name": "Char Count",
           "mockupSelector": ".char-count",
           "themeSelector": ".char-count",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Text Center",
-          "mockupSelector": ".text-center",
-          "themeSelector": ".text-center",
           "themeFile": "",
           "elements": []
         }
