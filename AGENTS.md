@@ -3,7 +3,7 @@
 ## Project Overview
 Scents by Sara — luxury body candle e-commerce brand. This repo contains:
 - `/html/` — Completed HTML mockup (90% done). Reference-only during Shopify development.
-- `/theme/` — Shopify Online Store 2.0 theme (active development). **This is a separate Git repository** — it has its own `.git` directory and is managed independently from this parent repo.
+- `/theme/` — Shopify Online Store 2.0 theme (active development). **This is a separate Git repository** — it has its own `.git` directory and is managed independently from this parent repo. Remote: `https://github.com/ejsiddiqui/scentsbysara-theme.git`
 - `/docs/superpowers/plans/` — Implementation plans for Shopify theme.
 - `/references/` — Design reference screenshots.
 
