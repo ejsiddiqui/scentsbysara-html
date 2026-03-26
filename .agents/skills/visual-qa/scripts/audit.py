@@ -89,7 +89,7 @@ def run_dry_run(config: dict, page_filter: str | None, section_filter: str | Non
             el_count = len(sec.get("elements", []))
             print(f"    Section: {sec['name']} ({el_count} elements)")
             for el in sec.get("elements", []):
-                print(f"      - {el['name']}: mockup={el.get('mockup', '?')} → theme={el.get('theme', '?')}")
+                print(f"      - {el['name']}: mockup={el.get('mockup', '?')} -> theme={el.get('theme', '?')}")
         print()
 
     print("  [OK] Config is valid. No browser launched.")
@@ -362,7 +362,7 @@ def main():
     try:
         mockup_server.start()
     except RuntimeError as e:
-        print(f"  ✗ {e}")
+        print(f"  [X] {e}")
         sys.exit(1)
 
     # Run audit

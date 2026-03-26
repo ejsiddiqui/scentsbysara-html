@@ -15,16 +15,25 @@ class MockupServer:
         self._server = None
         self._thread = None
 
+    @staticmethod
+    def _find_free_port(preferred: int, max_attempts: int = 20) -> int:
+        """Return the preferred port if free, else find the next free port."""
+        for offset in range(max_attempts):
+            port = preferred + offset
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                try:
+                    s.bind(("127.0.0.1", port))
+                    return port
+                except OSError:
+                    continue
+        raise RuntimeError(
+            f"Could not find a free port starting from {preferred} "
+            f"after {max_attempts} attempts."
+        )
+
     def start(self):
-        """Start the server in a background thread. Fails fast if port is occupied."""
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            try:
-                s.bind(("127.0.0.1", self.port))
-            except OSError:
-                raise RuntimeError(
-                    f"Port {self.port} is already in use. "
-                    f"Stop the process using it or configure a different port in page-mappings.json."
-                )
+        """Start the server in a background thread. Auto-selects a free port if preferred is busy."""
+        self.port = self._find_free_port(self.port)
 
         handler = http.server.SimpleHTTPRequestHandler
         self._server = http.server.HTTPServer(
