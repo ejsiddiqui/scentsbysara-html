@@ -7,7 +7,7 @@
 
 ## A. Requires Live Shopify Dev Store
 
-Run `shopify theme dev --store=your-dev-store.myshopify.com` first, then:
+Run `shopify theme dev --store=scentsbysara-dev.myshopify.com` first, then:
 
 ### Task 8.1: Responsive QA
 Test every page at these breakpoints: **375px, 390px, 768px, 1024px, 1440px, 1920px**
