@@ -1,17 +1,30 @@
-{% comment %}
-  This section is used in the page template to render store pages like About us
-  or Contact us.
+<section class="page-section section-block color-scheme-1">
+  <div class="container page-section__inner">
+    <header class="page-section__header">
+      <h1 class="font-serif text-h1">{{ page.title }}</h1>
+    </header>
 
-  https://shopify.dev/docs/storefronts/themes/architecture/templates/page
-{% endcomment %}
+    <div class="rte page-section__content">
+      {{ page.content }}
+    </div>
+  </div>
+</section>
 
-<h1>{{ page.title }}</h1>
+{% stylesheet %}
+  .page-section__inner {
+    max-width: 56rem;
+    display: grid;
+    gap: var(--space-lg);
+  }
 
-{{ page.content }}
+  .page-section__content {
+    color: var(--color-foreground);
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
-  "name": "t:general.page",
+  "name": "Page",
   "settings": []
 }
 {% endschema %}
