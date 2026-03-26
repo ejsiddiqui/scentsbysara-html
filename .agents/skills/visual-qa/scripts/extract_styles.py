@@ -7,6 +7,11 @@ from playwright.sync_api import Page, Browser, BrowserContext
 def load_properties() -> dict[str, list[str]]:
     """Parse properties.md and return dict of category -> property names."""
     props_file = Path(__file__).parent.parent / "references" / "properties.md"
+    if not props_file.exists():
+        raise FileNotFoundError(
+            f"Properties file not found: {props_file}. "
+            "Ensure references/properties.md exists in the visual-qa skill directory."
+        )
     categories = {}
     current_category = None
     for line in props_file.read_text().splitlines():
@@ -81,7 +86,7 @@ EXTRACT_IMAGE_JS = """
         naturalHeight: img.naturalHeight,
         renderedWidth: rect.width,
         renderedHeight: rect.height,
-        aspectRatio: rect.width / rect.height,
+        aspectRatio: rect.height > 0 ? rect.width / rect.height : null,
         objectFit: computed.getPropertyValue('object-fit'),
         objectPosition: computed.getPropertyValue('object-position'),
         borderRadius: computed.getPropertyValue('border-radius')
@@ -142,7 +147,8 @@ def extract_section_styles(
     if container["found"]:
         try:
             page.evaluate(
-                f"document.querySelector('{section_selector}').scrollIntoView({{block: 'center'}})"
+                "(s) => { const el = document.querySelector(s); if (el) el.scrollIntoView({block: 'center'}); }",
+                section_selector
             )
             page.wait_for_timeout(300)
         except Exception:

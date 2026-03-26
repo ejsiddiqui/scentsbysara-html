@@ -172,20 +172,6 @@ def diff_element_styles(
         actual = theme_styles.get(prop, "")
         category = _get_category(prop)
 
-        # Explicit check for missing property
-        if actual == "" and expected != "":
-            diffs.append(StyleDiff(
-                element_name=element_name,
-                element_selector=element_selector,
-                property=prop,
-                category=category,
-                expected=expected,
-                actual="(missing)",
-                severity="Critical",
-                viewport=viewport,
-            ))
-            continue
-
         if prop in COLOR_PROPERTIES:
             severity, _ = classify_color_diff(expected, actual)
         elif prop in NUMERIC_PROPERTIES:
@@ -216,6 +202,15 @@ def diff_sections(
 ) -> list[StyleDiff]:
     """Compare extracted styles for all elements in a section."""
     all_diffs = []
+
+    if len(mockup_results) != len(theme_results):
+        # Log a warning — results may be mismatched
+        import warnings
+        warnings.warn(
+            f"diff_sections: mockup has {len(mockup_results)} elements but theme has {len(theme_results)}. "
+            "Trailing elements will be ignored. Check your page-mappings.json config.",
+            stacklevel=2,
+        )
 
     for mockup_el, theme_el in zip(mockup_results, theme_results):
         if not mockup_el["found"]:

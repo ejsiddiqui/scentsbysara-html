@@ -4,7 +4,6 @@ import http.server
 import threading
 import socket
 import os
-from pathlib import Path
 
 
 class MockupServer:
