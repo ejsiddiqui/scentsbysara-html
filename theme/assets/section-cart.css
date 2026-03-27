@@ -164,7 +164,7 @@ body.template-cart .page-wrapper {
 .checkout-breadcrumbs span {
   color: var(--color-muted);
   font-size: var(--text-micro);
-  line-height: 24px;
+  line-height: 13.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
