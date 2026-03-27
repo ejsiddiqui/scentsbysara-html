@@ -37,21 +37,22 @@ Introduce three named card layout tiers for the Shopify theme's `product-card` s
 
 ## Typography
 
-All values use Suisse Int'l (already loaded as `var(--font-sans)`).
+All values use Suisse Int'l (already loaded as `var(--font-sans)`). Design tokens are used throughout so sizes adjust automatically with responsive scaling.
 
-| Element | Font Size | Weight | Letter Spacing |
-|---|---|---|---|
-| Product title (`.product-card__title`) | 16px | 400 (Regular) | — |
-| Price (`.product-card .price__current`) | 16px | 400 (Regular) | — |
-| Short description (`.product-card__subtitle`) | 14px | 300 (Light) | — |
-| SHOP NOW button (`.product-card__button`) | 14px | 300 (Light) | 0.1em (10%) |
+| Element | Token | Resolves To | Weight | Letter Spacing |
+|---|---|---|---|---|
+| Product title (`.product-card__title`) | `var(--text-body)` | 16px | 400 (Regular) | — |
+| Price (`.product-card .price__current`) | `var(--text-body)` | 16px | 400 (Regular) | — |
+| Short description (`.product-card__subtitle`) | `var(--text-body-small)` | 14px | 300 (Light) | — |
+| SHOP NOW button (`.product-card__button`) | `var(--text-body-small)` | 14px | 300 (Light) | 0.1em (10%) |
+
+**New token required:** `--text-body-small: 14px` — added to `design-tokens.liquid` between `--text-body` (16px) and `--text-small` (13px). This fills a gap in the existing scale.
 
 ---
 
 ## Swatches
 
-- Size: **30×30px** (width and height)
-- Applied as a CSS override scoped to `.product-card` so it does not affect global swatch settings
+- Size: **30×30px** — achieved by overriding the existing `--swatch-size` token locally on `.product-card` (does not affect the global setting or other swatch contexts)
 - Border included within the 30px dimension (existing `border: 1px solid var(--color-border)` unchanged)
 
 ---
@@ -77,15 +78,18 @@ All values use Suisse Int'l (already loaded as `var(--font-sans)`).
 - Add `change` event listener for `.product-card__option-select`
 - On change: parse `data-variants` JSON, find best-matching variant, navigate to its URL and update active swatch state
 
-### 3. `theme/sections/featured-collection.liquid`
-- **Schema:** add `compact` option to `card_layout` select
-- **CSS `{% stylesheet %}`:** add typography rules, 30px swatch override, responsive rules, `compact` layout CSS
+### 3. `theme/snippets/design-tokens.liquid`
+- Add `--text-body-small: 14px;` between `--text-body` and `--text-small` in the type scale
 
-### 4. `theme/sections/main-collection.liquid`
+### 4. `theme/sections/featured-collection.liquid`
+- **Schema:** add `compact` option to `card_layout` select
+- **CSS `{% stylesheet %}`:** add typography rules (using tokens), `--swatch-size` override, responsive rules, `compact` layout CSS
+
+### 5. `theme/sections/main-collection.liquid`
 - **Schema:** add `card_layout` select setting (options: stacked / shop / compact; default: `shop`)
 - **Liquid:** replace hardcoded `card_layout: 'shop'` with `card_layout: section.settings.card_layout`
 
-### 5. `theme/sections/product-recommendations.liquid`
+### 6. `theme/sections/product-recommendations.liquid`
 - **Schema:** add `card_layout` select setting (options: stacked / shop / compact; default: `stacked`)
 - **Liquid:** replace hardcoded `card_layout: 'stacked'` with `card_layout: section.settings.card_layout`
 
@@ -96,33 +100,32 @@ All values use Suisse Int'l (already loaded as `var(--font-sans)`).
 Added to `featured-collection.liquid` `{% stylesheet %}`:
 
 ```css
-/* Typography */
+/* Typography — uses design tokens from design-tokens.liquid */
 .product-card__title,
 .product-card__title a {
-  font-size: 16px;
+  font-size: var(--text-body);
   font-weight: 400;
 }
 
 .product-card__subtitle {
-  font-size: 14px;
+  font-size: var(--text-body-small);
   font-weight: 300;
 }
 
 .product-card .price__current {
-  font-size: 16px;
+  font-size: var(--text-body);
   font-weight: 400;
 }
 
 .product-card__button {
-  font-size: 14px;
+  font-size: var(--text-body-small);
   font-weight: 300;
   letter-spacing: 0.1em;
 }
 
-/* Swatch size override (scoped to card) */
-.product-card .variant-swatches__swatch {
-  width: 30px;
-  height: 30px;
+/* Swatch size — overrides --swatch-size token locally, does not affect global settings */
+.product-card {
+  --swatch-size: 30px;
 }
 
 /* Compact layout body (same as shop) */
@@ -143,7 +146,7 @@ Added to `featured-collection.liquid` `{% stylesheet %}`:
   background: transparent;
   padding: 6px 24px 6px 8px;
   font-family: var(--font-sans);
-  font-size: 13px;
+  font-size: var(--text-small);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -218,6 +221,6 @@ this.addEventListener('change', this.handleOptionChange);
 
 ## Out of Scope
 
-- No changes to swatch global settings_schema default (30px applied via CSS override only)
+- No changes to global `swatch_size` setting in settings_schema (30px applied by overriding `--swatch-size` token on `.product-card` only)
 - No changes to `variant-swatches.liquid` or `variant-picker.liquid`
 - No new CSS files — all product card CSS remains in `featured-collection.liquid` stylesheet block
