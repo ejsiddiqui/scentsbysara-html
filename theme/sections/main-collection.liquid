@@ -195,7 +195,7 @@
             {%- for product in collection.products -%}
               {% render 'product-card',
                 product: product,
-                card_layout: 'shop',
+                card_layout: section.settings.card_layout,
                 show_secondary_image: true,
                 show_swatches: true,
                 show_quick_add: false
@@ -281,6 +281,26 @@
       "max": 5,
       "step": 1,
       "default": 4
+    },
+    {
+      "type": "select",
+      "id": "card_layout",
+      "label": "Card layout",
+      "default": "shop",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "Full / Stacked"
+        },
+        {
+          "value": "shop",
+          "label": "Shop / Collection"
+        },
+        {
+          "value": "compact",
+          "label": "Compact / Carousel"
+        }
+      ]
     },
     {
       "type": "checkbox",
