@@ -38,7 +38,11 @@ theme/.shopify-cli.yml
 
 # Git Worktrees
 .worktrees/
+.claude/worktrees/
 
 # HTML Mockup — untracked artifacts (screenshots, QA sweeps generated during dev)
 html/docs/qa/sweep-*/
 html/docs/qa/token-audit-*/
+
+# QA Reports
+docs/qa-reports/

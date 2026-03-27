@@ -42,6 +42,10 @@ def check_server_reachable(url: str) -> bool:
         req = urllib.request.Request(url, method="HEAD")
         urllib.request.urlopen(req, timeout=5)
         return True
+    except urllib.error.HTTPError as exc:
+        # Shopify preview/dev stores can return 401 before the password page is
+        # handled in the browser flow. That still means the server is live.
+        return exc.code in {200, 301, 302, 401, 403}
     except (urllib.error.URLError, OSError):
         return False
 
@@ -62,6 +66,228 @@ def wait_for_theme_server(url: str, max_retries: int = 3, interval: int = 5):
 
     print(f"\n  [X] Could not reach {url} after {max_retries} attempts. Exiting.")
     sys.exit(1)
+
+
+def seed_cart(theme_ctx, theme_base_url: str, cart_seed: dict | None) -> bool:
+    """Populate the preview cart when a page needs a filled-cart state."""
+    if not cart_seed:
+        return True
+
+    request = theme_ctx.request
+    variant_id = cart_seed["variantId"]
+    quantity = cart_seed.get("quantity", 1)
+
+    def is_rate_limited(response) -> bool:
+        try:
+            body = response.text()
+        except Exception:
+            body = ""
+        return response.status == 429 or "too_many_requests" in body
+
+    def fetch_cart_state():
+        response = request.get(
+            f"{theme_base_url}/cart.js",
+            headers={"Accept": "application/json"},
+        )
+        if not response.ok:
+            return None
+
+        try:
+            return response.json()
+        except Exception:
+            try:
+                return json.loads(response.text())
+            except Exception:
+                return None
+
+    def cart_matches_seed(cart_state: dict | None) -> bool:
+        if not cart_state:
+            return False
+
+        for item in cart_state.get("items", []):
+            if item.get("variant_id") == variant_id and item.get("quantity") == quantity:
+                return True
+
+        return False
+
+    current_cart = fetch_cart_state()
+    if cart_matches_seed(current_cart):
+        return True
+
+    clear_response = None
+    add_response = None
+
+    for attempt in range(3):
+        if current_cart and current_cart.get("item_count", 0) > 0:
+            clear_response = request.post(
+                f"{theme_base_url}/cart/clear.js",
+                headers={"Accept": "application/json"},
+            )
+            if is_rate_limited(clear_response):
+                time.sleep(5 * (attempt + 1))
+                current_cart = fetch_cart_state()
+                continue
+
+        add_response = request.post(
+            f"{theme_base_url}/cart/add.js",
+            headers={
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            data=json.dumps(
+                {
+                    "items": [
+                        {
+                            "id": variant_id,
+                            "quantity": quantity,
+                        }
+                    ]
+                }
+            ),
+        )
+
+        current_cart = fetch_cart_state()
+        if cart_matches_seed(current_cart):
+            return True
+
+        if is_rate_limited(add_response):
+            time.sleep(5 * (attempt + 1))
+            continue
+
+        break
+
+    clear_status = clear_response.status if clear_response else "n/a"
+    add_status = add_response.status if add_response else "n/a"
+    item_count = current_cart.get("item_count", 0) if current_cart else "n/a"
+    print(
+        "        [!] Cart seed failed:",
+        f"clear={clear_status} add={add_status} item_count={item_count}",
+    )
+    return False
+
+
+def seed_mockup_cart(mockup_ctx, cart_seed: dict | None):
+    """Populate the HTML mockup cart so comparisons use the same filled-cart state."""
+    if not cart_seed:
+        return
+
+    mockup_item = cart_seed.get("mockupItem") or {
+        "id": "she-is-beauty",
+        "name": "She Is Beauty",
+        "price": 22.59,
+        "quantity": cart_seed.get("quantity", 1),
+        "image": "assets/images/product-1.png",
+        "color": "IVORY",
+        "size": "SLIM",
+        "scent": "VANILLA",
+        "url": "product.html",
+    }
+
+    mockup_payload = json.dumps([mockup_item])
+    mockup_ctx.add_init_script(
+        f"""
+        window.localStorage.setItem('scentsbysara-cart-v1', {json.dumps(mockup_payload)});
+        window.localStorage.setItem('sbs_currency', 'GBP');
+        """,
+    )
+
+
+def wait_for_mockup_cart_render(mockup_page, cart_seed: dict | None):
+    """Wait until the seeded mockup cart has rendered its JS-driven state."""
+    if not cart_seed:
+        return
+
+    try:
+        mockup_page.wait_for_function(
+            """
+            () => {
+                const rows = document.querySelectorAll('#cart-items-table tr');
+                const subtotal = document.getElementById('cart-subtotal');
+                return rows.length > 0
+                  && subtotal
+                  && subtotal.textContent
+                  && !['£0.00', '$0.00', 'AED 0.00'].includes(subtotal.textContent.trim());
+            }
+            """,
+            timeout=5000,
+        )
+    except Exception:
+        # The mockup cart is JS-rendered; give it a short grace period before
+        # falling back to whatever state is available.
+        mockup_page.wait_for_timeout(1200)
+
+
+def wait_for_theme_cart_render(theme_page, cart_seed: dict | None):
+    """Wait until the Shopify cart renders a filled state after seeding."""
+    if not cart_seed:
+        return
+
+    try:
+        theme_page.wait_for_function(
+            """
+            () => {
+                if (document.body.innerText.includes('Too many attempts')) {
+                    return false;
+                }
+
+                const subtotal = document.querySelector('.cart-total-subtotal');
+                const hasNonZeroSubtotal = subtotal
+                  && subtotal.textContent
+                  && !['£0.00', '$0.00', 'AED 0.00'].includes(subtotal.textContent.trim());
+
+                return Boolean(document.querySelector('.cart-table-wrap, .cart-mobile-list')) || hasNonZeroSubtotal;
+            }
+            """,
+            timeout=5000,
+        )
+    except Exception:
+        theme_page.wait_for_timeout(1200)
+
+
+def theme_cart_is_seeded(theme_page, cart_seed: dict | None) -> bool:
+    """Return True when the Shopify page reflects a seeded filled-cart state."""
+    if not cart_seed:
+        return True
+
+    return bool(
+        theme_page.evaluate(
+            """
+            () => {
+                if (document.body.innerText.includes('Too many attempts')) {
+                    return false;
+                }
+
+                if (document.querySelector('.cart-table-wrap, .cart-mobile-list')) {
+                    return true;
+                }
+
+                const subtotal = document.querySelector('.cart-total-subtotal');
+                return Boolean(
+                    subtotal
+                    && subtotal.textContent
+                    && !['£0.00', '$0.00', 'AED 0.00'].includes(subtotal.textContent.trim())
+                );
+            }
+            """
+        )
+    )
+
+
+def navigate_mockup_page(mockup_page, mockup_url: str, cart_seed: dict | None):
+    """Open a mockup page and wait for any seeded client-side cart state to render."""
+    navigate_to_page(mockup_page, mockup_url)
+    wait_for_mockup_cart_render(mockup_page, cart_seed)
+
+
+def section_matches_viewport(section: dict, viewport_width: int) -> bool:
+    """Return True when a section should be audited for the current viewport."""
+    min_viewport = section.get("minViewport")
+    max_viewport = section.get("maxViewport")
+    if min_viewport is not None and viewport_width < min_viewport:
+        return False
+    if max_viewport is not None and viewport_width > max_viewport:
+        return False
+    return True
 
 
 def run_dry_run(config: dict, page_filter: str | None, section_filter: str | None):
@@ -113,6 +339,8 @@ def audit_page(
     mockup_file = page_config["mockup"]
     theme_path = page_config["theme"]
     sections = page_config.get("sections", [])
+    cart_seed = page_config.get("cartSeed")
+    skip_theme_cart_seed = page_config.get("skipThemeCartSeed", False)
 
     if not sections:
         print(f"  [!] No sections configured for {page_name} — skipping")
@@ -132,6 +360,30 @@ def audit_page(
 
     print(f"\n  Auditing: {page_name}")
 
+    seeded_theme_storage = None
+    if cart_seed and not skip_theme_cart_seed:
+        with create_browser_context(browser, viewports[0]) as seed_theme_ctx:
+            seed_page = seed_theme_ctx.new_page()
+            theme_url = f"{theme_base_url}{theme_path}"
+            navigate_to_page(seed_page, theme_url, password=store_password)
+
+            if not seed_cart(seed_theme_ctx, theme_base_url, cart_seed):
+                print(
+                    f"  [!] Skipping {page_name}: unable to seed Shopify cart without rate limiting."
+                )
+                return None
+
+            navigate_to_page(seed_page, theme_url, password=store_password)
+            wait_for_theme_cart_render(seed_page, cart_seed)
+
+            if not theme_cart_is_seeded(seed_page, cart_seed):
+                print(
+                    f"  [!] Skipping {page_name}: Shopify cart remained empty after seeding."
+                )
+                return None
+
+            seeded_theme_storage = seed_theme_ctx.storage_state()
+
     for section in sections:
         if section_filter and section["name"].lower() != section_filter.lower():
             continue
@@ -141,15 +393,19 @@ def audit_page(
         print(f"    Section: {sec_name} ({len(elements)} elements)")
 
         for vp_width in viewports:
+            if not section_matches_viewport(section, vp_width):
+                continue
+
             print(f"      Viewport: {vp_width}px ... ", end="", flush=True)
 
             slug = sec_name.lower().replace(" ", "-")
 
             # --- Mockup ---
             with create_browser_context(browser, vp_width) as mockup_ctx:
+                seed_mockup_cart(mockup_ctx, cart_seed)
                 mockup_page = mockup_ctx.new_page()
                 mockup_url = f"{mockup_base_url}/{mockup_file}"
-                navigate_to_page(mockup_page, mockup_url)
+                navigate_mockup_page(mockup_page, mockup_url, cart_seed)
 
                 mockup_elements = [{"name": e["name"], "mockup": e["mockup"]} for e in elements]
                 mockup_results = extract_section_styles(
@@ -164,10 +420,14 @@ def audit_page(
                 )
 
             # --- Theme ---
-            with create_browser_context(browser, vp_width) as theme_ctx:
+            with create_browser_context(
+                browser, vp_width, storage_state=seeded_theme_storage
+            ) as theme_ctx:
                 theme_page = theme_ctx.new_page()
                 theme_url = f"{theme_base_url}{theme_path}"
                 navigate_to_page(theme_page, theme_url, password=store_password)
+                if cart_seed and not skip_theme_cart_seed:
+                    wait_for_theme_cart_render(theme_page, cart_seed)
 
                 theme_elements = [{"name": e["name"], "theme": e["theme"]} for e in elements]
                 theme_results = extract_section_styles(
@@ -198,13 +458,18 @@ def audit_page(
                         continue
 
                     with create_browser_context(browser, vp_width) as mockup_ctx2:
+                        seed_mockup_cart(mockup_ctx2, cart_seed)
                         mp = mockup_ctx2.new_page()
-                        navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
+                        navigate_mockup_page(mp, f"{mockup_base_url}/{mockup_file}", cart_seed)
                         mockup_img = extract_image_info(mp, mockup_sel)
 
-                    with create_browser_context(browser, vp_width) as theme_ctx2:
+                    with create_browser_context(
+                        browser, vp_width, storage_state=seeded_theme_storage
+                    ) as theme_ctx2:
                         tp = theme_ctx2.new_page()
                         navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
+                        if cart_seed and not skip_theme_cart_seed:
+                            wait_for_theme_cart_render(tp, cart_seed)
                         theme_img = extract_image_info(tp, theme_sel)
 
                     if mockup_img and theme_img:
@@ -252,13 +517,18 @@ def audit_page(
                         continue
 
                     with create_browser_context(browser, vp_width) as mockup_ctx3:
+                        seed_mockup_cart(mockup_ctx3, cart_seed)
                         mp = mockup_ctx3.new_page()
-                        navigate_to_page(mp, f"{mockup_base_url}/{mockup_file}")
+                        navigate_mockup_page(mp, f"{mockup_base_url}/{mockup_file}", cart_seed)
                         mockup_svg = extract_svg_info(mp, mockup_sel)
 
-                    with create_browser_context(browser, vp_width) as theme_ctx3:
+                    with create_browser_context(
+                        browser, vp_width, storage_state=seeded_theme_storage
+                    ) as theme_ctx3:
                         tp = theme_ctx3.new_page()
                         navigate_to_page(tp, f"{theme_base_url}{theme_path}", password=store_password)
+                        if cart_seed and not skip_theme_cart_seed:
+                            wait_for_theme_cart_render(tp, cart_seed)
                         theme_svg = extract_svg_info(tp, theme_sel)
 
                     if mockup_svg and theme_svg:

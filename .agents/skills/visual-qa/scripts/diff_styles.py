@@ -36,6 +36,10 @@ NUMERIC_PROPERTIES = {
     "flex-grow", "flex-shrink", "z-index", "aspect-ratio",
 }
 
+TRACK_LIST_PROPERTIES = {
+    "grid-template-columns", "grid-template-rows",
+}
+
 PROPERTY_CATEGORIES = {
     "Typography": {
         "font-family", "font-size", "font-weight", "font-style",
@@ -92,6 +96,11 @@ def _parse_numeric(value: str) -> float | None:
     if match:
         return float(match.group(1))
     return None
+
+
+def _parse_numeric_list(value: str) -> list[float]:
+    """Extract all numeric components from a compound CSS value."""
+    return [float(match) for match in re.findall(r"-?[\d.]+", value)]
 
 
 def _get_category(prop: str) -> str:
@@ -157,6 +166,28 @@ def classify_nonnumeric_diff(expected: str, actual: str) -> str:
     return "Critical"
 
 
+def classify_track_list_diff(expected: str, actual: str, tolerance: float) -> tuple[str, float]:
+    """Classify compound grid track differences using numeric tolerance."""
+    expected_tracks = _parse_numeric_list(expected)
+    actual_tracks = _parse_numeric_list(actual)
+
+    if not expected_tracks or not actual_tracks or len(expected_tracks) != len(actual_tracks):
+        if expected != actual:
+            return "Critical", 0
+        return "", 0
+
+    max_diff = max(abs(expected_track - actual_track) for expected_track, actual_track in zip(expected_tracks, actual_tracks))
+
+    if max_diff == 0:
+        return "", 0
+    elif max_diff > tolerance * 2:
+        return "Critical", max_diff
+    elif max_diff > tolerance:
+        return "Notable", max_diff
+    else:
+        return "Marginal", max_diff
+
+
 def diff_element_styles(
     element_name: str,
     element_selector: str,
@@ -174,6 +205,8 @@ def diff_element_styles(
 
         if prop in COLOR_PROPERTIES:
             severity, _ = classify_color_diff(expected, actual)
+        elif prop in TRACK_LIST_PROPERTIES:
+            severity, _ = classify_track_list_diff(expected, actual, tolerance)
         elif prop in NUMERIC_PROPERTIES:
             severity, _ = classify_numeric_diff(expected, actual, tolerance)
         else:

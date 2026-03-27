@@ -36,7 +36,7 @@ The type system relies on a contrast between an editorial Serif (RL Limo) and a 
 **Import Tag:**
 
 ```html
-<link rel="stylesheet" href="[https://use.typekit.net/ooj6lrz.css](https://use.typekit.net/ooj6lrz.css)">
+<link rel="stylesheet" href="[https://use.typekit.net/gnx4xvq.css](https://use.typekit.net/gnx4xvq.css)">
 
 ```
 

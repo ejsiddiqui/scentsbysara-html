@@ -178,16 +178,25 @@ def take_section_screenshot(page: Page, section_selector: str, output_path: str)
     el = page.locator(section_selector)
     if el.count() == 0:
         return False
-    el.first.scroll_into_view_if_needed()
-    page.wait_for_timeout(300)
-    el.first.screenshot(path=output_path)
-    return True
+    try:
+        if not el.first.is_visible():
+            return False
+        el.first.scroll_into_view_if_needed()
+        page.wait_for_timeout(300)
+        el.first.screenshot(path=output_path)
+        return True
+    except Exception:
+        return False
 
 
 def create_browser_context(
-    browser: Browser, viewport_width: int, viewport_height: int = 900
+    browser: Browser,
+    viewport_width: int,
+    viewport_height: int = 900,
+    storage_state: dict | None = None,
 ) -> BrowserContext:
     """Create a new browser context with the specified viewport."""
-    return browser.new_context(
-        viewport={"width": viewport_width, "height": viewport_height}
-    )
+    kwargs = {"viewport": {"width": viewport_width, "height": viewport_height}}
+    if storage_state is not None:
+        kwargs["storage_state"] = storage_state
+    return browser.new_context(**kwargs)

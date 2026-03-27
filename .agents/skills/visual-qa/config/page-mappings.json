@@ -117,7 +117,12 @@
     {
       "name": "Cart",
       "mockup": "cart.html",
-      "theme": "/cart",
+      "theme": "/cart?qa_cart=1",
+      "cartSeed": {
+        "variantId": 44932533026952,
+        "quantity": 1
+      },
+      "skipThemeCartSeed": true,
       "sections": [
         {
           "name": "Page Wrapper",
@@ -143,7 +148,7 @@
         {
           "name": "Cart Layout",
           "mockupSelector": ".cart-layout",
-          "themeSelector": ".cart-page-section",
+          "themeSelector": ".cart-layout",
           "themeFile": "sections/main-cart.liquid",
           "elements": []
         },
@@ -155,17 +160,11 @@
           "elements": []
         },
         {
-          "name": "Cart Empty",
-          "mockupSelector": ".cart-empty",
-          "themeSelector": ".cart-empty",
-          "themeFile": "",
-          "elements": []
-        },
-        {
           "name": "Cart Table Wrap",
           "mockupSelector": ".cart-table-wrap",
           "themeSelector": ".cart-table-wrap",
           "themeFile": "",
+          "minViewport": 769,
           "elements": []
         },
         {
@@ -173,6 +172,7 @@
           "mockupSelector": ".cart-mobile-list",
           "themeSelector": ".cart-mobile-list",
           "themeFile": "",
+          "maxViewport": 768,
           "elements": []
         }
       ]
@@ -593,7 +593,7 @@
     {
       "name": "Product",
       "mockup": "product.html",
-      "theme": "/products/body-candle",
+      "theme": "/products/she-is-beauty",
       "sections": [
         {
           "name": "Page Wrapper",
@@ -1179,7 +1179,7 @@
         {
           "name": "Shop Hero",
           "mockupSelector": ".shop-hero",
-          "themeSelector": ".collection-page",
+          "themeSelector": ".shop-hero",
           "themeFile": "sections/main-collection.liquid",
           "elements": []
         },
@@ -1201,13 +1201,6 @@
           "name": "Mobile Item Count",
           "mockupSelector": ".mobile-item-count",
           "themeSelector": ".mobile-item-count",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Shop Canvas",
-          "mockupSelector": ".shop-canvas",
-          "themeSelector": ".shop-canvas",
           "themeFile": "",
           "elements": []
         },
@@ -1236,13 +1229,6 @@
           "name": "Product Options",
           "mockupSelector": ".product-options",
           "themeSelector": ".product-options",
-          "themeFile": "",
-          "elements": []
-        },
-        {
-          "name": "Size Dropdown",
-          "mockupSelector": ".size-dropdown",
-          "themeSelector": ".size-dropdown",
           "themeFile": "",
           "elements": []
         },
