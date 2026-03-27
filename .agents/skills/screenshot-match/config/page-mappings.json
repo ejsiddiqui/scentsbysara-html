@@ -1,0 +1,20 @@
+{
+  "defaults": {
+    "themeBaseUrl": "http://127.0.0.1:9292",
+    "figmaDir": "figma-exports",
+    "storePassword": "",
+    "hints": {
+      "fontFamilies": ["Cormorant Garamond", "Jost"],
+      "brandColors": ["#1a1a1a", "#f5f0eb", "#c9a96e"],
+      "notes": ""
+    }
+  },
+  "pages": [
+    {
+      "name": "Homepage",
+      "figmaImage": "homepage-1440.png",
+      "themeUrl": "/",
+      "viewport": 1440
+    }
+  ]
+}
