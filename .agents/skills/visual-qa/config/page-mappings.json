@@ -640,7 +640,7 @@
         {
           "name": "Product Main",
           "mockupSelector": ".product-main",
-          "themeSelector": ".product-page-section",
+          "themeSelector": ".product-main",
           "themeFile": "sections/main-product.liquid",
           "elements": []
         },
@@ -857,8 +857,8 @@
         {
           "name": "Reviews Section",
           "mockupSelector": ".reviews-section",
-          "themeSelector": ".reviews-section",
-          "themeFile": "",
+          "themeSelector": ".reviews-placeholder",
+          "themeFile": "sections/reviews-placeholder.liquid",
           "elements": []
         },
         {
