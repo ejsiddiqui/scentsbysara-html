@@ -13,10 +13,10 @@ const MOBILE_MENU_TEMPLATE = `
             </a>
             <div class="mobile-menu-actions">
                 <button class="icon-btn mobile-menu-cart" aria-label="Cart" onclick="window.location.href='cart.html'">
-                    <img src="assets/icons/handbag 1.svg" alt="" aria-hidden="true">
+                    <img src="assets/icons/handbag-1.svg" alt="" aria-hidden="true">
                 </button>
                 <button class="icon-btn mobile-menu-search search-toggle" aria-label="Search">
-                    <img src="assets/icons/search 1.svg" alt="" aria-hidden="true">
+                    <img src="assets/icons/search-1.svg" alt="" aria-hidden="true">
                 </button>
                 <button class="icon-btn close-mobile-menu" aria-label="Close Menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"

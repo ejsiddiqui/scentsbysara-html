@@ -75,12 +75,14 @@ The completed HTML mockup is the visual source of truth. When building Shopify s
 - **British English:** Use British spelling in all user-facing strings (colour, customise, etc.)
 
 ## Testing & QA Guidelines
-- Primary validation is visual QA against the HTML mockup in `/html/`
+- Primary validation is visual QA against **`/figma-exports/figma-<page>.png`** — these are the latest Figma designs and the source of truth
+- `/references/<page>/` contains old snapshots and should NOT be used as QA reference
+- `/html/` is useful for CSS token and component patterns only, not as visual reference
 - Test every page at: 375px, 390px, 768px, 1024px, 1440px, 1920px
+- Always verify on the live store using `?preview_theme_id=147874775176` to bypass CDN cache
 - Run `shopify theme check` before committing to catch Liquid errors
 - Treat console errors and horizontal overflow as release blockers
-- Use the QA checklist at the end of each phase in the implementation plan
-- QA process: Test -> Verify against mockup -> Fix -> Re-test -> Commit
+- QA process: Load Figma export → Screenshot live → Visual diff → Fix → Re-verify with preview URL → Commit
 
 ## Commit & Pull Request Guidelines
 - Follow Conventional Commit prefixes: `feat:`, `fix:`, `docs:`, `chore:`, `perf:`

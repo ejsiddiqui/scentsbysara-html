@@ -510,6 +510,74 @@
           "themeSelector": ".testimonials-section",
           "themeFile": "sections/testimonials.liquid",
           "elements": []
+        },
+        {
+          "name": "Footer",
+          "mockupSelector": ".site-footer",
+          "themeSelector": ".footer-section",
+          "themeFile": "sections/footer.liquid",
+          "elements": [
+            {
+              "name": "Newsletter Heading",
+              "mockup": ".newsletter-heading",
+              "theme": ".footer-section__eyebrow"
+            },
+            {
+              "name": "Newsletter Form",
+              "mockup": ".newsletter-form-stacked",
+              "theme": ".footer-section__newsletter-form"
+            },
+            {
+              "name": "Social Icons Group",
+              "mockup": ".footer-social-group",
+              "theme": ".footer-section__socials"
+            },
+            {
+              "name": "Instagram Icon",
+              "mockup": ".footer-social-group a:nth-child(1) img",
+              "theme": ".footer-section__socials a:nth-child(1) svg"
+            },
+            {
+              "name": "Facebook Icon",
+              "mockup": ".footer-social-group a:nth-child(2) img",
+              "theme": ".footer-section__socials a:nth-child(2) svg"
+            },
+            {
+              "name": "TikTok Icon",
+              "mockup": ".footer-social-group a:nth-child(3) img",
+              "theme": ".footer-section__socials a:nth-child(3) svg"
+            },
+            {
+              "name": "Pinterest Icon",
+              "mockup": ".footer-social-group a:nth-child(4) img",
+              "theme": ".footer-section__socials a:nth-child(4) svg"
+            },
+            {
+              "name": "Footer Bottom",
+              "mockup": ".footer-bottom-row",
+              "theme": ".footer-section__bottom"
+            },
+            {
+              "name": "Brand Block",
+              "mockup": ".footer-brand-wrap",
+              "theme": ".footer-section__brand"
+            },
+            {
+              "name": "Desktop Logo",
+              "mockup": ".footer-logo-desktop",
+              "theme": ".footer-section__brand-logo--desktop"
+            },
+            {
+              "name": "Mobile Logo",
+              "mockup": ".footer-logo-mobile",
+              "theme": ".footer-section__brand-logo--mobile"
+            },
+            {
+              "name": "Payment Methods",
+              "mockup": ".payment-methods-img",
+              "theme": ".footer-section__payments"
+            }
+          ]
         }
       ]
     },
