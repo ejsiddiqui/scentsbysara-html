@@ -18,7 +18,7 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| HP-01 | 🟠 HIGH | **Hero slide order wrong.** First slide shows "SCAR COLLECTION" macro texture; Figma shows "THE FEMALE FORM, AS IT IS" with two body candle figurines as the opening slide. | pending (admin) |
+| HP-01 | 🟠 HIGH | **Hero slide order wrong.** First slide shows "SCAR COLLECTION" macro texture; Figma shows "THE FEMALE FORM, AS IT IS" with two body candle figurines as the opening slide. | done |
 | HP-02 | 🟠 HIGH | **Featured products section has filter/sort controls.** The "Best Sellers" section on the homepage renders as a mini-collection embed with a FILTER button and SORT BY dropdown. Figma shows a clean product grid with no filter controls. | pending |
 | HP-03 | 🟠 HIGH | **Logo renders as text fallback instead of wordmark image.** Live shows "SCENTS BY SARA" as plain text. Logo image is likely not uploaded in theme settings. | pending (admin) |
 | HP-04 | 🟠 HIGH | **Hero slide indicators missing.** Figma shows three dot/line pagination indicators centred below the hero text. Live shows no visible slide indicators against the image. | done |
@@ -128,7 +128,7 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| BS-01 | 🔴 CRITICAL | **Collection does not exist.** `/collections/bestsellers` returns 404. Figma shows a full "BESTSELLERS" page with hero, 4-column product grid (6 products), and filter/sort toolbar. Collection needs to be created in Shopify admin and populated. | pending (admin) |
+| BS-01 | 🔴 CRITICAL | **Collection does not exist.** `/collections/bestsellers` returns 404. Figma shows a full "BESTSELLERS" page with hero, 4-column product grid (6 products), and filter/sort toolbar. Collection needs to be created in Shopify admin and populated. | done |
 
 ---
 
@@ -147,7 +147,7 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| GF-01 | 🔴 CRITICAL | **"Gifts" header nav link points to `/collections` instead of `/pages/gifts`.** Users clicking Gifts in the nav never reach the gifts landing page. | pending (admin) |
+| GF-01 | 🔴 CRITICAL | **"Gifts" header nav link points to `/collections` instead of `/pages/gifts`.** Users clicking Gifts in the nav never reach the gifts landing page. | done |
 | GF-02 | 🟠 HIGH | **Hero section missing.** Figma shows a full-width dark mocha hero banner with "PERSONALISED GIFTS" headline and lifestyle fragrance photo. Live page starts with plain text on a cream background with no hero image. | pending |
 | GF-03 | 🟠 HIGH | **Hero right-panel image missing.** Figma shows a second large lifestyle photo in the right half of the hero. Live shows only the notebook/journal image on the left side. | pending |
 | GF-04 | 🟡 MEDIUM | **"She Is Also" editorial section layout mismatch.** Figma shows a proper two-column split (image right, text + CTA left). Live layout proportions differ. | pending |
@@ -162,8 +162,8 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| OS-01 | 🔴 CRITICAL | **Page does not exist.** `/pages/our-story` returns 404. Template exists (`page.our-story.json`) — create the page in Shopify Admin → Pages, set handle to `our-story`, assign template `page.our-story`. | pending (admin) |
-| OS-02 | 🔴 CRITICAL | **Header and footer "Our Story" nav links broken.** Both point to `/#`. Update in Admin → Online Store → Navigation. | pending (admin) |
+| OS-01 | 🔴 CRITICAL | **Page does not exist.** `/pages/our-story` returns 404. Template exists (`page.our-story.json`) — create the page in Shopify Admin → Pages, set handle to `our-story`, assign template `page.our-story`. | done |
+| OS-02 | 🔴 CRITICAL | **Header and footer "Our Story" nav links broken.** Both point to `/#`. Update in Admin → Online Store → Navigation. | done |
 
 ---
 
@@ -172,8 +172,8 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| SUS-01 | 🔴 CRITICAL | **Page does not exist.** Template created (`page.our-sustainability.json`) — create the page in Shopify Admin → Pages, set handle to `our-sustainability`, assign template `page.our-sustainability`. | pending (admin) |
-| SUS-02 | 🔴 CRITICAL | **Footer "Sustainability" link broken.** Points to `/#`. Update in Admin → Online Store → Navigation. | pending (admin) |
+| SUS-01 | 🔴 CRITICAL | **Page does not exist.** Template created (`page.our-sustainability.json`) — create the page in Shopify Admin → Pages, set handle to `our-sustainability`, assign template `page.our-sustainability`. | done |
+| SUS-02 | 🔴 CRITICAL | **Footer "Sustainability" link broken.** Points to `/#`. Update in Admin → Online Store → Navigation. | done |
 
 ---
 
@@ -182,8 +182,8 @@
 
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
-| YS-01 | 🔴 CRITICAL | **Header "Your Story" nav link broken.** Points to `/#`. Update in Admin → Online Store → Navigation. | pending (admin) |
-| YS-02 | 🟠 HIGH | **Page redirects away.** `/pages/your-story` briefly loads then redirects to `/collections/all`. No redirect code found in sections — verify page handle and template assignment in Admin → Pages. | pending (admin) |
+| YS-01 | 🔴 CRITICAL | **Header "Your Story" nav link broken.** Points to `/#`. Update in Admin → Online Store → Navigation. | done |
+| YS-02 | 🟠 HIGH | **Page redirects away.** `/pages/your-story` briefly loads then redirects to `/collections/all`. No redirect code found in sections — verify page handle and template assignment in Admin → Pages. | done |
 | YS-03 | 🟠 HIGH | **Hero section missing.** Figma shows a two-column hero: lifestyle candle image (left), intro text + headline "The Pleasure of a Lifetime…" (right). Added split-view hero to `page.your-story.json`. | done |
 | YS-04 | 🟠 HIGH | **UGC stories grid wrong layout.** Figma shows 3-column × 2 rows = 6+ story cards. Live shows 2-column with only 4 cards. | pending |
 | YS-05 | 🟡 MEDIUM | **Story submission form layout unstyled.** Figma shows a designed two-column layout (decorative text/image left, form fields right). Live shows the form without the surrounding layout. | pending |
@@ -213,7 +213,7 @@
 | ID | Priority | Issue | Status |
 |----|----------|-------|--------|
 | GL-01 | 🔴 CRITICAL | **Multiple footer links point to `/#`.** Affected: Our Story, Your Story, Sustainability, Candle Care, Customisation, Corporate Gifting, Shipping & Returns, FAQs, Terms & Conditions. All are dead links with no target page. Update in Admin → Online Store → Navigation. | pending (admin) |
-| GL-02 | 🟠 HIGH | **"BESTSELLERS" missing as a primary nav item.** Figma for Sculpted Collection and Mega Menu shows BESTSELLERS as a top-level nav link. Live nav only has SHOP, GIFTS, OUR STORY, YOUR STORY, CONTACT US. | pending (admin) |
+| GL-02 | 🟠 HIGH | **"BESTSELLERS" missing as a primary nav item.** Figma for Sculpted Collection and Mega Menu shows BESTSELLERS as a top-level nav link. Live nav only has SHOP, GIFTS, OUR STORY, YOUR STORY, CONTACT US. | done |
 | GL-03 | 🟠 HIGH | **Product card "SHOP NOW" button absent on all collection pages.** Figma consistently shows a "SHOP NOW" button on each product card across all collection pages. Live collection cards have no CTA button. Needs to be enabled in `product-card.liquid` for collection contexts. | done |
 | GL-04 | 🟠 HIGH | **Collection hero descriptions not populated.** Figma shows description text below the collection title in the hero on SCAR and Sculpted pages. No collection descriptions are set in Shopify admin. | pending (admin) |
 | GL-05 | 🟠 HIGH | **Body Shape and Body Colour filters not enabled.** Figma filter panel shows BODY SHAPE and BODY COLOUR facets. Live shows generic AVAILABILITY and PRICE. Requires enabling product metafield-based filters in the Shopify "Search & Discovery" app. | pending (admin) |
@@ -253,7 +253,7 @@ Items requiring action in Shopify Admin (no code changes needed):
 - [ ] **GF-01** — Fix Gifts nav link: change from `/collections` to `/pages/gifts` in Admin → Navigation → Main Menu
 - [ ] **OS-01** — Create "Our Story" page in Admin → Pages, set handle `our-story`, assign template `page.our-story`
 - [ ] **OS-02** — Fix "Our Story" nav + footer links in Admin → Navigation
-- [ ] **SUS-01** — Create "Our Sustainability" page in Admin → Pages, set handle `our-sustainability`, assign template `page.our-sustainability`
+- [x] **SUS-01** — Create "Our Sustainability" page in Admin → Pages, set handle `our-sustainability`, assign template `page.our-sustainability`
 - [ ] **SUS-02** — Fix footer "Sustainability" link in Admin → Navigation
 - [ ] **YS-01** — Fix "Your Story" nav link in Admin → Navigation
 - [ ] **YS-02** — Verify `/pages/your-story` page handle and template assignment in Admin → Pages
