@@ -246,16 +246,14 @@
               {%- endif -%}
             </div>
 
-            {%- unless is_product_template -%}
-              <div class="scents-section__body">
-                <h3 class="scents-section__name">{{ scent_name | escape }}</h3>
-                {%- if scent_description != blank -%}
-                  <div class="scents-section__description rte">
-                    {{ scent_description }}
-                  </div>
-                {%- endif -%}
-              </div>
-            {%- endunless -%}
+            <div class="scents-section__body">
+              <h3 class="scents-section__name">{{ scent_name | escape }}</h3>
+              {%- if scent_description != blank -%}
+                <div class="scents-section__description rte">
+                  {{ scent_description }}
+                </div>
+              {%- endif -%}
+            </div>
           </article>
         {%- endfor -%}
       </div>

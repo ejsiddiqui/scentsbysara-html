@@ -2,9 +2,9 @@
   "defaults": {
     "themeBaseUrl": "http://127.0.0.1:9292",
     "figmaDir": "figma-exports",
-    "storePassword": "",
+    "storePassword": "ahttey",
     "hints": {
-      "fontFamilies": ["Cormorant Garamond", "Jost"],
+      "fontFamilies": ["RL Limo", "Suisse Intl"],
       "brandColors": ["#1a1a1a", "#f5f0eb", "#c9a96e"],
       "notes": ""
     }
@@ -12,9 +12,15 @@
   "pages": [
     {
       "name": "Homepage",
-      "figmaImage": "homepage-1440.png",
+      "figmaImage": "figma-homepage.png",
       "themeUrl": "/",
-      "viewport": 1440
+      "viewport": 1920
+    },
+    {
+      "name": "PDP",
+      "figmaImage": "figma-PDP.png",
+      "themeUrl": "/products/she-is-strength-1",
+      "viewport": 1920
     }
   ]
 }

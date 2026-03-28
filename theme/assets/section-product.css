@@ -27,7 +27,7 @@
 .product-main,
 .product-page-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
   gap: 56px;
   align-items: start;
   min-width: 0;
@@ -64,8 +64,8 @@
 .main-image-wrap,
 .product-gallery__stage {
   position: relative;
-  height: clamp(620px, 44vw, 810px);
-  min-height: clamp(620px, 44vw, 810px);
+  height: clamp(620px, 46vw, 900px);
+  min-height: clamp(620px, 46vw, 900px);
   display: flex;
   align-items: center;
   justify-content: center;
