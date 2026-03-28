@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo-long.svg",
+    "logo": "shopify://shop_images/logo.svg",
     "logo_inverse": "",
     "logo_mobile": "shopify://shop_images/logo-symbol.svg",
     "logo_height": 30,
@@ -36,11 +36,11 @@
     "card_show_swatches": true,
     "card_show_quick_add": true,
     "swatch_shape": "circle",
-    "swatch_size": 32,
-    "social_instagram": "",
-    "social_facebook": "",
-    "social_tiktok": "",
-    "social_pinterest": "",
+    "swatch_size": 30,
+    "social_instagram": "#",
+    "social_facebook": "#",
+    "social_tiktok": "#",
+    "social_pinterest": "#",
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
