@@ -9,28 +9,56 @@
  */
 {
   "sections": {
+    "page_hero_ef9eP4": {
+      "type": "page-hero",
+      "name": "Page hero",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Your Story",
+        "subheading": "Stories that deserve to be seen",
+        "image": "shopify://shop_images/hero-your-story.png"
+      }
+    },
     "hero": {
       "type": "split-view",
       "settings": {
         "color_scheme": "scheme-1",
-        "full_width": false,
-        "eyebrow": "YOUR STORY",
-        "heading": "THE PLEASURE OF A LIFETIME.",
-        "body": "<p>Scents by Sara was built on the stories of real women. Every candle holds a memory. We invite you to share yours.</p>",
-        "image_position": "left",
-        "content_background": "primary",
+        "full_width": true,
+        "eyebrow": "",
+        "heading": "",
+        "body": "<p>Every body carries a story — of strength, healing, and becoming. <strong>Your words may help another woman feel seen.</strong><br/><br/><strong>We invite you to share yours.</strong> Selected stories may be featured on our website and, with permission, included in our packaging to uplift others.<br/></p>",
+        "image": "shopify://shop_images/our-story-right-1.png",
+        "asset_image": "",
+        "image_alt": "Everybody carries a story",
+        "image_position": "right",
+        "content_background": "secondary",
         "cta_text": "",
-        "button_style": "btn-outline"
+        "cta_link": "",
+        "button_style": "btn-outline",
+        "collection_filter": ""
       }
     },
     "form": {
       "type": "story-form",
       "settings": {
         "color_scheme": "scheme-1",
-        "eyebrow": "SHARE WITH US",
+        "eyebrow": "BE A PART OF SCENTS BY SARA",
         "heading": "SUBMIT YOUR STORY",
-        "description": "Tell us about your moment. We may feature your story as part of our community pages or in upcoming editorials.",
+        "description": "",
         "disclaimer": "By submitting, you agree that Scents by Sara may publish your story, edited for brevity, across our digital channels."
+      }
+    },
+    "page_hero_iGRYBF": {
+      "type": "page-hero",
+      "custom_css": [
+        ".page-hero__overlay {background: none;}"
+      ],
+      "name": "Page hero",
+      "settings": {
+        "color_scheme": "",
+        "heading": "",
+        "subheading": "",
+        "image": "shopify://shop_images/our-story-bottom-2.png"
       }
     },
     "grid": {
@@ -39,7 +67,15 @@
         "color_scheme": "scheme-1",
         "heading": "YOUR STORIES",
         "eyebrow": "AS TOLD BY OUR COMMUNITY",
-        "description": "Every candle tells a story. These are yours: shared moments of transformation, memory, and quiet power."
+        "description": "Every candle tells a story. These are yours: shared moments of transformation, memory, and quiet power.",
+        "stories": [
+          "she-is-grace",
+          "she-is-strength",
+          "she-is-beauty",
+          "she-is-timeless",
+          "she-is-power",
+          "she-is-you"
+        ]
       }
     },
     "editorial": {
@@ -50,17 +86,22 @@
         "eyebrow": "OUR STORY",
         "heading": "GROUNDED IN RITUAL. EMBODIED IN CONFIDENCE.",
         "body": "<p>Scents By Sara is a female-founded fragrance house rooted in embodied confidence and modern ritual. What began as a personal exploration of scent and form has grown into a brand shaped by lived experience, community, and the power of recognising ourselves as we are.</p>",
+        "asset_image": "",
+        "image_alt": "Founder of Scents by Sara",
         "image_position": "left",
         "content_background": "secondary",
         "cta_text": "READ OUR STORY",
         "cta_link": "/pages/our-story",
-        "button_style": "btn-solid"
+        "button_style": "btn-solid",
+        "collection_filter": ""
       }
     }
   },
   "order": [
+    "page_hero_ef9eP4",
     "hero",
     "form",
+    "page_hero_iGRYBF",
     "grid",
     "editorial"
   ]
