@@ -242,11 +242,11 @@
 
 .product-details__subtitle {
   color: var(--color-muted);
-  font-size: var(--text-body-large);
-  letter-spacing: 0.18em;
+  font-size: var(--text-small);
+  letter-spacing: 0.03em;
   margin-bottom: 0;
-  text-transform: uppercase;
-  font-weight: 400;
+  text-transform: none;
+  font-weight: 300;
 }
 
 .product-details__summary {
@@ -282,14 +282,14 @@
   gap: 0;
   border: 0;
   padding: 0;
-  margin: 0 0 var(--space-md);
+  margin: 0 0 24px;
 }
 
 .selector-label {
   margin-bottom: var(--space-sm);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: var(--text-small);
+  font-size: var(--text-micro);
 }
 
 .variant-option-values {
@@ -325,12 +325,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 13px 0 10px;
+  min-height: 48px;
+  padding: 14px 0 14px;
   border: 1px solid var(--color-border);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: var(--text-small);
+  letter-spacing: 0.12em;
+  font-size: var(--text-micro);
   flex: 1;
 }
 
@@ -384,12 +384,17 @@
 .accordion-wrapper,
 .product-accordions {
   display: grid;
-  gap: 12px;
+  gap: 0;
 }
 
 .accordion {
   border: 0;
-  background: var(--color-secondary-bg);
+  border-top: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.product-accordions .accordion:last-child {
+  border-bottom: 1px solid var(--color-border);
 }
 
 .accordion-header {
@@ -398,9 +403,9 @@
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  padding: 24px;
+  padding: 20px 0;
   list-style: none;
-  font-size: var(--text-body);
+  font-size: var(--text-micro);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-foreground);
@@ -436,7 +441,7 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  padding: 0 24px;
+  padding: 0;
   opacity: 0;
   transition: max-height 0.25s ease, opacity 0.25s ease, padding-bottom 0.25s ease;
 }
@@ -444,7 +449,7 @@
 .accordion[open] .accordion-body {
   max-height: 40rem;
   opacity: 1;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 .accordion-body__inner {

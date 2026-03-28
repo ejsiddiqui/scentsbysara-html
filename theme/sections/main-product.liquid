@@ -28,7 +28,7 @@
     <div class="product-mobile-header">
       <div class="product-mobile-header__copy product-mobile-header-copy">
         <h1 class="font-serif product-details__title product-title">{{ product.title | upcase }}</h1>
-        <p class="product-details__subtitle subtitle text-micro">{{ subtitle_text | upcase }}</p>
+        <p class="product-details__subtitle subtitle">{{ subtitle_text }}</p>
       </div>
       <div class="product-mobile-header__price">
         {% render 'price', card_product: product, variant: current_variant %}
@@ -168,7 +168,7 @@
           <h1 class="product-details__title product-title font-serif text-h1">{{ product.title | upcase }}</h1>
 
           <div class="product-details__meta flex-between items-center" aria-live="polite" aria-atomic="true">
-            <p class="product-details__subtitle subtitle text-micro">{{ subtitle_text | upcase }}</p>
+            <p class="product-details__subtitle subtitle">{{ subtitle_text }}</p>
             {% render 'price', card_product: product, variant: current_variant %}
           </div>
         </header>

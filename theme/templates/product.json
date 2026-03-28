@@ -11,7 +11,9 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "settings": {},
+      "settings": {
+        "fallback_subtitle": "Stretch Mark Body Candle"
+      },
       "blocks": {
         "description": {
           "type": "accordion",
