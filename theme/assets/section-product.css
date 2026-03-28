@@ -167,6 +167,52 @@
   gap: 12px;
 }
 
+/* Thumbnail slider (> 3 images) */
+.product-gallery__thumbnails--slider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-gallery__thumb-viewport {
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.product-gallery__thumb-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+/* Each thumb in slider: sized to exactly 1/3 of viewport (accounting for 2 gaps) */
+.product-gallery__thumbnails--slider .product-gallery__thumb {
+  flex: 0 0 calc((100% - 24px) / 3);
+  min-width: 0;
+}
+
+.product-gallery__thumb-arrow {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-muted);
+  box-shadow: none;
+}
+
+.product-gallery__thumb-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
 .product-gallery__thumb,
 .thumb-wrap {
   position: relative;
@@ -334,12 +380,23 @@
   flex: 1;
 }
 
+/* Swatches: double-ring on selected/hover */
 .swatch-label input:checked + .swatch-large,
-.swatch-label:hover .swatch-large,
-.pill-label input:checked + .pill,
+.swatch-label:hover .swatch-large {
+  border-color: var(--color-foreground);
+  box-shadow: inset 0 0 0 2px var(--color-background), 0 0 0 1px var(--color-foreground);
+}
+
+/* Pills: stone fill + dark border on selected, simple border on hover */
+.pill-label input:checked + .pill {
+  background-color: var(--color-secondary-bg);
+  border-color: var(--color-foreground);
+  box-shadow: none;
+}
+
 .pill-label:hover .pill {
   border-color: var(--color-foreground);
-  box-shadow: inset 0 0 0 1px var(--color-background), 0 0 0 1px var(--color-foreground);
+  box-shadow: none;
 }
 
 .add-to-cart-row {
@@ -384,17 +441,19 @@
 .accordion-wrapper,
 .product-accordions {
   display: grid;
-  gap: 0;
+  gap: 8px;
 }
 
 .accordion {
   border: 0;
-  border-top: 1px solid var(--color-border);
-  background: transparent;
+  background: var(--color-secondary-bg);
 }
 
-.product-accordions .accordion:last-child {
-  border-bottom: 1px solid var(--color-border);
+/* Description is always open — prevent toggling */
+.accordion.static-block > summary {
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
 }
 
 .accordion-header {
@@ -403,7 +462,7 @@
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 24px;
   list-style: none;
   font-size: var(--text-micro);
   letter-spacing: 0.14em;
@@ -441,7 +500,7 @@
   display: block;
   max-height: 0;
   overflow: hidden;
-  padding: 0;
+  padding: 0 24px;
   opacity: 0;
   transition: max-height 0.25s ease, opacity 0.25s ease, padding-bottom 0.25s ease;
 }
@@ -484,7 +543,7 @@
     display: none;
   }
 
-  .product-gallery__thumbnails {
+  .product-gallery__thumbnails:not(.product-gallery__thumbnails--slider) {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
