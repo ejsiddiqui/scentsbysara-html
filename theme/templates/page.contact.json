@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
@@ -25,25 +34,9 @@
             "content": "<p><a href=\"mailto:hello@scentsbysara.com\">hello@scentsbysara.com</a></p>"
           }
         },
-        "whatsapp": {
-          "type": "info_block",
-          "settings": {
-            "title": "WhatsApp",
-            "content": "<p><a href=\"tel:+442012345678\">+44 20 1234 5678</a></p>"
-          }
-        },
-        "hours": {
-          "type": "info_block",
-          "settings": {
-            "title": "Studio hours",
-            "content": "<p>Monday to Friday, 9:00 to 18:00 GMT</p>"
-          }
-        }
       },
       "block_order": [
-        "email",
-        "whatsapp",
-        "hours"
+        "email"
       ]
     }
   },
