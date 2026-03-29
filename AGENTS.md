@@ -5,7 +5,7 @@ Scents by Sara — luxury body candle e-commerce brand. This repo contains:
 - `/html/` — Completed HTML mockup (90% done). Reference-only during Shopify development.
 - `/theme/` — Shopify Online Store 2.0 theme (active development). **This is a separate Git repository** — it has its own `.git` directory and is managed independently from this parent repo. Remote: `https://github.com/ejsiddiqui/scentsbysara-theme.git`
 - `/docs/superpowers/plans/` — Implementation plans for Shopify theme.
-- `/references/` — Design reference screenshots.
+- `/figma-exports/figma-<page>.png` — Design reference screenshots.
 
 ## Store Details
 - **Theme name:** SBS
@@ -50,7 +50,7 @@ Key HTML mockup files:
 ## Current Status & Scope
 - HTML mockup phase is complete. Do not modify files in `/html/` unless explicitly requested.
 - Active work is on the Shopify theme in `/theme/`.
-- Follow the implementation plan: `docs/superpowers/plans/2026-03-26-shopify-theme-development.md`
+- Follow the implementation plan: `docs/superpowers/plans/2026-03-26-shopify-theme-development.md` - Now, `Done`.
 
 ## Architecture Decisions
 - **Platform:** Shopify Basic plan, Online Store 2.0
