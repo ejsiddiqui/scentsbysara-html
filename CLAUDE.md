@@ -2,13 +2,16 @@
 
 ## Design Reference Sources
 
-| Source | Purpose | When to use |
-|--------|---------|-------------|
-| `figma-exports/figma-<page>.png` | **Latest Figma designs** — source of truth for QA | Always use this for visual comparison |
-| `references/<page>/` | Old screenshot snapshots — may be outdated | Do NOT use as QA reference |
-| `html/` | Completed HTML mockup — useful for CSS token patterns | Reference for token names and component structure |
+| Source | Purpose | Priority |
+|--------|---------|----------|
+| `figma-exports/figma-<page>.png` | **Primary design reference** — all visual decisions (layout, typography, colour, spacing) | **Highest — supersedes everything** |
+| `html/` | **Functionality reference** — component behaviour, interaction patterns, CSS token names | Secondary — consult for how things work, not how they look |
+| `references/<page>/` | Old screenshot snapshots — outdated | Do NOT use |
 
-**Rule:** When doing any visual QA, always load `figma-exports/figma-<page>.png` first. Do not trust `references/` as current design truth.
+**Rules:**
+- **Figma is always right visually.** When Figma and the HTML mockup conflict on appearance, follow Figma.
+- **HTML mockup is right functionally.** Consult it for component logic, token names, JS behaviour, and responsive patterns.
+- Always load `figma-exports/figma-<page>.png` before writing any CSS. Never assume — read the design first.
 
 ---
 

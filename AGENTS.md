@@ -26,13 +26,24 @@ theme/
   templates/       — JSON templates (Online Store 2.0)
 ```
 
-### HTML Mockup Reference (`/html/`)
-The completed HTML mockup is the visual source of truth. When building Shopify sections, cross-reference:
-- `html/index.html` — Homepage layout and sections
-- `html/product.html` — Product detail page
-- `html/shop.html` — Shop/collection page
-- `html/cart.html` — Cart page
-- `html/css/design-tokens.css` — All color, spacing, typography tokens
+### Design Reference Hierarchy
+
+**Figma exports (`/figma-exports/figma-<page>.png`) are the primary design reference.** All visual decisions — layout, typography, colour, spacing, component proportions — are sourced from Figma. Figma supersedes the HTML mockup whenever they conflict visually.
+
+**The HTML mockup (`/html/`) is the functionality reference.** Consult it for component behaviour, interaction patterns, CSS token names, and responsive logic. Do not use it as visual truth.
+
+| Source | Use for | Do NOT use for |
+|--------|---------|----------------|
+| `figma-exports/figma-<page>.png` | Visual QA, layout, typography, colours | — |
+| `html/` | Token names, JS behaviour, component logic | Visual comparison |
+| `references/<page>/` | — | Anything — these are outdated |
+
+Key HTML mockup files:
+- `html/index.html` — Homepage structure and section order
+- `html/product.html` — Product detail page component logic
+- `html/shop.html` — Collection page structure
+- `html/cart.html` — Cart behaviour
+- `html/css/design-tokens.css` — All colour, spacing, typography tokens
 - `html/css/components.css` — Button, card, form component styles
 - `html/css/responsive.css` — Breakpoint-specific styles
 
@@ -75,9 +86,9 @@ The completed HTML mockup is the visual source of truth. When building Shopify s
 - **British English:** Use British spelling in all user-facing strings (colour, customise, etc.)
 
 ## Testing & QA Guidelines
-- Primary validation is visual QA against **`/figma-exports/figma-<page>.png`** — these are the latest Figma designs and the source of truth
-- `/references/<page>/` contains old snapshots and should NOT be used as QA reference
-- `/html/` is useful for CSS token and component patterns only, not as visual reference
+- Primary validation is visual QA against **`/figma-exports/figma-<page>.png`** — Figma is the source of truth for all visual decisions
+- `/html/` is the **functionality reference** — use it for token names, component logic, and behaviour only, never for visual comparison
+- `/references/<page>/` contains old snapshots and must NOT be used as a QA reference
 - Test every page at: 375px, 390px, 768px, 1024px, 1440px, 1920px
 - Always verify on the live store using `?preview_theme_id=147874775176` to bypass CDN cache
 - Run `shopify theme check` before committing to catch Liquid errors
