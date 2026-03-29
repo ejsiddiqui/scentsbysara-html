@@ -83,55 +83,24 @@
         "color_scheme": "scheme-1"
       }
     },
-    "commitment": {
-      "type": "commitment",
-      "blocks": {
-        "value_1": {
-          "type": "value",
-          "settings": {
-            "title": "Embodied Confidence",
-            "description": "Confidence that is felt rather than performed - creating space to recognise ourselves, our experiences, and how we feel within them."
-          }
-        },
-        "value_2": {
-          "type": "value",
-          "settings": {
-            "title": "Rooted in Real Stories",
-            "description": "Built with its community, not just for it - shaped by lived experience, resilience, and the individuality that defines each person."
-          }
-        },
-        "value_3": {
-          "type": "value",
-          "settings": {
-            "title": "Meaningful Gifting",
-            "description": "Custom pieces gifted as recognition for self or others - chosen to honour who someone is and the moments that shape them."
-          }
-        },
-        "value_4": {
-          "type": "value",
-          "settings": {
-            "title": "Sustainable Craftsmanship",
-            "description": "Luxury defined through consideration - for materials, craft, and the environments in which our pieces exist."
-          }
-        }
-      },
-      "block_order": [
-        "value_1",
-        "value_2",
-        "value_3",
-        "value_4"
-      ],
+    "split_view_nGBMwq": {
+      "type": "split-view",
+      "name": "Split view",
       "settings": {
+        "color_scheme": "",
         "full_width": true,
-        "color_scheme": "scheme-1",
-        "eyebrow": "OUR COMMITMENT",
-        "heading": "INTENTIONAL DESIGN IN SCENT AND FORM.",
-        "description": "Every material used by Scents by Sara is chosen for performance, longevity, and environmental consideration.",
-        "image": "shopify://shop_images/our-commitment.png",
-        "image_alt": "Matches and candle",
+        "eyebrow": "OUR PHILOSOPHY",
+        "heading": "INTENTIONAL DESIGN IN SCENT & FORM.",
+        "body": "<p>Scents By Sara is rooted in self-recognition in a culture of external validation. <br/><br/>Fragrance is approached as emotional architecture, shaping the relationship between body, space, and emotion. <br/><br/>Each piece is created as a ritual object, designed to be returned to — reinforcing recognition of self, space, and lived experience.<br/><br/>Here, confidence is not performed.<br/>It is embodied.</p>",
+        "image": "shopify://shop_images/our-philosphy.png",
+        "asset_image": "",
+        "image_alt": "Founder of Scents by Sara",
         "image_position": "left",
-        "button_label": "READ OUR STORY",
-        "button_link": "/pages/our-story"
+        "content_background": "secondary",
+        "cta_text": "",
+        "cta_link": "",
+        "button_style": "btn-solid",
+        "collection_filter": ""
       }
     },
     "collections": {
@@ -180,12 +149,28 @@
         "heading": "GROUNDED IN RITUAL. EMBODIED IN CONFIDENCE.",
         "body": "<p>Scents By Sara is a female-founded fragrance house rooted in embodied confidence and modern ritual. What began as a personal exploration of scent and form has grown into a brand shaped by lived experience, community, and the power of recognising ourselves as we are.</p>",
         "image": "shopify://shop_images/our-story.png",
+        "asset_image": "",
         "image_alt": "Founder of Scents by Sara",
-        "image_position": "left",
+        "image_position": "right",
         "content_background": "secondary",
         "cta_text": "READ MORE",
         "cta_link": "/pages/our-story",
-        "button_style": "btn-solid"
+        "button_style": "btn-solid",
+        "collection_filter": ""
+      }
+    },
+    "page_hero_aCnJqP": {
+      "type": "page-hero",
+      "custom_css": [
+        ".page-hero__overlay {background: none;}",
+        ".page-hero--has-image {margin: 0 var(--gutter);}"
+      ],
+      "name": "Page hero",
+      "settings": {
+        "color_scheme": "",
+        "heading": "",
+        "subheading": "",
+        "image": "shopify://shop_images/home-image-2.png"
       }
     },
     "testimonials": {
@@ -233,9 +218,10 @@
   "order": [
     "hero",
     "bestsellers",
-    "commitment",
+    "split_view_nGBMwq",
     "collections",
     "our_story",
+    "page_hero_aCnJqP",
     "testimonials"
   ]
 }
