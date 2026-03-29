@@ -11,15 +11,93 @@
   },
   "pages": [
     {
-      "name": "Homepage",
+      "name": "homepage",
       "figmaImage": "figma-homepage.png",
       "themeUrl": "/",
       "viewport": 1920
     },
     {
-      "name": "PDP",
+      "name": "pdp",
       "figmaImage": "figma-PDP.png",
       "themeUrl": "/products/she-is-strength-1",
+      "viewport": 1920
+    },
+    {
+      "name": "scar-collection",
+      "figmaImage": "figma-scar-collection.png",
+      "themeUrl": "/collections/scar-collection",
+      "viewport": 1920
+    },
+    {
+      "name": "scar-collection-filter",
+      "figmaImage": "figma-scar-collection-filter.png",
+      "themeUrl": "/collections/scar-collection",
+      "viewport": 1920
+    },
+    {
+      "name": "sculpted-collection",
+      "figmaImage": "figma-sculpted-collection.png",
+      "themeUrl": "/collections/sculpted-collection",
+      "viewport": 1920
+    },
+    {
+      "name": "body-candles",
+      "figmaImage": "figma-body-candles.png",
+      "themeUrl": "/collections/body-candles",
+      "viewport": 1920
+    },
+    {
+      "name": "gifts-page",
+      "figmaImage": "figma-gifts-page.png",
+      "themeUrl": "/pages/gifts",
+      "viewport": 1920
+    },
+    {
+      "name": "shop-all",
+      "figmaImage": "figma-shop-all.png",
+      "themeUrl": "/collections/all",
+      "viewport": 1920
+    },
+    {
+      "name": "bestsellers",
+      "figmaImage": "figma-bestsellers.png",
+      "themeUrl": "/collections/best-sellers",
+      "viewport": 1920
+    },
+    {
+      "name": "shop-by-curvy",
+      "figmaImage": "figma-shop-by-curvy.png",
+      "themeUrl": "/collections/all?filter.p.tag=curvy",
+      "viewport": 1920
+    },
+    {
+      "name": "our-story",
+      "figmaImage": "figma-our-story-page.png",
+      "themeUrl": "/pages/our-story",
+      "viewport": 1920
+    },
+    {
+      "name": "our-sustainability",
+      "figmaImage": "figma-our-sustainability-page.png",
+      "themeUrl": "/pages/our-sustainability",
+      "viewport": 1920
+    },
+    {
+      "name": "your-story",
+      "figmaImage": "figma-your-story-page.png",
+      "themeUrl": "/pages/your-story",
+      "viewport": 1920
+    },
+    {
+      "name": "contact-us",
+      "figmaImage": "figma-contact-us-page.png",
+      "themeUrl": "/pages/contact",
+      "viewport": 1920
+    },
+    {
+      "name": "mega-menu",
+      "figmaImage": "figma-mega-menu.png",
+      "themeUrl": "/",
       "viewport": 1920
     }
   ]
