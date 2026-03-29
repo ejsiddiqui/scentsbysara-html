@@ -57,3 +57,6 @@ figma-exports/
 # Auth state (browser automation)
 .auth-state.json
 browser-auth.json
+
+# tmp-screenshots
+tmp-screenshots/
