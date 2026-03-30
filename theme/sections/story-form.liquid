@@ -55,78 +55,77 @@
       <div class="story-form__actions text-center">
         <button type="submit" class="btn-hero">SHARE WITH US</button>
       </div>
-      ...
-      {% stylesheet %}
-      .story-form-section__inner {
-      display: grid;
-      gap: var(--space-lg);
-      }
+    {%- endform -%}
+  </div>
+</section>
 
-      .story-form-section .text-h1 {
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-top: var(--space-sm);
-      margin-bottom: var(--space-sm);
-      }
+{% stylesheet %}
+  .story-form-section__inner {
+    display: grid;
+    gap: var(--space-lg);
+  }
 
-      .story-form-section__intro {
-      max-width: 48rem;
-      margin-inline: auto;
-      }
+  .story-form-section .text-h1 {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
 
-      .story-form-section__description {
-      margin-top: 1rem;
-      margin-bottom: 3rem;
-      }
+  .story-form-section__intro {
+    max-width: 48rem;
+    margin-inline: auto;
+  }
 
-      .story-form {
-      max-width: 52rem;
-      margin-inline: auto;
-      display: grid;
-      gap: 1rem;
-      }
+  .story-form-section__description {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
 
-      .story-form .form-label {
-      font-size: var(--text-micro);
-      letter-spacing: 0.1em;
-      color: var(--color-muted);
-      margin-bottom: 8px;
-      }
+  .story-form {
+    max-width: 52rem;
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+  }
 
-      .story-form .form-input {
-      border: 1px solid var(--border-heavy);
-      padding: 16px;
-      }
+  .story-form .form-label {
+    font-size: var(--text-micro);
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin-bottom: 8px;
+  }
 
-      .story-form__grid {
-      gap: 1rem;
-      margin-bottom: 1rem;
-      }
+  .story-form .form-input {
+    border: 1px solid var(--border-heavy);
+    padding: 16px;
+  }
 
-      .story-form__textarea {
-      min-height: 14rem;
-      }
+  .story-form__grid {
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
 
-      .story-form__disclaimer {
-      margin: 1.5rem 0 2rem;
-      line-height: 1.4;
-      }
+  .story-form__textarea {
+    min-height: 14rem;
+  }
 
-      .story-form .btn-hero {
-      width: 260px;
-      }
+  .story-form__disclaimer {
+    margin: 1.5rem 0 2rem;
+    line-height: 1.4;
+  }
 
-      @media (max-width: 749px) {
-      .story-form__grid {
+  .story-form .btn-hero {
+    width: 260px;
+  }
+
+  @media (max-width: 749px) {
+    .story-form__grid {
       grid-template-columns: 1fr;
-      }
-
-      .story-form .btn-hero {
+    }
+    
+    .story-form .btn-hero {
       width: 100%;
-      }
-      }
-      {% endstylesheet %}
-
     }
   }
 {% endstylesheet %}
